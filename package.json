@@ -12,6 +12,7 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.9",
 		"@sveltejs/kit": "next",
+		"@types/d3-scale": "^3.2.2",
 		"@typescript-eslint/eslint-plugin": "^4.19.0",
 		"@typescript-eslint/parser": "^4.19.0",
 		"eslint": "^7.22.0",
@@ -27,5 +28,8 @@
 		"vite-plugin-windicss": "^0.15.10",
 		"windicss": "^2.5.14"
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"d3-scale": "^3.3.0"
+	}
 }

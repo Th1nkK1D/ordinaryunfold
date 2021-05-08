@@ -50,7 +50,7 @@
 </script>
 
 <script lang="ts">
-	import Chart from './_chart.svelte';
+	import Chart from './_chart/chart.svelte';
 	import Content from './_content.svelte';
 
 	export let dailyNewCases: DailyNewCase[];
@@ -60,9 +60,9 @@
 	<title>Thai Government COVID19 Speeches - OrdinaryUnfold</title>
 </svelte:head>
 
-<div class="flex flex-col md:flex-row w-screen h-screen">
-	<div class="-sm:h-72 md:flex-1 bg-blue-gray-900 flex flex-col">
-		<div class="flex p-4 -sm:(justify-center p-3)">
+<div class="flex flex-col lg:flex-row w-screen h-screen">
+	<div class="-md:h-72 bg-blue-gray-900 flex flex-col md:flex-1">
+		<div class="flex p-4 -md:(justify-center p-3)">
 			<a href="/"><img src="logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 		</div>
 		<div class="flex-1">
