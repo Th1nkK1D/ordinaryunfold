@@ -5,7 +5,7 @@
 
 <div
 	class="absolute left-0 right-0 text-white border-b border-white opacity-25 p-2 text-sm"
-	style="bottom: {y}%;"
+	style="bottom: {y}px;"
 >
 	{count}
 </div>
