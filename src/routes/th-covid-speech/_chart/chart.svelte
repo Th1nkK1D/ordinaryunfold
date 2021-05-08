@@ -6,10 +6,13 @@
 
 	const X_MAX_WIDTH = 1500;
 	const Y_STEP_SIZE = 1000;
+	const SCROLL_BAR_HEIGHT = 8;
 
 	export let dailyNewCases: DailyNewCase[];
 
-	let clientHeight = 0;
+	let clientHeight = SCROLL_BAR_HEIGHT;
+
+	$: chartHeight = clientHeight - SCROLL_BAR_HEIGHT;
 
 	const yMax = Math.max(...dailyNewCases.map(({ count }) => count));
 
@@ -17,7 +20,7 @@
 		.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
 		.range([0, X_MAX_WIDTH]);
 
-	$: yScale = scaleLinear().domain([0, yMax]).range([0, clientHeight]);
+	$: yScale = scaleLinear().domain([0, yMax]).range([0, chartHeight]);
 
 	const xAxis = dailyNewCases
 		.filter(({ date }) => date.getDate() === 1)
@@ -26,17 +29,17 @@
 			x: xScale(date)
 		}));
 
-	$: yAxis = new Array(Math.floor(yMax / Y_STEP_SIZE)).fill(null).map((_, i) => {
-		const count = (i + 1) * Y_STEP_SIZE;
+	$: yAxis = new Array(Math.ceil(yMax / Y_STEP_SIZE)).fill(null).map((_, i) => {
+		const count = i * Y_STEP_SIZE;
 
 		return {
 			count,
-			y: Math.round(yScale(count))
+			y: Math.round(yScale(count)) + SCROLL_BAR_HEIGHT
 		};
 	});
 
 	$: points = dailyNewCases
-		.map(({ count, date }) => `${xScale(date)},${clientHeight - yScale(count)}`)
+		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
 </script>
 
@@ -50,11 +53,7 @@
 				<XLabel {...label} />
 			{/each}
 		</div>
-		<svg
-			class="absolute"
-			viewBox="0 0 {X_MAX_WIDTH} {clientHeight}"
-			style="width: {X_MAX_WIDTH}px;"
-		>
+		<svg class="absolute" viewBox="0 0 {X_MAX_WIDTH} {chartHeight}" style="width: {X_MAX_WIDTH}px;">
 			<defs>
 				<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
 					<stop offset="0%" stop-color="#FF4D00" />
@@ -72,3 +71,18 @@
 		</svg>
 	</div>
 </div>
+
+<style>
+	::-webkit-scrollbar {
+		height: 8px;
+	}
+
+	::-webkit-scrollbar-track {
+		background: none;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply bg-gray-600;
+		border-radius: 4px;
+	}
+</style>
