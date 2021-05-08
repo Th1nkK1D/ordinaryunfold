@@ -6,7 +6,8 @@
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-		"format": "prettier --write --plugin-search-dir=. ."
+		"format": "prettier --write --plugin-search-dir=. .",
+		"deploy": "netlify deploy --prod --dir=build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^1.0.0-next.9",
