@@ -1,6 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@sveltejs/adapter-static': ^1.0.0-next.9
   '@sveltejs/kit': next
   '@typescript-eslint/eslint-plugin': ^4.19.0
   '@typescript-eslint/parser': ^4.19.0
@@ -18,7 +19,8 @@ specifiers:
   windicss: ^2.5.14
 
 devDependencies:
-  '@sveltejs/kit': 1.0.0-next.101_svelte@3.38.2+vite@2.2.4
+  '@sveltejs/adapter-static': 1.0.0-next.9
+  '@sveltejs/kit': 1.0.0-next.102_svelte@3.38.2
   '@typescript-eslint/eslint-plugin': 4.22.1_f2cf9a191be19a59b06aad4f4e4a9af1
   '@typescript-eslint/parser': 4.22.1_eslint@7.25.0+typescript@4.2.4
   eslint: 7.25.0
@@ -102,13 +104,16 @@ packages:
       picomatch: 2.2.3
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.101_svelte@3.38.2+vite@2.2.4:
-    resolution: {integrity: sha512-SwUImLhFmyaDsq7LKRJXPJRIOPa06SWENG7heko5FTRRLMpI/UDFcijjT2ln0Fp+AL9XfSbTHO8QrOflCMbfiQ==}
+  /@sveltejs/adapter-static/1.0.0-next.9:
+    resolution: {integrity: sha512-yqZ+4dzi+2+2jDPHCrI7WrLdXyQ/0U56a7aFdepmodpvpxhazF203D1ez+AtTo27FjMmHjfI+q0O2FivUOosxg==}
+    dev: true
+
+  /@sveltejs/kit/1.0.0-next.102_svelte@3.38.2:
+    resolution: {integrity: sha512-zLCPiKguhN3LjOTnAqudYm9uhkc3O1ELAV8SkXvs1O/a7hWSMFlbuF0aWXE8g6f79aCKjihd29RrdFkLnaZrog==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:
-      svelte: ^3.34.0
-      vite: ^2.2.3
+      svelte: ^3.38.2
     dependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.9_svelte@3.38.2+vite@2.2.4
       cheap-watch: 1.0.3
