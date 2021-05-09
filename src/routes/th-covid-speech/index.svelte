@@ -70,9 +70,11 @@
 
 	export let dailyNewCases: DailyNewCase[];
 
+	let activeSpeechId: number;
+
 	const speeches: Speech[] = speechesData
 		.map(({ date, speaker, note, ...rest }, index) => ({
-			id: index,
+			id: index + 1,
 			date: new Date(date),
 			speaker: speakers.find(({ name }) => name === speaker),
 			...rest
@@ -90,10 +92,10 @@
 			<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 		</div>
 		<div class="relative flex-1">
-			<Chart {dailyNewCases} {speeches} />
+			<Chart {dailyNewCases} {speeches} {activeSpeechId} />
 		</div>
 	</div>
 	<div class="w-full max-w-2xl">
-		<Content {speeches} />
+		<Content {speeches} bind:activeSpeechId />
 	</div>
 </div>

@@ -11,8 +11,10 @@
 
 	export let dailyNewCases: DailyNewCase[];
 	export let speeches: Speech[];
+	export let activeSpeechId: number;
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
+	let horizontalScroll: HTMLElement;
 
 	$: chartHeight = clientHeight - SCROLL_BAR_HEIGHT;
 
@@ -44,7 +46,8 @@
 		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
 
-	$: speechPins = speeches.map(({ date }) => ({
+	$: speechPins = speeches.map(({ id, date }) => ({
+		id,
 		x: Math.round(xScale(date)),
 		y: Math.round(
 			yScale(
@@ -52,13 +55,25 @@
 			)
 		)
 	}));
+
+	$: {
+		if (activeSpeechId) {
+			const left =
+				speechPins.find(({ id }) => id === activeSpeechId).x - horizontalScroll.clientWidth / 2;
+
+			horizontalScroll.scrollTo({
+				left,
+				behavior: 'smooth'
+			});
+		}
+	}
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight>
 	{#each yAxis as label}
 		<YLabel {...label} />
 	{/each}
-	<div class="relative h-full overflow-x-scroll overflow-y-hidden">
+	<div class="relative h-full overflow-x-scroll overflow-y-hidden" bind:this={horizontalScroll}>
 		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {X_MAX_WIDTH}px;">
 			{#each xAxis as label}
 				<XLabel {...label} />
