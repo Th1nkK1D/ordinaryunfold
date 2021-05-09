@@ -14,6 +14,8 @@
 	let container: HTMLElement;
 
 	const dispatch = createEventDispatcher();
+
+	export const getBoundingClientRect = () => container.getBoundingClientRect();
 </script>
 
 <IntersectionObserver
@@ -22,8 +24,9 @@
 	on:intersect={() => dispatch('enter', id)}
 >
 	<div
-		class="text-center space-y-6 transition-opacity duration-300 ease-in-out"
-		class:opacity-20={!isActive}
+		class="text-center space-y-6 transition-opacity duration-300 ease-in-out {isActive
+			? ''
+			: 'opacity-15'}"
 		bind:this={container}
 	>
 		<!-- <div bind:this={intersector} /> -->

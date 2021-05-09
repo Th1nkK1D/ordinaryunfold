@@ -2,8 +2,23 @@
 	import type { Speech } from '../index.svelte';
 	import SpeechBox from './speech-box.svelte';
 
+	const SCREEN_LG = 1024;
+	const MOBILE_OFFSET_TOP = 260;
+
 	export let speeches: Speech[] = [];
 	export let activeSpeechId: number;
+
+	let speechBoxElements = new Map<number, SpeechBox>();
+
+	export const scrollToSpeech = (id: number) => {
+		const { top, height }: DOMRect = speechBoxElements[id].getBoundingClientRect();
+		window.scrollBy({
+			top:
+				top +
+				(window.innerWidth >= SCREEN_LG ? height / 2 - window.innerHeight / 2 : -MOBILE_OFFSET_TOP),
+			behavior: 'smooth'
+		});
+	};
 </script>
 
 <div class="flex flex-col py-6 px-4 space-y-24 md:(py-12 px-10 space-y-36)">
@@ -16,6 +31,7 @@
 	</div>
 	{#each speeches as speech}
 		<SpeechBox
+			bind:this={speechBoxElements[speech.id]}
 			{...speech}
 			isActive={activeSpeechId === speech.id}
 			on:enter={({ detail: id }) => (activeSpeechId = id)}

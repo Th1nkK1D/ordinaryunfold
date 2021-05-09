@@ -9,7 +9,8 @@
 </script>
 
 <div
-	class="absolute w-4 h-4 md:(w-6 h-6) flex shadow rounded-full transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
+	on:click
+	class="absolute w-4 h-4 md:(w-6 h-6) flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
 		? 'bg-white scale-150 z-10'
 		: 'text-white bg-gray-600 hover:scale-150'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"

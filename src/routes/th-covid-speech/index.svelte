@@ -71,6 +71,7 @@
 	export let dailyNewCases: DailyNewCase[];
 
 	let activeSpeechId: number;
+	let scrollToSpeech: (id: number) => void;
 
 	const speeches: Speech[] = speechesData
 		.map(({ date, speaker, note, ...rest }, index) => ({
@@ -87,15 +88,20 @@
 </svelte:head>
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">
-	<div class="h-56 bg-blue-gray-900 flex flex-col sticky top-0 z-10 md:(flex-1 h-screen)">
+	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 md:(flex-1 h-screen)">
 		<div class="flex p-4 -md:(justify-center p-3)">
 			<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 		</div>
 		<div class="relative flex-1">
-			<Chart {dailyNewCases} {speeches} {activeSpeechId} />
+			<Chart
+				{dailyNewCases}
+				{speeches}
+				bind:activeSpeechId
+				on:selectspeech={({ detail: id }) => scrollToSpeech(id)}
+			/>
 		</div>
 	</div>
 	<div class="w-full max-w-2xl">
-		<Content {speeches} bind:activeSpeechId />
+		<Content {speeches} bind:activeSpeechId bind:scrollToSpeech />
 	</div>
 </div>

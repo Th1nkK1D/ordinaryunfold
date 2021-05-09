@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
+	import { createEventDispatcher } from 'svelte';
 	import type { DailyNewCase, Speech } from '../index.svelte';
 	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
@@ -12,6 +13,8 @@
 	export let dailyNewCases: DailyNewCase[];
 	export let speeches: Speech[];
 	export let activeSpeechId: number;
+
+	const dispatch = createEventDispatcher();
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
 	let horizontalScroll: HTMLElement;
@@ -96,7 +99,7 @@
 			/>
 		</svg>
 		{#each speechPins as { x, y, id }}
-			<Pin {x} {y} isActive={id === activeSpeechId} />
+			<Pin {x} {y} isActive={id === activeSpeechId} on:click={() => dispatch('selectspeech', id)} />
 		{/each}
 	</div>
 </div>
