@@ -3,6 +3,8 @@
 	import SpeechBox from './speech-box.svelte';
 
 	export let speeches: Speech[] = [];
+
+	let activeSpeechId: number;
 </script>
 
 <div class="flex flex-col py-6 px-4 space-y-24 md:(py-12 px-10 space-y-36)">
@@ -14,6 +16,10 @@
 		<p class="text-right font-head italic">อัพเดตล่าสุด ...</p>
 	</div>
 	{#each speeches as speech}
-		<SpeechBox {...speech} />
+		<SpeechBox
+			{...speech}
+			isActive={activeSpeechId === speech.id}
+			on:enter={({ detail: id }) => (activeSpeechId = id)}
+		/>
 	{/each}
 </div>

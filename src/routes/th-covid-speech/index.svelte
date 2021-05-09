@@ -30,6 +30,7 @@
 	}
 
 	export interface Speech {
+		id: number;
 		date: Date;
 		quote: string;
 		speaker: Speaker;
@@ -70,7 +71,8 @@
 	export let dailyNewCases: DailyNewCase[];
 
 	const speeches: Speech[] = speechesData
-		.map(({ date, speaker, note, ...rest }) => ({
+		.map(({ date, speaker, note, ...rest }, index) => ({
+			id: index,
 			date: new Date(date),
 			speaker: speakers.find(({ name }) => name === speaker),
 			...rest

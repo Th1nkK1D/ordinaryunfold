@@ -14,6 +14,7 @@ specifiers:
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.2.0
   svelte: ^3.34.0
+  svelte-intersection-observer: ^0.7.0
   svelte-preprocess: ^4.0.0
   tslib: ^2.0.0
   typescript: ^4.0.0
@@ -37,6 +38,7 @@ devDependencies:
   prettier: 2.2.1
   prettier-plugin-svelte: 2.2.0_prettier@2.2.1+svelte@3.38.2
   svelte: 3.38.2
+  svelte-intersection-observer: 0.7.0
   svelte-preprocess: 4.7.3_svelte@3.38.2+typescript@4.2.4
   tslib: 2.2.0
   typescript: 4.2.4
@@ -1394,6 +1396,10 @@ packages:
       svelte: '>=3.19.0'
     dependencies:
       svelte: 3.38.2
+    dev: true
+
+  /svelte-intersection-observer/0.7.0:
+    resolution: {integrity: sha512-i8nbGR1PKdq2ViuzJW6qGu+jy+J0MnlIv/u3CEqssIn5InRNQUU0Z9O9hJbTACMp3e966wU2plFMvl+X3AbmJg==}
     dev: true
 
   /svelte-preprocess/4.7.3_svelte@3.38.2+typescript@4.2.4:
