@@ -95,8 +95,8 @@
 				{points}
 			/>
 		</svg>
-		{#each speechPins as pin}
-			<Pin {...pin} />
+		{#each speechPins as { x, y, id }}
+			<Pin {x} {y} isActive={id === activeSpeechId} />
 		{/each}
 	</div>
 </div>

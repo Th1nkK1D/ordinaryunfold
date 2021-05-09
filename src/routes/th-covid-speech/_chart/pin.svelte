@@ -1,13 +1,18 @@
 <script lang="ts">
 	import Quote from '../_quote.svelte';
 
+	const minBottom = 12;
+
 	export let x: number;
 	export let y: number;
+	export let isActive: boolean = false;
 </script>
 
 <div
-	class="absolute w-6 h-6 flex bg-white shadow rounded-full transform -translate-x-1/2 -translate-y-1/2"
-	style="left: {x}px; bottom: {y}px;"
+	class="absolute w-4 h-4 md:(w-6 h-6) flex shadow rounded-full transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
+		? 'bg-white scale-150 z-10'
+		: 'text-white bg-gray-600 hover:scale-150'}"
+	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 >
-	<Quote class="w-3 m-auto" />
+	<Quote class="w-2 md:w-3 m-auto" />
 </div>

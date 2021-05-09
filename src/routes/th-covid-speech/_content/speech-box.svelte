@@ -28,8 +28,8 @@
 	>
 		<!-- <div bind:this={intersector} /> -->
 		<div class="relative">
-			<Quote class="absolute fill-gray-200 w-12 transform rotate-180 -translate-y-full" />
-			<Quote class="absolute fill-gray-200 w-12 transform right-0 bottom-0 translate-y-full" />
+			<Quote class="absolute text-gray-200 w-12 transform rotate-180 -translate-y-full" />
+			<Quote class="absolute text-gray-200 w-12 transform right-0 bottom-0 translate-y-full" />
 			<p class="text-lg p-2 md:p-4">{quote}</p>
 		</div>
 
