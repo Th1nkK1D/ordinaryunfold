@@ -33,7 +33,6 @@
 		date: Date;
 		quote: string;
 		speaker: Speaker;
-		note?: string;
 		reference: string;
 	}
 
@@ -64,19 +63,17 @@
 
 <script lang="ts">
 	import Chart from './_chart/chart.svelte';
-	import Content from './_content.svelte';
+	import Content from './_content/content.svelte';
 	import speechesData from './_data/speeches.csv';
 	import speakers from './_data/speakers.csv';
 
 	export let dailyNewCases: DailyNewCase[];
 
-	const speeches: Speech[] = speechesData.map(({ date, speaker, ...rest }) => ({
+	const speeches: Speech[] = speechesData.map(({ date, speaker, note, ...rest }) => ({
 		date: new Date(date),
 		speaker: speakers.find(({ name }) => name === speaker),
 		...rest
 	}));
-
-	console.log(speeches);
 </script>
 
 <svelte:head>
@@ -93,6 +90,6 @@
 		</div>
 	</div>
 	<div class="w-full max-w-2xl">
-		<Content />
+		<Content {speeches} />
 	</div>
 </div>
