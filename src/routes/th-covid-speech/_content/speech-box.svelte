@@ -12,7 +12,7 @@
 	<div class="relative">
 		<Quote class="transform rotate-180 -translate-y-full" />
 		<Quote class="transform right-0 bottom-0 translate-y-full" />
-		<p class="text-lg p-4">{quote}</p>
+		<p class="text-lg p-2 md:p-4">{quote}</p>
 	</div>
 
 	<div class="flex flex-col space-y-1">

@@ -80,12 +80,12 @@
 	<title>ในวิกฤติกาลโควิด 19 รัฐบาลไทยได้พูดอะไรไว้บ้าง? - OrdinaryUnfold</title>
 </svelte:head>
 
-<div class="flex flex-col lg:flex-row w-screen h-screen">
-	<div class="-md:h-64 bg-blue-gray-900 flex flex-col md:flex-1">
+<div class="relative flex flex-col lg:flex-row min-h-screen">
+	<div class="h-56 bg-blue-gray-900 flex flex-col sticky top-0 z-10 md:(flex-1 h-screen)">
 		<div class="flex p-4 -md:(justify-center p-3)">
 			<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 		</div>
-		<div class="flex-1">
+		<div class="relative flex-1">
 			<Chart {dailyNewCases} />
 		</div>
 	</div>
