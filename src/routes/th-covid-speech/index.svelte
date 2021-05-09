@@ -69,11 +69,13 @@
 
 	export let dailyNewCases: DailyNewCase[];
 
-	const speeches: Speech[] = speechesData.map(({ date, speaker, note, ...rest }) => ({
-		date: new Date(date),
-		speaker: speakers.find(({ name }) => name === speaker),
-		...rest
-	}));
+	const speeches: Speech[] = speechesData
+		.map(({ date, speaker, note, ...rest }) => ({
+			date: new Date(date),
+			speaker: speakers.find(({ name }) => name === speaker),
+			...rest
+		}))
+		.sort((a, z) => a.date.valueOf() - z.date.valueOf());
 </script>
 
 <svelte:head>
