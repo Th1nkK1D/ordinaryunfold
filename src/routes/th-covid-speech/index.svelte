@@ -88,7 +88,7 @@
 			<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 		</div>
 		<div class="relative flex-1">
-			<Chart {dailyNewCases} />
+			<Chart {dailyNewCases} {speeches} />
 		</div>
 	</div>
 	<div class="w-full max-w-2xl">

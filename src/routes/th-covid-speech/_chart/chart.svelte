@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
-	import type { DailyNewCase } from '../index.svelte';
+	import type { DailyNewCase, Speech } from '../index.svelte';
+	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
 
@@ -9,6 +10,7 @@
 	const SCROLL_BAR_HEIGHT = 8;
 
 	export let dailyNewCases: DailyNewCase[];
+	export let speeches: Speech[];
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
 
@@ -41,6 +43,15 @@
 	$: points = dailyNewCases
 		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
+
+	$: speechPins = speeches.map(({ date }) => ({
+		x: Math.round(xScale(date)),
+		y: Math.round(
+			yScale(
+				dailyNewCases.find((newCase) => newCase.date.toDateString() === date.toDateString()).count
+			)
+		)
+	}));
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight>
@@ -69,6 +80,9 @@
 				{points}
 			/>
 		</svg>
+		{#each speechPins as pin}
+			<Pin {...pin} />
+		{/each}
 	</div>
 </div>
 
