@@ -24,6 +24,19 @@
 		count: number;
 	}
 
+	export interface Speaker {
+		name: string;
+		position: string;
+	}
+
+	export interface Speech {
+		date: Date;
+		quote: string;
+		speaker: Speaker;
+		note?: string;
+		reference: string;
+	}
+
 	export async function load({ fetch }) {
 		const res = await fetch('https://covid19.th-stat.com/api/open/timeline');
 
@@ -52,8 +65,18 @@
 <script lang="ts">
 	import Chart from './_chart/chart.svelte';
 	import Content from './_content.svelte';
+	import speechesData from './_data/speeches.csv';
+	import speakers from './_data/speakers.csv';
 
 	export let dailyNewCases: DailyNewCase[];
+
+	const speeches: Speech[] = speechesData.map(({ date, speaker, ...rest }) => ({
+		date: new Date(date),
+		speaker: speakers.find(({ name }) => name === speaker),
+		...rest
+	}));
+
+	console.log(speeches);
 </script>
 
 <svelte:head>
