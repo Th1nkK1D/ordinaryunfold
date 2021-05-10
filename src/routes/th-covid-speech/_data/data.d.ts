@@ -19,3 +19,13 @@ declare module '*/speakers.csv' {
 
 	export = speakers;
 }
+
+declare module '*/news.csv' {
+	declare const news: Array<{
+		date: string;
+		content: string;
+		reference: string;
+	}>;
+
+	export = news;
+}
