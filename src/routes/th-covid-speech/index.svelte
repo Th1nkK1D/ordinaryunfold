@@ -25,6 +25,7 @@
 	}
 
 	export interface Speaker {
+		id: string;
 		name: string;
 		position: string;
 	}
@@ -77,7 +78,7 @@
 		.map(({ date, speaker, note, ...rest }, index) => ({
 			id: index + 1,
 			date: new Date(date),
-			speaker: speakers.find(({ name }) => name === speaker),
+			speaker: speakers.find(({ id }) => id === speaker),
 			...rest
 		}))
 		.sort((a, z) => a.date.valueOf() - z.date.valueOf());

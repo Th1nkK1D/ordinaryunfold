@@ -12,6 +12,7 @@ declare module '*/speeches.csv' {
 
 declare module '*/speakers.csv' {
 	declare const speakers: Array<{
+		id: string;
 		name: string;
 		position: string;
 	}>;
