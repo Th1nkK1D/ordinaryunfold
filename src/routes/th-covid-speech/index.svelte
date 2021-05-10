@@ -24,20 +24,6 @@
 		count: number;
 	}
 
-	export interface Speaker {
-		id: string;
-		name: string;
-		position: string;
-	}
-
-	export interface Speech {
-		id: number;
-		date: Date;
-		quote: string;
-		speaker: Speaker;
-		reference: string;
-	}
-
 	export async function load({ fetch }) {
 		const res = await fetch('https://covid19.th-stat.com/api/open/timeline');
 
@@ -66,22 +52,12 @@
 <script lang="ts">
 	import Chart from './_chart/chart.svelte';
 	import Content from './_content/content.svelte';
-	import speechesData from './_data/speeches.csv';
-	import speakers from './_data/speakers.csv';
+	import { contentBlocks } from './_data/content';
 
 	export let dailyNewCases: DailyNewCase[];
 
-	let activeSpeechId: number;
+	let activeContentId: number;
 	let scrollToSpeech: (id: number) => void;
-
-	const speeches: Speech[] = speechesData
-		.map(({ date, speaker, note, ...rest }, index) => ({
-			id: index + 1,
-			date: new Date(date),
-			speaker: speakers.find(({ id }) => id === speaker),
-			...rest
-		}))
-		.sort((a, z) => a.date.valueOf() - z.date.valueOf());
 </script>
 
 <svelte:head>
@@ -96,13 +72,13 @@
 		<div class="relative flex-1">
 			<Chart
 				{dailyNewCases}
-				{speeches}
-				bind:activeSpeechId
+				{contentBlocks}
+				bind:activeContentId
 				on:selectspeech={({ detail: id }) => scrollToSpeech(id)}
 			/>
 		</div>
 	</div>
 	<div class="w-full max-w-2xl">
-		<Content {speeches} bind:activeSpeechId bind:scrollToSpeech />
+		<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
 	</div>
 </div>

@@ -1,17 +1,17 @@
 <script lang="ts">
-	import type { Speech } from '../index.svelte';
-	import SpeechBox from './speech-box.svelte';
+	import type { ContentBlock } from '../_data/content';
+	import ContentBox from './content-box.svelte';
 
 	const SCREEN_LG = 1024;
 	const MOBILE_OFFSET_TOP = 260;
 
-	export let speeches: Speech[] = [];
-	export let activeSpeechId: number;
+	export let contentBlocks: ContentBlock[] = [];
+	export let activeContentId: number;
 
-	let speechBoxElements = new Map<number, SpeechBox>();
+	let contentBoxElements = new Map<number, ContentBox>();
 
 	export const scrollToSpeech = (id: number) => {
-		const { top, height }: DOMRect = speechBoxElements[id].getBoundingClientRect();
+		const { top, height }: DOMRect = contentBoxElements[id].getBoundingClientRect();
 		window.scrollBy({
 			top:
 				top +
@@ -29,12 +29,12 @@
 		<div class="h-1 md:h-1.5 w-16 bg-blue-gray-900" />
 		<p class="text-right font-head italic">อัพเดตล่าสุด ...</p>
 	</div>
-	{#each speeches as speech}
-		<SpeechBox
-			bind:this={speechBoxElements[speech.id]}
-			{...speech}
-			isActive={activeSpeechId === speech.id}
-			on:enter={({ detail: id }) => (activeSpeechId = id)}
+	{#each contentBlocks as contentBlock}
+		<ContentBox
+			bind:this={contentBoxElements[contentBlock.id]}
+			{contentBlock}
+			isActive={activeContentId === contentBlock.id}
+			on:enter={() => (activeContentId = contentBlock.id)}
 		/>
 	{/each}
 </div>

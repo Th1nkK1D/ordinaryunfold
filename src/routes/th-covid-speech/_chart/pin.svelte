@@ -5,6 +5,7 @@
 
 	export let x: number;
 	export let y: number;
+	export let type: 'speech' | 'news';
 	export let isActive: boolean = false;
 </script>
 
@@ -15,5 +16,17 @@
 		: 'text-white bg-gray-600 hover:scale-150'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 >
-	<Quote class="w-2 md:w-3 m-auto" />
+	{#if type === 'speech'}
+		<Quote class="w-2 md:w-3 m-auto" />
+	{:else}
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 24 24"
+			class="h-3 md:h-4 m-auto fill-current"
+		>
+			<path d="M0 0h24v24H0V0z" fill="none" />
+			<circle cx="12" cy="19" r="2" />
+			<path d="M10 3h4v12h-4z" />
+		</svg>
+	{/if}
 </div>

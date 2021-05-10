@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
 	import { createEventDispatcher } from 'svelte';
-	import type { DailyNewCase, Speech } from '../index.svelte';
+	import type { DailyNewCase } from '../index.svelte';
+	import type { ContentBlock } from '../_data/content';
 	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
@@ -11,8 +12,8 @@
 	const SCROLL_BAR_HEIGHT = 8;
 
 	export let dailyNewCases: DailyNewCase[];
-	export let speeches: Speech[];
-	export let activeSpeechId: number;
+	export let contentBlocks: ContentBlock[];
+	export let activeContentId: number;
 
 	const dispatch = createEventDispatcher();
 
@@ -49,8 +50,9 @@
 		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
 
-	$: speechPins = speeches.map(({ id, date }) => ({
+	$: pins = contentBlocks.map(({ id, type, date }) => ({
 		id,
+		type,
 		x: Math.round(xScale(date)),
 		y: Math.round(
 			yScale(
@@ -60,9 +62,9 @@
 	}));
 
 	$: {
-		if (activeSpeechId) {
+		if (activeContentId) {
 			const left =
-				speechPins.find(({ id }) => id === activeSpeechId).x - horizontalScroll.clientWidth / 2;
+				pins.find(({ id }) => id === activeContentId).x - horizontalScroll.clientWidth / 2;
 
 			horizontalScroll.scrollTo({
 				left,
@@ -98,8 +100,12 @@
 				{points}
 			/>
 		</svg>
-		{#each speechPins as { x, y, id }}
-			<Pin {x} {y} isActive={id === activeSpeechId} on:click={() => dispatch('selectspeech', id)} />
+		{#each pins as { id, ...rest }}
+			<Pin
+				{...rest}
+				isActive={id === activeContentId}
+				on:click={() => dispatch('selectspeech', id)}
+			/>
 		{/each}
 	</div>
 </div>
