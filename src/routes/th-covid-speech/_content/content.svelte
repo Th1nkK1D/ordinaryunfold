@@ -29,12 +29,13 @@
 		<div class="h-1 md:h-1.5 w-16 bg-blue-gray-900" />
 		<p class="text-right font-head italic">อัพเดตล่าสุด ...</p>
 	</div>
-	{#each contentBlocks as contentBlock}
+	{#each contentBlocks as { id, type, ...contentBlock }}
 		<ContentBox
-			bind:this={contentBoxElements[contentBlock.id]}
+			bind:this={contentBoxElements[id]}
+			{type}
 			{contentBlock}
-			isActive={activeContentId === contentBlock.id}
-			on:enter={() => (activeContentId = contentBlock.id)}
+			isActive={activeContentId === id}
+			on:enter={() => (activeContentId = id)}
 		/>
 	{/each}
 </div>
