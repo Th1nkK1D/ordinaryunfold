@@ -14,7 +14,14 @@
 	<div class="relative">
 		<Quote class="absolute text-gray-200 w-12 transform rotate-180 -translate-y-full" />
 		<Quote class="absolute text-gray-200 w-12 transform right-0 bottom-0 translate-y-full" />
-		<p class="text-lg p-2 md:p-4">{@html quote} <span>({note})</span></p>
+		<div class="p-2 md:p-4 space-y-2">
+			<p class="text-lg">
+				{@html quote}
+			</p>
+			{#if note}
+				<p class="text-sm text-gray-500">({note})</p>
+			{/if}
+		</div>
 	</div>
 
 	<div class="flex flex-col space-y-1">
