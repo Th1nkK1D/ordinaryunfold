@@ -61,7 +61,8 @@
 </script>
 
 <svelte:head>
-	<title>ในวิกฤติกาลโควิด 19 รัฐบาลไทยได้พูดอะไรไว้บ้าง? - OrdinaryUnfold</title>
+	<title>วาทกรรมโควิด 19 - OrdinaryUnfold</title>
+	<meta name="description" content="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลไทยได้พูดอะไรไว้บ้าง?" />
 </svelte:head>
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">

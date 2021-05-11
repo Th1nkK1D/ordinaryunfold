@@ -24,18 +24,17 @@
 </script>
 
 <div
-	class="pt-12 px-4 min-h-md md:(pt-20 px-10 min-h-screen) bg-no-repeat bg-contain bg-bottom"
+	class="pt-12 px-4 min-h-md md:(pt-20 px-10 min-h-screen) bg-no-repeat bg-contain bg-bottom -lg:text-center"
 	style="background-image: url('/th-covid-speech/hero-cover.svg');"
 >
-	<h1 class="font-head font-bold -lg:text-center">
-		<span class="font-normal text-2xl md:text-5xl !leading-normal">ในวิกฤติกาลโควิด 19</span><br />
-		<span class="font-bold text-5xl md:text-8xl !leading-tight">
-			รัฐบาลไทย<br />
-			<span class="text-light-blue-700">ได้พูด</span><br />
-			อะไรไว้บ้าง?
-		</span>
+	<h1 class="font-head font-bold font-bold text-5xl md:text-8xl">
+		วาทกรรม<br />
+		<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 	</h1>
-	<div class="flex mt-4 mb-12 md:(mt-12 mb-36) -lg:(justify-center)">
+	<h2 class="font-head text-xl mt-4 mb-12 md:(text-3xl mt-12 mb-36)">
+		ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลไทยได้พูดอะไรไว้บ้าง?
+	</h2>
+	<div class="flex mb-12 md:mb-36 -lg:(justify-center)">
 		<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
 	</div>
 
