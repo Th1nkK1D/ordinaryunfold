@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '../../../components/footer.svelte';
 	import type { ContentBlock } from '../_data/content';
 	import ContentBox from './content-box.svelte';
 
@@ -44,7 +45,7 @@
 	>
 </div>
 
-<div class="py-6 px-4 space-y-36 mt-36 md:(py-12 px-10 space-y-48 mt-48)">
+<div class="mt-36 py-6 px-4 space-y-48 md:(mt-48 py-12 px-10 space-y-60)">
 	{#each contentBlocks as { id, type, ...contentBlock }}
 		<ContentBox
 			bind:this={contentBoxElements[id]}
@@ -54,4 +55,23 @@
 			on:enter={() => (activeContentId = id)}
 		/>
 	{/each}
+
+	<div class="space-y-4">
+		<p class="text-xl font-head">ที่มาของข้อมูล</p>
+		<ul class="space-y-2">
+			<li>
+				จำนวนผู้ติดเชื่้อโควิดใหม่รายวันจาก <a
+					href="https://covid19.th-stat.com/th/api"
+					class="text-blue-600 hover:underline"
+					target="_black"
+					rel="noreferrer noopener"
+				>
+					Open API กรมควบคุมโรค
+				</a>
+			</li>
+			<li>ข่าวและคำพูดต่างๆ ตามลิ้งค์ที่ได้แนบไว้</li>
+		</ul>
+	</div>
+
+	<Footer />
 </div>

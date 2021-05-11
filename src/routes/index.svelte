@@ -1,3 +1,7 @@
+<script>
+	import Footer from '../components/footer.svelte';
+</script>
+
 <svelte:head>
 	<title>OrdinaryUnfold</title>
 </svelte:head>
@@ -22,5 +26,6 @@
 
 	<h1 class="text-4xl md:text-5xl font-head font-bold">OrdinaryUnfold</h1>
 	<h3 class="text-2xl font-bold">"coming soon"</h3>
-	<p class="text-sm">&copy; OrdinaryUnfold {new Date().getFullYear()} All right reserved</p>
+
+	<Footer />
 </div>
