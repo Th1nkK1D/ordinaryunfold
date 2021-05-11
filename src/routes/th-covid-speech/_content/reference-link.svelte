@@ -7,7 +7,7 @@
 	href={reference}
 	target="_blank"
 	rel="noreferrer noopener"
-	class="text-blue-600 flex flex-row space-x-2 {$$props.class || ''}"
+	class="text-blue-600 flex flex-row space-x-2 hover:underline {$$props.class || ''}"
 >
 	<p>{date.toLocaleDateString('TH-th', { dateStyle: 'medium' })}</p>
 	<svg
