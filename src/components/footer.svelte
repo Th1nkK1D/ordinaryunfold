@@ -1,1 +1,3 @@
-<footer class="text-sm">Copyright &copy; {new Date().getFullYear()} OrdinaryUnfold</footer>
+<footer class="text-sm {$$props.class || ''}">
+	Copyright &copy; {new Date().getFullYear()} OrdinaryUnfold
+</footer>
