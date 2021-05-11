@@ -25,7 +25,7 @@
 
 <div
 	class="pt-12 px-4 min-h-md md:(pt-20 px-10 min-h-screen) bg-no-repeat bg-contain bg-bottom"
-	style="background-image: url('th-covid-speech/hero-cover.svg');"
+	style="background-image: url('/th-covid-speech/hero-cover.svg');"
 >
 	<h1 class="font-head font-bold -lg:text-center">
 		<span class="font-normal text-2xl md:text-5xl !leading-normal">ในวิกฤติกาลโควิด 19</span><br />

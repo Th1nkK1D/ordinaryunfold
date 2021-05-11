@@ -27,7 +27,7 @@
 	<div class="flex flex-col space-y-1">
 		<img
 			class="w-24 mx-auto rounded-full object-cover"
-			src="https://via.placeholder.com/150"
+			src="/th-covid-speech/speakers/{speaker.id}.jpeg"
 			alt={speaker.name}
 		/>
 		<p class="font-bold">{speaker.name}</p>
