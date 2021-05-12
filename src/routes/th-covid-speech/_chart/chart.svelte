@@ -50,16 +50,20 @@
 		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
 
-	$: pins = contentBlocks.map(({ id, type, date }) => ({
-		id,
-		type,
-		x: Math.round(xScale(date)),
-		y: Math.round(
-			yScale(
-				dailyNewCases.find((newCase) => newCase.date.toDateString() === date.toDateString()).count
-			)
-		)
-	}));
+	$: pins = contentBlocks.map(({ id, type, date }) => {
+		const { count } = dailyNewCases.find(
+			(newCase) => newCase.date.toDateString() === date.toDateString()
+		);
+
+		return {
+			id,
+			type,
+			date,
+			count,
+			x: Math.round(xScale(date)),
+			y: Math.round(yScale(count))
+		};
+	});
 
 	$: {
 		if (activeContentId) {

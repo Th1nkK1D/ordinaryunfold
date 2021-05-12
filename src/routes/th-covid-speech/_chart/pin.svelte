@@ -1,28 +1,50 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import Quote from '../_quote.svelte';
 
 	const minBottom = 12;
 
 	export let x: number;
 	export let y: number;
+	export let date: Date;
+	export let count: number;
 	export let type: 'speech' | 'news';
 	export let isActive: boolean = false;
+
+	let isHovered = false;
 </script>
 
+{#if isActive || isHovered}
+	<div
+		class="absolute mb-1 md:mb-2 shadow transform -translate-x-full bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isHovered
+			? 'z-30'
+			: 'z-20'}"
+		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
+		transition:fade={{ duration: 150 }}
+	>
+		<p class="text-xs whitespace-nowrap">
+			{date.toLocaleDateString('TH-th', { year: '2-digit', month: 'short', day: 'numeric' })}
+		</p>
+		<p class="text-sm font-bold">+{count.toLocaleString('TH-th')}</p>
+	</div>
+{/if}
+
 <div
-	on:click
-	class="absolute w-4 h-4 md:(w-6 h-6) flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
-		? 'bg-white scale-150 z-10'
-		: 'text-white bg-gray-600 hover:scale-150'}"
+	class="absolute w-6 h-6 md:(w-8 h-8) text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
+		? 'bg-blue-600 scale-120 z-40'
+		: 'bg-gray-600 hover:(z-50 scale-120)'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
+	on:click
+	on:mouseover={() => (isHovered = true)}
+	on:mouseleave={() => (isHovered = false)}
 >
 	{#if type === 'speech'}
-		<Quote class="w-2 md:w-3 m-auto" />
+		<Quote class="w-3 md:w-4 m-auto" />
 	{:else}
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
-			class="h-3 md:h-4 m-auto fill-current"
+			class="h-4 md:h-5 m-auto fill-current"
 		>
 			<path d="M0 0h24v24H0V0z" fill="none" />
 			<circle cx="12" cy="19" r="2" />
