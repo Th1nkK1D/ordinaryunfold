@@ -61,7 +61,7 @@
 </script>
 
 <svelte:head>
-	<title>วาทกรรมโควิด 19 - OrdinaryUnfold</title>
+	<title>สุนทรพจน์โควิด 19 - OrdinaryUnfold</title>
 	<meta name="description" content="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลไทยได้พูดอะไรไว้บ้าง?" />
 </svelte:head>
 

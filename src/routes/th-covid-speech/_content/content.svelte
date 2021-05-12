@@ -28,7 +28,7 @@
 	style="background-image: url('/th-covid-speech/hero-cover.svg');"
 >
 	<h1 class="font-head font-bold font-bold text-5xl md:text-8xl">
-		วาทกรรม<br />
+		สุนทรพจน์<br />
 		<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 	</h1>
 	<h2 class="font-head text-xl mt-4 mb-12 md:(text-3xl mt-12 mb-36)">
