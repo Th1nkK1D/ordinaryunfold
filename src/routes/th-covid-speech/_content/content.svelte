@@ -28,11 +28,11 @@
 	style="background-image: url('/th-covid-speech/hero-cover.svg');"
 >
 	<h1 class="font-head font-bold font-bold text-5xl md:text-8xl">
-		สุนทรพจน์<br />
+		วิวาทะ<br />
 		<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 	</h1>
 	<h2 class="font-head text-xl mt-4 mb-12 md:(text-3xl mt-12 mb-36)">
-		ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลไทยได้พูดอะไรไว้บ้าง?
+		ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลหรือใครได้พูดอะไรไว้บ้าง?
 	</h2>
 	<div class="flex mb-12 md:mb-36 -lg:(justify-center)">
 		<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />

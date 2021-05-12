@@ -61,8 +61,11 @@
 </script>
 
 <svelte:head>
-	<title>สุนทรพจน์โควิด 19 - OrdinaryUnfold</title>
-	<meta name="description" content="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลไทยได้พูดอะไรไว้บ้าง?" />
+	<title>วิวาทะโควิด 19 - OrdinaryUnfold</title>
+	<meta
+		name="description"
+		content="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลหรือใครได้พูดอะไรไว้บ้าง?"
+	/>
 </svelte:head>
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">
