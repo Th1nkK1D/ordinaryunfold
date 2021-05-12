@@ -2,7 +2,7 @@
 	import { scaleTime, scaleLinear } from 'd3-scale';
 	import { createEventDispatcher } from 'svelte';
 	import type { DailyNewCase } from '../index.svelte';
-	import type { ContentBlock } from '../_data/content';
+	import type { ContentBlock, Speech } from '../_data/content';
 	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
@@ -10,6 +10,7 @@
 	const X_MAX_WIDTH = 1500;
 	const Y_STEP_SIZE = 1000;
 	const SCROLL_BAR_HEIGHT = 8;
+	const MARGIN_TOP = 30;
 
 	export let dailyNewCases: DailyNewCase[];
 	export let contentBlocks: ContentBlock[];
@@ -28,7 +29,9 @@
 		.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
 		.range([0, X_MAX_WIDTH]);
 
-	$: yScale = scaleLinear().domain([0, yMax]).range([0, chartHeight]);
+	$: yScale = scaleLinear()
+		.domain([0, yMax])
+		.range([0, chartHeight - MARGIN_TOP]);
 
 	const xAxis = dailyNewCases
 		.filter(({ date }) => date.getDate() === 1)
@@ -50,7 +53,7 @@
 		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
 		.join(' ');
 
-	$: pins = contentBlocks.map(({ id, type, date }) => {
+	$: pins = contentBlocks.map(({ id, type, date, ...rest }) => {
 		const { count } = dailyNewCases.find(
 			(newCase) => newCase.date.toDateString() === date.toDateString()
 		);
@@ -60,6 +63,7 @@
 			type,
 			date,
 			count,
+			speaker: type === 'speech' ? (rest as Speech).speaker : undefined,
 			x: Math.round(xScale(date)),
 			y: Math.round(yScale(count))
 		};

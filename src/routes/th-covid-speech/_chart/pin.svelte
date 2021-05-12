@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import Quote from '../_quote.svelte';
+	import type { Speaker } from '../_data/content';
 
 	const minBottom = 12;
 
@@ -8,6 +8,7 @@
 	export let y: number;
 	export let date: Date;
 	export let count: number;
+	export let speaker: Speaker | undefined;
 	export let type: 'speech' | 'news';
 	export let isActive: boolean = false;
 
@@ -16,8 +17,8 @@
 
 {#if isActive || isHovered}
 	<div
-		class="absolute mb-1 md:mb-2 shadow transform -translate-x-full bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isHovered
-			? 'z-30'
+		class="absolute mb-2 md:mb-4 shadow transform -translate-x-1/2 bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isHovered
+			? 'z-30 -md:hidden'
 			: 'z-20'}"
 		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 		transition:fade={{ duration: 150 }}
@@ -31,15 +32,19 @@
 
 <div
 	class="absolute w-6 h-6 md:(w-8 h-8) text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
-		? 'bg-blue-600 scale-120 z-40'
-		: 'bg-gray-600 hover:(z-50 scale-120)'}"
+		? 'bg-blue-500 scale-120 z-40'
+		: 'bg-gray-500 hover:(z-50 scale-130)'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 	on:click
 	on:mouseover={() => (isHovered = true)}
 	on:mouseleave={() => (isHovered = false)}
 >
 	{#if type === 'speech'}
-		<Quote class="w-3 md:w-4 m-auto" />
+		<img
+			src="/th-covid-speech/speakers/{speaker.id}.jpeg"
+			alt={speaker.name}
+			class="rounded-full p-0.5 md:p-1 m-auto"
+		/>
 	{:else}
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
