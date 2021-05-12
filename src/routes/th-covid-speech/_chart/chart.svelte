@@ -7,7 +7,7 @@
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
 
-	const X_MAX_WIDTH = 1500;
+	const WIDTH_SCREEN_MULTIPLIER = 3;
 	const Y_STEP_SIZE = 1000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 30;
@@ -19,21 +19,24 @@
 	const dispatch = createEventDispatcher();
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
+	let clientWidth = 0;
 	let horizontalScroll: HTMLElement;
 
 	$: chartHeight = clientHeight - SCROLL_BAR_HEIGHT;
 
 	const yMax = Math.max(...dailyNewCases.map(({ count }) => count));
 
-	const xScale = scaleTime()
+	$: xMaxWidth = clientWidth * WIDTH_SCREEN_MULTIPLIER;
+
+	$: xScale = scaleTime()
 		.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
-		.range([0, X_MAX_WIDTH]);
+		.range([0, xMaxWidth]);
 
 	$: yScale = scaleLinear()
 		.domain([0, yMax])
 		.range([0, chartHeight - MARGIN_TOP]);
 
-	const xAxis = dailyNewCases
+	$: xAxis = dailyNewCases
 		.filter(({ date }) => date.getDate() === 1)
 		.map(({ date }) => ({
 			date,
@@ -82,17 +85,20 @@
 	}
 </script>
 
-<div class="relative h-full w-full" bind:clientHeight>
+<div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
+	<div class="absolute top-0 left-0 right-0 flex p-4 -md:(justify-center p-3)">
+		<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
+	</div>
 	{#each yAxis as label}
 		<YLabel {...label} />
 	{/each}
 	<div class="relative h-full overflow-x-scroll overflow-y-hidden" bind:this={horizontalScroll}>
-		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {X_MAX_WIDTH}px;">
+		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {xMaxWidth}px;">
 			{#each xAxis as label}
 				<XLabel {...label} />
 			{/each}
 		</div>
-		<svg class="absolute" viewBox="0 0 {X_MAX_WIDTH} {chartHeight}" style="width: {X_MAX_WIDTH}px;">
+		<svg class="absolute" viewBox="0 0 {xMaxWidth} {chartHeight}" style="width: {xMaxWidth}px;">
 			<defs>
 				<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
 					<stop offset="0%" stop-color="#FF4D00" />

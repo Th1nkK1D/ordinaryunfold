@@ -70,9 +70,6 @@
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">
 	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 md:(flex-1 h-screen)">
-		<div class="flex p-4 -md:(justify-center p-3)">
-			<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
-		</div>
 		<div class="relative flex-1">
 			<Chart
 				{dailyNewCases}
