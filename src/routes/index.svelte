@@ -6,9 +6,9 @@
 <Metadata />
 
 <div
-	class="w-screen h-screen bg-blue-gray-800 text-white flex-1 flex flex-col justify-center items-center m-auto space-y-4"
+	class="w-full min-h-screen bg-cool-gray-900 text-white flex-1 flex flex-col justify-center items-center m-auto space-y-8 text-center px-3 py-18"
 >
-	<svg class="w-32" viewBox="0 0 45 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+	<svg class="w-24 md:w-32" viewBox="0 0 45 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 		<path
 			d="M35.0261 7.25519C35.0261 7.70765 34.8014 8.29327 34.064 8.98587C33.3238 9.68105 32.1717 10.3762 30.6232 10.9914C27.5347 12.2183 23.1654 13.0104 18.2631 13.0104C13.3608 13.0104 8.9914 12.2183 5.90292 10.9914C4.35436 10.3762 3.20227 9.68105 2.46212 8.98587C1.7247 8.29327 1.5 7.70765 1.5 7.25519C1.5 6.80272 1.7247 6.2171 2.46212 5.5245C3.20227 4.82933 4.35436 4.1342 5.90292 3.51902C8.9914 2.29209 13.3608 1.5 18.2631 1.5C23.1654 1.5 27.5347 2.29209 30.6232 3.51902C32.1717 4.1342 33.3238 4.82933 34.064 5.5245C34.8014 6.2171 35.0261 6.80272 35.0261 7.25519Z"
 			stroke="white"
@@ -25,6 +25,18 @@
 
 	<h1 class="text-4xl md:text-5xl font-head font-bold">OrdinaryUnfold</h1>
 	<h3 class="text-2xl font-bold">Bite-size visualization and storytelling experiments</h3>
+
+	<p class="max-w-screen-md mx-auto">
+		We just launch first experimental story about Thailand Covid-19 related speeches<br />(sorry
+		folks, it is written in Thai)
+	</p>
+
+	<a
+		href="/th-covid-speech"
+		class="w-full max-w-92 rounded-lg overflow-hidden shadow-lg mx-auto transform transition-transform duration-200 ease-in-out hover:(scale-102 shadow-xl)"
+	>
+		<img src="/th-covid-speech/og.png" class="" alt="วิวาทะโควิด 19" />
+	</a>
 
 	<Footer />
 </div>
