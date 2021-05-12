@@ -1,12 +1,11 @@
 <script lang="ts">
 	import ReferenceLink from './reference-link.svelte';
 
-	export let date: Date;
 	export let content: string;
 	export let reference: string;
 </script>
 
-<div class="rounded-lg p-4 md:p-6 space-y-2 bg-blue-50 flex flex-col">
+<div class="rounded-lg p-4 md:p-6 space-x-2 bg-blue-50 flex flex-row">
 	<div>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="fill-blue-300 w-8">
 			<path d="M0 0h24v24H0V0z" fill="none" />
@@ -17,9 +16,5 @@
 		</svg>
 	</div>
 
-	<p>{content}</p>
-
-	<div class="flex flex-row justify-end">
-		<ReferenceLink {date} {reference} />
-	</div>
+	<p class="flex-1">{content} <ReferenceLink {reference} /></p>
 </div>

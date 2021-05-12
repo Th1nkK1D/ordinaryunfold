@@ -1,15 +1,13 @@
 <script lang="ts">
 	export let reference: string;
-	export let date: Date;
 </script>
 
 <a
 	href={reference}
 	target="_blank"
 	rel="noreferrer noopener"
-	class="text-blue-600 flex flex-row space-x-2 hover:underline {$$props.class || ''}"
+	class="text-blue-600 inline-flex hover:underline {$$props.class || ''}"
 >
-	<p>{date.toLocaleDateString('TH-th', { dateStyle: 'medium' })}</p>
 	<svg
 		width="13"
 		height="13"

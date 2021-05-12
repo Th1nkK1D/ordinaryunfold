@@ -50,10 +50,11 @@
 </div>
 
 <div class="mt-36 py-6 px-4 space-y-48 md:(mt-48 py-12 px-10 space-y-60)">
-	{#each contentBlocks as { id, type, ...contentBlock }}
+	{#each contentBlocks as { id, type, date, ...contentBlock }}
 		<ContentBox
 			bind:this={contentBoxElements[id]}
 			{type}
+			{date}
 			{contentBlock}
 			isActive={activeContentId === id}
 			on:enter={() => (activeContentId = id)}

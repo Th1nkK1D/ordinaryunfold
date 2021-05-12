@@ -3,7 +3,6 @@
 	import Quote from '../_quote.svelte';
 	import ReferenceLink from './reference-link.svelte';
 
-	export let date: Date;
 	export let quote: string;
 	export let note: string;
 	export let speaker: Speaker;
@@ -17,6 +16,7 @@
 		<div class="p-2 md:p-4 space-y-2">
 			<p class="text-lg">
 				{@html quote}
+				<ReferenceLink {reference} />
 			</p>
 			{#if note}
 				<p class="text-sm text-gray-500">({note})</p>
@@ -32,6 +32,5 @@
 		/>
 		<p class="font-bold">{speaker.name}</p>
 		<p class="italic">{speaker.position}</p>
-		<ReferenceLink class="mx-auto" {date} {reference} />
 	</div>
 </div>

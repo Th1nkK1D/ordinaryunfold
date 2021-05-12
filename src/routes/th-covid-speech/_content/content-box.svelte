@@ -5,9 +5,10 @@
 	import SpeechBox from './speech-box.svelte';
 	import NewsBox from './news-box.svelte';
 
-	export let contentBlock: Omit<ContentBlock, 'id' | 'type'>;
+	export let contentBlock: Omit<ContentBlock, 'id' | 'type' | 'date'>;
 	export let type: 'speech' | 'news';
 	export let isActive: boolean = false;
+	export let date: Date;
 
 	let container: HTMLElement;
 
@@ -22,9 +23,13 @@
 	on:intersect={() => dispatch('enter')}
 >
 	<div
-		class="transition-opacity duration-300 ease-in-out {isActive ? '' : 'opacity-15'}"
+		class="transition-opacity duration-300 ease-in-out space-y-12 {isActive ? '' : 'opacity-15'}"
 		bind:this={container}
 	>
+		<p class="font-head text-center text-xl text-light-blue-600">
+			[ {date.toLocaleDateString('TH-th', { dateStyle: 'medium' })} ]
+		</p>
+
 		{#if type === 'speech'}
 			<SpeechBox {...contentBlock} />
 		{:else}
