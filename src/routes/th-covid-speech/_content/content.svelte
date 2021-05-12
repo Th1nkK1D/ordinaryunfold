@@ -82,6 +82,14 @@
 					</a>
 				</li>
 				<li>ข่าวและคำพูดต่างๆ ตามลิ้งค์ที่ได้แนบไว้</li>
+				<li>
+					มีคำพูดหรือเหตุการที่น่าสนใจ? <a
+						href="https://docs.google.com/forms/d/e/1FAIpQLSdx-AyhmdZh9gd-oJvS51MRbTy5ehQ9_n2B1hLkMMREJv3I6g/viewform?usp=sf_link"
+						class="text-blue-600 hover:underline"
+						target="_black"
+						rel="noreferrer noopener">บอกเราได้ที่นี่</a
+					>
+				</li>
 			</ul>
 		</div>
 
