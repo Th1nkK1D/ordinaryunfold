@@ -12,7 +12,7 @@
 	<title>{title ? `${title} - ${SITE_NAME}` : SITE_NAME}</title>
 	<meta name="description" content={description} />
 
-	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="{BASE_URL}{path}" />
 	<meta property="og:title" content={title || SITE_NAME} />
