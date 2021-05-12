@@ -32,7 +32,7 @@
 		<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 	</h1>
 	<h2 class="font-head text-xl mt-4 mb-12 md:(text-3xl mt-12 mb-36)">
-		ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลหรือใครได้พูดอะไรไว้บ้าง?
+		รัฐบาลหรือใครได้พูดอะไรไว้ ในแต่ละช่วงของวิกฤติกาล
 	</h2>
 	<div class="flex mb-12 md:mb-36 -lg:(justify-center)">
 		<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
