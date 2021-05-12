@@ -86,7 +86,7 @@
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
-	<div class="absolute top-0 left-0 right-0 flex p-4 -md:(justify-center p-3)">
+	<div class="absolute top-0 left-0 right-0 flex p-4 z-10 -md:(justify-center p-3)">
 		<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 	</div>
 	{#each yAxis as label}

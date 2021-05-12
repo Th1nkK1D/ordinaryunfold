@@ -1,10 +1,9 @@
 <script>
+	import Metadata from '../components/metadata.svelte';
 	import Footer from '../components/footer.svelte';
 </script>
 
-<svelte:head>
-	<title>OrdinaryUnfold</title>
-</svelte:head>
+<Metadata />
 
 <div
 	class="w-screen h-screen bg-blue-gray-800 text-white flex-1 flex flex-col justify-center items-center m-auto space-y-4"
@@ -25,7 +24,7 @@
 	</svg>
 
 	<h1 class="text-4xl md:text-5xl font-head font-bold">OrdinaryUnfold</h1>
-	<h3 class="text-2xl font-bold">"coming soon"</h3>
+	<h3 class="text-2xl font-bold">Bite-size visualization and storytelling experiments</h3>
 
 	<Footer />
 </div>

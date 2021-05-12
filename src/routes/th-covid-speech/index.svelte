@@ -50,6 +50,7 @@
 </script>
 
 <script lang="ts">
+	import Metadata from '../../components/metadata.svelte';
 	import Chart from './_chart/chart.svelte';
 	import Content from './_content/content.svelte';
 	import { contentBlocks } from './_data/content';
@@ -60,13 +61,12 @@
 	let scrollToSpeech: (id: number) => void;
 </script>
 
-<svelte:head>
-	<title>วิวาทะโควิด 19 - OrdinaryUnfold</title>
-	<meta
-		name="description"
-		content="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลหรือใครได้พูดอะไรไว้บ้าง?"
-	/>
-</svelte:head>
+<Metadata
+	title="วิวาทะโควิด 19"
+	description="ย้อนดูแต่ละช่วงของวิกฤติกาล ว่ารัฐบาลหรือใครได้พูดอะไรไว้บ้าง?"
+	path="/th-covid-speech"
+	image="/th-covid-speech/og.png"
+/>
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">
 	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 lg:(flex-1 h-screen)">
