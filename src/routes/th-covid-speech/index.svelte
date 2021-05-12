@@ -69,7 +69,7 @@
 </svelte:head>
 
 <div class="relative flex flex-col lg:flex-row min-h-screen">
-	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 md:(flex-1 h-screen)">
+	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 lg:(flex-1 h-screen)">
 		<div class="relative flex-1">
 			<Chart
 				{dailyNewCases}
@@ -79,7 +79,7 @@
 			/>
 		</div>
 	</div>
-	<div class="w-full max-w-2xl">
+	<div class="w-full lg:max-w-2xl">
 		<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
 	</div>
 </div>

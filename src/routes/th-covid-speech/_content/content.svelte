@@ -5,7 +5,7 @@
 	import ContentBox from './content-box.svelte';
 
 	const SCREEN_LG = 1024;
-	const MOBILE_OFFSET_TOP = 220;
+	const MOBILE_OFFSET_TOP = 240;
 
 	export let contentBlocks: ContentBlock[] = [];
 	export let activeContentId: number;
@@ -24,7 +24,7 @@
 </script>
 
 <div
-	class="pt-12 px-4 min-h-md md:(pt-20 px-10 min-h-screen) bg-no-repeat bg-contain bg-bottom -lg:text-center"
+	class="pt-12 px-4 min-h-md lg:(pt-20 px-10 min-h-screen) bg-no-repeat bg-contain bg-bottom -lg:text-center"
 	style="background-image: url('/th-covid-speech/hero-cover.svg');"
 >
 	<h1 class="font-head font-bold font-bold text-5xl md:text-8xl">
@@ -49,7 +49,7 @@
 	>
 </div>
 
-<div class="mt-36 py-6 px-4 space-y-48 md:(mt-48 py-12 px-10 space-y-60)">
+<div class="mt-36 py-6 px-4 space-y-48 max-w-2xl mx-auto lg:(mt-48 py-12 px-10 space-y-60)">
 	{#each contentBlocks as { id, type, date, ...contentBlock }}
 		<ContentBox
 			bind:this={contentBoxElements[id]}
