@@ -15,6 +15,7 @@
 	const dispatch = createEventDispatcher();
 
 	export const getBoundingClientRect = () => container.getBoundingClientRect();
+
 </script>
 
 <IntersectionObserver
@@ -23,7 +24,9 @@
 	on:intersect={() => dispatch('enter')}
 >
 	<div
-		class="transition-opacity duration-300 ease-in-out space-y-12 {isActive ? '' : 'opacity-15'}"
+		class="transition-opacity duration-300 ease-in-out space-y-12 my-24 md:my-30 {isActive
+			? ''
+			: 'opacity-15'}"
 		bind:this={container}
 	>
 		<p class="font-head text-center text-xl text-light-blue-600">

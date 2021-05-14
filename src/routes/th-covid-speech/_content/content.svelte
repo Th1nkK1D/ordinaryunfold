@@ -4,6 +4,7 @@
 	import type { ContentBlock } from '../_data/content';
 	import ContentBox from './content-box.svelte';
 	import { isScreenLarge } from '../../../utils/screen';
+	import SortButton from './sort-button.svelte';
 
 	const MOBILE_OFFSET_TOP = 240;
 
@@ -11,6 +12,7 @@
 	export let activeContentId: number;
 
 	let contentBoxElements = new Map<number, ContentBox>();
+	let isReversed: boolean = false;
 
 	export const scrollToSpeech = (id: number) => {
 		const { top, height }: DOMRect = contentBoxElements[id].getBoundingClientRect();
@@ -18,6 +20,13 @@
 			top: top + (isScreenLarge() ? height / 2 - window.innerHeight / 2 : -MOBILE_OFFSET_TOP),
 			behavior: 'smooth'
 		});
+	};
+
+	const getTopContentId = () => contentBlocks[isReversed ? contentBlocks.length - 1 : 0].id;
+
+	const onClickReverse = () => {
+		isReversed = !isReversed;
+		activeContentId = getTopContentId();
 	};
 
 </script>
@@ -41,26 +50,34 @@
 		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		class="w-12 cursor-pointer fill-light-blue-700 hover:fill-light-blue-500 -lg:mx-auto"
-		on:click={() => scrollToSpeech(1)}
+		on:click={() => scrollToSpeech(getTopContentId())}
 		><path d="M0 0h24v24H0V0z" fill="none" /><path
 			d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
 		/></svg
 	>
 </div>
 
-<div class="mt-36 py-6 px-4 space-y-48 max-w-2xl mx-auto lg:(mt-48 py-12 px-10 space-y-60)">
-	{#each contentBlocks as { id, type, date, ...contentBlock }}
-		<ContentBox
-			bind:this={contentBoxElements[id]}
-			{type}
-			{date}
-			{contentBlock}
-			isActive={activeContentId === id}
-			on:enter={() => (activeContentId = id)}
-		/>
-	{/each}
+<div class="py-6 px-4 mt-24 lg:(py-12 px-10 mt-0)">
+	<SortButton {isReversed} on:click={onClickReverse} />
 
-	<div class="flex justify-center">
+	<div
+		class="flex py-6 px-4 max-w-2xl mx-auto lg:(py-12 px-10) {isReversed
+			? 'flex-col-reverse'
+			: 'flex-col'}"
+	>
+		{#each contentBlocks as { id, type, date, ...contentBlock }}
+			<ContentBox
+				bind:this={contentBoxElements[id]}
+				{type}
+				{date}
+				{contentBlock}
+				isActive={activeContentId === id}
+				on:enter={() => (activeContentId = id)}
+			/>
+		{/each}
+	</div>
+
+	<div class="flex justify-center mb-24">
 		<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
 	</div>
 
