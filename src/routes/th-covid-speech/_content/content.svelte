@@ -3,8 +3,8 @@
 	import Footer from '../../../components/footer.svelte';
 	import type { ContentBlock } from '../_data/content';
 	import ContentBox from './content-box.svelte';
+	import { isScreenLarge } from '../../../utils/screen';
 
-	const SCREEN_LG = 1024;
 	const MOBILE_OFFSET_TOP = 240;
 
 	export let contentBlocks: ContentBlock[] = [];
@@ -15,9 +15,7 @@
 	export const scrollToSpeech = (id: number) => {
 		const { top, height }: DOMRect = contentBoxElements[id].getBoundingClientRect();
 		window.scrollBy({
-			top:
-				top +
-				(window.innerWidth >= SCREEN_LG ? height / 2 - window.innerHeight / 2 : -MOBILE_OFFSET_TOP),
+			top: top + (isScreenLarge() ? height / 2 - window.innerHeight / 2 : -MOBILE_OFFSET_TOP),
 			behavior: 'smooth'
 		});
 	};

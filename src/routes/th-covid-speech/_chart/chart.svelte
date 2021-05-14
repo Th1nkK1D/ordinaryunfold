@@ -83,14 +83,15 @@
 			});
 		}
 	}
+
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
 	<div class="absolute top-0 left-0 right-0 flex p-4 z-10 -md:(justify-center p-3)">
 		<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
 	</div>
-	{#each yAxis as label}
-		<YLabel {...label} />
+	{#each yAxis as label, index}
+		<YLabel {index} {...label} />
 	{/each}
 	<div class="relative h-full overflow-x-scroll overflow-y-hidden" bind:this={horizontalScroll}>
 		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {xMaxWidth}px;">
@@ -137,4 +138,5 @@
 		@apply bg-gray-600;
 		border-radius: 4px;
 	}
+
 </style>
