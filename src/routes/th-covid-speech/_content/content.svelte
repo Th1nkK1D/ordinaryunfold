@@ -45,9 +45,7 @@
 				วิวาทะ<br />
 				<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 			</h1>
-			<h2 class="font-head text-xl md:text-3xl">
-				รัฐบาลหรือใครได้พูดอะไรไว้ ในแต่ละช่วงของวิกฤติกาล
-			</h2>
+			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
 			<div class="-lg:mx-auto">
 				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
 			</div>

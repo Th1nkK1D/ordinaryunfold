@@ -65,7 +65,7 @@
 
 <Metadata
 	title="วิวาทะโควิด 19"
-	description="รัฐบาลหรือใครได้พูดอะไรไว้ ในแต่ละช่วงของวิกฤติกาล"
+	description="ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล"
 	path="/th-covid-speech"
 	image="/th-covid-speech/og.png"
 />
