@@ -71,7 +71,7 @@
 />
 
 <div class="relative flex flex-col lg:flex-row h-screen">
-	<div class="bg-blue-gray-900 lg:flex-1 -lg:h-30vh">
+	<div class="bg-blue-gray-900 lg:flex-1 -lg:h-32vh">
 		<Chart
 			{dailyNewCases}
 			{contentBlocks}
