@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { isScreenLarge } from '../../../utils/screen';
 	import { fade } from 'svelte/transition';
 	import type { Speaker } from '../_data/content';
 
@@ -13,12 +14,14 @@
 	export let isActive: boolean = false;
 
 	let isHovered = false;
+
 </script>
 
 {#if isActive || isHovered}
 	<div
-		class="absolute mb-2 md:mb-4 shadow transform -translate-x-1/2 bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isHovered
-			? 'z-30 -md:hidden'
+		class="absolute mb-2 md:mb-4 shadow transform -translate-x-1/2 bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isScreenLarge() &&
+		isHovered
+			? 'z-40 -md:hidden'
 			: 'z-20'}"
 		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 		transition:fade={{ duration: 150 }}
@@ -32,7 +35,7 @@
 
 <div
 	class="absolute w-6 h-6 md:(w-8 h-8) text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
-		? 'bg-blue-500 scale-120 z-40'
+		? 'bg-blue-500 scale-120 z-30'
 		: 'bg-gray-500 hover:(z-50 scale-130)'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 	on:click
