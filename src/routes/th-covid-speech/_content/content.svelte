@@ -95,7 +95,7 @@
 					<li>
 						จำนวนผู้ติดเชื้อใหม่รายวันจาก <a
 							href="https://covid19.th-stat.com/th/api"
-							class="text-blue-600 hover:underline"
+							class="text-light-blue-700 hover:underline"
 							target="_black"
 							rel="noreferrer noopener"
 						>
@@ -106,7 +106,7 @@
 					<li>
 						มีคำพูดหรือเหตุการที่น่าสนใจ? <a
 							href="https://docs.google.com/forms/d/e/1FAIpQLSdx-AyhmdZh9gd-oJvS51MRbTy5ehQ9_n2B1hLkMMREJv3I6g/viewform?usp=sf_link"
-							class="text-blue-600 hover:underline"
+							class="text-light-blue-700 hover:underline"
 							target="_black"
 							rel="noreferrer noopener">บอกเราได้ที่นี่</a
 						>

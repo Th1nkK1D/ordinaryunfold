@@ -2,6 +2,7 @@
 	export let url: string;
 
 	$: encodedUrl = encodeURI(url);
+
 </script>
 
 <div class="flex flex-row space-x-4 md:space-x-6 {$$props.class || ''}">
@@ -9,6 +10,7 @@
 		href="http://www.facebook.com/sharer/sharer.php?u={encodedUrl}"
 		target="_black"
 		rel="noreferrer noopener"
+		aria-label="Share to Facebook"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -25,6 +27,7 @@
 		href="https://twitter.com/intent/tweet?url={encodedUrl}"
 		target="_black"
 		rel="noreferrer noopener"
+		aria-label="Share to Twitter"
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -43,10 +46,11 @@
 
 <style>
 	a {
-		@apply text-blue-400 hover:text-blue-600;
+		@apply text-light-blue-400 hover:text-light-blue-700;
 	}
 
 	svg {
 		@apply h-6 md:h-8;
 	}
+
 </style>

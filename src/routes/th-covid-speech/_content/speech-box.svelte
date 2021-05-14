@@ -13,8 +13,8 @@
 
 <div class="text-center space-y-6">
 	<div class="relative">
-		<Quote class="absolute text-blue-200 w-12 transform rotate-180 -translate-y-full" />
-		<Quote class="absolute text-blue-200 w-12 transform right-0 bottom-0 translate-y-full" />
+		<Quote class="transform rotate-180 -translate-y-full" />
+		<Quote class="transform right-0 bottom-0 translate-y-full" />
 		<div class="p-2 md:p-4 space-y-2">
 			<p class="text-lg">
 				{@html quote}

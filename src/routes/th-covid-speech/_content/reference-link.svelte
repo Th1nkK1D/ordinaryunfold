@@ -8,7 +8,7 @@
 	href={url}
 	target="_blank"
 	rel="noreferrer noopener"
-	class="text-blue-600 inline-flex text-sm hover:underline {$$props.class || ''}"
+	class="text-light-blue-700 inline-flex text-sm hover:underline {$$props.class || ''}"
 >
 	- {source}
 	<svg
