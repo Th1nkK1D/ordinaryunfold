@@ -7,10 +7,11 @@
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
 
-	const WIDTH_SCREEN_MULTIPLIER = 3;
+	const WIDTH_SCREEN_MULTIPLIER = 3.14;
 	const Y_STEP_SIZE = 1000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 30;
+	const MARGIN_RIGHT = 30;
 
 	export let dailyNewCases: DailyNewCase[];
 	export let contentBlocks: ContentBlock[];
@@ -27,6 +28,7 @@
 	const yMax = Math.max(...dailyNewCases.map(({ count }) => count));
 
 	$: xMaxWidth = clientWidth * WIDTH_SCREEN_MULTIPLIER;
+	$: canvasSize = xMaxWidth + MARGIN_RIGHT;
 
 	$: xScale = scaleTime()
 		.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
@@ -94,12 +96,12 @@
 		<YLabel {index} {...label} />
 	{/each}
 	<div class="relative h-full overflow-x-scroll overflow-y-hidden" bind:this={horizontalScroll}>
-		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {xMaxWidth}px;">
+		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {canvasSize}px;">
 			{#each xAxis as label}
 				<XLabel {...label} />
 			{/each}
 		</div>
-		<svg class="absolute" viewBox="0 0 {xMaxWidth} {chartHeight}" style="width: {xMaxWidth}px;">
+		<svg class="absolute" viewBox="0 0 {canvasSize} {chartHeight}" style="width: {canvasSize}px;">
 			<defs>
 				<linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
 					<stop offset="0%" stop-color="#FF4D00" />
