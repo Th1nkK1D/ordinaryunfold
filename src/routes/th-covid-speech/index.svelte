@@ -47,6 +47,7 @@
 			error: new Error(`Could not load Covid API`)
 		};
 	}
+
 </script>
 
 <script lang="ts">
@@ -59,6 +60,7 @@
 
 	let activeContentId: number;
 	let scrollToSpeech: (id: number) => void;
+
 </script>
 
 <Metadata
@@ -68,18 +70,15 @@
 	image="/th-covid-speech/og.png"
 />
 
-<div class="relative flex flex-col lg:flex-row min-h-screen">
-	<div class="h-200px bg-blue-gray-900 flex flex-col sticky top-0 z-10 lg:(flex-1 h-screen)">
-		<div class="relative flex-1">
-			<Chart
-				{dailyNewCases}
-				{contentBlocks}
-				bind:activeContentId
-				on:selectspeech={({ detail: id }) => scrollToSpeech(id)}
-			/>
-		</div>
+<div class="relative flex flex-col lg:flex-row h-screen">
+	<div class="bg-blue-gray-900 lg:flex-1 -lg:h-30vh">
+		<Chart
+			{dailyNewCases}
+			{contentBlocks}
+			bind:activeContentId
+			on:selectspeech={({ detail: id }) => scrollToSpeech(id)}
+		/>
 	</div>
-	<div class="w-full lg:max-w-2xl">
-		<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
-	</div>
+
+	<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
 </div>
