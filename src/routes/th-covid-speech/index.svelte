@@ -67,7 +67,7 @@
 	title="วิวาทะโควิด 19"
 	description="ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล"
 	path="/th-covid-speech"
-	image="/th-covid-speech/og.png"
+	image="/th-covid-speech/og2.png"
 />
 
 <div class="relative flex flex-col lg:flex-row h-screen">

@@ -7,9 +7,9 @@
 <Metadata />
 
 <div
-	class="w-full min-h-screen bg-cool-gray-900 text-white flex-1 flex flex-col justify-center items-center m-auto space-y-12 text-center px-3 py-18"
+	class="w-full min-h-screen flex-1 flex flex-col justify-center items-center m-auto space-y-12 text-center px-3 py-18"
 >
-	<img src="/logo-white.png" alt="OrdinaryUnfold" class="w-full max-w-96" />
+	<img src="/logo-black.png" alt="OrdinaryUnfold" class="w-full max-w-96" />
 
 	<div class="space-y-4">
 		<div class="flex">
@@ -18,7 +18,7 @@
 				class="mx-auto transform transition-transform duration-200 ease-in-out hover:(scale-102 shadow-xl)"
 			>
 				<img
-					src="/th-covid-speech/og.png"
+					src="/th-covid-speech/og2.png"
 					class="rounded-lg shadow-lg w-full max-w-86"
 					alt="วิวาทะโควิด 19"
 				/>
