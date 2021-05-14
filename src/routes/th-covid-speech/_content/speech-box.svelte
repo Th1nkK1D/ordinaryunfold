@@ -6,7 +6,9 @@
 	export let quote: string;
 	export let note: string;
 	export let speaker: Speaker;
-	export let reference: string;
+	export let source: string;
+	export let url: string;
+
 </script>
 
 <div class="text-center space-y-6">
@@ -16,7 +18,7 @@
 		<div class="p-2 md:p-4 space-y-2">
 			<p class="text-lg">
 				{@html quote}
-				<ReferenceLink {reference} />
+				<ReferenceLink {source} {url} />
 			</p>
 			{#if note}
 				<p class="text-sm text-gray-500">({note})</p>

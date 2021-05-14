@@ -21,6 +21,7 @@
 			behavior: 'smooth'
 		});
 	};
+
 </script>
 
 <div
@@ -72,7 +73,7 @@
 			<p class="text-xl font-head">ที่มาของข้อมูล</p>
 			<ul class="space-y-2">
 				<li>
-					จำนวนผู้ติดเชื่้อโควิดใหม่รายวันจาก <a
+					จำนวนผู้ติดเชื้อใหม่รายวันจาก <a
 						href="https://covid19.th-stat.com/th/api"
 						class="text-blue-600 hover:underline"
 						target="_black"

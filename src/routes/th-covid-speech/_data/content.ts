@@ -13,14 +13,16 @@ export interface Speech {
 	date: Date;
 	quote: string;
 	speaker: Speaker;
-	reference: string;
+	source: string;
+	url: string;
 }
 
 export interface News {
 	type: 'news';
 	date: Date;
 	content: string;
-	reference: string;
+	source: string;
+	url: string;
 }
 
 export type ContentBlock = {

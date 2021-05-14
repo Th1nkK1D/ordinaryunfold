@@ -4,7 +4,8 @@ declare module '*/speeches.csv' {
 		quote: string;
 		speaker: string;
 		note?: string;
-		reference: string;
+		source: string;
+		url: string;
 	}>;
 
 	export = speeches;
@@ -24,7 +25,8 @@ declare module '*/news.csv' {
 	declare const news: Array<{
 		date: string;
 		content: string;
-		reference: string;
+		source: string;
+		url: string;
 	}>;
 
 	export = news;

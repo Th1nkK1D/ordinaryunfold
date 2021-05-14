@@ -2,7 +2,9 @@
 	import ReferenceLink from './reference-link.svelte';
 
 	export let content: string;
-	export let reference: string;
+	export let source: string;
+	export let url: string;
+
 </script>
 
 <div class="rounded-lg p-4 md:p-6 space-x-2 bg-blue-50 flex flex-row">
@@ -16,5 +18,5 @@
 		</svg>
 	</div>
 
-	<p class="flex-1">{content} <ReferenceLink {reference} /></p>
+	<p class="flex-1">{content} <ReferenceLink {source} {url} /></p>
 </div>
