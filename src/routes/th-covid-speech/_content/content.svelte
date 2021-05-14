@@ -35,7 +35,7 @@
 
 </script>
 
-<div bind:this={container} class="flex-1 overflow-y-scroll lg:(max-w-2xl h-screen)">
+<div bind:this={container} class="flex-1 overflow-y-scroll md:max-w-2xl lg:(max-w-3xl h-screen)">
 	<div
 		class="flex flex-col pt-12 px-4 h-full lg:(pt-20 px-10) bg-no-repeat bg-contain bg-bottom -lg:text-center"
 		style="background-image: url('/th-covid-speech/hero-cover.svg');"
