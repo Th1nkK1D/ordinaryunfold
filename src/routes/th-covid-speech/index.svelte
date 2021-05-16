@@ -80,5 +80,10 @@
 		/>
 	</div>
 
-	<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
+	<Content
+		{contentBlocks}
+		bind:activeContentId
+		bind:scrollToSpeech
+		lastUpdated={dailyNewCases[dailyNewCases.length - 1].date}
+	/>
 </div>

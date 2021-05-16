@@ -7,6 +7,7 @@
 
 	export let contentBlocks: ContentBlock[] = [];
 	export let activeContentId: number;
+	export let lastUpdated: Date;
 
 	let contentBoxElements = new Map<number, ContentBox>();
 	let isReversed: boolean = false;
@@ -46,8 +47,11 @@
 				<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 			</h1>
 			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
+			<p class="italic font-sm text-gray-600">
+				อัพเดตล่าสุด {lastUpdated.toLocaleDateString('TH-th', { dateStyle: 'medium' })}
+			</p>
 			<div class="-lg:mx-auto">
-				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
+				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
 			</div>
 		</div>
 
@@ -83,7 +87,7 @@
 		</div>
 
 		<div class="flex justify-center my-24">
-			<Sharer url="https://www.ordinaryunfold.com/th-covid-speech" />
+			<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
 		</div>
 
 		<div class="flex flex-col space-y-20 mb-12 -lg:text-center">
