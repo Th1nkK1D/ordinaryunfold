@@ -16,7 +16,7 @@
 		<Quote class="transform rotate-180 -translate-y-full" />
 		<Quote class="transform right-0 bottom-0 translate-y-full" />
 		<div class="p-2 md:p-4 space-y-2">
-			<p class="text-lg">
+			<p class="md:text-lg">
 				{@html quote}
 				<ReferenceLink {source} {url} />
 			</p>
@@ -26,7 +26,7 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col space-y-1">
+	<div class="flex flex-col space-y-1 -md:text-sm">
 		<img
 			class="w-24 mx-auto rounded-full object-cover"
 			src="/th-covid-speech/speakers/{speaker.id}.jpeg"
