@@ -8,7 +8,7 @@
 	import YLabel from './y-label.svelte';
 
 	const WIDTH_SCREEN_MULTIPLIER = 3.14;
-	const Y_STEP_SIZE = 1000;
+	const Y_STEP_SIZE = 2000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 60;
 	const MARGIN_RIGHT = 40;
