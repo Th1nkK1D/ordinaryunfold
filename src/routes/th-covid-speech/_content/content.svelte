@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Sharer from '../../../components/sharer.svelte';
 	import Footer from '../../../components/footer.svelte';
+	import { lastUpdated } from '../_data/dailycases.json';
 	import type { ContentBlock } from '../_data/content';
 	import ContentBox from './content-box.svelte';
 	import SortButton from './sort-button.svelte';
 
 	export let contentBlocks: ContentBlock[] = [];
 	export let activeContentId: number;
-	export let lastUpdated: Date;
 
 	let contentBoxElements = new Map<number, ContentBox>();
 	let isReversed: boolean = false;
@@ -48,7 +48,7 @@
 			</h1>
 			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
 			<p class="italic font-sm text-gray-600">
-				อัพเดตล่าสุด {lastUpdated.toLocaleDateString('TH-th', { dateStyle: 'medium' })}
+				อัพเดตล่าสุด {new Date(lastUpdated).toLocaleDateString('TH-th', { dateStyle: 'medium' })}
 			</p>
 			<div class="-lg:mx-auto">
 				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
 	import { createEventDispatcher } from 'svelte';
-	import type { DailyNewCase } from '../index.svelte';
+	import { dailyNewCases as dailyNewCasesRaw } from '../_data/dailycases.json';
 	import type { ContentBlock, Speech } from '../_data/content';
 	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
@@ -13,11 +13,14 @@
 	const MARGIN_TOP = 60;
 	const MARGIN_RIGHT = 40;
 
-	export let dailyNewCases: DailyNewCase[];
 	export let contentBlocks: ContentBlock[];
 	export let activeContentId: number;
 
 	const dispatch = createEventDispatcher();
+	const dailyNewCases = dailyNewCasesRaw.map(({ date, count }) => ({
+		date: new Date(date),
+		count
+	}));
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
 	let clientWidth = 0;
