@@ -14,8 +14,12 @@
 			class="underline">open source</a
 		>
 		under
-		<a href="https://mit-license.org/" rel="noreferrer noopener" target="_blank">MIT license</a> and
-		the content is under
+		<a
+			href="https://github.com/Th1nkK1D/ordinaryunfold/blob/main/LICENSE"
+			rel="noreferrer noopener"
+			target="_blank">MIT license</a
+		>
+		and the content is under
 		<a href="https://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener" target="_blank"
 			>CC-BY-4.0 license</a
 		>
