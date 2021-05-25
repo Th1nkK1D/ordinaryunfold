@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
-	import { createEventDispatcher } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import { dailyNewCases as dailyNewCasesRaw } from '../_data/dailycases.json';
 	import type { ContentBlock, Speech } from '../_data/content';
 	import Pin from './pin.svelte';
@@ -88,6 +88,17 @@
 			});
 		}
 	}
+
+	onMount(() => {
+		setTimeout(
+			() =>
+				horizontalScroll.scrollTo({
+					left: canvasSize,
+					behavior: 'smooth'
+				}),
+			1000
+		);
+	});
 
 </script>
 

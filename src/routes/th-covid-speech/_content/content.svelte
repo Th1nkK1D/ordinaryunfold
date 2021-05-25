@@ -10,7 +10,7 @@
 	export let activeContentId: number;
 
 	let contentBoxElements = new Map<number, ContentBox>();
-	let isReversed: boolean = false;
+	let isReversed: boolean = true;
 	let container: HTMLElement;
 	let sortButtonContainer: HTMLElement;
 
