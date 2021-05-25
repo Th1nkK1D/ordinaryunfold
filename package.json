@@ -1,6 +1,11 @@
 {
 	"name": "ordinaryunfold",
 	"version": "1.0.0",
+	"author": {
+		"name": "Withee Poositasai",
+		"email": "witheep@gmail.com"
+	},
+	"license": "MIT",
 	"scripts": {
 		"dev": "svelte-kit dev",
 		"build": "rm -rf build && svelte-kit build",

@@ -1,7 +1,23 @@
 <footer class="text-sm {$$props.class || ''}">
-	Crafted by
-	<a href="https://th1nkk1d.xyz" rel="noreferrer noopener" target="_blank" class="hover:underline"
-		>Th1nkK1D</a
-	>
-	- Copyright &copy; {new Date().getFullYear()} OrdinaryUnfold
+	<p>
+		Crafted with &lt;3 by
+		<a href="https://th1nkk1d.xyz" rel="noreferrer noopener" target="_blank" class="underline"
+			>Th1nkK1D</a
+		>
+	</p>
+	<p>
+		Code is
+		<a
+			href="https://github.com/Th1nkK1D/ordinaryunfold"
+			rel="noreferrer noopener"
+			target="_blank"
+			class="underline">open source</a
+		>
+		under
+		<a href="https://mit-license.org/" rel="noreferrer noopener" target="_blank">MIT license</a> and
+		the content is under
+		<a href="https://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener" target="_blank"
+			>CC-BY-4.0 license</a
+		>
+	</p>
 </footer>
