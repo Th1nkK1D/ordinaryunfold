@@ -2,7 +2,6 @@
 	import Metadata from '../../components/metadata.svelte';
 	import Chart from './_chart/chart.svelte';
 	import Content from './_content/content.svelte';
-	import { contentBlocks } from './_data/content';
 
 	let activeContentId: number;
 	let scrollToSpeech: (id: number) => void;
@@ -18,12 +17,8 @@
 
 <div class="relative flex flex-col lg:flex-row h-screen">
 	<div class="bg-blue-gray-900 lg:flex-1 -lg:h-32vh">
-		<Chart
-			{contentBlocks}
-			bind:activeContentId
-			on:selectspeech={({ detail: id }) => scrollToSpeech(id)}
-		/>
+		<Chart bind:activeContentId on:selectspeech={({ detail: id }) => scrollToSpeech(id)} />
 	</div>
 
-	<Content {contentBlocks} bind:activeContentId bind:scrollToSpeech />
+	<Content bind:activeContentId bind:scrollToSpeech />
 </div>

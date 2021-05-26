@@ -1,7 +1,7 @@
 <script lang="ts">
 	import IntersectionObserver from 'svelte-intersection-observer';
 	import { createEventDispatcher } from 'svelte';
-	import type { ContentBlock } from '../_data/content';
+	import type { ContentBlock } from '../_data';
 	import SpeechBox from './speech-box.svelte';
 	import NewsBox from './news-box.svelte';
 

@@ -1,12 +1,10 @@
 <script lang="ts">
 	import Sharer from '../../../components/sharer.svelte';
 	import Footer from '../../../components/footer.svelte';
-	import { lastUpdated } from '../_data/dailycases.json';
-	import type { ContentBlock } from '../_data/content';
+	import { contentBlocks, lastUpdated } from '../_data';
 	import ContentBox from './content-box.svelte';
 	import SortButton from './sort-button.svelte';
 
-	export let contentBlocks: ContentBlock[] = [];
 	export let activeContentId: number;
 
 	let contentBoxElements = new Map<number, ContentBox>();

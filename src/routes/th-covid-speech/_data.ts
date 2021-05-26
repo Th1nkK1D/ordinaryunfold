@@ -1,6 +1,7 @@
-import speechesData from './speeches.csv';
-import newsData from './news.csv';
-import speakers from './speakers.csv';
+import speechesData from '../../data/th-covid-speech/speeches.csv';
+import newsData from '../../data/th-covid-speech/news.csv';
+import speakers from '../../data/th-covid-speech/speakers.csv';
+import dailycases from '../../data/th-covid-speech/dailycases.json';
 
 export interface Speaker {
 	id: string;
@@ -45,3 +46,10 @@ const news: News[] = newsData.map(({ date, ...rest }) => ({
 export const contentBlocks: ContentBlock[] = [...speeches, ...news]
 	.sort((a, z) => a.date.valueOf() - z.date.valueOf())
 	.map((content, index) => ({ id: index + 1, ...content }));
+
+export const dailyNewCases = dailycases.dailyNewCases.map(({ date, count }) => ({
+	date: new Date(date),
+	count
+}));
+
+export const lastUpdated = dailycases.lastUpdated;

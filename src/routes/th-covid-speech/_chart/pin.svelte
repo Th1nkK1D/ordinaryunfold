@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { isScreenLarge } from '../../../utils/screen';
 	import { fade } from 'svelte/transition';
-	import type { Speaker } from '../_data/content';
+	import type { Speaker } from '../_data';
 
 	const minBottom = 12;
 

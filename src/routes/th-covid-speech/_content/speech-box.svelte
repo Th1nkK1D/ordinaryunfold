@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { Speaker } from '../_data/content';
-	import Quote from '../_quote.svelte';
+	import type { Speaker } from '../_data';
+	import Quote from './quote.svelte';
 	import ReferenceLink from './reference-link.svelte';
 
 	export let quote: string;
