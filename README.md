@@ -8,4 +8,4 @@ Bite-size visualization and storytelling experiments
 
 ## Licenses
 
-The source code is licensed under [MIT License](https://github.com/Th1nkK1D/ordinaryunfold/blob/main/LICENSE) and the content is under [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)
+Code is open source under [MIT License](https://github.com/Th1nkK1D/ordinaryunfold/blob/main/LICENSE). Data and content are licensed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/)

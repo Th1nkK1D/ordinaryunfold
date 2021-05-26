@@ -18,10 +18,9 @@
 			href="https://github.com/Th1nkK1D/ordinaryunfold/blob/main/LICENSE"
 			rel="noreferrer noopener"
 			target="_blank">MIT license</a
-		>
-		and the content is under
+		>. Data and content are licensed under
 		<a href="https://creativecommons.org/licenses/by/4.0/" rel="noreferrer noopener" target="_blank"
-			>CC-BY-4.0 license</a
+			>CC-BY-4.0</a
 		>
 	</p>
 </footer>
