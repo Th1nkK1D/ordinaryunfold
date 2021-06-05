@@ -6,6 +6,7 @@
 	import Pin from './pin.svelte';
 	import XLabel from './x-label.svelte';
 	import YLabel from './y-label.svelte';
+	import Logo from '../../../components/logo.svelte';
 
 	const WIDTH_SCREEN_MULTIPLIER = 3.14;
 	const Y_STEP_SIZE = 2000;
@@ -99,7 +100,7 @@
 
 <div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
 	<div class="absolute top-0 left-0 flex p-4 z-10 -md:(justify-center p-3 right-0)">
-		<a href="/"><img src="/logo-white.png" alt="OrdinaryUnfold" class="h-6 md:h-8" /></a>
+		<Logo />
 	</div>
 	{#each yAxis as label, index}
 		<YLabel {index} {...label} />
