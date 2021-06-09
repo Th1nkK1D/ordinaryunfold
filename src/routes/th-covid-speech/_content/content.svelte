@@ -96,7 +96,7 @@
 				<ul class="space-y-2">
 					<li>
 						จำนวนผู้ติดเชื้อใหม่รายวันจาก <a
-							href="https://covid19.ddc.moph.go.th/api/"
+							href="https://covid19.th-stat.com/th/api"
 							class="text-light-blue-700 hover:underline"
 							target="_black"
 							rel="noreferrer noopener"
