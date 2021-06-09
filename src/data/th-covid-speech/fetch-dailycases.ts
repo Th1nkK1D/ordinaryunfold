@@ -18,7 +18,7 @@ interface CovidResponse {
 	UpdateDate: string;
 }
 
-const res = await fetch('https://covid19.th-stat.com/api/open/timeline');
+const res = await fetch('https://covid19.th-stat.com/json/covid19v2/getTimeline.json');
 
 if (res.ok) {
 	const { Data } = (await res.json()) as CovidResponse;
