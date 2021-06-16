@@ -31,7 +31,6 @@
 		isReversed = !isReversed;
 		activeContentId = getTopContentId();
 	};
-
 </script>
 
 <div bind:this={container} class="flex-1 overflow-y-scroll md:max-w-2xl lg:(max-w-3xl h-screen)">
@@ -46,7 +45,7 @@
 			</h1>
 			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
 			<p class="italic font-sm text-gray-600">
-				อัพเดตล่าสุด {new Date(lastUpdated).toLocaleDateString('TH-th', { dateStyle: 'medium' })}
+				ข้อมูลล่าสุด {new Date(lastUpdated).toLocaleDateString('TH-th', { dateStyle: 'medium' })}
 			</p>
 			<div class="-lg:mx-auto">
 				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
