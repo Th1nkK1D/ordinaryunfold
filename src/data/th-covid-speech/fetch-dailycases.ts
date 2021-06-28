@@ -18,19 +18,28 @@ interface CovidResponse {
 	UpdateDate: string;
 }
 
-const res = await fetch('https://covid19.th-stat.com/json/covid19v2/getTimeline.json');
+const DATA_FILE = './dailycases.json';
+const API_ENDPOINT = 'https://covid19.th-stat.com/json/covid19v2/getTimeline.json';
+
+const res = await fetch(API_ENDPOINT);
 
 if (res.ok) {
 	const { Data } = (await res.json()) as CovidResponse;
 
-	const dailyNewCases = Data.map(({ Date: date, NewConfirmed }) => ({
+	const oldData = JSON.parse(await Deno.readTextFile(DATA_FILE));
+	const lastUpdated = new Date(oldData.lastUpdated);
+
+	const newCases = Data.map(({ Date: date, NewConfirmed }) => ({
 		date: new Date(date),
 		count: NewConfirmed
-	}));
+	})).filter(({ date }) => date > lastUpdated);
 
 	await Deno.writeTextFile(
-		'./dailycases.json',
-		JSON.stringify({ lastUpdated: dailyNewCases[dailyNewCases.length - 1].date, dailyNewCases })
+		DATA_FILE,
+		JSON.stringify({
+			lastUpdated: newCases[newCases.length - 1].date,
+			dailyNewCases: [...oldData.dailyNewCases, ...newCases]
+		})
 	);
 } else {
 	console.error('Failed to fetch API');
