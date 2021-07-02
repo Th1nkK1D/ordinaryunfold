@@ -38,6 +38,8 @@
 	"type": "module",
 	"dependencies": {
 		"d3-scale": "^3.3.0",
+		"intersection-observer": "^0.12.0",
+		"scrollama": "^2.2.2",
 		"smoothscroll-polyfill": "^0.4.4"
 	}
 }

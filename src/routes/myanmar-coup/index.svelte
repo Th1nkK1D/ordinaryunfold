@@ -1,4 +1,5 @@
 <script>
+	import Scrollama from '../../components/scrollama.svelte';
 	import Metadata from '../../components/metadata.svelte';
 	import PeopleBackground from './_people/people-background.svelte';
 	import Chapter from './_sections/chapter.svelte';
@@ -9,12 +10,15 @@
 
 <PeopleBackground />
 
-<div class="flex flex-col w-full text-white">
+<Scrollama
+	class="flex flex-col w-full text-white"
+	on:stepenter={({ detail }) => console.log(detail)}
+>
 	<Landing />
 	<Chapter>
 		<h2><mark>When</mark> did the incident happended?</h2>
 	</Chapter>
-</div>
+</Scrollama>
 
 <style>
 	h2 {

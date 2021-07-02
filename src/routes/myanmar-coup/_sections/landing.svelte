@@ -1,6 +1,6 @@
 <script>
-	import Logo from '../../components/logo.svelte';
-	import fetalities from '../../data/myanmar-coup/recent-fatality.csv';
+	import Logo from '../../../components/logo.svelte';
+	import fetalities from '../../../data/myanmar-coup/recent-fatality.csv';
 </script>
 
 <section class="flex flex-col min-h-screen p-8 md: p-20 justify-between">
