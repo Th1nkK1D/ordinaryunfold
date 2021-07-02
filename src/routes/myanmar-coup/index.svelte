@@ -1,7 +1,7 @@
 <script>
 	import Metadata from '../../components/metadata.svelte';
 	import Logo from '../../components/logo.svelte';
-
+	import Avatar from './_people/avatar.svelte';
 </script>
 
 <Metadata title="Myanmar Coup 2021" />
@@ -23,4 +23,5 @@
 			</svg>
 		</div>
 	</section>
+	<Avatar />
 </div>
