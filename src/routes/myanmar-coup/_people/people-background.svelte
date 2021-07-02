@@ -1,23 +1,18 @@
 <script lang="ts">
 	import type { Person } from '../_data';
-	import Avatar from './avatar.svelte';
+	import paper from 'paper/dist/paper-core';
+	import { onMount } from 'svelte';
+	import { drawAvatar } from './avatar';
 
 	export let people: Person[];
 
-	let clientHeight: number = 0;
-	let clientWidth: number = 0;
+	let canvas: HTMLCanvasElement;
 
-	$: size = Math.floor(Math.sqrt((clientHeight * clientWidth) / people.length));
+	$: onMount(() => {
+		paper.setup(canvas);
+
+		drawAvatar();
+	});
 </script>
 
-<div
-	class="fixed -z-1 flex flex-row flex-wrap h-screen w-full content-around overflow-hidden bg-true-gray-900"
-	bind:clientHeight
-	bind:clientWidth
->
-	{#each people as { id } (id)}
-		<div class="p-1px md:p-1" style="width:{size}px; height:{size}px; ">
-			<Avatar />
-		</div>
-	{/each}
-</div>
+<canvas class="fixed -z-1 h-screen w-full bg-true-gray-900" bind:this={canvas} />
