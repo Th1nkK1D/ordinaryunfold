@@ -1,6 +1,7 @@
 import fetalitiesData from '../../data/myanmar-coup/recent-fatality.csv';
 
-export const fetalities = fetalitiesData.map(({ age, dateOfIncident, ...data }) => ({
+export const fetalities = fetalitiesData.map(({ age, dateOfIncident, ...data }, index) => ({
+	id: index,
 	age: +age,
 	dateOfIncident: new Date(dateOfIncident),
 	...data

@@ -15,7 +15,9 @@
 	bind:clientHeight
 	bind:clientWidth
 >
-	{#each people as _}
-		<Avatar {size} />
+	{#each people as { id } (id)}
+		<div class="p-1px md:p-1" style="width:{size}px; height:{size}px; ">
+			<Avatar />
+		</div>
 	{/each}
 </div>
