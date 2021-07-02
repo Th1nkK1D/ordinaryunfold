@@ -1,11 +1,13 @@
 <script lang="ts">
-	import fetalities from '../../../data/myanmar-coup/recent-fatality.csv';
+	import type { Person } from '../_data';
 	import Avatar from './avatar.svelte';
+
+	export let people: Person[];
 
 	let clientHeight: number = 0;
 	let clientWidth: number = 0;
 
-	$: size = Math.floor(Math.sqrt((clientHeight * clientWidth) / fetalities.length));
+	$: size = Math.floor(Math.sqrt((clientHeight * clientWidth) / people.length));
 </script>
 
 <div
@@ -13,7 +15,7 @@
 	bind:clientHeight
 	bind:clientWidth
 >
-	{#each fetalities as avatar}
+	{#each people as _}
 		<Avatar {size} />
 	{/each}
 </div>
