@@ -1,8 +1,10 @@
 <script lang="ts">
-	import type { Person } from '../_data';
-	import paper from 'paper/dist/paper-core';
 	import { onMount } from 'svelte';
+	import paper from 'paper/dist/paper-core';
 	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
+	import type { Person } from '../_data';
+
+	const TWEEN_DURATION = 1500;
 
 	export let people: Person[];
 
@@ -26,10 +28,12 @@
 		const columnSize = Math.floor(canvas.clientWidth / size);
 
 		getPositionFromIndex = (index: number) =>
-			new paper.Point((index % columnSize) * size, Math.floor(index / columnSize) * size);
+			new paper.Point((index % columnSize) * size, Math.floor(index / columnSize) * size).add(
+				size / 2
+			);
 
 		people.forEach((person) => {
-			const item = randomPickIn(avatarSymbols).place();
+			const item = randomPickIn(avatarSymbols).place(getPositionFromIndex(person.id));
 
 			item.scale(scale);
 			item.data = person;
@@ -37,10 +41,20 @@
 	});
 
 	$: {
-		if (paper && getPositionFromIndex) {
+		if (people && getPositionFromIndex) {
 			paper.project.activeLayer.children.forEach((avatar) => {
-				const newIndex = people.findIndex(({ id }) => id === (avatar.data as Person).id);
-				avatar.position = getPositionFromIndex(newIndex);
+				const { x, y } = getPositionFromIndex(people.findIndex(({ id }) => id === avatar.data.id));
+
+				avatar.tween(
+					{
+						'position.x': x,
+						'position.y': y
+					},
+					{
+						duration: TWEEN_DURATION,
+						easing: 'easeInOutQuad'
+					}
+				);
 			});
 		}
 	}

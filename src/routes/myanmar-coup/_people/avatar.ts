@@ -38,7 +38,7 @@ export const generateAvatarSymbols = (): paper.SymbolDefinition[] => {
 	BACK_HAIR.forEach((backHair) =>
 		FACES.forEach((face) =>
 			FRONT_HAIR.forEach((frontHair) => {
-				symbols.push(new paper.SymbolDefinition(drawAvatar(backHair, face, frontHair), true));
+				symbols.push(new paper.SymbolDefinition(drawAvatar(backHair, face, frontHair)));
 			})
 		)
 	);
