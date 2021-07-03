@@ -1,9 +1,8 @@
 <script lang="ts" context="module">
-	type RenderCaption = (count: Number) => string;
-
 	export interface Step {
 		matchedMask: boolean[];
-		heading: RenderCaption;
+		heading: (count: Number) => string;
+		description?: string;
 	}
 </script>
 
@@ -19,15 +18,26 @@
 </script>
 
 <Scrollama class="p-8 md: p-20" on:stepenter={onStepEnter}>
-	<div class="flex flex-col justify-center min-h-screen">
+	<div>
 		<slot />
 	</div>
 
-	{#each steps as { heading, matchedMask }}
-		<div class="flex flex-col justify-center h-50vh">
-			<p class="text-white">{heading(matchedMask.filter((value) => value).length)}</p>
+	{#each steps as { heading, description, matchedMask }}
+		<div class="items-center">
+			<h3 class="font-head font-bold text-3xl max-w-xl text-center">
+				{@html heading(matchedMask.filter((value) => value).length)}
+			</h3>
+			{#if description}
+				<p class="text-lg">{description}</p>
+			{/if}
 		</div>
 	{/each}
 
-	<div class="h-50vh" />
+	<div />
 </Scrollama>
+
+<style>
+	div {
+		@apply flex flex-col justify-center min-h-screen;
+	}
+</style>

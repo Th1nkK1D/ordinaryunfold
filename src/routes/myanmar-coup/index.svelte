@@ -21,7 +21,21 @@
 		[
 			{
 				matchedMask: fetalities.map(({ organization }) => organization === 'Civilian'),
-				heading: (count) => `${count} people are civilian`
+				heading: (count) => `${count} people are <mark>civilians</mark>`,
+				description: 'who would think the last day will came this soon?'
+			},
+			{
+				matchedMask: fetalities.map(({ organization }) => organization === 'Student'),
+				heading: (count) => `${count} <mark>students</mark> were killed`,
+				description: 'future of the country, they said.'
+			},
+			{
+				matchedMask: fetalities.map(({ organization }) =>
+					['Teacher', 'Doctor/Nurse', 'Engineer', 'Civil Servant'].includes(organization)
+				),
+				heading: (count) =>
+					`We also lost ${count} <mark>teachers, doctor, nurse, engineer and civil servant</mark>`,
+				description: 'we appreciate your work'
 			}
 		]
 	];
@@ -62,7 +76,7 @@
 		@apply font-head font-bold text-6xl;
 	}
 
-	mark {
+	:global(mark) {
 		@apply bg-transparent text-yellow-500;
 	}
 </style>
