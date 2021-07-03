@@ -9,11 +9,6 @@
 		easing: 'easeInOutQuad'
 	};
 
-	const TWEEN_FADE_CONFIG = {
-		duration: 700,
-		easing: 'easeInOutQuad'
-	};
-
 	export let people: Person[];
 	export let activePeopleMask: boolean[];
 
@@ -62,11 +57,7 @@
 	$: {
 		if (paper.project && activePeopleMask) {
 			paper.project.activeLayer.children.forEach((avatar, index) => {
-				const opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.3;
-
-				if (opacity !== avatar.opacity) {
-					avatar.tween({ opacity }, TWEEN_FADE_CONFIG);
-				}
+				avatar.opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.3;
 			});
 		}
 	}
