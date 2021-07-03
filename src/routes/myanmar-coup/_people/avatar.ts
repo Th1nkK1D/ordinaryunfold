@@ -3,10 +3,9 @@ import paper from 'paper/dist/paper-core';
 export const BASE_SIZE = 100;
 
 const FACE_VARIATION = [10, 15, 20];
-
 const DEFAULT_COLOR = new paper.Color('#404040');
 
-export const drawAvatar = (y: number, xTop: number, xButtom: number): paper.Group => {
+const drawAvatar = (y: number, xTop: number, xButtom: number): paper.Group => {
 	const face = new paper.Path({
 		segments: [
 			new paper.Point(xTop, y),
