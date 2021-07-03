@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import paper from 'paper/dist/paper-core';
+	import paper from 'paper';
 	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
 	import type { Person } from '../_data';
 

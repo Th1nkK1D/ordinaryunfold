@@ -7,6 +7,4 @@ export const fetalities = fetalitiesData.map(({ age, dateOfIncident, ...data }, 
 	...data
 }));
 
-console.log(fetalities);
-
 export type Person = typeof fetalities[0];
