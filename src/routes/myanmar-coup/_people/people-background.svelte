@@ -2,7 +2,7 @@
 	import type { Person } from '../_data';
 	import paper from 'paper/dist/paper-core';
 	import { onMount } from 'svelte';
-	import { generateAvatarSymbols } from './avatar';
+	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
 
 	export let people: Person[];
 
@@ -19,7 +19,18 @@
 
 		avatarSymbols = generateAvatarSymbols();
 
-		randomPickIn(avatarSymbols).place();
+		const size = Math.floor(Math.sqrt((canvas.clientHeight * canvas.clientWidth) / people.length));
+		const scale = size / BASE_SIZE;
+		const columnSize = Math.floor(canvas.clientWidth / size);
+
+		people.forEach((_, index) => {
+			const position = new paper.Point(
+				(index % columnSize) * size,
+				Math.floor(index / columnSize) * size
+			);
+
+			randomPickIn(avatarSymbols).place(position).scale(scale, position);
+		});
 	});
 </script>
 

@@ -1,6 +1,8 @@
 import paper from 'paper/dist/paper-core';
 import { BACK_HAIR, FACES, FRONT_HAIR } from './variation.json';
 
+export const BASE_SIZE = 100;
+
 const DEFAULT_COLOR = new paper.Color('#404040');
 const BG_COLOR = new paper.Color('#171717');
 
