@@ -1,13 +1,6 @@
-<script lang="ts" context="module">
-	export interface Step {
-		matchedMask: boolean[];
-		heading: (count: Number) => string;
-		description?: string;
-	}
-</script>
-
 <script lang="ts">
 	import Scrollama from '../../../components/scrollama.svelte';
+	import type { Step } from './chapters';
 
 	export let steps: Step[] = [];
 	export let activePeopleMask: boolean[];
@@ -19,7 +12,7 @@
 
 <Scrollama class="p-8 md: p-20" on:stepenter={onStepEnter}>
 	<div>
-		<slot />
+		<h2><slot /></h2>
 	</div>
 
 	{#each steps as { heading, description, matchedMask }}
@@ -37,6 +30,9 @@
 </Scrollama>
 
 <style>
+	h2 {
+		@apply font-head font-bold text-6xl;
+	}
 	div {
 		@apply flex flex-col justify-center min-h-screen;
 	}
