@@ -2,16 +2,24 @@
 	import type { Person } from '../_data';
 	import paper from 'paper/dist/paper-core';
 	import { onMount } from 'svelte';
-	import { drawAvatar } from './avatar';
+	import { generateAvatarSymbols } from './avatar';
 
 	export let people: Person[];
+
+	let avatarSymbols: paper.SymbolDefinition[];
+
+	function randomPickIn<T>(array: T[]): T {
+		return array[Math.floor(Math.random() * array.length)];
+	}
 
 	let canvas: HTMLCanvasElement;
 
 	$: onMount(() => {
 		paper.setup(canvas);
 
-		drawAvatar();
+		avatarSymbols = generateAvatarSymbols();
+
+		randomPickIn(avatarSymbols).place();
 	});
 </script>
 

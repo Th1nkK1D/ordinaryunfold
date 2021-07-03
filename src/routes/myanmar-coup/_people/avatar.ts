@@ -4,15 +4,11 @@ import { BACK_HAIR, FACES, FRONT_HAIR } from './variation.json';
 const DEFAULT_COLOR = new paper.Color('#404040');
 const BG_COLOR = new paper.Color('#171717');
 
-function randomPickIn<T>(array: T[]): T {
-	return array[Math.floor(Math.random() * array.length)];
-}
-
-export const drawAvatar = (): paper.Group => {
+export const drawAvatar = (backHair: string[], face: string, frontHair: string): paper.Group => {
 	const paths = [
-		...randomPickIn(BACK_HAIR).map((d) => new paper.Path(d)),
-		new paper.Path(randomPickIn(FACES)),
-		new paper.Path(randomPickIn(FRONT_HAIR))
+		...backHair.map((d) => new paper.Path(d)),
+		new paper.Path(face),
+		new paper.Path(frontHair)
 	];
 
 	paths.forEach((path) => {
@@ -32,4 +28,18 @@ export const drawAvatar = (): paper.Group => {
 	);
 
 	return new paper.Group([...paths, ...eyes]);
+};
+
+export const generateAvatarSymbols = (): paper.SymbolDefinition[] => {
+	const symbols: paper.SymbolDefinition[] = [];
+
+	BACK_HAIR.forEach((backHair) =>
+		FACES.forEach((face) =>
+			FRONT_HAIR.forEach((frontHair) => {
+				symbols.push(new paper.SymbolDefinition(drawAvatar(backHair, face, frontHair), true));
+			})
+		)
+	);
+
+	return symbols;
 };
