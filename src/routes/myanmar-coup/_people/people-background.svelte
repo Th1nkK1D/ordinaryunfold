@@ -4,9 +4,18 @@
 	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
 	import type { Person } from '../_data';
 
-	const TWEEN_DURATION = 1500;
+	const TWEEN_TRANSLATE_CONFIG = {
+		duration: 1500,
+		easing: 'easeInOutQuad'
+	};
+
+	const TWEEN_FADE_CONFIG = {
+		duration: 700,
+		easing: 'easeInOutQuad'
+	};
 
 	export let people: Person[];
+	export let activePeopleMask: boolean[];
 
 	let avatarSymbols: paper.SymbolDefinition[];
 
@@ -45,16 +54,19 @@
 			paper.project.activeLayer.children.forEach((avatar) => {
 				const { x, y } = getPositionFromIndex(people.findIndex(({ id }) => id === avatar.data.id));
 
-				avatar.tween(
-					{
-						'position.x': x,
-						'position.y': y
-					},
-					{
-						duration: TWEEN_DURATION,
-						easing: 'easeInOutQuad'
-					}
-				);
+				avatar.tween({ 'position.x': x, 'position.y': y }, TWEEN_TRANSLATE_CONFIG);
+			});
+		}
+	}
+
+	$: {
+		if (paper.project && activePeopleMask) {
+			paper.project.activeLayer.children.forEach((avatar, index) => {
+				const opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.3;
+
+				if (opacity !== avatar.opacity) {
+					avatar.tween({ opacity }, TWEEN_FADE_CONFIG);
+				}
 			});
 		}
 	}

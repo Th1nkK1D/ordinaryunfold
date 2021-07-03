@@ -3,6 +3,7 @@
 	import Metadata from '../../components/metadata.svelte';
 	import PeopleBackground from './_people/people-background.svelte';
 	import Chapter from './_sections/chapter.svelte';
+	import type { Step } from './_sections/chapter.svelte';
 	import Landing from './_sections/landing.svelte';
 	import type { Person } from './_data';
 	import { fetalities } from './_data';
@@ -16,12 +17,22 @@
 		[4, (a, z) => a.dateOfIncident.getTime() - z.dateOfIncident.getTime()]
 	]);
 
+	const chapterSteps: Step[][] = [
+		[
+			{
+				matchedMask: fetalities.map(({ organization }) => organization === 'Civilian'),
+				heading: (count) => `${count} people are civilian`
+			}
+		]
+	];
+
 	let people: Person[] = fetalities;
+	let activePeopleMask: boolean[] = [];
 </script>
 
 <Metadata title="Myanmar Coup 2021" />
 
-<PeopleBackground {people} />
+<PeopleBackground {people} {activePeopleMask} />
 
 <Scrollama
 	class="flex flex-col w-full text-white"
@@ -32,16 +43,16 @@
 	}}
 >
 	<Landing />
-	<Chapter>
+	<Chapter steps={chapterSteps[0]} bind:activePeopleMask>
 		<h2><mark>Who</mark> are they?</h2>
 	</Chapter>
-	<Chapter>
+	<Chapter bind:activePeopleMask>
 		<h2><mark>How old</mark> are they?</h2>
 	</Chapter>
-	<Chapter>
+	<Chapter bind:activePeopleMask>
 		<h2>What are their <mark>sexuality?</mark></h2>
 	</Chapter>
-	<Chapter>
+	<Chapter bind:activePeopleMask>
 		<h2><mark>When</mark> did the incident happended?</h2>
 	</Chapter>
 </Scrollama>
