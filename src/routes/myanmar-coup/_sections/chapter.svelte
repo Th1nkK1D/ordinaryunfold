@@ -16,7 +16,7 @@
 	</div>
 
 	{#each steps as { heading, description, matchedMask }}
-		<div class="items-center">
+		<div class="items-center space-y-2">
 			<h3 class="font-head font-bold text-3xl max-w-xl text-center">
 				{@html heading(matchedMask.filter((value) => value).length)}
 			</h3>
