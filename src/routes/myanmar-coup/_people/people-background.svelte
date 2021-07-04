@@ -27,13 +27,21 @@
 
 		avatarSymbols = generateAvatarSymbols();
 
-		const size = Math.floor(Math.sqrt((canvas.clientHeight * canvas.clientWidth) / people.length));
+		const { clientHeight, clientWidth } = canvas;
+
+		const size = Math.floor(Math.sqrt((clientHeight * clientWidth) / people.length));
 		const scale = size / BASE_SIZE;
-		const columnSize = Math.floor(canvas.clientWidth / size);
+
+		const columnSize = Math.floor(clientWidth / size);
+		const rowSize = Math.ceil(people.length / columnSize);
+
+		const xOffset = Math.round((clientWidth - size * columnSize + size) / 2);
+		const yOffset = Math.round((clientHeight - size * rowSize + size) / 2);
 
 		getPositionFromIndex = (index: number) =>
-			new paper.Point((index % columnSize) * size, Math.floor(index / columnSize) * size).add(
-				size / 2
+			new paper.Point(
+				(index % columnSize) * size + xOffset,
+				Math.floor(index / columnSize) * size + yOffset
 			);
 
 		people.forEach((person) => {
