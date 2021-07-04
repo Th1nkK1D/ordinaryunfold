@@ -14,7 +14,12 @@
 	let activePeopleMask: boolean[] = [];
 </script>
 
-<Metadata title="Losses in Myanmar" description="The lives that were taken away by junta coup" />
+<Metadata
+	title="Losses in Myanmar"
+	description="The lives that were taken away by junta coup"
+	path="/myanmar-coup/"
+	image="/myanmar-coup/og.png"
+/>
 
 <PeopleBackground {people} {activePeopleMask} />
 
@@ -59,7 +64,7 @@
 				Spread the news, and visit <a
 					href="https://www.isupportmyanmar.com/"
 					rel="papererrer noopener">isupportmyanmar</a
-				> for more information
+				> for more information.
 			</p>
 			<p class="-md:text-sm">#StandWithMyanmar</p>
 			<div class="pt-12">

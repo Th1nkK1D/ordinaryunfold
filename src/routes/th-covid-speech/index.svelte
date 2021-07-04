@@ -5,13 +5,12 @@
 
 	let activeContentId: number;
 	let scrollToSpeech: (id: number) => void;
-
 </script>
 
 <Metadata
 	title="วิวาทะโควิด 19"
 	description="ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล"
-	path="/th-covid-speech"
+	path="/th-covid-speech/"
 	image="/th-covid-speech/og2.png"
 />
 
