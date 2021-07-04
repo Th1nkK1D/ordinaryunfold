@@ -16,6 +16,28 @@ const youngestAge = Math.min(...fetalities.filter(({ age }) => age > 0).map(({ a
 
 export const chapters: Chapter[] = [
 	{
+		title: '<mark>When</mark> did the incident happended?',
+		sortBy: (a, z) =>
+			a.dateOfIncident.format('YYYY/MM').localeCompare(z.dateOfIncident.format('YYYY/MM')),
+		steps: [
+			{
+				matchedMask: fetalities.map(
+					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/02'
+				),
+				heading: (count) =>
+					`A coup d'état in Myanmar began in <mark>1&nbsp;February 2021</mark>. ${count} dead on that month.`,
+				description: 'But it is just the begining'
+			},
+			{
+				matchedMask: fetalities.map(
+					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/03'
+				),
+				heading: (count) =>
+					`The situation escalated dramatically in <mark>March 2021</mark>, total ${count} lifes were taken away.`
+			}
+		]
+	},
+	{
 		title: '<mark>Who</mark> are they?',
 		sortBy: (a, z) => a.organization.localeCompare(z.organization),
 		steps: [
@@ -50,8 +72,7 @@ export const chapters: Chapter[] = [
 			},
 			{
 				matchedMask: fetalities.map(({ sex }) => sex === 'F'),
-				heading: (count) => `${count} <mark>females</mark> were killed too.`,
-				description: `So cruel, didn't they?`
+				heading: (count) => `${count} <mark>females</mark> were killed too.`
 			}
 		]
 	},
@@ -62,30 +83,16 @@ export const chapters: Chapter[] = [
 			{
 				matchedMask: fetalities.map(({ age }) => age <= 20),
 				heading: (count) => `${count} people are <mark>20 or younger</mark>.`,
-				description: 'Who would expect to be this soon.'
+				description: 'Who would expect to be this soon?'
 			},
 			{
 				matchedMask: fetalities.map(({ age }) => age === youngestAge),
-				heading: () => `The youngest one is just ${youngestAge}.`
+				heading: () => `<mark>The youngest one</mark> is just ${youngestAge}.`
 			},
 			{
 				matchedMask: fetalities.map(({ age }) => age > 50 && age < 1000),
 				heading: (count) => `${count} people are <mark>50 or older</mark>.`,
 				description: 'They should have a peaceful life at this age.'
-			}
-		]
-	},
-	{
-		title: '<mark>When</mark> did the incident happended?',
-		sortBy: (a, z) => a.dateOfIncident.getTime() - z.dateOfIncident.getTime(),
-		steps: [
-			{
-				matchedMask: fetalities.map(
-					({ dateOfIncident }) =>
-						dateOfIncident.getFullYear() === 2021 && dateOfIncident.getMonth() === 2
-				),
-				heading: (count) => `Just <mark>March 2021</mark>, total ${count} lifes were taken.`,
-				description: 'What a tragedy.'
 			}
 		]
 	}
