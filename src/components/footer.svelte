@@ -1,6 +1,12 @@
 <footer class="text-sm {$$props.class || ''}">
 	<p>
-		Crafted with &lt;3 by
+		Follow us on <a
+			href="https://www.facebook.com/ordinaryunfold"
+			rel="noreferrer noopener"
+			target="_blank"
+			class="underline">Facebook</a
+		>
+		- Crafted with &lt;3 by
 		<a href="https://th1nkk1d.xyz" rel="noreferrer noopener" target="_blank" class="underline"
 			>Th1nkK1D</a
 		>
