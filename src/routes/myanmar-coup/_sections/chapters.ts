@@ -87,7 +87,7 @@ export const chapters: Chapter[] = [
 			},
 			{
 				matchedMask: fetalities.map(({ age }) => age === youngestAge),
-				heading: () => `<mark>The youngest one</mark> is just ${youngestAge}.`
+				heading: () => `<mark>The youngest one</mark> is just ${youngestAge} year old.`
 			},
 			{
 				matchedMask: fetalities.map(({ age }) => age > 50 && age < 1000),

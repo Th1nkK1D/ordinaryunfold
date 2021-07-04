@@ -6,3 +6,5 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+*.pdf

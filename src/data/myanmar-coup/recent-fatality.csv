@@ -1,21 +1,21 @@
 sex,age,dateOfIncident,organization,remarks
 M,32,08-Feb-21,Civilian,"In another incident, 32 year old Ko Na Pwar (a.k.a Ko Ko Oo), died after a car intentionally hit him at night in Mandalay."
 F,19,09-Feb-21,Civilian,"On February 9, peaceful anti-coup protests in Naypyitaw were suppressed using a water cannon, rubber bullets and live ammunition resulting in four people being injured. Among them was Ma Mya Thawe Thawe Khaing, 21-years old, who, on 19 February later died from gunshot wounds to the head."
-M,18,15-Feb-21,Civilian,"On 15 February evening, 18-year old Maung Nay Nay Win Htet was beaten on his head to death while guarding a waroad security in Myeik, Tanintharyi Region."
-M,37,20-Feb-21,Civilian,"In Mandalay, a shipyaroad raid turned violent on Saturoaday when security forces opened fire on demonstrators trying to stop the arrest of workers taking part in the growing anti-coup movement."
-M,16,20-Feb-21,Civilian,"In Mandalay, a shipyaroad raid turned violent on Saturoaday when security forces opened fire on demonstrators trying to stop the arrest of workers taking part in the growing anti-coup movement. He was shot in the head, and his head was blown off. He was pronounced dead on the spot."
+M,18,15-Feb-21,Civilian,"On 15 February evening, 18-year old Maung Nay Nay Win Htet was beaten on his head to death while guarding a Warroad security in Myeik, Tanintharyi Region."
+M,37,20-Feb-21,Civilian,"In Mandalay, a shipyaroad raid turned violent on Saturday when security forces opened fire on demonstrators trying to stop the arrest of workers taking part in the growing anti-coup movement."
+M,16,20-Feb-21,Civilian,"In Mandalay, a shipyaroad raid turned violent on Saturday when security forces opened fire on demonstrators trying to stop the arrest of workers taking part in the growing anti-coup movement. He was shot in the head, and his head was blown off. He was pronounced dead on the spot."
 M,48,20-Feb-21,Civilian,"Died due to head injuries caused by being beaten during a demonstration at Strand road in Mandalay, whilst he was going out"
-M,30,20-Feb-21,Civilian,"He was shot dead while standing guaroad in Ta/15 Quarter, Shwepyithar township in Yangon Region. Accoroading to one source, three shots came from a police car entering the quarter and hit the victim’s head."
+M,30,20-Feb-21,Civilian,"He was shot dead while standing guard in Ta/15 Quarter, Shwepyithar township in Yangon Region. According to one source, three shots came from a police car entering the quarter and hit the victim’s head."
 M,26,20-Feb-21,Civilian,"26 years old (Ko) Yar Zar Aung, was arrested and detained in Mandalay after being shot in the knee during the brutal Crackdown on 20 February by security forces. The Crackdown was in the Mandalay Yadanarbon Shipyaroad of Domestic Transportation, he died on 24 February after receiving no medical treatment in the Mandalay Military Hospital, Patheingyi Township."
 M,30,28-Feb-21,Other,
-,35,28-Feb-21,Civilian,He was killed from gunshot
+M,35,28-Feb-21,Civilian,He was killed from gunshot
 M,36,28-Feb-21,Civilian,"While he was lying on the ground he was shot in the stomach with the gunfire, the security forces have taken his body."
 M,33,28-Feb-21,Civilian,He was killed from gunshot
 M,39,28-Feb-21,Civilian,He was killed from gunshot
 M,23,28-Feb-21,Civilian,He was killed from gunshot
 F,59,28-Feb-21,Teacher,"As teachers gathered to demonstrate at another protest site in Yangon, the police began firing tear gas and rubber bullets near them. She was first hit by a rubber bullet in arm, then suffocated by tear gas. She struggle to find her inhaler from her bag but it was kicked by a police officer who taking protesters to the ground. The primary-school teacher identified as  Tin Nwet Yi died of a heart attack, a witness said."
 M,20,28-Feb-21,Other,"Shot in the eye with gunfire, his dead body is missing"
-M,23,28-Feb-21,Student,Shot in the head with gunfire
+,23,28-Feb-21,Student,Shot in the head with gunfire
 M,16,28-Feb-21,Civilian,Shot in the head with gunfire
 M,18,28-Feb-21,Civilian,Shot in the left side of chest with gunfire
 M,34,28-Feb-21,Civilian,Shot in the left side of thigh with gunfire
@@ -35,8 +35,8 @@ M,23,03-Mar-21,Civilian,Shot in the thigh with a bullet
 M,20,03-Mar-21,Civilian,Shot in the head with gunfire
 M,45,03-Mar-21,Civilian,Have not returned yet the dead body
 M,39,03-Mar-21,Other,He was killed from gunshot
-,25,03-Mar-21,Civilian,He was killed from gunshot
-M,38,03-Mar-21,Civilian,He was injured on March 3 and died on March 11 while receiving   medical treatment.
+M,25,03-Mar-21,Civilian,He was killed from gunshot
+M,38,03-Mar-21,Civilian,He was injured on March 3 and died on March 11 while receiving  medical treatment.
 M,19,03-Mar-21,Civilian,Shot in the head with gunfire
 M,22,03-Mar-21,Civilian,Shot in the head with gunfire
 M,20,03-Mar-21,Civilian,Shot in the head with gunfire
@@ -53,12 +53,12 @@ M,20,05-Mar-21,Civilian,
 M,20,05-Mar-21,Civilian,"He was arrested with two gunshot wounds to the thigh during a Strike, his family was informed later he had died."
 M,17,05-Mar-21,Civilian,"A group of Union Solidarity and Development Party (USDP) supporters in Magwe region stabbed two people to death on Friday in a mob attack against a National League for Democracy (NLD) official and his family, one of the survivors said. The two were on their way home from a friend’s house with six other family members in the morning when a group of about 25 knife-wielding USDP supporters attacked them in front of a wood workshop, said Bo Bo, who survived the attack and is Htway Naing’s son."
 M,53,05-Mar-21,Civilian,"A group of Union Solidarity and Development Party (USDP) supporters in Magwe region stabbed two people to death on Friday in a mob attack against a National League for Democracy (NLD) official and his family, one of the survivors said. The two were on their way home from a friend’s house with six other family members in the morning when a group of about 25 knife-wielding USDP supporters attacked them in front of a wood workshop, said Bo Bo, who survived the attack and is Htway Naing’s son."
-M,58,07-Mar-21,Other,A waroad chair for the National League for Democracy (NLD) party in Yangon’s Pabedan Township died on Sunday after security forces took him from his home during a Saturoaday night raid on the city. Family members of 58-year-old Khin Maung Latt were informed by officials from the Pabedan police station on Sunday morning that they needed to come and retrieve his body from the Mingalaroadon Military Hospital.
+M,58,07-Mar-21,NLD,A waroad chair for the National League for Democracy (NLD) party in Yangon’s Pabedan Township died on Sunday after security forces took him from his home during a Saturday night raid on the city. Family members of 58-year-old Khin Maung Latt were informed by officials from the Pabedan police station on Sunday morning that they needed to come and retrieve his body from the Mingalaroadon Military Hospital.
 M,27,07-Mar-21,Civilian,Shot in the heart with gunfire
-,62,08-Mar-21,Civilian,Shot in the head with gunfire
+M,62,08-Mar-21,Civilian,Shot in the head with gunfire
 M,22,,Student,Shot in the head with gunfire
 M,31,08-Mar-21,Other,He was killed from gunshot
-M,46,09-Mar-21,Other,"He died to torture while under military detention. Zaw Myat Lin, who was in-charge of Suu Vocational Institute in Shwe Pyi Thar Township of Yangon region, was arrested by security officers during a raid on his vocational institute late Monday night."
+M,46,09-Mar-21,NLD,"He died to torture while under military detention. Zaw Myat Lin, who was in-charge of Suu Vocational Institute in Shwe Pyi Thar Township of Yangon region, was arrested by security officers during a raid on his vocational institute late Monday night."
 M,38,10-Mar-21,Bank Staff,He was injured on March 10 and died on March 11 while receiving the medical treatment.
 M,19,11-Mar-21,Student,He was shot to death while protesting. Police kept his body.
 M,30,11-Mar-21,Civilian,Shot in the head with gunfire
@@ -70,8 +70,8 @@ M,19,11-Mar-21,Civilian,Shot in the head with gunfire
 M,40,11-Mar-21,Civilian,Shot in the head with gunfire
 M,24,11-Mar-21,Civilian,He was shot in the head   while defending people with a shield from the front.
 M,51,11-Mar-21,Civilian,He was killed from gunshot
-M,42,12-Mar-21,Civilian,He was shot to death by the military while he was serving as security for his waroad.
-M,,12-Mar-21,Civilian,He was shot to death by the military while he was serving as security for his waroad.
+M,42,12-Mar-21,Civilian,He was shot to death by the military while he was serving as security for his ward.
+M,,12-Mar-21,Civilian,He was shot to death by the military while he was serving as security for his ward.
 M,37,12-Mar-21,,Shot in the head with gunfire
 M,41,12-Mar-21,,Shot in the neck with gunfire
 M,18,12-Mar-21,Student,Shot in the head with gunfire
@@ -87,32 +87,33 @@ M,23,13-Mar-21,Civilian,He was killed from gunshot
 M,24,13-Mar-21,Civilian,He was killed from gunshot
 M,35,13-Mar-21,Civilian,He was killed from gunshot
 M,25,13-Mar-21,Civilian,He was killed from gunshot
+M,,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
 M,22,14-Mar-21,Student,"A native of Myeik, he was shot in the head near the Than Lan bus stop in Hlaing Township in Yangon Region."
 M,30,14-Mar-21,Civilian,Shot in the head with gunfire
 M,21,14-Mar-21,Student,Shot in the left side of chest with gunfire
 F,38,14-Mar-21,Civilian,Shot in the head with gunfire
-,31,14-Mar-21,Civilian,Shot in the joint of hand with gunfire
+M,31,14-Mar-21,Civilian,Shot in the joint of hand with gunfire
 M,19,14-Mar-21,Student,Shot in the neck with gunfire
 F,24,14-Mar-21,Civilian,
 M,17,14-Mar-21,Student,He was shot near Tamwe Police Station and dragged into the station by the so-called police died
 M,18,14-Mar-21,Civilian,
 M,25,14-Mar-21,Civilian,Shot in the neck with gunfire
-M,24,14-Mar-21,Civilian,သင်္ကန််းင်္ျွန််းမ ိ ြို့နယ်သပိတ်အတွင််း  နံရိ ်းနှစ်ဖင်္်ကင်္ ်း နှလံ်းင်္ျဉ်ဆံဖဖ င်္်ဝင်င်္ျဆံ ်းပါသည်။
+M,24,14-Mar-21,Civilian,He was shot in the heart during Thingangyun Strike
 M,43,14-Mar-21,Civilian,
 M,25,14-Mar-21,Civilian,
 M,24,14-Mar-21,Civilian,
 M,32,14-Mar-21,Civilian,
 M,20,14-Mar-21,Civilian,
 M,30,14-Mar-21,Civilian,
-M,41,14-Mar-21,,Shot in the head with gunfire
+,41,14-Mar-21,,Shot in the head with gunfire
 F,15,14-Mar-21,Student,
 M,38,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
 M,29,14-Mar-21,Civilian,He was shot to death in a crackdown at the Aye Yar Won Fortress in South Dagon Township.
 M,38,14-Mar-21,Civilian,
 M,39,14-Mar-21,Civilian,
-,22,14-Mar-21,Civilian,
+M,22,14-Mar-21,Civilian,
 M,24,14-Mar-21,Civilian,Name to be confirmed
 M,17,14-Mar-21,Civilian,
 M,35,14-Mar-21,Civilian,
@@ -131,16 +132,16 @@ M,29,14-Mar-21,Student,Shot in the head with gunfire
 M,19,14-Mar-21,Student,
 M,38,14-Mar-21,Civilian,
 M,22,14-Mar-21,Civilian,Shot in the head with gunfire
-M,23,14-Mar-21,Civilian,He was shot on the Aung Zay Ya Bridge and his body was found in the Pan Hlaing River.
+,23,14-Mar-21,Civilian,He was shot on the Aung Zay Ya Bridge and his body was found in the Pan Hlaing River.
 M,35,14-Mar-21,Civilian,He was killed from gunshot
-M,26,14-Mar-21,,
+,26,14-Mar-21,,
 M,17,14-Mar-21,Student,
 M,57,14-Mar-21,Civilian,
 M,24,14-Mar-21,Civilian,
 M,37,14-Mar-21,Civilian,Shot through the mouth into brain with gunfire.
 M,20,14-Mar-21,Civilian,
 M,17,14-Mar-21,Civilian,
-M,29,14-Mar-21,Civilian,
+,29,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
 M,26,14-Mar-21,Civilian,
 M,41,14-Mar-21,Civilian,
@@ -158,7 +159,7 @@ F,78,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
 M,19,14-Mar-21,Civilian,
 M,32,14-Mar-21,Civilian,
-M,61,14-Mar-21,Civilian,
+M,52,14-Mar-21,Civilian,
 M,48,14-Mar-21,Civilian,
 M,30,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
@@ -192,19 +193,19 @@ M,,14-Mar-21,Civilian,
 M,,14-Mar-21,Civilian,
 M,,14-Mar-21,Civilian,
 M,17,14-Mar-21,Civilian,
-M,,14-Mar-21,Civilian,
-,35,14-Mar-21,Civilian,
-M,,14-Mar-21,Civilian,
+M,33,14-Mar-21,Civilian,
+M,35,14-Mar-21,Civilian,
+M,32,14-Mar-21,Civilian,
 M,23,14-Mar-21,Civilian,
 M,28,17-Mar-21,Civilian,
 M,,14-Mar-21,Civilian,
 M,59,14-Mar-21,Civilian,
-M,,14-Mar-21,Civilian,
+,,14-Mar-21,Civilian,
 M,25,15-Mar-21,Civilian,
-M,,,,
+M,28,,,
 M,,15-Mar-21,,
 M,,15-Mar-21,,
-M,,15-Mar-21,,
+M,43,15-Mar-21,,
 M,,15-Mar-21,Civilian,
 M,35,15-Mar-21,Civilian,He was killed from gunshot
 F,20,15-Mar-21,Student,
@@ -216,12 +217,12 @@ M,19,15-Mar-21,Civilian,"He was shot and then arrested, when he was detained his
 M,27,15-Mar-21,Civilian,"He was shot in the face. While  receiving treatment at Mandalay Hospital, he died on March 19."
 M,,15-Mar-21,Civilian,
 M,,15-Mar-21,Civilian,
-M,26,15-Mar-21,Civilian,He was shot in the back and killed.
+M,26,15-Mar-21,Civilian,
 M,,15-Mar-21,Civilian,
 M,18,15-Mar-21,Civilian,
 M,37,15-Mar-21,Civilian,"He was shot and arrested at the Myeik Taung Inn Lay Kann Protest by the military. On March 16, his contacts were informed to collect his body."
 M,22,15-Mar-21,Civilian,
-M,,15-Mar-21,Civilian,He was shot and killed as the military and so called police opened fire in the waroad.
+,,15-Mar-21,Civilian,He was shot and killed as the military and so called police opened fire in the waroad.
 M,,15-Mar-21,Civilian,He was shot and killed as the military and so called police opened fire in the waroad.
 M,40,15-Mar-21,Civilian,
 M,18,15-Mar-21,Civilian,Shot in the head with gunfire
@@ -230,11 +231,11 @@ F,16,15-Mar-21,Student,
 M,52,15-Mar-21,,Shot in the left side of chest with gunfire
 M,29,15-Mar-21,Civilian,Shot in the stomach and arm with gunfire
 M,47,15-Mar-21,Civilian,
-,,15-Mar-21,,
-M,24,15-Mar-21,Civil Servant,He was arrested and beaten in his head. As he did not recieve enough medical treatment while detention he got brain damage and later died.
+M,,15-Mar-21,,
+M,24,15-Mar-21,Civil Servant,He was arrested and beaten in his head. As he did not receive enough medical treatment while detention he got brain damage and later died.
 M,42,15-Mar-21,Civilian,
-M,24,15-Mar-21,Civilian,ဖသနတ်င်္ျဉ်ဆံထိ ှန်င်္ျဆံ်း
-M,39,15-Mar-21,Other,"He died on March 30 while being interrogated by the security forces. He is the thiroad member of the NLD to die in custody since the junta’s Feb. 1 coup.His family were allowed one final look at his corpse, but regime authorities refused to allow them to take away the body for a funeral, insisting that they would arrange one themselves."
+M,24,15-Mar-21,Civilian,He was killed from gunshot
+M,39,15-Mar-21,NLD,"He died on March 30 while being interrogated by the security forces. He is the thiroad member of the NLD to die in custody since the junta’s Feb. 1 coup.His family were allowed one final look at his corpse, but regime authorities refused to allow them to take away the body for a funeral, insisting that they would arrange one themselves."
 M,21,16-Mar-21,Student,Shot in the head with gunfire
 M,16,16-Mar-21,Student,Shot by BGF
 M,,16-Mar-21,Civilian,He was shot in his head while he was going out.
@@ -251,15 +252,15 @@ M,19,17-Mar-21,Civilian,
 M,42,17-Mar-21,Civilian,Shot in the head with gunfire
 M,31,17-Mar-21,Civilian,He was shot while he is going to sell the gold for supplies for his family .
 M,28,17-Mar-21,Civilian,He was killed from gunshot
-F,70,17-Mar-21,Civilian,A 70 yr-old retired woman was shot dead while saying prayers at home
+F,76,17-Mar-21,Civilian,A 70 yr-old retired woman was shot dead while saying prayers at home
 F,22,18-Mar-21,Civilian,Shot in the stomach with gunfire
 M,,18-Mar-21,Civilian,He was shot and killed as the military and so called police opened fire in the waroad.
 M,30,19-Mar-21,Civilian,
-F,39,19-Mar-21,Civilian,"The mother of the three children who was killed, begged on her knees to not be arrested, she was shot and detained on March 19. On March 20, the junta forces called her husband to take her dead body. When her body returned home, there were many wounds accoroading to a local resident."
-,41,19-Mar-21,Student,He was shot to death at night of March 19 at Thukha Housing at Hlaing Township
+F,39,19-Mar-21,Civilian,"The mother of the three children who was killed, begged on her knees to not be arrested, she was shot and detained on March 19. On March 20, the junta forces called her husband to take her dead body. When her body returned home, there were many wounds according to a local resident."
+M,41,19-Mar-21,Student,He was shot to death at night of March 19 at Thukha Housing at Hlaing Township
 M,27,19-Mar-21,Student,He was shot and arrested at night of March 19 at Thukha Housing at Hlaing Township and died on March 20
 M,27,19-Mar-21,Civilian,Shot in the head with gunfire
-,47,19-Mar-21,Civilian,He was killed from gunshot
+M,47,19-Mar-21,Civilian,He was killed from gunshot
 M,41,19-Mar-21,Civilian,He was killed from gunshot
 M,22,19-Mar-21,Civilian,He was killed from gunshot
 M,,19-Mar-21,Civilian,He was killed from gunshot
@@ -269,14 +270,14 @@ M,,19-Mar-21,Civilian,He was killed from gunshot
 ,,19-Mar-21,Civilian,He was killed from gunshot
 M,,19-Mar-21,Civilian,He was killed from gunshot
 M,32,19-Mar-21,Civilian,Shot in the head with gunfire
-,62,19-Mar-21,Civilian,He was killed by a car in Myeik Taung village.
+M,62,19-Mar-21,Civilian,He was killed by a car in Myeik Taung village.
 M,28,20-Mar-21,Student,He was shot in the forehead
 M,15,20-Mar-21,Student,He was shot in the forehead
 M,,20-Mar-21,Civilian,Shot from the gunfire while protesting
 M,,20-Mar-21,Civilian,Shot from the gunfire while protesting
 M,29,21-Mar-21,Civilian,Shot in the head with gunfire
-,35,21-Mar-21,Civilian,"The office of the We Love Yangon was broken into, smashing doors and furniture, and the accessories of the office were destroyed and looted today. The raid was so panic-stricken that a 35 year old woman, who tried to sneak out through the fire-escape, dropped off from the fifth floor onto the ground, heavily cutting her head and died."
-M,28,21-Mar-21,,
+F,35,21-Mar-21,Civilian,"The office of the We Love Yangon was broken into, smashing doors and furniture, and the accessories of the office were destroyed and looted today. The raid was so panic-stricken that a 35 year old woman, who tried to sneak out through the fire-escape, dropped off from the fifth floor onto the ground, heavily cutting her head and died."
+,28,21-Mar-21,,
 M,40,21-Mar-21,Civilian,
 M,16,21-Mar-21,Civilian,"He had been working at a tea shop in Mandalay from Nattalin, Bago Division for only two days, when he was shot dead on March 21 when he was looking out from the shop when the soldiers came."
 M,26,21-Mar-21,Civilian,The bullet penetrated his left waist through to his right waist
@@ -298,7 +299,7 @@ M,30,22-Mar-21,Civilian,
 M,32,22-Mar-21,Other,
 M,20,22-Mar-21,Civilian,
 M,18,22-Mar-21,Civilian,
-M,21,22-Mar-21,Civilian,
+M,19,22-Mar-21,Other,"He was killed from gunshot, Missing dead body"
 M,25,22-Mar-21,Civilian,
 M,21,22-Mar-21,Civilian,
 M,25,22-Mar-21,Civilian,
@@ -308,6 +309,7 @@ M,25,23-Mar-21,Civilian,
 M,20,23-Mar-21,Civilian,
 F,6,23-Mar-21,Student,Military and so called police opened fired at her house when she was at home. She was shot in the stomach and died.
 M,,23-Mar-21,Civilian,"non-uniformed military and so-called police challenged people on bikes. When he looked, they shot him in the arm and chest."
+M,,23-Mar-21,Civilian,
 M,34,23-Mar-21,Civilian,He was hit and killed by a military vehicle travelling at high speed
 M,26,23-Mar-21,Civilian,
 M,15,23-Mar-21,Civilian,
@@ -319,12 +321,12 @@ M,28,25-Mar-21,Civilian,Shot in the eye and the leg
 M,,27-Mar-21,Civilian,
 M,,25-Mar-21,Student,Shot in the head with gunfire
 M,41,25-Mar-21,Civilian,Shot in the stomach with gunfire
-M,,25-Mar-21,Civilian,Shot in the stomach with gunfire
+M,,25-Mar-21,Civilian,Shot in the stomach with gunfire missing dead body
 M,20,25-Mar-21,Student,Shot in the groin with gunfire
 M,19,25-Mar-21,Civil Servant,
 M,19,25-Mar-21,Civilian,
 M,30,25-Mar-21,Civilian,
-M,44,25-Mar-21,Civilian,ရ် ်းတွင် ိဖင်ဖည  င ဖသနတ်ဒါဏ်ရ ဖဖ င်္်ဝင်သည ဒါဏ််် စံဖပဖဆ်းရံ တွင်င်္ သဖနစဉ်  ရ ဖဖင င်္ျဆံ်းသွ ်းပါသည်။
+M,44,25-Mar-21,Civilian,He died while receiving medical treatment for his tailbone Injury at Sanpya Hospital.
 ,,25-Mar-21,Civilian,
 M,32,25-Mar-21,Civilian,He was shot in the thigh and bled to death
 M,33,25-Mar-21,Civilian,He through his chest into his back
@@ -337,7 +339,7 @@ M,40,26-Mar-21,Civilian,He was shot during the crackdown
 M,18,26-Mar-21,Civilian,He was shot during the crackdown
 M,24,26-Mar-21,Civilian,He was shot during the crackdown
 M,36,26-Mar-21,Civilian,He was shot while going to work
-M,38,26-Mar-21,Civilian,Shot in the temple (head) with gunfire on 26 Mar and death on 27 Mar on the MDY hosptial
+M,38,26-Mar-21,Civilian,Shot in the temple (head) with gunfire on 26 Mar and death on 27 Mar on the MDY hospital
 M,32,26-Mar-21,Civilian,He was shot 3 times in the leg.
 M,,27-Mar-21,Civilian,He was killed from gunshot
 M,37,27-Mar-21,Civilian,He was killed from gunshot
@@ -347,16 +349,16 @@ M,,27-Mar-21,Civilian,Shot in the head with gunfire
 M,19,27-Mar-21,Student,Shot in the cheek with gunfire
 M,43,27-Mar-21,Civilian,
 M,,27-Mar-21,Civilian,
-M,24,27-Mar-21,Civilian,
+,24,27-Mar-21,Civilian,
 M,21,27-Mar-21,Civilian,
 M,31,27-Mar-21,Civilian,
 M,49,27-Mar-21,Civilian,
 M,21,27-Mar-21,Civilian,
-M,21,27-Mar-21,Civilian,
+,21,27-Mar-21,Civilian,
 M,21,27-Mar-21,Civilian,He was killed from gunshot
 F,50,27-Mar-21,Civilian,Shot in the stomach with gunfire
 M,35,27-Mar-21,Other,He was killed from gunshot
-M,25,27-Mar-21,Civilian,
+,25,27-Mar-21,Civilian,
 M,19,27-Mar-21,Civilian,
 M,46,27-Mar-21,Civilian,
 M,20,27-Mar-21,Civilian,
@@ -372,12 +374,12 @@ F,14,27-Mar-21,Civilian,
 M,39,27-Mar-21,Civilian,
 M,20,27-Mar-21,Civilian,
 ,,27-Mar-21,Civilian,
-,,27-Mar-21,Doctor/Nurse,
+M,,27-Mar-21,Doctor/Nurse,
 M,,27-Mar-21,,
 M,41,27-Mar-21,Other,
 M,25,27-Mar-21,Engineer,
 M,,27-Mar-21,Engineer,
-M,36,27-Mar-21,Civilian,
+M,36,27-Mar-21,Civilian,"Shot in the groin with gunfire, Missing dead body"
 M,,27-Mar-21,Civilian,
 M,25,27-Mar-21,Civilian,
 M,23,27-Mar-21,Student,
@@ -395,12 +397,12 @@ M,37,27-Mar-21,Civilian,
 M,34,27-Mar-21,Civilian,
 M,20,27-Mar-21,Civilian,
 M,24,27-Mar-21,Civilian,
-M,59,27-Mar-21,Civilian,He was killed from gunshot (thigh)
-M,48,27-Mar-21,Civilian,He was killed from gunshot (Back)
-M,46,27-Mar-21,Civilian,He was killed from gunshot (Back)
-M,40,27-Mar-21,Civilian,He was killed from gunshot (Back)
-M,14,27-Mar-21,Civilian,He was killed from gunshot (Neck)
-M,20,27-Mar-21,Civilian,He was killed from gunshot (Head)
+M,59,27-Mar-21,Civilian,
+M,48,27-Mar-21,Civilian,
+M,46,27-Mar-21,Civilian,
+M,40,27-Mar-21,Civilian,
+M,14,27-Mar-21,Civilian,
+M,20,27-Mar-21,Civilian,
 M,29,27-Mar-21,Civilian,
 M,16,27-Mar-21,Civilian,
 M,19,27-Mar-21,Civilian,
@@ -409,7 +411,7 @@ M,,27-Mar-21,Civilian,He was killed from gunshot
 M,,27-Mar-21,Civilian,He was shot in front of the school
 M,35,27-Mar-21,Civilian,He was killed from gunshot
 ,,27-Mar-21,Civilian,
-M,41,27-Mar-21,Civilian,He Was shot Druing the Crackdown
+M,41,27-Mar-21,Civilian,He Was shot During the Crackdown
 M,13,27-Mar-21,Civilian,Shot at his house
 M,21,27-Mar-21,Civil Servant,He was killed from gunshot
 M,19,27-Mar-21,Civilian,Shot in the Head with gunfire
@@ -456,14 +458,14 @@ M,,27-Mar-21,Civilian,Shot in the stomach with gunfire
 M,,27-Mar-21,Civilian,Gunshot on neck/ Ma Nilar Win (Wife)
 M,41,27-Mar-21,Civilian,
 M,31,27-Mar-21,Teacher,
-M,31,27-Mar-21,Civilian,His dead body was taken by militray
+M,31,27-Mar-21,Civilian,
 M,,27-Mar-21,Civilian,
-M,40,27-Mar-21,Civilian,"Junta forces' burnt a Mandalay resident alive after shooting him in the chest, accoroading to residents and a night guaroad in the victim’s neighbourhood."
+M,40,27-Mar-21,Civilian,"Junta forces' burnt a Mandalay resident alive after shooting him in the chest, according to residents and a night guard in the victim’s neighbourhood."
 F,21,27-Mar-21,Civilian,He was shot during the crackdown
 M,47,27-Mar-21,Civilian,Ma Khine Zin Tun was shot while rescuing
 M,17,27-Mar-21,Civilian,He was shot during the crackdown
 M,20,27-Mar-21,Civilian,He was shot during the crackdown
-M,26,27-Mar-21,Doctor/Nurse,His dead body was taken by militray
+M,26,27-Mar-21,Doctor/Nurse,
 M,40,27-Mar-21,Civilian,
 M,,27-Mar-21,Civilian,
 M,22,27-Mar-21,Civilian,
@@ -484,14 +486,14 @@ M,29,27-Mar-21,Civilian,
 M,22,27-Mar-21,Civilian,
 M,45,27-Mar-21,Civilian,
 M,17,27-Mar-21,Civilian,
-M,40,27-Mar-21,Civilian,
+,40,27-Mar-21,Civilian,
 M,15,27-Mar-21,Civilian,
 M,40,27-Mar-21,Civilian,
 M,40,27-Mar-21,Civilian,
-,25,27-Mar-21,Civilian,
+M,25,27-Mar-21,Civilian,
 M,26,27-Mar-21,Civilian,
-M,24,27-Mar-21,Civilian,His dead body was taken by military
-M,30,27 Mar 21 injury,Civilian,He was shot to the hip with gunfire on March 27 and died on April 7 while receiving medical treatment
+M,24,27-Mar-21,Civilian,
+M,30,27-Mar-21,Civilian,He was shot to the hip with gunfire on March 27 and died on April 7 while receiving medical treatment
 M,40,27-Mar-21,Civilian,
 M,30,27-Mar-21,Civilian,
 M,30,27-Mar-21,Civilian,
@@ -500,7 +502,7 @@ M,32,27-Mar-21,Civilian,
 M,17,27-Mar-21,Civilian,
 M,39,27-Mar-21,Civilian,He was arrested and tortured and died due to lack of medical treatment.
 M,49,27-Mar-21,Civilian,
-M,,27 Mar 21 arrest,Civilian,He was arrested at teashop for no reason and died due to the torture while interrogation.
+,,27-Mar-21,Civilian,He was arrested at teashop for no reason and died due to the torture while interrogation. The date of arrest was 27 Mar 21.
 M,16,27-Mar-21,Student,He was shot while he is driving in a motorbike and then arrested
 F,24,28-Mar-21,Doctor/Nurse,
 F,,28-Mar-21,Other,Shot in the chest with gunfire
@@ -508,13 +510,13 @@ M,,28-Mar-21,Civilian,
 M,,28-Mar-21,Civilian,
 M,,28-Mar-21,Civilian,
 M,19,28-Mar-21,Student,
-M,16,28-Mar-21,Civilian,
+,16,28-Mar-21,Civilian,
 F,20,28-Mar-21,Doctor/Nurse,"Twenty-year-old nurse Thinzar Hein was killed, along with an as of yet unidentified man, on Sunday in Monywa by the regime’s armed forces. Thinzar Hein was working with  a rescue team & was shot in the head while attending to other people who had been shot by the junta's troops."
 M,24,28-Mar-21,Civilian,
 F,,28-Mar-21,Civilian,
 F,,28-Mar-21,Bank Staff,"Ma Khine Zar Thwe, an AYA bank employee, was shot in the eye by Terrorists (#Myanmar security forces) this afternoon. Died at the hospital."
 M,30,28-Mar-21,Civilian,He was shot in the neck by terrorists.
-M,,28-Mar-21,Civilian,
+,,28-Mar-21,Civilian,
 M,29,28-Mar-21,Civilian,
 M,39,28-Mar-21,Civilian,Shot in the head with gunfire
 M,37,28-Mar-21,Civilian,Shot in the thigh with gunfire
@@ -529,7 +531,7 @@ M,20,29-Mar-21,Civilian,He was killed from gunshot
 M,33,29-Mar-21,Civilian,
 M,19,29-Mar-21,Civilian,
 M,21,29-Mar-21,Civilian,
-M,32,29-Mar-21,Civilian,
+,32,29-Mar-21,Civilian,
 M,30,29-Mar-21,Civilian,
 M,27,29-Mar-21,Civilian,
 M,27,29-Mar-21,Civilian,Shot in the eye with gunfire
@@ -542,7 +544,7 @@ M,19,29-Mar-21,Civilian,
 M,40,29-Mar-21,Civilian,
 M,29,29-Mar-21,Civilian,
 M,31,29-Mar-21,Civilian,Shot in the back of the head with gunfire
-M,,29-Mar-21,Civilian,He was set on fire at wa road 55 in South Dagon
+M,,29-Mar-21,Civilian,He was set on fire at war road 55 in South Dagon
 M,20,29-Mar-21,Civilian,
 M,27,29-Mar-21,Civilian,
 M,15,29-Mar-21,Civilian,Shot in the neck with gunfire
@@ -568,10 +570,10 @@ F,33,31-Mar-21,Bank Staff,"Su Su Kyi, a bank staff, was shot on the U Chit Maung
 M,20,31-Mar-21,Student,Shot with gunfire on March 27 and died on April 3
 M,53,01-Apr-21,Civilian,Shot in the head with gunfire
 M,19,01-Apr-21,Civilian,
-M,18,01-Apr-21,Other,
+,18,01-Apr-21,Other,
 F,,01-Apr-21,Civilian,Shot near the Ruby Mart
-M,36,01-Apr-21,Other,"While he was guaroading his waroad, he was shot in gorin and back"
-,19,01-Apr-21,Student,He was killed from gunshot
+M,36,01-Apr-21,Other,"While he was guarding his ward, he was shot in g and back"
+M,19,01-Apr-21,Student,He was killed from gunshot
 M,28,01-Apr-21,Student,He was killed from gunshot
 M,68,01-Apr-21,Civilian,He was killed from gunshot
 M,26,01-Apr-21,Student,Shot in the stomach with gunfire on April 1 and died on 3 April
@@ -586,7 +588,7 @@ M,,03-Apr-21,Civilian,He was killed from gunshot
 M,56,03-Apr-21,Civilian,"He was shot during the Pawdawmu Protest in Thaton and was arrested with gunshot injury on April 3, death confirmed on 6 April"
 F,,03-Apr-21,Teacher,He was killed from gunshot
 M,,03-Apr-21,Civilian,He was killed from gunshot
-M,27,04-Apr-21,Civilian,"He was arrested, beaten then shot to death. His boday was taken by the junta forces"
+M,27,04-Apr-21,Civilian,"He was arrested, beaten then shot to death. His body was taken by the junta forces"
 M,,04-Apr-21,Civilian,
 M,,,,
 F,19,04-Apr-21,Other,Shot with gunfire when she was on motorbike while she was returning home from work
@@ -638,7 +640,7 @@ M,46,09-Apr-21,Civilian,
 F,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 F,,09-Apr-21,Civilian,
 F,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
-,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
+M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,59,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
@@ -649,6 +651,8 @@ M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop dest
 M,19,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
+M,,09-Apr-21,Civilian,
+M,,09-Apr-21,Civilian,
 ,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
@@ -659,9 +663,9 @@ M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop des
 M,39,09-Apr-21,Civilian,"He is a Akyin Nar Lat Carity member and arrested on April 9, 2021 and died on April 12, 2021."
 M,,09-Apr-21,Civilian,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,39,10-Apr-21,Civilian,He was shot to death while he was driving a motorbike
-M,21,10-Apr-21,Civilian,He was shot to death duing a crackdown
-M,,11-Apr-21,Civilian,He was shot dead on the spot while driving infront of the Tamu District Police Office
-M,33,11-Apr-21,Civilian,"He was tortured to death while sitting infront of his house and his body was taken and his family gave 300,000 Kyat to return his body."
+M,21,10-Apr-21,Civilian,He was shot to death during a crackdown
+M,,11-Apr-21,Civilian,He was shot dead on the spot while driving in front of the Tamu District Police Office
+,33,11-Apr-21,Civilian,"He was tortured to death while sitting in front of his house and his body was taken and his family gave 300,000 Kyat to return his body."
 M,39,12-Apr-21,Civilian,"While he was guarding his community when he found suspect car. When he went to see it, he disappeared, his body was found at the hospital and his family said he was tortured to death."
 F,30,13-Apr-21,Civilian,She was shot to death near Parhal Bridge while she was going to send milk
 M,40,13-Apr-21,Civilian,He was shot to death near Parhal Bridge while he was going to send milk
@@ -673,7 +677,7 @@ M,,13-Apr-21,Civilian,
 M,,13-Apr-21,Civilian,
 M,,14-Apr-21,Civilian,
 M,25,14-Apr-21,Civilian,"While he was driving the motorbike, he was shot and tied up, then dragged alone and tortured to death"
-F,28,14-Apr-21,Civilian,"She was shot in the arm and died, her body was taken by the junta forces."
+M,28,14-Apr-21,Civilian,"She was shot in the arm and died, her body was taken by the junta forces."
 M,,13-Apr-21,Civilian,He is a UEC secretary of Pathein Township. He was detained and released almost one month ago and he was told to check the voter list. On 13 April his family was informed that he fell down the stair and told to collect his body. His body had head injuries and broken ribs.
 M,,07-Apr-21,Student,He disappeared during Tarhan Strike in Kale on April 7 and his body was found after one week.
 M,24,15-Apr-21,Civilian,"He was killed in Mandalay when junta forces stormed Sule Mosque in Maha Aung Myay Township on April 15, 2021 at around 10:00 am. (cid:10)"
@@ -705,7 +709,7 @@ M,50,27-Apr-21,Civilian,"He was killed in Demawso Township, Kayah State during a
 M,20,27-Apr-21,Civilian,"He was shot with gunfire at night of April 27, 2021, while he was driving the motorbike in Tedim Town, Chin State. The body is at the hospital and his family has not been allowed to return the body."
 M,36,27-Apr-21,Civilian,"He was arrested on April 27, 2021 and his body was returned on April 28, 2021. His body had injuries consistent with torture"
 M,32,28-Apr-21,Civilian,He was shot in the stomach with G3 gunfire and died on spot. He had tried to drive away when the terrorists tried to stop to check the motorbike.
-M,,28-Apr-21,Civilian,"After the ward administration office was set on fire, the terrorist junta opend fire and shot him in the stomach and arm and then arrested him and six other locals. He died while he was receiving medical treatment at  Bogalay Hospital."
+M,,28-Apr-21,Civilian,"After the ward administration office was set on fire, the terrorist junta opened fire and shot him in the stomach and arm and then arrested him and six other locals. He died while he was receiving medical treatment at  Bogalay Hospital."
 M,,01-May-21,Other,"The terrorists went to the Eain Phyu Taw  spare auto parts store to allegedly buy car tires in Kutkai Town, Shan State on 1 May. The victim's mother said the store was closed and they had stopped selling because of the ending of the fasting period. The victim’s mother was dragged into a car by the junta forces and an argument between the son  and the terrorists broke out, he was then shot twice in the chest."
 M,28,01-May-21,Civilian,"He went to a rubber plantation on the way to Pa Nyit village to scrape rubber, but did not return home according to a family member. His family members went to the military hospital in Dawei on May 3 and the authorities said Aung Thu body had already been cremated because no-one had cremated the body."
 M,25,02-May-21,Civilian,"While gathering to protest in Hsipaw, the security forces brutally cracked down and he was shot in forehead and died on spot."
@@ -715,41 +719,31 @@ M,22,02-May-21,Civilian,"While gathering to protest in Wetlet, Sagaing Region, t
 M,42,02-May-21,Civilian,"While gathering to protest in Wetlet, Sagaing Region, the terrorist forces brutally cracked down and he was shot in the chest and died while when people were planning to send him to hospital."
 M,24,02-May-21,Civilian,"While gathering to protest in Wetlet, Sagaing Region, junta forces suppressed, he was shot in the stomach and died while receiving medical treatment at a clinic in Mandalay."
 M,24,02-May-21,Civilian,"Around 10 pm on May 2 he was shot 3-times and arrested as he tried to get away. On 3 May, his father went to military hospital and found her son dead."
-M,40,04-May-21,Civilian,"He was shot dead between shoulder and ribs while defending his neighborhood against the junta in Htan Pin Kone Village in Htilin Township, Magwe Region"
+M,40,04-May-21,Civilian,"He was shot dead between shoulder and ribs while defending his neighbourhood against the junta in Htan Pin Kone Village in Htilin Township, Magwe Region"
 M,33,05-May-21,Civilian,"He was taken from his home and tortured. His parents were told to give 2,000,000 Kyat if they wanted him to return. But later his parents were contacted to see their son’s body at Shwedaung Military Hospital and found him dead with injuries consistent with torture. (cid:10)"
 M,19,04-May-21,Civilian,He was shot to death while he is arriving into Thar Kaung Village from Gangaw Township.
 M,29,04-May-21,Civilian,"He was shot dead at Pha Yar Taung Village in Pauk Township, Magway Region."
 M,,05-May-21,Civilian,He was shot dead while he was on a motorbike at Ba Yint Naung Street in Meiktila Town.
-M,25,06-May-21,Civilian,"He was killed in clash between the junta and the people’s Defense Force in Kani Township , Sagaing Region."
+M,25,06-May-21,Civilian,"He was killed in clash between the junta and the people’s Defence Force in Kani Township , Sagaing Region."
 M,15,07-May-21,Civilian,"In Le Thit Village, Myingyan Township, Mandalay region, after the explosion at the house of the village administrator appointed by the junta, troops came and shot, a 15 years old grade 9 student was shot in the head and the junta took the dead body."
 M,27,07-May-21,Civilian,He was shot dead by junta forces in the forest. A man who went to take the dead body was slapped by junta troops and not allowed to take the body.
 M,40,08-May-21,Doctor/Nurse,He was arrested and tied up behind his back and shot dead in the head while he is passing in front of the Infantry Battalion 389.
-,44,08-May-21,Other,He was arrested with his wife and family member on May 8 at his hosuse in Shwebo and died due to torture at an interogation center on May 9
+M,44,08-May-21,Other,He was arrested with his wife and family member on May 8 at his house in Shwebo and died due to torture at an interrogation center on May 9
 M,29,09-May-21,Civilian,"He was shot to death while asking for the release of two people in Myinmu Township, Sagaing Region"
 M,,09-May-21,Student,"On May 9, so-called police raided the Star City Home in Building B5, Thanlyin Township. During this brutal crackdown,  it was reported that he died after falling from a building allegedly was pushed by so-called police and soldiers as he refused to be arrested."
 M,,10-May-21,Civilian,He was shot to death on May 10 at 9:30 PM while he was driving a motorbike.
-M,35,11-May-21,Civilian,He suffers from mentel illness and he was shot to death at night of May 11
+M,35,11-May-21,Civilian,He suffers from mental illness and he was shot to death at night of May 11
 M,60,09-Mar-21,Civilian,He was arrested on May 9 and died on May 11 due to torture
-M,,09-Mar-21,Civilian,He was arrested at his home on May 9 at 9pm and was killed from torture in the interogation center. The junta said he died due to serious pneumonia. His family was not allowed to return his body.
-M,22,12 Mar 21 arrest,Student,He was shot and arrested with gunfire injury while guarding for security for Taloke Town in Myingyan Township on May 12 and died later due to torture. The junta informed his family to take back his body.
-M,17,13-May-21,Student,He was shot dead by artilery while defending people during a clash between the militay and Chinland Defense Force (CDF) on May 12
+M,,09-Mar-21,Civilian,He was arrested at his home on May 9 at 9pm and was killed from torture in the interrogation center. The junta said he died due to serious pneumonia. His family was not allowed to return his body.
 M,60,14-May-21,Other,"In Monywa , Sagaing Region, Sein Win, a poet, philanthropist and veteran politician was collecting donations for IDP’s and he was at a friend's house talking. Then an unidentified man arrived and poured gasoline on him and set him on fire."
 M,,14-May-21,Engineer,"He is an assistant electrical engineer, he was shot to death from artillery while serving his duty"
-,18,14-May-21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,25,14-May-21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,23,Between 12 May 21 and 15 May 21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,28,Between 12 May 21 and 15 May 21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,30,Between 12 May 21 and 15 May 21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,,Between 12 May 21 and 15 May 21,Student,He was shot dead by heavy artillery while defending Mindat from the terrorist junta between May 12 and 15.
-M,40,2 May 21 arrest,Teacher,He was shot in thigh while he was staging a protest on May 2 at Aungmyaythazan Township in Mandalay and died while he was receiving the medical treatment at Pyin Oo Lwin Military Hospital. His body was cemented without informing his family.
-M,26,16-May-21,Student,"He is a member of Chinland Defense Force (CDF), he was shot to death when the junta shoot into Hakha Town."
-M,44,18-Apr-21,Civilian,"On April 18, the junta shot in the wards in Myingyan. He is a rice mill worker and was shot in the head while he is trying to close the house door. He died on May 16 while he was receiving  medical tratment almost one month later at the Mandalay Hospital."
+M,40,02-May-21,Teacher,He was shot in thigh while he was staging a protest on May 2 at Aungmyaythazan Township in Mandalay and died while he was receiving the medical treatment at Pyin Oo Lwin Military Hospital. His body was cemented without informing his family. He was arrested on 2 May.
+M,26,16-May-21,Student,"He is a member of Chinland Defence Force (CDF), he was shot to death when the junta shoot into Hakha Town."
+M,44,18-Apr-21,Civilian,"On April 18, the junta shot in the wards in Myingyan. He is a rice mill worker and was shot in the head while he is trying to close the house door. He died on May 16 while he was receiving  medical treatment almost one month later at the Mandalay Hospital."
 M,26,16-May-21,Civilian,He was shot to death while driving motorbike in the ward.
-M,42,14 May 21 arrest,Civilian,"He who got arrested on May 14 at 56 Ward in South Dagon, his family got permission to bury his rotten body, and had to sign a paper that he died from his medical conditions. The body had wounds consistent with torture  and bruises on the face. The mouth also appeared to have broken teeth and the entire mouth was swollen. The junta closely followed the funeral, and they were not allowed to take pictures."
+M,42,14-May-21,Civilian,"He who got arrested on May 14 at 56 Ward in South Dagon, his family got permission to bury his rotten body, and had to sign a paper that he died from his medical conditions. The body had wounds consistent with torture  and bruises on the face. The mouth also appeared to have broken teeth and the entire mouth was swollen. The junta closely followed the funeral, and they were not allowed to take pictures."
 M,40,12-May-21,Civilian,He was shot dead during Kun Taung Village Clash while defending against the junta
-M,16,16-May-21,Civilian,He was shot to death by junta while defending Mindat.
-M,,Between 12 May 21 and 15 May 21,Civilian,He was shot to death by junta while defending Mindat.
-M,30,4 May 21 arrest,Civilian,"He was brutally beaten and then arrested on May 4 at Shwe Pyi Aye Street, Ward 70 in South Dagon Township by junta. After he was released, he died on May 16 due to injuries from torture."
+M,30,04-May-21,Civilian,"He was brutally beaten and then arrested on May 4 at Shwe Pyi Aye Street, Ward 70 in South Dagon Township by junta. After he was released, he died on May 16 due to injuries from torture."
 M,30,17-May-21,Civilian,"He was shot to death with gunshot injuries when the junta shot into Myo Thit (B) Ward, Daik-U Township in Bago Region on May 17 at 7pm."
 M,26,17-May-21,Student,"He was shot and arrested with gunshot injury when the junta raided Athen Restaurant at Bayint Naung Road in Bago. His family was informed that he died, hours after the arrest."
 M,30,18-May-21,Civilian,"He was shot and arrested with gunshot injury while he was driving on May 18 at 7:30 pm. In the morning of May 19, his family was informed to return his body"
@@ -757,23 +751,21 @@ M,47,19-May-21,Other,He is a former Sithar Village Administrator and died due to
 M,,19-May-21,Civilian,He was shot in the stomach when junta entered and shot into the village on May 19 at 2pm
 M,10,19-May-21,Civilian,"Bombing in Tedim Township, Chin State yesterday evening resulted in the death of a 10-year-old child, after the child was critically injured in the explosion, and then prevented from accessing medical assistance fast enough."
 M,19,20-May-21,Civilian,"While he was walking at Aung Yadana Ward (1), he saw junta forces, when he run away, he was arrested and shot in the stomach."
-M,,21-May-21,Civilian,He was shot while he was standing guard for the area
 M,,20-May-21,Civil Servant,He is a municipal staff and involved in CDM. He was shot to death when he was returning to his home at Mindat Town coming from the area of IDP place to collect his things
-M,15,21-May-21,Other,He was shot to death during an attack by junta troops in civilian clothing.
-M,42,arrest on 6 Mar 21,Civilian,"He is living at (10) Street in Lanmadaw in Yangon. On March 6, he was arrested whilst he is guarding his ward as security and later charged under 505(a) of the Penal Code. He suffers from diabetes and died from not receiving sufficient medical treatment."
+M,42,06-Mar-21,Civilian,"He is living at (10) Street in Lanmadaw in Yangon. On March 6, he was arrested whilst he is guarding his ward as security and later charged under 505(a) of the Penal Code. He suffers from diabetes and died from not receiving sufficient medical treatment."
 M,20,22-May-21,Civilian,"He was shot dead by the military forces in Demoso Township, Kayah State while bringing food for people who fled from the town. The body was reportedly taken away by the military."
 M,19,22-May-21,Civilian,"He was shot dead by the junta forces in Demoso Township, Kayah State while bringing food for the people who fled from the town. The body was reportedly taken away by the military regime."
-,,23-May-21,Other,"A clash between the People's Defense Force (PDF) and junta troops led to a PDF member shot in the thigh, they died from excessive bleeding. (cid:10)"
 M,,23-May-21,Civilian,"He was shot in the stomach while he was driving a motorbike, the motorbike hit the  lamp-post, and broke his leg."
-M,44,23 March 21 arrest,Teacher,"A private boarding school principal from Myo Thit Township in Magway Region with preexisting health conditions. On March 23, he was arrested and charged under Section 505(a) of the Penal Code and detained at the Magway Prison. He died from being forced to sit in a stress position (called “Pon Zan”) after he appeared before the court in Magway Prison on May 21.  (cid:10)"
+M,44,23-Mar-21,Teacher,"A private boarding school principal from Myo Thit Township in Magway Region with pre-existing health conditions. On March 23, he was arrested and charged under Section 505(a) of the Penal Code and detained at the Magway Prison. He died from being forced to sit in a stress position (called “Pon Zan”) after he appeared before the court in Magway Prison on May 21.  (cid:10)"
 M,35,23-May-21,Civilian,"He was shot dead in the head when junta forces opened fire at Myaung Kone Village in Kani Township, Sagaing Region"
-M,,22-May-21,Civilian,He was shot and arrested with injuries in an unprovoked shooting by junta troops into wards at Htantabin Township in Bago Region.
+M,48,22-May-21,Civilian,He was shot and arrested with injuries in an unprovoked shooting by junta troops into wards at Htantabin Township in Bago Region.
 M,,23-May-21,Civilian,"Junta forces opened fire when they raided the football ground in North Dagon Township, Yangon Region, he was shot  when he climbed on the wall to run away and fell on the ground. He was arrested with a forehead and gunshot injury, and later died."
-M,36,23-May-21,Civilian,"On the night of 23 May, in relation to bomb blast Myanma Economic Bank, he was shot from the back to chest while driving through Taungdwingyi to return home after work. He died while taking him to the Magway Hospital."
-M,55,22 May 21 arr,Other,"Mae Gyi (a.k.a Soe Moe Hlaing), a former member of All Burma Students' Democratic Front (ABSDF) and former political prisoner, was arrested on May 22 at Zaung Tu in Phayar Gyi Town in Bago Region, he was confirmed dead yesterday evening from brutal torture in interrogaiton."
-M,39,24 May 21 arrest,Civilian,"A family was informed this morning to collect their loved ones' dead body from “Seit Htar MaNwai Motorcycle Repair Shop” in Kale Town in Sagaing Region, the man had been arrested yesterday afternoon. His body was found with bruises all over the back, and stab wounds to his hands."
+M,36,23-May-21,Civilian,"On the night of 23 May, in relation to bomb blast Myanmar Economic Bank, he was shot from the back to chest while driving through Taungdwingyi to return home after work. He died while taking him to the Magway Hospital."
+M,55,22-May-21,Other,"Mae Gyi (a.k.a Soe Moe Hlaing), a former member of All Burma Students' Democratic Front (ABSDF) and former political prisoner, was arrested on May 22 at Zaung Tu in Phayar Gyi Town in Bago Region, he was confirmed dead yesterday evening from brutal torture in interrogation."
+M,39,24-May-21,Civilian,"A family was informed this morning to collect their loved ones' dead body from “Seit Htar MaNwai Motorcycle Repair Shop” in Kale Town in Sagaing Region, the man had been arrested yesterday afternoon. His body was found with bruises all over the back, and stab wounds to his hands. The date of arrest was 24 May 21."
 F,27,25-May-21,Civilian,She was shot dead in the head  when the village administrator requested the military come to the village and open fire in response to a  “No to Military Slavery Education” sticker campaign at a local school.
-M,,25-May-21,Civilian,"Early in the morning of May 25, he was shot to death at Thaketa Township, Yangon Region by the terrorist junta. The junta then put a knife and bomb beside him for propanganda that they shot him because he fought back."
+M,,25-May-21,Civilian,"Early in the morning of May 25, he was shot to death at Thaketa Township, Yangon Region by the terrorist junta. The junta then put a knife and bomb beside him for propaganda that they shot him because he fought back."
+M,,26-May-21,Civilian,"In the morning of May 26, he was shot death while he was riding the motorbike in Shwepyitha Township, Yangon Region. His body was taken by the terrorist junta's forces."
 M,,27-May-21,Civilian,He was shot to death by terrorist junta while bringing food for Karenni IDPs.
 M,,27-May-21,Civilian,He was shot to death by terrorist junta while bringing food for Karenni IDPs.
 M,14,27-May-21,Civilian,"He was shot dead in the head when he ran away as he was afraid of the regime forces entering the village at Thabyay Kone, Kayan Tharyar Village in Loikaw Township, Kayah State."
@@ -789,8 +781,61 @@ F,46,29-May-21,Civilian,"Two women, who were arrested with gunshot injuries afte
 F,29,29-May-21,Civilian,"Two women, who were arrested with gunshot injuries after they ran away in fear when soldiers entered into the Chaung Wa Pyin Village in Launglon Township, Tanintharyi Region on the night of May 29, died. Both women had been cremated and photos of their bodies were sent to the families by the junta in the evening of May 31."
 M,29,30-May-21,Civilian,"On the night of May 30, he was shot dead in an unprovoked shooting by junta troops while riding a motorbike when he returned to Law Pi Ta Village from Kyauk Taung Village at Loikaw Township in Kayah State."
 M,19,02-Jun-21,Civilian,"On the night of June 2, a 19 year-old youth was shot dead in the forehead and another civilian was seriously injured after being shot in the mouth when the junta fired sniper rounds into Mobye Town, Pekon Township, Southern Shan State."
-M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
-M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
+LGBT,37,04-Jun-21,Civilian,"On the night of 4 June, when  Thaw Thaw a.k.a Thaw Zin who is LGBT, and two friends were on the way home riding a motorcycle, Thaw Thaw a.k.a Thaw Zin was shot with three bullets hit in their arm and rib by junta troops deployed at Township Education Office in Kyaukpadaung Town in Mandalay Region, and died from not receiving medical treatment in time."
+M,,03-Jun-21,Civilian,"On the night of 3 June, Ka Lar was shot to death when he did not stop his motorcycle for inspection by junta troops in Monywa, Sagaing Region."
+M,20,05-Jun-21,Civilian,"Around 8pm on 5 June, Thant Zin Aung and Thein Naing were shot dead, and Khaing Zaw Win was beaten and arrested near the intersection of Shwe Nyaung and Nyaung Shwe in Shan State when junta troops opened fire from their cars at the men riding a motorcycle. The dead bodies of Thant Zin Aung and Thein Naing were taken by the junta troops."
+M,25,05-Jun-21,Civilian,"Around 8pm on 5 June, Thant Zin Aung and Thein Naing were shot dead, and Khaing Zaw Win was beaten and arrested near the intersection of Shwe Nyaung and Nyaung Shwe in Shan State when junta troops opened fire from their cars at the men riding a motorcycle. The dead bodies of Thant Zin Aung and Thein Naing were taken by the junta troops."
+M,31,09-Apr-21,Civilian,"He died on June 4, 2021 while he was receiving medical treatment for gunshot injuries on April 9, 2021."
+M,17,06-Jun-21,Civilian,"On the night of 6 June, two men were killed after being chased on motorbike and crashed into by a military vehicle in Pyigyidagun Township, Mandalay Region."
+M,,06-Jun-21,Civilian,"On the night of 6 June, two men were killed after being chased on motorbike and crashed into by a military vehicle in Pyigyidagun Township, Mandalay Region."
+M,40,05-Jun-21,Civilian,"Civilians were shot dead in Hlayswe village, Kyonpyaw Township, Ayeyarwady Region on June 5 during a search for weapons by junta forces to apprehend a man accused of plotting against the junta."
+M,18,05-Jun-21,Civilian,"Civilians were shot dead in Hlayswe village, Kyonpyaw Township, Ayeyarwady Region on June 5 during a search for weapons by junta forces to apprehend a man accused of plotting against the junta."
+M,20,05-Jun-21,Civilian,"Civilians were shot dead in Hlayswe village, Kyonpyaw Township, Ayeyarwady Region on June 5 during a search for weapons by junta forces to apprehend a man accused of plotting against the junta."
+M,,05-Jun-21,Civilian,"Civilians were shot dead in Hlayswe village, Kyonpyaw Township, Ayeyarwady Region on June 5 during a search for weapons by junta forces to apprehend a man accused of plotting against the junta."
+M,32,02-Jun-21,Civilian,"He died on June 3 due to torture. He was arrested on June 2, 2021 by so-called police and soldiers when he returned to Shwe Pyi Thar Township after he has finished  work at at the Mingaladon Military Hospital construction site (cid:10)"
+M,22,14-Mar-21,Civilian,"In the morning of June 9, Tin Zaw Oo, died while he was receiving medical treatment at the Pyay Township Hospital. He was shot in the stomach while staging a protest in front of Nyein Store at Aunglan Town in Magway Region on March 14."
+M,27,06-Jun-21,Student,He was shot dead in the head during a raid by the junta after a bomb blast near Shwe Ohn Pin Restaurant in Meiktila Town
+F,28,05-Jun-21,Civilian,He was shot in his chest when junta force entered the village and opened fire at 3am on 5 June
+M,19,10-Jun-21,Civilian,"On the night of June 10, Maung Chit Thae a.k.a Chit Ko Win, a university student, was shot dead on the spot while he was passing through the front of Yenangyaung Government Technical Institute (GTI) riding a motorcycle at Yenangyaung Township in Magway Region."
+M,,11-Jun-21,Other,He is a philanthropist and was shot dead due to artillery shells fired by the 102nd Battalion of the Terrorist Regime.
+M,20,11-Jun-21,Civilian,"In the morning of June 11, Saw Bell Kha Rinn Hae a.k.a Khun Bae Bae was shot twice in the chest and died on the spot while he was helping to push a pick-up truck."
+M,51,11-Jun-21,Civilian,He was shot dead when he was bringing food back to Padan Kho Village from a displaced camp in Demoso Township in Kayah State because they lacked food.
+M,,11-Jun-21,Civilian,
+M,,23-May-21,Civilian,He was shot dead after returning home from fishing.
+M,,23-May-21,Civilian,He was shot to death at Peking Khaw Khu where Shan and Kayah border
+M,,24-May-21,Civilian,"While he was sheltering as IDP at Kayan Tharyar Catholic church, he was killed as terrorist junta shelled a church near Loikaw"
+F,,24-May-21,Civilian,"While she was sheltering as IDP at Kayan Tharyar Catholic church, he was killed as terrorist junta shelled a church near Loikaw"
+F,,24-May-21,Civilian,"While she was sheltering as IDP at Kayan Tharyar Catholic church, he was killed as terrorist junta shelled a church near Loikaw"
+F,,24-May-21,Civilian,"While she was sheltering as IDP at Kayan Tharyar Catholic church, he was killed as terrorist junta shelled a church near Loikaw"
+M,,25-May-21,Civilian,He was killed as the terrorist entered into his home at Daw Poe Si Village and brutally beaten him.
+F,,26-May-21,Civilian,She was shot to death while he was riding the motorcycle in Demoso Township.
+M,38,14-Jun-21,Civilian,"He was arrested on June 13, 2021 while the terrorist junta raiding the village and arresting the villagers in relation to the murder of a woman in Taungtha Town. On June 14, he died due to  torture."
+M,22,14-Jun-21,Civilian,"In the evening of June 14, Aung San from Boke Village in Sagaing Region’s Depayin Township was shot dead in the chest when the junta troops opened fire on villages after two daughters of a coup council-appointed village administrator in Kyi Village, Depayin Township were stabbed to death."
+M,23,14-Jun-21,Civilian,"On the night of June 14, Su Paing Htwe a.k.a Paing Paing, died from severe bleeding when he did not receive adequate medical treatment after being shot in the stomach by junta’s forces while riding a motorcycle."
+M,90,15-Jun-21,Civilian,"After junta forces set fire to homes in Kingma Village in Magway Region’s Pauk Township on the evening of June 15, Some elderly and a disabled villager were killed, and buffalos and cattles died. In addition to this, a villager was shot in the thigh and some villagers arrested. (cid:10)"
+F,87,15-Jun-21,Civilian,"After junta forces set fire to homes in Kingma Village in Magway Region’s Pauk Township on the evening of June 15, Some elderly and a disabled villager were killed, and buffalos and cattles died. In addition to this, a villager was shot in the thigh and some villagers arrested. (cid:10)"
+M,55,15-Jun-21,Civilian,A total of 38 villagers from Kwansite Village in Mandalay Region’s Myingyan Township were arrested and interrogated after a former USDP Chairman Myint Kyaw was stabbed on June 15 at Kwansite Village. Two villagers killed from to torture in interrogation.
+M,36,15-Jun-21,Civilian,A total of 38 villagers from Kwansite Village in Mandalay Region’s Myingyan Township were arrested and interrogated after a Former USDP Chairman Myint Kyaw was stabbed on June 15 at Kwansite Village. Two villagers died due to tortures during interrogations.
+M,,19-Jun-21,Civilian,"In the evening of June 19 at Mi Kyaung Twin Village in Kani Township in Sagaing Region, junta forces shot to arrest a local villager called Sein Min. When Sein Min was lying down injured, they shot him dead and put a rifle beside his body, took the photo to conspire that Sein Min was an armed group member."
+M,13,19-Jun-21,Civilian,"On the night of June 19 in Bahan Township, Yangon Region, Maung Phoe Thingyan a.k.a. Phoe Sein, a 13 year-old, was shot in the back and taken injured by terrorist junta soldiers when he ran away after seeing them, he had been playing. On June 21, his family was informed that he had died. (cid:10)"
+F,1,19-Jun-21,Other,"On the night of June 19 at Kyaingtong Town in Shan State, Than Soe Aung, a local, was injured and his one year and six month old daughter Moe Thandar Aung was killed when they were hit by a car driven by Deputy Officer of the General Administration Department (GAD) in Kyaingtong Township. This was after Than Soe Aung did not stop when told by the junta forces when riding his motorcycle to go to a clinic for his ill daughter. Moreover, Than Soe Aung is being detained at the Kyaingtong Myoma Police Station and has been charged with two lawsuits against him at the station."
+M,,20-Jun-21,Civilian,"He was shot dead by junta soldiers when they did not stop riding a motorbike at a checkpoint in Mawlamyine, Mon State."
+M,,20-Jun-21,Civilian,"He was shot dead by junta soldiers when they did not stop riding a motorbike at a checkpoint in Mawlamyine, Mon State."
+M,,20-Jun-21,Civilian,"On the night of June 20, Kyaw Kyaw Myo, a bridegroom from Lat Pan Hla Village Tract in Mandalay Region’s Singu Township, was shot dead on spot while delivering wedding invitations with his friend by riding a motorcycle. His friend was beaten and also arrested."
+M,30,21 Jun 21 arrrest,Civilian,"Zayar Linn from Lalzin Sanpya Village in Monywa Township’s Sagaing Region was arrested and beaten on the night of June 21. His family was informed on the morning of June 22 that he died. He was found with wounds consistent with torture, one large on the back of his head and all over his body."
+M,40,23-Jun-21,Civilian,He was shot death by the terrorist junta as he ran away when junta came to arrest him due to false information given by the informer.
+M,,23-Jun-21,Civilian,He was shot dead by a junta troop.
+F,19,23-Jun-21,Civilian,"Mai Nuam Za Thiang, 19 years old, died on June 23 at around 10pm after she was arrested with a left thigh injury shot by terrorist junta’s soldiers on June 23 at around 9pm at Kale Township in Sagaing Region. Her family was informed in the morning of June 24 that she died due to COVID-19. It is reported that lots of blood was found on her body."
+M,28,23-Jun-21,Civilian,"On the night of June 23 in Hsipaw Township, northern Shan State, Aung Min Thu, a civilian, was shot  dead in the head by terrorist junta’s soldiers while he was riding a motorbike returning home after drinking at a tea shop. In addition to this,"
+M,34,25-Jun-21,Civilian,"On June 25 at 9 pm, Naing Win Oo was shot dead by the terrorist junta without question while he went back to collect a garage key he had forgotten."
+M,25,25-Jun-21,Civilian,"He was arrested with his father in the evening of June 25 at Kale Township in Sagaing Region by junta troops, his family was informed on June 26 he died from COVID-19. Zaw Htet was in good health, he was killed from torture according to his friends."
+M,,28-Jun-21,Civilian,
+M,44,29-Jun-21,NLD,"Soe San, NLD member in Talsu Village of Wundwin Township, Mandalay Region, who was arrested on June 29, died on June 30. It was informed that he died from COVID-19, however, Soe San had been beaten by the soldiers stationed at the Pintale Hospital. (cid:10)"
+M,19,28 Jun 21 arrest,Student,"Aung Aung Lwin, a 19-year-old, arrested on the night of June 28 due to a junta informer in Shwedaung Township, Bago Region, was tortured to death in interrogation. His body was cremated by the junta on July 1 without being allowed to be seen by the family."
+,23,01-Jul-21,Student,"A youth named Thiha Zaw a.k.a. Ngal Lay, who helped people injured during a bomb blast at a factory in Monywa Industry Zone, Sagaing Region, was arrested on the afternoon of July 1. Thiha Zaw’s body was returned on the evening of July 1."
+M,34,29-Jun-21,Civilian,"The family was informed on July 1 that a civilian named Soe Min from Bago Region’s Pyay Township, who was arrested on the night of June 29 due to a junta informer who alleged Soe Min destroyed Mya Village School. The body of Soe Min was found with injuries consistent with torture, including bruises over his thigh and body, and electric shock wounds."
+M,55,02-Jul-21,Teacher,"On the night of July 2 at Myingyan Township in Mandalay Region, Moe Heing, a high school teacher of the private school, and his wife Su Su Hlaing, who were the former executive member of the National League for Democracy (NLD) of Myingyan Township, were shot to death by a pro-junta group called “Pyu Saw Htee”"
+F,45,02-Jul-21,NLD,"On the night of July 2 at Myingyan Township in Mandalay Region, Moe Heing, a high school teacher of the private school, and his wife Su Su Hlaing, who were the former executive member of the National League for Democracy (NLD) of Myingyan Township, were shot to death by a pro-junta group called “Pyu Saw Htee”"
 M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
 M,19,09-Apr-21,Student,"Earlier on April 9, before dawn, the terrorist troop destroyed main roadblocks on both sides of Maggatic Road built by anti-military activists to prevent a violent crackdown in Bago. The terrorist junta used assault rifles, heavy weaponry like RPG, and hand grenades from both sides of the road to suppress the protesters’ bases and residences. There were many reported casualties in Bago. Still awaiting confirmation to identify all these."
