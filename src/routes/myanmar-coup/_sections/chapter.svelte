@@ -10,18 +10,18 @@
 	};
 </script>
 
-<Scrollama class="p-8 md: p-20" on:stepenter={onStepEnter}>
+<Scrollama class="p-8 md:p-20" on:stepenter={onStepEnter}>
 	<div>
-		<h2><slot /></h2>
+		<h2 class="font-head font-bold text-4xl md:text-6xl"><slot /></h2>
 	</div>
 
 	{#each steps as { heading, description, matchedMask }}
 		<div class="items-center space-y-2">
-			<h3 class="font-head font-bold text-3xl max-w-xl text-center">
+			<h3 class="font-head font-bold text-xl md:text-3xl max-w-xl text-center">
 				{@html heading(matchedMask.filter((value) => value).length)}
 			</h3>
 			{#if description}
-				<p class="text-lg">{description}</p>
+				<p class="text-sm md:text-lg">{description}</p>
 			{/if}
 		</div>
 	{/each}
@@ -30,9 +30,6 @@
 </Scrollama>
 
 <style>
-	h2 {
-		@apply font-head font-bold text-6xl;
-	}
 	div {
 		@apply flex flex-col justify-center min-h-screen;
 	}

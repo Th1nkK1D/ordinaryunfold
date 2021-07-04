@@ -36,11 +36,11 @@
 		{/each}
 	</Scrollama>
 
-	<section class="h-screen flex flex-col justify-center items-center">
-		<h2><mark>The fight</mark> is not over</h2>
+	<section class="h-screen flex flex-col justify-center items-center text-center p-8">
+		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over</h2>
 	</section>
 
-	<section class="h-screen flex flex-col space-y-12">
+	<section class="h-screen flex flex-col space-y-12 p-8 text-center">
 		<div class="flex-1 flex flex-col justify-center items-center space-y-4">
 			<svg
 				width="92"
@@ -55,12 +55,13 @@
 				/>
 			</svg>
 			<h2>How can I help?</h2>
-			<p class="text-lg">
+			<p class="md:text-lg">
 				Spread the news, and visit <a
 					href="https://www.isupportmyanmar.com/"
 					rel="papererrer noopener">isupportmyanmar</a
 				> for more information
 			</p>
+			<p class="-md:text-sm">#StandWithMyanmar</p>
 			<div class="pt-12">
 				<Sharer
 					url="https://www.ordinaryunfold.com/myanmar-coup/"
@@ -69,8 +70,8 @@
 			</div>
 		</div>
 
-		<div class="pb-6 text-center space-y-6">
-			<p class="">
+		<div class="space-y-6">
+			<p class="-md:text-sm">
 				Data from <a href="https://aappb.org/?cat=109" rel="papererrer noopener"
 					>AAPPB 2021 Coup Daily Briefings</a
 				>
@@ -86,7 +87,7 @@
 	}
 
 	h2 {
-		@apply font-head font-bold text-6xl;
+		@apply font-head font-bold text-4xl md:text-6xl;
 	}
 
 	a {
