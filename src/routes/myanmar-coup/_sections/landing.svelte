@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { tweened } from 'svelte/motion';
-	import { quartInOut } from 'svelte/easing';
 
 	import Sharer from '../../../components/sharer.svelte';
 	import Logo from '../../../components/logo.svelte';
 	import fetalities from '../../../data/myanmar-coup/recent-fatality.csv';
 
 	const count = tweened(0, {
-		duration: 3000,
-		easing: quartInOut
+		duration: 3000
 	});
 
 	onMount(() => {

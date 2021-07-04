@@ -4,6 +4,8 @@
 	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
 	import type { Person } from '../_data';
 
+	const ENTER_TRANSITION_DURATION = 3000;
+
 	const TWEEN_TRANSLATE_CONFIG = {
 		duration: 1500,
 		easing: 'easeInOutQuad'
@@ -44,11 +46,15 @@
 				Math.floor(index / columnSize) * size + yOffset
 			);
 
-		people.forEach((person) => {
-			const item = randomPickIn(avatarSymbols).place(getPositionFromIndex(person.id));
+		const enterDelay = ENTER_TRANSITION_DURATION / people.length;
 
-			item.scale(scale);
-			item.data = person;
+		people.forEach((person, index) => {
+			setTimeout(() => {
+				const item = randomPickIn(avatarSymbols).place(getPositionFromIndex(person.id));
+
+				item.scale(scale);
+				item.data = person;
+			}, enterDelay * index);
 		});
 	});
 
