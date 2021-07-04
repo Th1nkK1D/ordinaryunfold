@@ -14,7 +14,7 @@
 	let activePeopleMask: boolean[] = [];
 </script>
 
-<Metadata title="Myanmar Coup 2021" />
+<Metadata title="Losses in Myanmar" description="The lives that were taken away by junta coup" />
 
 <PeopleBackground {people} {activePeopleMask} />
 
@@ -37,7 +37,7 @@
 	</Scrollama>
 
 	<section class="h-screen flex flex-col justify-center items-center text-center p-8">
-		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over</h2>
+		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over.</h2>
 	</section>
 
 	<section class="h-screen flex flex-col space-y-12 p-8 text-center">
