@@ -1,8 +1,8 @@
 <script lang="ts">
 	export let url: string;
+	export let linkClass: string = 'text-light-blue-400 hover:text-light-blue-700';
 
 	$: encodedUrl = encodeURI(url);
-
 </script>
 
 <div class="flex flex-row space-x-4 md:space-x-6 {$$props.class || ''}">
@@ -11,6 +11,7 @@
 		target="_black"
 		rel="noreferrer noopener"
 		aria-label="Share to Facebook"
+		class={linkClass}
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -28,6 +29,7 @@
 		target="_black"
 		rel="noreferrer noopener"
 		aria-label="Share to Twitter"
+		class={linkClass}
 	>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -45,12 +47,7 @@
 </div>
 
 <style>
-	a {
-		@apply text-light-blue-400 hover:text-light-blue-700;
-	}
-
 	svg {
 		@apply h-6 md:h-8;
 	}
-
 </style>
