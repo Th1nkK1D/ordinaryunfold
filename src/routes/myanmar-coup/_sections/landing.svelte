@@ -4,7 +4,7 @@
 	import { quartInOut } from 'svelte/easing';
 
 	import Sharer from '../../../components/sharer.svelte';
-	import Logo from '../../../components/logo.svelte';
+	import Logo from '../../../components/images/logo.svelte';
 	import fetalities from '../../../data/myanmar-coup/recent-fatality.csv';
 
 	const count = tweened(0, {
