@@ -16,7 +16,7 @@ const youngestAge = Math.min(...fetalities.filter(({ age }) => age > 0).map(({ a
 
 export const chapters: Chapter[] = [
 	{
-		title: '<mark>When</mark> did the incident happended?',
+		title: '<mark>When</mark> did the incidents happen?',
 		sortBy: (a, z) =>
 			a.dateOfIncident.format('YYYY/MM').localeCompare(z.dateOfIncident.format('YYYY/MM')),
 		steps: [
@@ -25,15 +25,15 @@ export const chapters: Chapter[] = [
 					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/02'
 				),
 				heading: (count) =>
-					`A coup d'état in Myanmar began in <mark>1&nbsp;February 2021</mark>. ${count} dead on that month.`,
-				description: 'But it is just the begining'
+					`A coup d'état in Myanmar began in <mark>1&nbsp;February 2021</mark>. ${count} deads on that month.`,
+				description: 'But it was just the beginning'
 			},
 			{
 				matchedMask: fetalities.map(
 					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/03'
 				),
 				heading: (count) =>
-					`The situation escalated dramatically in <mark>March 2021</mark>, total ${count} lifes were taken away.`
+					`The situation escalated dramatically in <mark>March 2021</mark>, a total of ${count} lives were taken away.`
 			}
 		]
 	},
@@ -62,12 +62,12 @@ export const chapters: Chapter[] = [
 		]
 	},
 	{
-		title: 'What are their <mark>sexuality?</mark>',
+		title: 'What are their <mark>sexualities?</mark>',
 		sortBy: (a, z) => a.sex.localeCompare(z.sex),
 		steps: [
 			{
 				matchedMask: fetalities.map(({ sex }) => sex === 'M'),
-				heading: (count) => `Most people, ${count} in total, are <mark>male</mark>.`,
+				heading: (count) => `The majority of people, ${count} in total, are <mark>males</mark>.`,
 				description: `Do they look terrifying? I don't think so.`
 			},
 			{
