@@ -11,6 +11,8 @@
 		easing: 'easeInOutQuad'
 	};
 
+	const MUTE_OPACITY = 0.25;
+
 	export let people: Person[];
 	export let activePeopleMask: boolean[];
 
@@ -71,10 +73,16 @@
 	$: {
 		if (paper.project && activePeopleMask) {
 			paper.project.activeLayer.children.forEach((avatar, index) => {
-				avatar.opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.25;
+				avatar.opacity =
+					activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : MUTE_OPACITY;
 			});
 		}
 	}
 </script>
 
-<canvas class="fixed -z-1 h-screen w-full bg-true-gray-900" bind:this={canvas} />
+<div class="fixed -z-1 h-screen w-full bg-true-gray-900">
+	<canvas
+		class="h-full w-full {activePeopleMask.length === 0 ? 'opacity-60' : ''}"
+		bind:this={canvas}
+	/>
+</div>
