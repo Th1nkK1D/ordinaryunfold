@@ -96,9 +96,15 @@ export const chapters: Chapter[] = [
 				heading: () => `<mark>The youngest one</mark> is just ${youngestAge} year old.`
 			},
 			{
-				matchedMask: fetalities.map(({ age }) => age > 50 && age < 1000),
+				matchedMask: fetalities.map(({ age }) => age >= 50 && age < 1000),
 				heading: (count) => `${count} people are <mark>50 or older</mark>.`,
 				description: 'They should have a peaceful life at this age.'
+			},
+			{
+				matchedMask: fetalities.map(({ age }) => age > 20 && age < 50),
+				heading: (count) =>
+					`And most of them, ${count} people, are <mark>between 20 and 50</mark>.`,
+				description: 'Main working force of the country had gone.'
 			}
 		]
 	}
