@@ -29,7 +29,7 @@
 	<Scrollama
 		class="flex flex-col w-full"
 		on:stepenter={({ detail: { index } }) => {
-			people = fetalities.sort(chapters[index].sortBy);
+			people = people.sort(chapters[index].sortBy);
 		}}
 	>
 		{#each chapters as { title, steps }, index}

@@ -17,8 +17,7 @@ const youngestAge = Math.min(...fetalities.filter(({ age }) => age > 0).map(({ a
 export const chapters: Chapter[] = [
 	{
 		title: '<mark>When</mark> did the incidents happen?',
-		sortBy: (a, z) =>
-			a.dateOfIncident.format('YYYY/MM').localeCompare(z.dateOfIncident.format('YYYY/MM')),
+		sortBy: (a, z) => a.id - z.id,
 		steps: [
 			{
 				matchedMask: fetalities.map(
