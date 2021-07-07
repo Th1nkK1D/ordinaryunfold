@@ -11,26 +11,28 @@
 </script>
 
 <Scrollama class="p-8 md:p-20" on:stepenter={onStepEnter}>
-	<div>
+	<section>
 		<h2 class="font-head font-bold text-4xl md:text-6xl"><slot /></h2>
-	</div>
+	</section>
 
 	{#each steps as { heading, description, matchedMask }}
-		<div class="items-center space-y-3 text-center">
-			<h3 class="font-head font-bold text-xl md:text-3xl max-w-xl text-center">
-				{@html heading(matchedMask.filter((value) => value).length)}
-			</h3>
-			{#if description}
-				<p class="text-sm md:text-lg max-w-3xl">{description}</p>
-			{/if}
-		</div>
+		<section class="items-center">
+			<div class="bg-true-gray-900 bg-opacity-50 p-6 mx-auto space-y-3 text-center">
+				<h3 class="font-head font-bold text-xl md:text-3xl max-w-xl mx-auto">
+					{@html heading(matchedMask.filter((value) => value).length)}
+				</h3>
+				{#if description}
+					<p class="text-sm md:text-lg max-w-3xl">{description}</p>
+				{/if}
+			</div>
+		</section>
 	{/each}
 
 	<div />
 </Scrollama>
 
 <style>
-	div {
+	section {
 		@apply flex flex-col justify-center min-h-screen;
 	}
 </style>
