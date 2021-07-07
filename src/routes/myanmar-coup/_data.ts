@@ -1,10 +1,10 @@
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat';
-import fetalitiesData from '../../data/myanmar-coup/recent-fatality.csv';
+import fatalitiesData from '../../data/myanmar-coup/recent-fatality.csv';
 
 dayjs.extend(customParseFormat);
 
-export const fetalities = fetalitiesData
+export const fatalities = fatalitiesData
 	.map(({ age, dateOfIncident, ...data }) => ({
 		age: age.length > 0 ? +age : 9999,
 		dateOfIncident: dayjs(dateOfIncident, 'DD-MMM-YY'),
@@ -18,4 +18,4 @@ export const fetalities = fetalitiesData
 		...data
 	}));
 
-export type Person = typeof fetalities[0];
+export type Person = typeof fatalities[0];

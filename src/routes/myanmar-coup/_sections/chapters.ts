@@ -1,4 +1,4 @@
-import { fetalities } from '../_data';
+import { fatalities } from '../_data';
 import type { Person } from '../_data';
 
 export interface Step {
@@ -12,7 +12,7 @@ interface Chapter {
 	steps: Step[];
 }
 
-const youngestAge = Math.min(...fetalities.filter(({ age }) => age > 0).map(({ age }) => age));
+const youngestAge = Math.min(...fatalities.filter(({ age }) => age > 0).map(({ age }) => age));
 
 export const chapters: Chapter[] = [
 	{
@@ -26,7 +26,7 @@ export const chapters: Chapter[] = [
 				description: `The country's civilian leader, Aung San Suu Kyi, and numerous government figures was detained. Power had been handed to the commander of the armed forces, Min Aung Hlaing, who declared a national state of emergency for one year.`
 			},
 			{
-				matchedMask: fetalities.map(
+				matchedMask: fatalities.map(
 					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '200221'
 				),
 				heading: (count) =>
@@ -34,7 +34,7 @@ export const chapters: Chapter[] = [
 				description: `One of them was a 16-year-old boy. The slaughter continued.`
 			},
 			{
-				matchedMask: fetalities.map(
+				matchedMask: fatalities.map(
 					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '270321'
 				),
 				heading: (count) =>
@@ -48,17 +48,17 @@ export const chapters: Chapter[] = [
 		sortBy: (a, z) => a.organization.localeCompare(z.organization),
 		steps: [
 			{
-				matchedMask: fetalities.map(({ organization }) => organization === 'Civilian'),
+				matchedMask: fatalities.map(({ organization }) => organization === 'Civilian'),
 				heading: (count) => `${count} people are <mark>civilians</mark>.`,
 				description: 'I wonder what were they doing?'
 			},
 			{
-				matchedMask: fetalities.map(({ organization }) => organization === 'Student'),
+				matchedMask: fatalities.map(({ organization }) => organization === 'Student'),
 				heading: (count) => `${count} <mark>students</mark> were killed.`,
 				description: 'Future of the country, they said.'
 			},
 			{
-				matchedMask: fetalities.map(({ organization }) =>
+				matchedMask: fatalities.map(({ organization }) =>
 					['Teacher', 'Doctor/Nurse', 'Engineer', 'Civil Servant'].includes(organization)
 				),
 				heading: (count) =>
@@ -72,12 +72,12 @@ export const chapters: Chapter[] = [
 		sortBy: (a, z) => a.sex.localeCompare(z.sex),
 		steps: [
 			{
-				matchedMask: fetalities.map(({ sex }) => sex === 'M'),
+				matchedMask: fatalities.map(({ sex }) => sex === 'M'),
 				heading: (count) => `The majority of people, ${count} in total, are <mark>males</mark>.`,
 				description: `Do they look terrifying? I don't think so.`
 			},
 			{
-				matchedMask: fetalities.map(({ sex }) => sex === 'F'),
+				matchedMask: fatalities.map(({ sex }) => sex === 'F'),
 				heading: (count) => `${count} <mark>females</mark> were killed too.`
 			}
 		]
@@ -87,21 +87,21 @@ export const chapters: Chapter[] = [
 		sortBy: (a, z) => a.age - z.age,
 		steps: [
 			{
-				matchedMask: fetalities.map(({ age }) => age <= 20),
+				matchedMask: fatalities.map(({ age }) => age <= 20),
 				heading: (count) => `${count} people are <mark>20 or younger</mark>.`,
 				description: 'Who would expect to be this soon?'
 			},
 			{
-				matchedMask: fetalities.map(({ age }) => age === youngestAge),
+				matchedMask: fatalities.map(({ age }) => age === youngestAge),
 				heading: () => `<mark>The youngest one</mark> is just ${youngestAge} year old.`
 			},
 			{
-				matchedMask: fetalities.map(({ age }) => age >= 50 && age < 1000),
+				matchedMask: fatalities.map(({ age }) => age >= 50 && age < 1000),
 				heading: (count) => `${count} people are <mark>50 or older</mark>.`,
 				description: 'They should have a peaceful life at this age.'
 			},
 			{
-				matchedMask: fetalities.map(({ age }) => age > 20 && age < 50),
+				matchedMask: fatalities.map(({ age }) => age > 20 && age < 50),
 				heading: (count) =>
 					`And most of them, ${count} people, are <mark>between 20 and 50</mark>.`,
 				description: 'Main working force of the country had gone.'

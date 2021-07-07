@@ -5,12 +5,12 @@
 	import Chapter from './_sections/chapter.svelte';
 	import Landing from './_sections/landing.svelte';
 	import type { Person } from './_data';
-	import { fetalities } from './_data';
+	import { fatalities } from './_data';
 	import { chapters } from './_sections/chapters';
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
 
-	let people: Person[] = fetalities;
+	let people: Person[] = fatalities;
 	let activePeopleMask: boolean[] = [];
 </script>
 

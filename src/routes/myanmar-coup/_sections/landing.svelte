@@ -4,14 +4,14 @@
 
 	import Sharer from '../../../components/sharer.svelte';
 	import Logo from '../../../components/logo.svelte';
-	import fetalities from '../../../data/myanmar-coup/recent-fatality.csv';
+	import fatalities from '../../../data/myanmar-coup/recent-fatality.csv';
 
 	const count = tweened(0, {
 		duration: 3000
 	});
 
 	onMount(() => {
-		$count = fetalities.length;
+		$count = fatalities.length;
 	});
 </script>
 
