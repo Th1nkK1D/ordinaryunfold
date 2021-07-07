@@ -16,23 +16,30 @@ const youngestAge = Math.min(...fetalities.filter(({ age }) => age > 0).map(({ a
 
 export const chapters: Chapter[] = [
 	{
-		title: '<mark>When</mark> did the incidents happen?',
+		title: '<mark>What</mark> happended?',
 		sortBy: (a, z) => a.id - z.id,
 		steps: [
 			{
-				matchedMask: fetalities.map(
-					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/02'
-				),
-				heading: (count) =>
-					`A coup d'état in Myanmar began in <mark>1&nbsp;February 2021</mark>. ${count} deads on that month.`,
-				description: 'But it was just the beginning'
+				matchedMask: [],
+				heading: () =>
+					`A coup d'état in Myanmar began on the morning of <mark>1 February 2021</mark>.`,
+				description: `The country's civilian leader, Aung San Suu Kyi, and numerous government figures was detained. Power had been handed to the commander of the armed forces, Min Aung Hlaing, who declared a national state of emergency for one year.`
 			},
 			{
 				matchedMask: fetalities.map(
-					({ dateOfIncident }) => dateOfIncident.format('YYYY/MM') === '2021/03'
+					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '200221'
 				),
 				heading: (count) =>
-					`The situation escalated dramatically in <mark>March 2021</mark>, a total of ${count} lives were taken away.`
+					`Protests appeared all around the country.<br>In <mark>20 Febuary 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
+				description: `One of them was a 16-year-old boy. The slaughter continued.`
+			},
+			{
+				matchedMask: fetalities.map(
+					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '270321'
+				),
+				heading: (count) =>
+					`It was a bloodbath in <mark>27 March 2021</mark>, total ${count} people were killed in a single day.`,
+				description: 'That was in the deadliest day since the coup.'
 			}
 		]
 	},

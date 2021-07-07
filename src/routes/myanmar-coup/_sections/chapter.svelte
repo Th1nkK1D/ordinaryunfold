@@ -16,12 +16,12 @@
 	</div>
 
 	{#each steps as { heading, description, matchedMask }}
-		<div class="items-center space-y-2">
+		<div class="items-center space-y-3 text-center">
 			<h3 class="font-head font-bold text-xl md:text-3xl max-w-xl text-center">
 				{@html heading(matchedMask.filter((value) => value).length)}
 			</h3>
 			{#if description}
-				<p class="text-sm md:text-lg">{description}</p>
+				<p class="text-sm md:text-lg max-w-3xl">{description}</p>
 			{/if}
 		</div>
 	{/each}

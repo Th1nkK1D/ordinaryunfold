@@ -10,7 +10,9 @@ export const fetalities = fetalitiesData
 		dateOfIncident: dayjs(dateOfIncident, 'DD-MMM-YY'),
 		...data
 	}))
-	.sort((a, z) => a.dateOfIncident.format('YY/MM').localeCompare(z.dateOfIncident.format('YY/MM')))
+	.sort((a, z) =>
+		a.dateOfIncident.format('YYMMDD').localeCompare(z.dateOfIncident.format('YYMMDD'))
+	)
 	.map((data, index) => ({
 		id: index,
 		...data
