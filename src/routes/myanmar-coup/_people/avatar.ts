@@ -3,7 +3,7 @@ import paper from 'paper';
 export const BASE_SIZE = 100;
 
 const FACE_VARIATION = [10, 15, 20];
-const DEFAULT_COLOR = new paper.Color('#484848');
+const DEFAULT_COLOR = new paper.Color('#555555');
 
 const drawAvatar = (y: number, xTop: number, xButtom: number): paper.Group => {
 	const face = new paper.Path({

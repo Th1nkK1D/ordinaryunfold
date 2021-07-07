@@ -71,7 +71,7 @@
 	$: {
 		if (paper.project && activePeopleMask) {
 			paper.project.activeLayer.children.forEach((avatar, index) => {
-				avatar.opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.3;
+				avatar.opacity = activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : 0.25;
 			});
 		}
 	}
