@@ -77,8 +77,22 @@
 
 		<div class="space-y-6">
 			<p class="-md:text-sm">
-				Data from <a href="https://aappb.org/?cat=109" rel="papererrer noopener"
+				Fatality data from <a href="https://aappb.org/?cat=109" rel="papererrer noopener"
 					>AAPPB 2021 Coup Daily Briefings</a
+				>
+				<br />
+				News from
+				<a
+					href="https://www.nytimes.com/article/myanmar-news-protests-coup.html"
+					rel="papererrer noopener">NYTimes</a
+				>, <a href="https://www.bbc.com/news/world-asia-55902070" rel="papererrer noopener">BBC</a>,
+				<a
+					href="https://edition.cnn.com/2021/02/01/asia/myanmar-military-coup-explainer-intl-hnk-scli/index.html9"
+					rel="papererrer noopener">CNN</a
+				>, and
+				<a
+					href="https://en.wikipedia.org/wiki/2021_Myanmar_coup_d%27%C3%A9tat"
+					rel="papererrer noopener">Wikipedia</a
 				>
 			</p>
 			<Footer class="text-center text-true-gray-400" />
