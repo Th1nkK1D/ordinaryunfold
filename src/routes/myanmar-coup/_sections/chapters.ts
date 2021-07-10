@@ -22,23 +22,31 @@ export const chapters: Chapter[] = [
 			{
 				matchedMask: [],
 				heading: () =>
-					`A coup d'état in Myanmar began on the morning of <mark>1 February 2021</mark>.`,
-				description: `The country's civilian leader, Aung San Suu Kyi, and numerous government figures was detained. Power had been handed to the commander of the armed forces, Min Aung Hlaing, who declared a national state of emergency for one year.`
+					`A coup d'état in Myanmar began in <mark>1&nbsp;February&nbsp;2021</mark> by the armed forces led by Min Aung Hlaing`,
+				description: `A national state of emergency was declared for a year. The country's civilian leader, Aung San Suu Kyi, was detained, and protestors came out all around the country.`
 			},
 			{
 				matchedMask: fatalities.map(
 					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '200221'
 				),
 				heading: (count) =>
-					`Protests appeared all around the country.<br>In <mark>20 Febuary 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
-				description: `One of them was a 16-year-old boy. The slaughter continued.`
+					`<mark>20 Febuary 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
+				description: `One of them is a 16-year-old boy, but that was just the begining.`
+			},
+			{
+				matchedMask: fatalities.map(
+					({ dateOfIncident }) => dateOfIncident.format('MMYY') === '0321'
+				),
+				heading: (count) =>
+					`The situation escalated dramatically in <mark>March 2021</mark>, total ${count} people were killed.`,
+				description: 'It was a bloodbath.'
 			},
 			{
 				matchedMask: fatalities.map(
 					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '270321'
 				),
 				heading: (count) =>
-					`It was a bloodbath in <mark>27 March 2021</mark>, total ${count} people were killed in a single day.`,
+					`In that amount, ${count} incidents happend in just a single day: <mark>27 March 2021</mark>`,
 				description: 'That was in the deadliest day since the coup.'
 			}
 		]
@@ -68,7 +76,7 @@ export const chapters: Chapter[] = [
 		]
 	},
 	{
-		title: 'What are their <mark>sexualities?</mark>',
+		title: 'Are they <mark>males or females?</mark>',
 		sortBy: (a, z) => a.sex.localeCompare(z.sex),
 		steps: [
 			{
