@@ -45,7 +45,7 @@
 		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over.</h2>
 	</section>
 
-	<section class="h-screen flex flex-col space-y-12 p-8 text-center">
+	<section class="h-screen flex flex-col space-y-12 p-4 text-center">
 		<div class="flex-1 flex flex-col justify-center items-center space-y-4">
 			<svg
 				width="92"
@@ -67,16 +67,17 @@
 				> for more information.
 			</p>
 			<p class="-md:text-sm">#StandWithMyanmar</p>
-			<div class="pt-12">
+			<div class="flex flex-col items-center py-6 md:py-12 space-y-2">
 				<Sharer
 					url="https://www.ordinaryunfold.com/myanmar-coup/"
 					linkClass="text-yellow-500 hover:text-yellow-300"
 				/>
 			</div>
+			<a href="/" class="-md:text-xs">back to home page</a>
 		</div>
 
-		<div class="space-y-6">
-			<p class="-md:text-sm">
+		<div class="space-y-6 -md:text-xs">
+			<p>
 				Fatality data from <a href="https://aappb.org/?cat=109" rel="papererrer noopener"
 					>AAPPB 2021 Coup Daily Briefings</a
 				>
@@ -95,7 +96,7 @@
 					rel="papererrer noopener">Wikipedia</a
 				>
 			</p>
-			<Footer class="text-center text-true-gray-400" />
+			<Footer class="text-center text-true-gray-400 -md:text-xs" />
 		</div>
 	</section>
 </div>
