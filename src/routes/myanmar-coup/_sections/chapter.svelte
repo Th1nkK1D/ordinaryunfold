@@ -28,7 +28,7 @@
 		</section>
 	{/each}
 
-	<div />
+	<section />
 </Scrollama>
 
 <style>
