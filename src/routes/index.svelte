@@ -16,8 +16,16 @@
 		class="flex-1 flex flex-col w-full max-w-screen-lg px-2 space-y-6 md:(px-6 space-y-12) mx-auto "
 	>
 		<ProjectCard
-			title="วิวาทะโควิด 19 (Thailand Covid Speeches)"
-			description="ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล"
+			title="Losses in Myanmar"
+			description="Get to know the victims demography during the 2021 coup d'état in Myanmar #StandWithMyanmar"
+			href="/myanmar-coup/"
+			image="/myanmar-coup/og.png"
+			date="11 Jul 2021"
+			lang="EN"
+		/>
+		<ProjectCard
+			title="Thailand Covid-19 Speeches (วิวาทะโควิด 19)"
+			description="How did the Thai government, political parties, doctors, and others talk about COVID-19 compared to daily new cases"
 			href="/th-covid-speech/"
 			image="/th-covid-speech/og2.png"
 			date="14 May 2021"
