@@ -8,7 +8,7 @@
 </script>
 
 <a
-	class="w-full flex flex-col md:flex-row transition-shadow duration-300 ease-in-out border border-gray-100 shadow-lg hover:shadow-xl"
+	class="w-full flex flex-col md:flex-row transition-transform-shadow duration-300 ease-in-out border border-gray-100 shadow-lg hover:(shadow-xl transform scale-101)"
 	{href}
 >
 	<img src={image} class="w-full md:max-w-86" alt={title} />
