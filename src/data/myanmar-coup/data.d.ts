@@ -4,7 +4,6 @@ declare module '*/recent-fatality.csv' {
 		age?: string;
 		dateOfIncident: string;
 		organization?: string;
-		remarks?: string;
 	}>;
 
 	export = recentFatality;
