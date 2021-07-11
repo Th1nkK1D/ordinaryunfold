@@ -73,7 +73,7 @@
 					linkClass="text-yellow-500 hover:text-yellow-300"
 				/>
 			</div>
-			<a href="/" class="-md:text-xs">back to home page</a>
+			<a href="/" class="-md:text-xs">Return to home page</a>
 		</div>
 
 		<div class="space-y-6 -md:text-xs">

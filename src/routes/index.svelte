@@ -17,7 +17,7 @@
 	>
 		<ProjectCard
 			title="Losses in Myanmar"
-			description="Get to know the victims demography during the 2021 coup d'état in Myanmar #StandWithMyanmar"
+			description="Get to know the victims demography during the 2021 coup d'état in Myanmar. #StandWithMyanmar"
 			href="/myanmar-coup/"
 			image="/myanmar-coup/og.png"
 			date="11 Jul 2021"
@@ -25,7 +25,7 @@
 		/>
 		<ProjectCard
 			title="Thailand Covid-19 Speeches (วิวาทะโควิด 19)"
-			description="How did the Thai government, political parties, doctors, and others talk about COVID-19 compared to daily new cases"
+			description="How did Thai government, political parties, doctors, and others talk about COVID-19 compared to daily new cases."
 			href="/th-covid-speech/"
 			image="/th-covid-speech/og2.png"
 			date="14 May 2021"

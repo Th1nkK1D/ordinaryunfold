@@ -23,7 +23,7 @@ export const chapters: Chapter[] = [
 				matchedMask: [],
 				heading: () =>
 					`A coup d'état in Myanmar began in <mark>1&nbsp;February&nbsp;2021</mark> by the armed forces led by Min Aung Hlaing`,
-				description: `A national state of emergency was declared for a year. The country's civilian leader, Aung San Suu Kyi, was detained, and protestors came out all around the country.`
+				description: `A national state of emergency was declared for a year. The country's civilian leader, Aung San Suu Kyi, was detained. Protests over the coup appeared around the country.`
 			},
 			{
 				matchedMask: fatalities.map(
@@ -31,7 +31,7 @@ export const chapters: Chapter[] = [
 				),
 				heading: (count) =>
 					`<mark>20 Febuary 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
-				description: `One of them is a 16-year-old boy, but that was just the begining.`
+				description: `One of them was a 16-year-old boy.`
 			},
 			{
 				matchedMask: fatalities.map(
@@ -112,7 +112,7 @@ export const chapters: Chapter[] = [
 				matchedMask: fatalities.map(({ age }) => age > 20 && age < 50),
 				heading: (count) =>
 					`And most of them, ${count} people, are <mark>between 20 and 50</mark>.`,
-				description: 'Main working force of the country had gone.'
+				description: 'Main forces of the country had gone.'
 			}
 		]
 	}
