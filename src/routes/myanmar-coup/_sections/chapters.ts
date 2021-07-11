@@ -30,7 +30,7 @@ export const chapters: Chapter[] = [
 					({ dateOfIncident }) => dateOfIncident.format('DDMMYY') === '200221'
 				),
 				heading: (count) =>
-					`<mark>20 Febuary 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
+					`<mark>20 February 2021</mark>, ${count} unarmed protesters were killed by security forces.`,
 				description: `One of them was a 16-year-old boy.`
 			},
 			{

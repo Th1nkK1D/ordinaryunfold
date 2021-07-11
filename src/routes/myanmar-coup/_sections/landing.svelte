@@ -20,7 +20,7 @@
 	<h1 class="text-5xl md:text-9xl font-head font-bold">LOSSES IN<br />MYANMAR</h1>
 	<div class="font-head md:space-y-2">
 		<p class="text-2xl md:text-5xl font-bold text-yellow-500">{Math.round($count)} people</p>
-		<p class="text-lg md:text-2xl">have been confirmed killed by junta coup since Febuary 2021</p>
+		<p class="text-lg md:text-2xl">have been confirmed killed by junta coup since February 2021</p>
 	</div>
 	<p class="italic text-sm">Last updated on 3 July 2021</p>
 	<div class="flex">
