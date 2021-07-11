@@ -13,7 +13,7 @@
 	</section>
 
 	<div
-		class="flex-1 flex flex-col w-full max-w-screen-lg px-2 space-y-6 md:(px-6 space-y-12) mx-auto "
+		class="flex-1 flex flex-col w-full max-w-screen-lg px-2 space-y-10 md:(px-6 space-y-12) mx-auto "
 	>
 		<ProjectCard
 			title="Losses in Myanmar"
@@ -24,7 +24,7 @@
 			lang="EN"
 		/>
 		<ProjectCard
-			title="Thailand Covid-19 Speeches (วิวาทะโควิด 19)"
+			title="Thailand Covid-19 Speeches"
 			description="How did Thai government, political parties, doctors, and others talk about COVID-19 compared to daily new cases."
 			href="/th-covid-speech/"
 			image="/th-covid-speech/og2.png"
@@ -34,7 +34,7 @@
 	</div>
 
 	<div class="flex flex-row justify-center items-center space-x-2 mt-24 md:mt-48">
-		<div class="-md:text-sm">Follow us on</div>
+		<div class="-md:text-sm">Follow us</div>
 		<a
 			href="https://www.facebook.com/ordinaryunfold"
 			target="_blank"
