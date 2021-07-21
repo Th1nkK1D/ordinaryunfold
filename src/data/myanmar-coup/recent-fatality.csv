@@ -1,6 +1,6 @@
 sex,age,dateOfIncident,organization
 M,32,08-Feb-21,Civilian
-F,19,09-Feb-21,Civilian
+F,19,09-Feb-21,Student
 M,18,15-Feb-21,Civilian
 M,37,20-Feb-21,Civilian
 M,16,20-Feb-21,Civilian
@@ -141,7 +141,7 @@ M,24,14-Mar-21,Civilian
 M,37,14-Mar-21,Civilian
 M,20,14-Mar-21,Civilian
 M,17,14-Mar-21,Civilian
-,29,14-Mar-21,Civilian
+M,29,14-Mar-21,Civilian
 M,23,14-Mar-21,Civilian
 M,26,14-Mar-21,Civilian
 M,41,14-Mar-21,Civilian
@@ -232,7 +232,7 @@ M,52,15-Mar-21,
 M,29,15-Mar-21,Civilian
 M,47,15-Mar-21,Civilian
 M,,15-Mar-21,
-M,24,15-Mar-21,Civil Servant
+,24,15-Mar-21,Civil Servant
 M,42,15-Mar-21,Civilian
 M,24,15-Mar-21,Civilian
 M,39,15-Mar-21,NLD
@@ -246,7 +246,7 @@ M,16,16-Mar-21,
 M,44,16-Mar-21,Civilian
 M,34,17-Mar-21,Civilian
 F,,17-Mar-21,Civilian
-M,25,17-Mar-21,Other
+M,25,,Other
 M,27,17-Mar-21,Civilian
 M,19,17-Mar-21,Civilian
 M,42,17-Mar-21,Civilian
@@ -261,7 +261,7 @@ M,41,19-Mar-21,Student
 M,27,19-Mar-21,Student
 M,27,19-Mar-21,Civilian
 M,47,19-Mar-21,Civilian
-M,41,19-Mar-21,Civilian
+,41,19-Mar-21,Civilian
 M,22,19-Mar-21,Civilian
 M,,19-Mar-21,Civilian
 ,,19-Mar-21,Civilian
@@ -282,7 +282,7 @@ M,40,21-Mar-21,Civilian
 M,16,21-Mar-21,Civilian
 M,26,21-Mar-21,Civilian
 M,44,21-Mar-21,Civilian
-M,46,,Civilian
+M,46,21-Mar-21,Civilian
 M,14,21-Mar-21,Civilian
 M,51,21-Mar-21,Civilian
 M,20,21-Mar-21,Civilian
@@ -379,7 +379,7 @@ M,,27-Mar-21,
 M,41,27-Mar-21,Other
 M,25,27-Mar-21,Engineer
 M,,27-Mar-21,Engineer
-M,36,27-Mar-21,Civilian
+,36,27-Mar-21,Civilian
 M,,27-Mar-21,Civilian
 M,25,27-Mar-21,Civilian
 M,23,27-Mar-21,Student
@@ -416,7 +416,7 @@ M,13,27-Mar-21,Civilian
 M,21,27-Mar-21,Civil Servant
 M,19,27-Mar-21,Civilian
 M,20,27-Mar-21,Student
-M,33,27-Mar-21,Civilian
+,33,27-Mar-21,Civilian
 M,24,27-Mar-21,Civilian
 M,32,27-Mar-21,Civilian
 M,45,27-Mar-21,Civilian
@@ -607,7 +607,7 @@ M,64,07-Apr-21,Civilian
 M,,07-Apr-21,Civilian
 M,,07-Apr-21,Civilian
 M,34,07-Apr-21,Civilian
-M,,07-Apr-21,Civilian
+,,07-Apr-21,Civilian
 M,,07-Apr-21,Civilian
 M,,07-Apr-21,Civilian
 M,,07-Apr-21,Civilian
@@ -845,6 +845,29 @@ M,30,06-Jul-21,Other
 M,25,07-Jul-21,Other
 F,,07-Jul-21,Civilian
 M,26,08-Jul-21,Civilian
+M,60,08-Jul-21,Civilian
+M,30,10-Jul-21,Other
+M,,10-Jul-21,Civilian
+M,23,10-Jul-21,Civilian
+M,16,10-Jul-21,Civilian
+M,17,10-Jul-21,Civilian
+M,18,10-Jul-21,Civilian
+M,,11-Jul-21,Civilian
+M,60,13-Jul-21,Civilian
+M,,12-Jul-21,Civilian
+M,26,09-Jul-21,Civilian
+M,18,09-Jul-21,Civilian
+M,16,14-Jul-21,Civilian
+M,19,16-Jul-21,Civilian
+M,67,16-Jul-21,NLD
+,,14-Jun-21,Other
+M,20,17-Jul-21,Civilian
+M,28,17-Jul-21,Civilian
+M,40,17-Jul-21,Civilian
+M,35,17-Jul-21,Civilian
+M,72,16-Jun-21,NLD
+M,79,01-Feb-21,NLD
+M,,,NLD
 M,19,09-Apr-21,Student
 M,19,09-Apr-21,Student
 M,19,09-Apr-21,Student

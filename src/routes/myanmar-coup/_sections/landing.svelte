@@ -22,7 +22,7 @@
 		<p class="text-2xl md:text-5xl font-bold text-yellow-500">{Math.round($count)} people</p>
 		<p class="text-lg md:text-2xl">have been confirmed killed by junta coup since February 2021</p>
 	</div>
-	<p class="italic text-sm">Last updated on 10 July 2021</p>
+	<p class="italic text-sm">Last updated on 20 July 2021</p>
 	<div class="flex">
 		<div class="flex-1">
 			<Sharer
