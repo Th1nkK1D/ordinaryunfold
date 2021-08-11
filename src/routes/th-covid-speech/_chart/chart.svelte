@@ -58,9 +58,15 @@
 		.join(' ');
 
 	$: pins = contentBlocks.map(({ id, type, date, ...rest }) => {
-		const { count } = dailyNewCases.find(
+		const matchedCases = dailyNewCases.find(
 			(newCase) => newCase.date.toDateString() === date.toDateString()
 		);
+
+		const count = matchedCases
+			? matchedCases.count
+			: ([...dailyNewCases].reverse().find((newCase) => newCase.date <= date).count +
+					dailyNewCases.find((newCase) => newCase.date >= date).count) /
+			  2;
 
 		return {
 			id,
@@ -95,7 +101,6 @@
 			1000
 		);
 	});
-
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
@@ -150,5 +155,4 @@
 		@apply bg-gray-600;
 		border-radius: 4px;
 	}
-
 </style>
