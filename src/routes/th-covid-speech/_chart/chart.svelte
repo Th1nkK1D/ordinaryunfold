@@ -8,7 +8,7 @@
 	import YLabel from './y-label.svelte';
 	import Logo from '../../../components/logo.svelte';
 
-	const WIDTH_SCREEN_MULTIPLIER = 3.14;
+	const WIDTH_CASE_MULTIPLIER = 6;
 	const Y_STEP_SIZE = 2000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 60;
@@ -19,14 +19,13 @@
 	const dispatch = createEventDispatcher();
 
 	let clientHeight = SCROLL_BAR_HEIGHT;
-	let clientWidth = 0;
 	let horizontalScroll: HTMLElement;
 
 	$: chartHeight = clientHeight - SCROLL_BAR_HEIGHT;
 
 	const yMax = Math.max(...dailyNewCases.map(({ count }) => count));
 
-	$: xMaxWidth = clientWidth * WIDTH_SCREEN_MULTIPLIER;
+	$: xMaxWidth = dailyNewCases.length * WIDTH_CASE_MULTIPLIER;
 	$: canvasSize = xMaxWidth + MARGIN_RIGHT;
 
 	$: xScale = scaleTime()
@@ -103,7 +102,7 @@
 	});
 </script>
 
-<div class="relative h-full w-full" bind:clientHeight bind:clientWidth>
+<div class="relative h-full w-full" bind:clientHeight>
 	<div class="absolute top-0 left-0 flex p-4 z-10 -md:(justify-center p-3 right-0)">
 		<Logo />
 	</div>
