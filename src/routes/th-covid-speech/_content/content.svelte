@@ -95,13 +95,21 @@
 				<ul class="space-y-2">
 					<li>
 						จำนวนผู้ติดเชื้อใหม่รายวันจาก <a
-							href="https://covid19.th-stat.com/th/api"
+							href="https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all"
 							class="text-light-blue-700 hover:underline"
 							target="_black"
 							rel="noreferrer noopener"
 						>
 							Open API กรมควบคุมโรค
 						</a>
+						(<a
+							href="https://covid19.th-stat.com/th/api"
+							class="text-light-blue-700 hover:underline"
+							target="_black"
+							rel="noreferrer noopener"
+						>
+							เวอร์ชั่นเก่า
+						</a> ที่ใช้ไม่ได้แล้ว)
 					</li>
 					<li>ข่าวและคำพูดต่างๆ ตามลิ้งค์ที่ได้แนบไว้</li>
 					<li>
