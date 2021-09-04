@@ -9,7 +9,7 @@
 	import Logo from '../../../components/logo.svelte';
 
 	const WIDTH_CASE_MULTIPLIER = 6;
-	const Y_STEP_SIZE = 2000;
+	const Y_STEP_SIZE = 5000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 60;
 	const MARGIN_RIGHT = 40;
