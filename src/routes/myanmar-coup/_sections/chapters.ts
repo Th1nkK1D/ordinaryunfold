@@ -95,13 +95,13 @@ export const chapters: Chapter[] = [
 		sortBy: (a, z) => a.age - z.age,
 		steps: [
 			{
-				matchedMask: fatalities.map(({ age }) => age <= 20),
+				matchedMask: fatalities.map(({ age }) => age && age <= 20),
 				heading: (count) => `${count} people are <mark>20 or younger</mark>.`,
 				description: 'Who would expect to be this soon?'
 			},
 			{
 				matchedMask: fatalities.map(({ age }) => age === youngestAge),
-				heading: () => `<mark>The youngest two</mark> are just ${youngestAge} year old.`
+				heading: () => `<mark>The youngest victims</mark> are just ${youngestAge} year old.`
 			},
 			{
 				matchedMask: fatalities.map(({ age }) => age >= 50 && age < 1000),

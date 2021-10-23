@@ -6,8 +6,8 @@ dayjs.extend(customParseFormat);
 
 export const fatalities = fatalitiesData
 	.map(({ age, dateOfIncident, ...data }) => ({
-		age: age.length > 0 ? +age : 9999,
-		dateOfIncident: dayjs(dateOfIncident, 'DD-MMM-YY'),
+		age: +age || 9999,
+		dateOfIncident: dayjs(dateOfIncident || new Date(), 'DD-MMM-YY'),
 		...data
 	}))
 	.sort((a, z) =>
