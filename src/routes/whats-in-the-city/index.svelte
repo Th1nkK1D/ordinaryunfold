@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Logo from '../../components/logo.svelte';
+	import Map from './_map/map.svelte';
 </script>
 
 <div class="flex flex-col w-screen h-screen p-8">
@@ -11,6 +12,8 @@
 			<h1 class="text-4xl">What's in</h1>
 			<h2 class="text-6xl">Bangkok</h2>
 		</div>
-		<div class="flex-1 bg-gray-200" />
+		<div class="flex-1">
+			<Map />
+		</div>
 	</div>
 </div>
