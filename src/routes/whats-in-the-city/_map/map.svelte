@@ -9,7 +9,6 @@
 	import bangkokGarden from '../../../data/whats-in-the-city/bangkok-garden.json';
 
 	const MAP_COLOR = '#E5E5E5';
-	const PIN_RADIUS = 5;
 	const DISTANCE_RADIUS = [
 		{ km: 10, color: '#FF8A65' },
 		{ km: 5, color: '#FFD54F' },
@@ -20,10 +19,6 @@
 
 	onMount(() => {
 		paper.setup(canvas);
-
-		const mapLayer = new paper.Layer();
-		const pointRadiusLayers = DISTANCE_RADIUS.map(() => new paper.Layer());
-		const pinLayer = new paper.Layer();
 
 		const { clientWidth, clientHeight } = canvas;
 
@@ -41,23 +36,22 @@
 			lineString([centroid, destination(centroid, 1, 0).geometry.coordinates as [number, number]])
 		);
 
-		mapLayer.activate();
 		const cityPath = new paper.Path(path(bangkokGeo));
-		cityPath.fillColor = MAP_COLOR;
 
-		bangkokGarden.forEach(({ lat, lon }) => {
-			const point = new paper.Point(projection([lon, lat]));
-
-			DISTANCE_RADIUS.forEach(({ km, color }, index) => {
-				pointRadiusLayers[index].activate();
+		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) =>
+			bangkokGarden.map(({ lat, lon }) => {
+				const point = new paper.Point(projection([lon, lat]));
 				const circle = new paper.Shape.Circle(point, km * pixelPerKm);
 				circle.fillColor = color;
-			});
+				return circle;
+			})
+		);
 
-			pinLayer.activate();
-			const circle = new paper.Shape.Circle(point, PIN_RADIUS);
-			circle.fillColor = 'white';
-		});
+		const bgRect = new paper.Shape.Rectangle(0, 0, clientWidth, clientHeight);
+		bgRect.fillColor = MAP_COLOR;
+
+		const group = new paper.Group([cityPath, bgRect, ...distanceRadiusShape]);
+		group.clipped = true;
 	});
 </script>
 
