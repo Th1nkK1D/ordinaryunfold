@@ -10,10 +10,13 @@
 
 	const MAP_COLOR = '#E5E5E5';
 	const DISTANCE_RADIUS = [
-		{ km: 10, color: '#FF8A65' },
+		{ color: '#FF8A65' },
 		{ km: 5, color: '#FFD54F' },
 		{ km: 2, color: '#9CCC65' }
 	];
+
+	const ANIMATE_DELAY_PER_POINT = 10;
+	const ANIMATE_DURATION_PER_KM = 6;
 
 	let canvas: HTMLCanvasElement;
 
@@ -38,14 +41,23 @@
 
 		const cityPath = new paper.Path(path(bangkokGeo));
 
-		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) =>
-			bangkokGarden.map(({ lat, lon }) => {
+		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }, distanceIndex) => {
+			const radiusFrom = (DISTANCE_RADIUS[distanceIndex + 1]?.km || 0) * pixelPerKm;
+			const radiusTo = (km || clientWidth) * pixelPerKm;
+			const duration = (radiusTo - radiusFrom) * ANIMATE_DURATION_PER_KM;
+
+			return bangkokGarden.map(({ lat, lon }, pointIndex) => {
 				const point = new paper.Point(projection([lon, lat]));
-				const circle = new paper.Shape.Circle(point, km * pixelPerKm);
+				const circle = new paper.Shape.Circle(point, 0);
 				circle.fillColor = color;
+
+				setTimeout(() => {
+					circle.tween({ radius: radiusFrom }, { radius: radiusTo }, duration);
+				}, pointIndex * ANIMATE_DELAY_PER_POINT);
+
 				return circle;
-			})
-		);
+			});
+		});
 
 		const bgRect = new paper.Shape.Rectangle(0, 0, clientWidth, clientHeight);
 		bgRect.fillColor = MAP_COLOR;
