@@ -10,9 +10,9 @@
 
 	const MAP_COLOR = '#E5E5E5';
 	const DISTANCE_RADIUS = [
-		{ color: '#FF8A65' },
-		{ km: 5, color: '#FFD54F' },
-		{ km: 2, color: '#9CCC65' }
+		{ color: '#B2EBF2' },
+		{ km: 5, color: '#80DEEA' },
+		{ km: 2, color: '#4DD0E1' }
 	];
 
 	const ANIMATE_DELAY_PER_POINT = 10;
