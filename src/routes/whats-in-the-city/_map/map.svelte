@@ -10,7 +10,11 @@
 
 	const MAP_COLOR = '#E5E5E5';
 	const PIN_RADIUS = 5;
-	const POINT_RADIUS_KM = [10, 5, 2];
+	const DISTANCE_RADIUS = [
+		{ km: 10, color: '#FF8A65' },
+		{ km: 5, color: '#FFD54F' },
+		{ km: 2, color: '#9CCC65' }
+	];
 
 	let canvas: HTMLCanvasElement;
 
@@ -18,7 +22,7 @@
 		paper.setup(canvas);
 
 		const mapLayer = new paper.Layer();
-		const pointRadiusLayers = POINT_RADIUS_KM.map(() => new paper.Layer());
+		const pointRadiusLayers = DISTANCE_RADIUS.map(() => new paper.Layer());
 		const pinLayer = new paper.Layer();
 
 		const { clientWidth, clientHeight } = canvas;
@@ -44,10 +48,10 @@
 		bangkokGarden.forEach(({ lat, lon }) => {
 			const point = new paper.Point(projection([lon, lat]));
 
-			POINT_RADIUS_KM.forEach((radius, index) => {
+			DISTANCE_RADIUS.forEach(({ km, color }, index) => {
 				pointRadiusLayers[index].activate();
-				const circle = new paper.Shape.Circle(point, radius * pixelPerKm);
-				circle.strokeColor = 'green';
+				const circle = new paper.Shape.Circle(point, km * pixelPerKm);
+				circle.fillColor = color;
 			});
 
 			pinLayer.activate();
