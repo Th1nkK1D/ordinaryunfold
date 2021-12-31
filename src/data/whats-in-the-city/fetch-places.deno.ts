@@ -1,3 +1,6 @@
+// To tun script with Deno
+// deno run --allow-net --allow-write fetch-places.deno.ts --key <TOKEN> --area 10 --tag supermarket --output bangkok-supermarket.json
+
 import { parse } from 'https://deno.land/std/flags/mod.ts';
 
 interface Place {
@@ -35,7 +38,7 @@ const API_ENDPOINT = 'https://search.longdo.com/mapsearch/json/search';
 
 let offset = 0;
 let hasmore = true;
-const places = [];
+const places: { id: string; name: string; lat: number; lon: number }[] = [];
 
 while (hasmore) {
 	const queryString = Object.entries({ ...query, offset })
@@ -49,7 +52,11 @@ while (hasmore) {
 	if (res.ok) {
 		const { meta, data } = (await res.json()) as SearchResult;
 
-		places.push(...data.map(({ id, name, lat, lon }) => ({ id, name, lat, lon })));
+		places.push(
+			...data
+				.filter(({ id }) => !places.some((exist) => exist.id === id))
+				.map(({ id, name, lat, lon }) => ({ id, name: name.trim(), lat, lon }))
+		);
 
 		hasmore = meta.hasmore;
 		offset = meta.end + 1;
