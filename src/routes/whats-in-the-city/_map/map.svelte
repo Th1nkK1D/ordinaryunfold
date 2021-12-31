@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { geoPath, geoMercator } from 'd3-geo';
-	import destination from '@turf/destination';
-	import { lineString } from '@turf/helpers';
+	import { geoPath, geoMercator, geoCircle, geoDistance } from 'd3-geo';
+	import { lengthToDegrees, radiansToDegrees } from '@turf/helpers';
 	import paper from 'paper';
 
 	import bangkokGeo from '../../../data/whats-in-the-city/bangkok-geo.json';
@@ -16,7 +15,7 @@
 	];
 
 	const ANIMATE_DELAY_PER_POINT = 10;
-	const ANIMATE_DURATION_PER_KM = 6;
+	const ANIMATE_DURATION_PER_LAYER = 500;
 
 	let canvas: HTMLCanvasElement;
 
@@ -34,25 +33,26 @@
 		);
 		const path = geoPath(projection);
 
-		const centroid = path.centroid(bangkokGeo);
-		const pixelPerKm = path.measure(
-			lineString([centroid, destination(centroid, 1, 0).geometry.coordinates as [number, number]])
-		);
-
 		const cityPath = new paper.Path(path(bangkokGeo));
 
-		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }, distanceIndex) => {
-			const radiusFrom = (DISTANCE_RADIUS[distanceIndex + 1]?.km || 0) * pixelPerKm;
-			const radiusTo = (km || clientWidth) * pixelPerKm;
-			const duration = (radiusTo - radiusFrom) * ANIMATE_DURATION_PER_KM;
+		const maxLength = geoDistance(
+			projection.invert([0, 0]),
+			projection.invert([clientWidth, clientHeight])
+		);
+		const maxRadius = radiansToDegrees(maxLength);
+
+		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) => {
+			const createCircle = geoCircle().radius(km ? lengthToDegrees(km) : maxRadius);
 
 			return bangkokGarden.map(({ lat, lon }, pointIndex) => {
-				const point = new paper.Point(projection([lon, lat]));
-				const circle = new paper.Shape.Circle(point, 0);
+				const circle = new paper.Path(path(createCircle.center([lon, lat])()));
 				circle.fillColor = color;
+				circle.applyMatrix = false;
+				circle.scaling = 0.00001;
+				circle.opacity = 0;
 
 				setTimeout(() => {
-					circle.tween({ radius: radiusFrom }, { radius: radiusTo }, duration);
+					circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION_PER_LAYER);
 				}, pointIndex * ANIMATE_DELAY_PER_POINT);
 
 				return circle;

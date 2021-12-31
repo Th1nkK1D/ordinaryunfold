@@ -38,7 +38,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@turf/destination": "^6.5.0",
 		"@turf/helpers": "^6.5.0",
 		"d3-geo": "^3.0.1",
 		"d3-scale": "^3.3.0",
