@@ -1,11 +1,20 @@
+<script lang="ts" context="module">
+	export interface Location {
+		id: string;
+		name: string;
+		lat: number;
+		lon: number;
+	}
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { geoPath, geoMercator, geoCircle, geoDistance } from 'd3-geo';
+	import { geoPath, geoMercator, geoCircle, geoDistance, GeoPermissibleObjects } from 'd3-geo';
 	import { lengthToDegrees, radiansToDegrees } from '@turf/helpers';
 	import paper from 'paper';
 
-	import bangkokGeo from '../../../data/whats-in-the-city/bangkok-geo.json';
-	import bangkokGarden from '../../../data/whats-in-the-city/bangkok-garden.json';
+	export let map: GeoPermissibleObjects;
+	export let locations: Location[];
 
 	const MAP_COLOR = '#E5E5E5';
 	const DISTANCE_RADIUS = [
@@ -21,7 +30,9 @@
 
 	onMount(() => {
 		paper.setup(canvas);
+	});
 
+	const draw = () => {
 		const { clientWidth, clientHeight } = canvas;
 
 		const projection = geoMercator().fitExtent(
@@ -29,11 +40,11 @@
 				[0, 0],
 				[clientWidth, clientHeight]
 			],
-			bangkokGeo
+			map
 		);
 		const path = geoPath(projection);
 
-		const cityPath = new paper.Path(path(bangkokGeo));
+		const cityPath = new paper.Path(path(map));
 
 		const maxLength = geoDistance(
 			projection.invert([0, 0]),
@@ -44,7 +55,7 @@
 		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) => {
 			const createCircle = geoCircle().radius(km ? lengthToDegrees(km) : maxRadius);
 
-			return bangkokGarden.map(({ lat, lon }, pointIndex) => {
+			return locations.map(({ lat, lon }, pointIndex) => {
 				const circle = new paper.Path(path(createCircle.center([lon, lat])()));
 				circle.fillColor = color;
 				circle.applyMatrix = false;
@@ -64,7 +75,13 @@
 
 		const group = new paper.Group([cityPath, bgRect, ...distanceRadiusShape]);
 		group.clipped = true;
-	});
+	};
+
+	$: {
+		if (canvas && map && locations) {
+			draw();
+		}
+	}
 </script>
 
 <canvas class="h-full w-full" bind:this={canvas} />

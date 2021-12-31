@@ -1,6 +1,26 @@
 <script lang="ts">
+	import type { GeoPermissibleObjects } from 'd3-geo';
+	import { onMount } from 'svelte';
 	import Logo from '../../components/logo.svelte';
-	import Map from './_map/map.svelte';
+	import Map, { Location } from './_map/map.svelte';
+
+	const RESOURCES_PATH = '/whats-in-the-city/json';
+
+	let isLoading = true;
+	let map: GeoPermissibleObjects;
+	let locations: Location[];
+
+	const fetchJson = async (path: string) => {
+		const res = await fetch(`${RESOURCES_PATH}/${path}`);
+		return res.json();
+	};
+
+	onMount(async () => {
+		isLoading = true;
+		map = await fetchJson('bangkok-geo.json');
+		locations = await fetchJson('bangkok-garden.json');
+		isLoading = false;
+	});
 </script>
 
 <div class="flex flex-col w-screen h-screen max-w-screen-2xl mx-auto p-3 md:p-16">
@@ -12,8 +32,13 @@
 			<h1 class="text-3xl md:text-4xl">What's in</h1>
 			<h2 class="text-5xl md:text-6xl">Bangkok</h2>
 		</div>
-		<div class="flex-1">
-			<Map />
+		<div class="flex-1 relative">
+			{#if isLoading}
+				<div class="absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
+					loading...
+				</div>
+			{/if}
+			<Map {map} {locations} />
 		</div>
 	</div>
 </div>
