@@ -59,13 +59,13 @@
 						bind:selectedOption={selectedCity}
 						on:select={({ detail }) => {
 							loadCityJson(detail);
-							loadCategoryJson(detail, selectedCategory);
+							if (selectedCategory) loadCategoryJson(detail, selectedCategory);
 						}}
 					/>
 				</h2>
 			</div>
 
-			<p class:invisible={!locations.length}>{locations.length} locations found</p>
+			<p class={locations.length ? '' : 'invisible'}>{locations.length} locations found</p>
 		</div>
 		<div class="flex-1 flex flex-col relative items-center">
 			{#if pendingTask > 0}

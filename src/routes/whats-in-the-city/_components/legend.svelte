@@ -33,8 +33,9 @@
 </script>
 
 <div
-	class="flex flex-row items-center space-x-4 text-xs md:(space-x-6 text-sm) text-gray-600"
-	class:invisible={!colors}
+	class="flex flex-row items-center space-x-4 text-xs md:(space-x-6 text-sm) text-gray-600 {colors
+		? ''
+		: 'invisible'}"
 >
 	<div class="text-right">Distance (km)</div>
 	<div class="flex flex-row w-48 md:w-64">
