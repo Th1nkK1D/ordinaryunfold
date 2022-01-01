@@ -40,27 +40,31 @@
 		<Logo dark />
 	</div>
 	<div class="flex flex-col-reverse md:(flex-row space-x-12) flex-1">
-		<div class="font-head font-bold md:(space-y-2 w-sm mt-48) -md:(text-center my-6)">
-			<h1 class="text-3xl md:text-4xl">
-				<Dropdown
-					options={categories}
-					bind:selectedOption={selectedCategory}
-					placeholder="What's"
-					on:select={({ detail }) => loadCategoryJson(selectedCity, detail)}
-				/> in
-			</h1>
-			<h2 class="text-5xl md:text-6xl">
-				<Dropdown
-					options={cities}
-					bind:selectedOption={selectedCity}
-					on:select={({ detail }) => loadCityJson(detail)}
-				/>
-			</h2>
+		<div class="space-y-6 md:(space-y-10 w-sm mt-48) -md:(text-center my-6)">
+			<div class="font-head font-bold md:space-y-2">
+				<h1 class="text-3xl md:text-4xl">
+					<Dropdown
+						options={categories}
+						bind:selectedOption={selectedCategory}
+						placeholder="What's"
+						on:select={({ detail }) => loadCategoryJson(selectedCity, detail)}
+					/> in
+				</h1>
+				<h2 class="text-5xl md:text-6xl">
+					<Dropdown
+						options={cities}
+						bind:selectedOption={selectedCity}
+						on:select={({ detail }) => loadCityJson(detail)}
+					/>
+				</h2>
+			</div>
+
+			<p class:invisible={!locations.length}>{locations.length} locations found</p>
 		</div>
 		<div class="flex-1 relative">
 			{#if pendingTask > 0}
 				<div class="absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
-					loading...
+					...
 				</div>
 			{/if}
 			<Map
