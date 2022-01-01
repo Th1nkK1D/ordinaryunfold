@@ -2,6 +2,7 @@
 	export interface Option {
 		key: string;
 		name: string;
+		colors?: string[];
 	}
 </script>
 
@@ -17,14 +18,19 @@
 
 <select
 	bind:value={selectedOption}
-	class="inline-block"
+	class="inline font-bold bg-white border-b-3 border-solid border-gray-200"
+	style="color: {selectedOption
+		? options.find(({ key }) => key === selectedOption)?.colors?.[3]
+		: '#BDBDBD'}"
 	{placeholder}
 	on:change={() => dispatch('select', selectedOption)}
 >
 	{#if placeholder}
 		<option value="" class="hidden">{placeholder}</option>
 	{/if}
-	{#each options as { key, name }}
-		<option value={key}>{name}</option>
+	{#each options as { key, name, colors }}
+		<option value={key} class="text-lg font-normal" style="color: {colors?.[3] || 'black'}"
+			>{name}</option
+		>
 	{/each}
 </select>

@@ -1,8 +1,20 @@
 [
-	{ "key": "cinema-theater", "name": "Cinema and theater" },
-	{ "key": "garden", "name": "Garden and park" },
-	{ "key": "library", "name": "Library" },
-	{ "key": "museum", "name": "Museum" },
-	{ "key": "supermarket", "name": "Supermarket" },
-	{ "key": "transport", "name": "Public transport" }
+	{
+		"key": "cinema-theater",
+		"name": "Cinema",
+		"colors": ["#F8BBD0", "#F48FB1", "#EC407A", "#C2185B"]
+	},
+	{ "key": "garden", "name": "Garden", "colors": ["#C8E6C9", "#A5D6A7", "#66BB6A", "#388E3C"] },
+	{ "key": "library", "name": "Library", "colors": ["#B2EBF2", "#80DEEA", "#4DD0E1", "#0097A7"] },
+	{ "key": "museum", "name": "Museum", "colors": ["#FFCCBC", "#FF8A65", "#FF7043", "#E64A19"] },
+	{
+		"key": "supermarket",
+		"name": "Supermarket",
+		"colors": ["#FFECB3", "#FFE082", "#FFCA28", "#FFA000"]
+	},
+	{
+		"key": "transport",
+		"name": "Public transport",
+		"colors": ["#D1C4E9", "#B39DDB", "#7E57C2", "#512DA8"]
+	}
 ]

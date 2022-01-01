@@ -5,7 +5,7 @@ export const createPinDefinition = (): paper.SymbolDefinition => {
 	pinStem.strokeColor = 'black';
 
 	const pinHead = new paper.Path.Circle(new paper.Point(0, -20), 5);
-	pinHead.fillColor = '#CE3E3E';
+	pinHead.fillColor = '#C62828';
 
 	return new paper.SymbolDefinition(new paper.Group([pinStem, pinHead]));
 };

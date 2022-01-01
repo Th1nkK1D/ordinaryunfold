@@ -63,7 +63,11 @@
 					loading...
 				</div>
 			{/if}
-			<Map {map} {locations} />
+			<Map
+				{map}
+				{locations}
+				colors={categories.find(({ key }) => key === selectedCategory)?.colors}
+			/>
 		</div>
 	</div>
 </div>

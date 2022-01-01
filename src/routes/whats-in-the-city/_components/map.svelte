@@ -16,13 +16,10 @@
 
 	export let map: GeoPermissibleObjects;
 	export let locations: Location[];
+	export let colors: string[];
 
 	const MAP_COLOR = '#E5E5E5';
-	const DISTANCE_RADIUS = [
-		{ color: '#B2EBF2' },
-		{ km: 5, color: '#80DEEA' },
-		{ km: 2, color: '#4DD0E1' }
-	];
+	const DISTANCE_RADIUS_KM = [5, 2];
 
 	const ANIMATE_DELAY_PER_POINT = 10;
 	const ANIMATE_DURATION = 500;
@@ -57,12 +54,15 @@
 
 		locations.sort((a, z) => z.lat - a.lat);
 
-		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) => {
-			const createCircle = geoCircle().radius(km ? lengthToDegrees(km) : maxRadius);
+		const distanceRadiusShape = [
+			maxRadius,
+			...DISTANCE_RADIUS_KM.map((km) => lengthToDegrees(km))
+		].flatMap((radius, distanceIndex) => {
+			const createCircle = geoCircle().radius(radius);
 
 			return locations.map(({ lat, lon }, pointIndex) => {
 				const circle = new paper.Path(path(createCircle.center([lon, lat])()));
-				circle.fillColor = color;
+				circle.fillColor = colors[distanceIndex];
 				circle.applyMatrix = false;
 				circle.scaling = 0.00001;
 				circle.opacity = 0;
