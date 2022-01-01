@@ -1,0 +1,8 @@
+[
+	{ "key": "cinema-theater", "name": "Cinema and theater" },
+	{ "key": "garden", "name": "Garden and park" },
+	{ "key": "library", "name": "Library" },
+	{ "key": "museum", "name": "Museum" },
+	{ "key": "supermarket", "name": "Supermarket" },
+	{ "key": "transport", "name": "Public transport" }
+]
