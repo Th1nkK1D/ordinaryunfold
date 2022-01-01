@@ -33,7 +33,9 @@
 		paper.setup(canvas);
 	});
 
-	const draw = () => {
+	const draw = (map: GeoPermissibleObjects, locations: Location[]) => {
+		paper.project.clear();
+
 		const { clientWidth, clientHeight } = canvas;
 
 		const projection = geoMercator().fitExtent(
@@ -98,8 +100,8 @@
 	};
 
 	$: {
-		if (canvas && map && locations) {
-			draw();
+		if (canvas) {
+			draw(map, locations);
 		}
 	}
 </script>

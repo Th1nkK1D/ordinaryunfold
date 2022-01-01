@@ -9,24 +9,30 @@
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
-	let isLoading = true;
+	let pendingTask = 0;
 	let map: GeoPermissibleObjects;
-	let locations: Location[];
+	let locations: Location[] = [];
 
 	let selectedCategory: string = '';
 	let selectedCity: string = cities[0].key;
 
 	const fetchJson = async (path: string) => {
+		pendingTask++;
 		const res = await fetch(`${RESOURCES_PATH}/${path}`);
+		pendingTask--;
+
 		return res.json();
 	};
 
-	onMount(async () => {
-		isLoading = true;
-		map = await fetchJson('bangkok-geo.json');
-		locations = await fetchJson('bangkok-garden.json');
-		isLoading = false;
-	});
+	const loadCityJson = async (city: string) => {
+		map = await fetchJson(`${city}-geo.json`);
+	};
+
+	const loadCategoryJson = async (city: string, category: string) => {
+		locations = await fetchJson(`${city}-${category}.json`);
+	};
+
+	onMount(() => loadCityJson('bangkok'));
 </script>
 
 <div class="flex flex-col w-screen h-screen max-w-screen-2xl mx-auto p-3 md:p-16">
@@ -40,14 +46,19 @@
 					options={categories}
 					bind:selectedOption={selectedCategory}
 					placeholder="What's"
+					on:select={({ detail }) => loadCategoryJson(selectedCity, detail)}
 				/> in
 			</h1>
 			<h2 class="text-5xl md:text-6xl">
-				<Dropdown options={cities} bind:selectedOption={selectedCity} />
+				<Dropdown
+					options={cities}
+					bind:selectedOption={selectedCity}
+					on:select={({ detail }) => loadCityJson(detail)}
+				/>
 			</h2>
 		</div>
 		<div class="flex-1 relative">
-			{#if isLoading}
+			{#if pendingTask > 0}
 				<div class="absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
 					loading...
 				</div>
