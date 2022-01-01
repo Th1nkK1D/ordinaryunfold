@@ -12,6 +12,7 @@
 	import { geoPath, geoMercator, geoCircle, geoDistance, GeoPermissibleObjects } from 'd3-geo';
 	import { lengthToDegrees, radiansToDegrees } from '@turf/helpers';
 	import paper from 'paper';
+	import { createPinDefinition } from './symbols';
 
 	export let map: GeoPermissibleObjects;
 	export let locations: Location[];
@@ -24,7 +25,7 @@
 	];
 
 	const ANIMATE_DELAY_PER_POINT = 10;
-	const ANIMATE_DURATION_PER_LAYER = 500;
+	const ANIMATE_DURATION = 500;
 
 	let canvas: HTMLCanvasElement;
 
@@ -63,18 +64,35 @@
 				circle.opacity = 0;
 
 				setTimeout(() => {
-					circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION_PER_LAYER);
-				}, pointIndex * ANIMATE_DELAY_PER_POINT);
+					circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION);
+				}, ANIMATE_DURATION + pointIndex * ANIMATE_DELAY_PER_POINT);
 
 				return circle;
 			});
 		});
 
-		const bgRect = new paper.Shape.Rectangle(0, 0, clientWidth, clientHeight);
-		bgRect.fillColor = MAP_COLOR;
+		const bgMap = new paper.Path(path(map));
+		bgMap.fillColor = MAP_COLOR;
 
-		const group = new paper.Group([cityPath, bgRect, ...distanceRadiusShape]);
+		const group = new paper.Group([cityPath, ...distanceRadiusShape]);
 		group.clipped = true;
+
+		const pinDefinition = createPinDefinition();
+
+		locations.map(({ lat, lon }, pointIndex) => {
+			const pin = new paper.SymbolItem(pinDefinition);
+
+			const finalPosition = new paper.Point(projection([lon, lat]));
+			finalPosition.y -= 10;
+
+			pin.position = finalPosition;
+			pin.position.y -= 100;
+			pin.opacity = 0;
+
+			setTimeout(() => {
+				pin.tweenTo({ 'position.y': finalPosition.y, opacity: 1 }, ANIMATE_DURATION);
+			}, pointIndex * ANIMATE_DELAY_PER_POINT);
+		});
 	};
 
 	$: {
