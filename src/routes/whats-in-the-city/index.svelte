@@ -7,6 +7,7 @@
 	import categories from '../../data/whats-in-the-city/categories.json';
 	import cities from '../../data/whats-in-the-city/cities.json';
 	import Legend from './_components/legend.svelte';
+	import Metadata from '../../components/metadata.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
@@ -37,6 +38,13 @@
 
 	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors;
 </script>
+
+<Metadata
+	title="What's in the city?"
+	description="What kind of place does Thailand flavor?"
+	path="/whats-in-the-city/"
+	image="/whats-in-the-city/og.png"
+/>
 
 <div class="flex flex-col w-screen h-screen max-w-screen-2xl mx-auto p-3 md:p-16">
 	<div class="flex -md:justify-center">
