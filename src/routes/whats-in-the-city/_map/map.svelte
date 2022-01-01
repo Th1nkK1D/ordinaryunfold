@@ -53,6 +53,8 @@
 		);
 		const maxRadius = radiansToDegrees(maxLength);
 
+		locations.sort((a, z) => z.lat - a.lat);
+
 		const distanceRadiusShape = DISTANCE_RADIUS.flatMap(({ km, color }) => {
 			const createCircle = geoCircle().radius(km ? lengthToDegrees(km) : maxRadius);
 
