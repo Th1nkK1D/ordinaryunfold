@@ -6,6 +6,7 @@
 	import Map, { Location } from './_components/map.svelte';
 	import categories from '../../data/whats-in-the-city/categories.json';
 	import cities from '../../data/whats-in-the-city/cities.json';
+	import Legend from './_components/legend.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
@@ -33,6 +34,8 @@
 	};
 
 	onMount(() => loadCityJson('bangkok'));
+
+	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors;
 </script>
 
 <div class="flex flex-col w-screen h-screen max-w-screen-2xl mx-auto p-3 md:p-16">
@@ -61,17 +64,14 @@
 
 			<p class:invisible={!locations.length}>{locations.length} locations found</p>
 		</div>
-		<div class="flex-1 relative">
+		<div class="flex-1 flex flex-col relative items-center">
 			{#if pendingTask > 0}
 				<div class="absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
 					...
 				</div>
 			{/if}
-			<Map
-				{map}
-				{locations}
-				colors={categories.find(({ key }) => key === selectedCategory)?.colors}
-			/>
+			<Map {map} {locations} {colors} />
+			<Legend {colors} />
 		</div>
 	</div>
 </div>

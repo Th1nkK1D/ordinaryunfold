@@ -5,6 +5,8 @@
 		lat: number;
 		lon: number;
 	}
+
+	export const DISTANCE_RADIUS_KM = [5, 2];
 </script>
 
 <script lang="ts">
@@ -19,7 +21,6 @@
 	export let colors: string[];
 
 	const MAP_COLOR = '#E5E5E5';
-	const DISTANCE_RADIUS_KM = [5, 2];
 
 	const ANIMATE_DELAY_PER_POINT = 10;
 	const ANIMATE_DURATION = 500;
