@@ -57,7 +57,10 @@
 					<Dropdown
 						options={cities}
 						bind:selectedOption={selectedCity}
-						on:select={({ detail }) => loadCityJson(detail)}
+						on:select={({ detail }) => {
+							loadCityJson(detail);
+							loadCategoryJson(detail, selectedCategory);
+						}}
 					/>
 				</h2>
 			</div>

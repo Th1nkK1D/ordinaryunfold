@@ -1,1 +1,4 @@
-[{ "key": "bangkok", "name": "Bangkok" }]
+[
+	{ "key": "bangkok", "name": "Bangkok" },
+	{ "key": "chiangmai", "name": "Chiang-Mai" }
+]
