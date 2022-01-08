@@ -29,7 +29,7 @@ interface SearchResult {
 	data: Place[];
 }
 
-const { _, output, ...query } = parse(Deno.args);
+const { _, output, include, exclude, ...query } = parse(Deno.args);
 
 console.log(query);
 
@@ -66,4 +66,10 @@ while (hasmore) {
 	}
 }
 
-await Deno.writeTextFile(output, JSON.stringify(places));
+const outputData = places.filter(
+	({ name }) => (!include || name.includes(include)) && (!exclude || !name.includes(exclude))
+);
+
+console.log(`filter from ${places.length} to ${outputData.length}`);
+
+await Deno.writeTextFile(output, JSON.stringify(outputData));
