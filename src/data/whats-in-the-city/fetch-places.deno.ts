@@ -67,7 +67,8 @@ while (hasmore) {
 }
 
 const outputData = places.filter(
-	({ name }) => (!include || name.includes(include)) && (!exclude || !name.includes(exclude))
+	({ name, lat, lon }) =>
+		lat && lon && (!include || name.includes(include)) && (!exclude || !name.includes(exclude))
 );
 
 console.log(`filter from ${places.length} to ${outputData.length}`);
