@@ -1,4 +1,8 @@
 [
 	{ "key": "bangkok", "name": "Bangkok" },
-	{ "key": "chiangmai", "name": "Chiang-Mai" }
+	{ "key": "chiangmai", "name": "Chiang Mai" },
+	{ "key": "chonburi", "name": "Chon Buri" },
+	{ "key": "khonkaen", "name": "Khon Kaen" },
+	{ "key": "phuket", "name": "Phuket" },
+	{ "key": "ratchaburi", "name": "Ratchaburi" }
 ]

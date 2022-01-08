@@ -7,7 +7,7 @@
 	{ "key": "garden", "name": "Garden", "colors": ["#C8E6C9", "#A5D6A7", "#66BB6A", "#388E3C"] },
 	{
 		"key": "hospital",
-		"name": "Hospital/Clinic",
+		"name": "Hospital",
 		"colors": ["#F8BBD0", "#F48FB1", "#EC407A", "#C2185B"]
 	},
 	{ "key": "library", "name": "Library", "colors": ["#B2EBF2", "#80DEEA", "#4DD0E1", "#0097A7"] },
