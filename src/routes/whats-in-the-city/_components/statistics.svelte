@@ -1,14 +1,34 @@
 <script lang="ts">
+	import { Tweened, tweened } from 'svelte/motion';
+	import { ANIMATE_DELAY_PER_POINT, ANIMATE_DURATION } from '../_components/map.svelte';
 	import cities from '../../../data/whats-in-the-city/cities.json';
 
 	export let selectedCity: string;
 	export let locationCount: number;
 
-	$: city = cities.find(({ key }) => key === selectedCity);
+	const locationTween = tweened(0);
+	const populationTween = tweened(0);
+	const areaTween = tweened(0);
+
+	const updateTween = (tween: Tweened<number>, value: number) =>
+		tween.set(value, {
+			duration: locationCount * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
+		});
+
+	$: updateTween(locationTween, locationCount);
+
+	$: {
+		let city = cities.find(({ key }) => key === selectedCity);
+
+		if (city) {
+			updateTween(populationTween, city.population);
+			updateTween(areaTween, city.area);
+		}
+	}
 </script>
 
 <div class="flex flex-col space-y-2 md:space-y-6 -md:items-center">
-	<div class="flex flex-row space-x-4 {city ? '' : 'invisible'}">
+	<div class="flex flex-row space-x-4 {selectedCity ? '' : 'invisible'}">
 		<div class="stat">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +43,7 @@
 				></svg
 			>
 			<p>
-				{city.population} people
+				{Math.round($populationTween).toLocaleString()} people
 			</p>
 		</div>
 		<div class="stat">
@@ -42,18 +62,18 @@
 				></svg
 			>
 			<p>
-				{city.area} km<sup>2</sup>
+				{Math.round($areaTween).toLocaleString()} km<sup>2</sup>
 			</p>
 		</div>
 	</div>
 
-	<div class="stat {locationCount >= 0 ? '' : 'invisible'}">
+	<div class="stat {locationCount > 0 ? '' : 'invisible'}">
 		<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
 			><path d="M0 0h24v24H0z" fill="none" /><path
 				d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
 			/></svg
 		>
-		<p>{Math.round(locationCount)} locations found</p>
+		<p>{Math.round($locationTween)} locations found</p>
 	</div>
 </div>
 

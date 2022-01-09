@@ -4,17 +4,12 @@
 	import { fade } from 'svelte/transition';
 	import Logo from '../../components/logo.svelte';
 	import Dropdown from './_components/dropdown.svelte';
-	import Map, {
-		ANIMATE_DELAY_PER_POINT,
-		ANIMATE_DURATION,
-		Location
-	} from './_components/map.svelte';
+	import Map, { Location } from './_components/map.svelte';
 	import categories from '../../data/whats-in-the-city/categories.json';
 	import cities from '../../data/whats-in-the-city/cities.json';
 	import Legend from './_components/legend.svelte';
 	import Metadata from '../../components/metadata.svelte';
 	import Spinner from './_components/spinner.svelte';
-	import { tweened } from 'svelte/motion';
 	import Statistics from './_components/statistics.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
@@ -25,8 +20,6 @@
 
 	let selectedCategory: string = '';
 	let selectedCity: string = cities[0].key;
-
-	const locationCount = tweened(-1);
 
 	const fetchJson = async (path: string) => {
 		pendingTask++;
@@ -42,11 +35,6 @@
 
 	const loadCategoryJson = async (city: string, category: string) => {
 		locations = await fetchJson(`${city}-${category}.json`);
-
-		locationCount.set(0, { duration: 0 });
-		locationCount.set(locations.length, {
-			duration: locations.length * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
-		});
 	};
 
 	onMount(() => {
@@ -91,7 +79,7 @@
 				</h2>
 			</div>
 
-			<Statistics {selectedCity} locationCount={$locationCount} />
+			<Statistics {selectedCity} locationCount={locations.length} />
 		</div>
 		<div class="flex-1 flex flex-col relative items-center">
 			{#if pendingTask > 0}
