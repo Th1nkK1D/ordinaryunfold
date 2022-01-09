@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { GeoPermissibleObjects } from 'd3-geo';
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import Logo from '../../components/logo.svelte';
 	import Dropdown from './_components/dropdown.svelte';
 	import Map, { Location } from './_components/map.svelte';
@@ -8,10 +9,11 @@
 	import cities from '../../data/whats-in-the-city/cities.json';
 	import Legend from './_components/legend.svelte';
 	import Metadata from '../../components/metadata.svelte';
+	import Spinner from './_components/spinner.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
-	let pendingTask = 0;
+	let pendingTask = 1;
 	let map: GeoPermissibleObjects;
 	let locations: Location[] = [];
 
@@ -34,7 +36,10 @@
 		locations = await fetchJson(`${city}-${category}.json`);
 	};
 
-	onMount(() => loadCityJson('bangkok'));
+	onMount(() => {
+		loadCityJson('bangkok');
+		pendingTask--;
+	});
 
 	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors;
 </script>
@@ -77,8 +82,11 @@
 		</div>
 		<div class="flex-1 flex flex-col relative items-center">
 			{#if pendingTask > 0}
-				<div class="absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center">
-					...
+				<div
+					class="z-10 absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center"
+					transition:fade
+				>
+					<Spinner />
 				</div>
 			{/if}
 			<Map {map} {locations} {colors} />
