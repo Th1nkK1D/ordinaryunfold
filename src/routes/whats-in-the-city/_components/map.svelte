@@ -45,7 +45,15 @@
 		);
 		const path = geoPath(projection);
 
-		const cityPath = new paper.Path(path(map));
+		const cityPath =
+			map?.geometry?.type === 'MultiPolygon'
+				? new paper.Group(
+						path(map)
+							.split('M')
+							.filter((polygon) => polygon.length)
+							.map((polygon) => new paper.Path(`M${polygon}`))
+				  )
+				: new paper.Path(path(map));
 
 		const maxLength = geoDistance(
 			projection.invert([0, 0]),
@@ -76,10 +84,13 @@
 			});
 		});
 
-		const bgMap = new paper.Path(path(map));
-		bgMap.fillColor = MAP_COLOR;
+		const background = new paper.Shape.Rectangle(
+			new paper.Point(0, 0),
+			new paper.Point(clientWidth, clientHeight)
+		);
+		background.fillColor = MAP_COLOR;
 
-		const group = new paper.Group([cityPath, ...distanceRadiusShape]);
+		const group = new paper.Group([cityPath, background, ...distanceRadiusShape]);
 		group.clipped = true;
 
 		const pinDefinition = createPinDefinition();
