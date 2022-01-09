@@ -1,8 +1,8 @@
 [
-	{ "key": "bangkok", "name": "Bangkok", "population": "5,588,222" },
-	{ "key": "chiangmai", "name": "Chiang Mai", "population": "1,784,370" },
-	{ "key": "chonburi", "name": "Chon Buri", "population": "1,566,885" },
-	{ "key": "khonkaen", "name": "Khon Kaen", "population": "1,794,531" },
-	{ "key": "phuket", "name": "Phuket", "population": "414,471" },
-	{ "key": "ratchaburi", "name": "Ratchaburi", "population": "869,313" }
+	{ "key": "bangkok", "name": "Bangkok", "population": "5,588,222", "area": "1,568.7" },
+	{ "key": "chiangmai", "name": "Chiang Mai", "population": "1,784,370", "area": "20,107" },
+	{ "key": "chonburi", "name": "Chon Buri", "population": "1,566,885", "area": "4,363" },
+	{ "key": "khonkaen", "name": "Khon Kaen", "population": "1,794,531", "area": "10,886" },
+	{ "key": "phuket", "name": "Phuket", "population": "414,471", "area": "543" },
+	{ "key": "ratchaburi", "name": "Ratchaburi", "population": "869,313", "area": "5,196.5" }
 ]
