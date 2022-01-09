@@ -11,6 +11,7 @@
 	import Metadata from '../../components/metadata.svelte';
 	import Spinner from './_components/spinner.svelte';
 	import Statistics from './_components/statistics.svelte';
+	import Comparison from './_components/comparison.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
@@ -52,7 +53,7 @@
 	image="/whats-in-the-city/og.png"
 />
 
-<div class="flex flex-col w-screen h-screen max-w-screen-2xl mx-auto p-3 md:p-16 space-y-1">
+<div class="flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-16 space-y-1">
 	<div class="flex -md:justify-center">
 		<Logo dark />
 	</div>
@@ -94,4 +95,8 @@
 			<Legend {colors} />
 		</div>
 	</div>
+</div>
+
+<div class="p-3 md:p-16 bg-gray-100 overflow-x-auto">
+	<Comparison />
 </div>
