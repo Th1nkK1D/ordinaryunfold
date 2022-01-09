@@ -33,18 +33,21 @@
 </script>
 
 <div
-	class="flex flex-row items-center space-x-4 text-xs md:(space-x-6 text-sm) text-gray-600 {colors
-		? ''
-		: 'invisible'}"
+	class="flex flex-row items-center space-x-4 text-xs md:(space-x-6 text-sm) text-gray-600 transition-opacity duration-1000 {colors
+		? 'opacity-100'
+		: 'opacity-0'}"
 >
 	<div class="text-right">Distance (km)</div>
 	<div class="flex flex-row w-48 md:w-64">
-		{#each legends as { label, size, color, icon }}
+		{#each legends as { label, size, color, icon }, index (index)}
 			<div class="flex flex-col" style="width: {size}%">
 				<div class="flex justify-center">
 					{@html icon}
 				</div>
-				<div class="h-1.5 md:h-2" style="background-color: {color};" />
+				<div
+					class="h-1.5 md:h-2 transition-colors duration-1000"
+					style="background-color: {color};"
+				/>
 				<div>
 					<span class="-ml-1">{label}</span>
 				</div>
