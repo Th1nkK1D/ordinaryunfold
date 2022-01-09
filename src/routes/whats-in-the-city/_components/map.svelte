@@ -11,6 +11,7 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { scale } from 'svelte/transition';
 	import { geoPath, geoMercator, geoCircle, geoDistance, GeoPermissibleObjects } from 'd3-geo';
 	import { lengthToDegrees, radiansToDegrees } from '@turf/helpers';
 	import paper from 'paper';
@@ -140,6 +141,7 @@
 		<div
 			class="absolute bg-black text-white rounded px-2 py-1 text-center text-sm whitespace-nowrap shadow transform -translate-x-1/2 -translate-y-full"
 			style="top: {tooltip.y}px; left: {tooltip.x}px"
+			transition:scale={{ duration: 200 }}
 		>
 			{tooltip.name}
 		</div>
