@@ -25,7 +25,13 @@
 	const ANIMATE_DELAY_PER_POINT = 10;
 	const ANIMATE_DURATION = 500;
 
+	const PIN_HEIGHT = 20;
+	const PIN_DROP_OFFSET = 100;
+	const PIN_TOOLTIP_OFFSET = 8;
+
 	let canvas: HTMLCanvasElement;
+
+	let tooltip: { x: number; y: number; name: string } = null;
 
 	onMount(() => {
 		paper.setup(canvas);
@@ -95,15 +101,25 @@
 
 		const pinDefinition = createPinDefinition();
 
-		locations.map(({ lat, lon }, pointIndex) => {
+		locations.map(({ lat, lon, name }, pointIndex) => {
+			const position = projection([lon, lat]);
 			const pin = new paper.SymbolItem(pinDefinition);
 
-			const finalPosition = new paper.Point(projection([lon, lat]));
-			finalPosition.y -= 10;
+			const finalPosition = new paper.Point(position);
+			finalPosition.y -= PIN_HEIGHT / 2;
 
 			pin.position = finalPosition;
-			pin.position.y -= 100;
+			pin.position.y -= PIN_DROP_OFFSET;
 			pin.opacity = 0;
+
+			pin.onMouseEnter = () => {
+				tooltip = {
+					name,
+					x: position[0],
+					y: position[1] - PIN_HEIGHT - PIN_TOOLTIP_OFFSET
+				};
+			};
+			pin.onMouseLeave = () => (tooltip = null);
 
 			setTimeout(() => {
 				pin.tweenTo({ 'position.y': finalPosition.y, opacity: 1 }, ANIMATE_DURATION);
@@ -118,4 +134,14 @@
 	}
 </script>
 
-<canvas class="h-full w-full" bind:this={canvas} />
+<div class="relative h-full w-full">
+	<canvas class="h-full w-full" bind:this={canvas} />
+	{#if tooltip}
+		<div
+			class="absolute bg-black text-white rounded px-2 py-1 text-center text-sm whitespace-nowrap shadow transform -translate-x-1/2 -translate-y-full"
+			style="top: {tooltip.y}px; left: {tooltip.x}px"
+		>
+			{tooltip.name}
+		</div>
+	{/if}
+</div>
