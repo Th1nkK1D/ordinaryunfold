@@ -112,17 +112,19 @@
 			pin.position.y -= PIN_DROP_OFFSET;
 			pin.opacity = 0;
 
-			pin.onMouseEnter = () => {
-				tooltip = {
-					name,
-					x: position[0],
-					y: position[1] - PIN_HEIGHT - PIN_TOOLTIP_OFFSET
-				};
-			};
-			pin.onMouseLeave = () => (tooltip = null);
-
 			setTimeout(() => {
 				pin.tweenTo({ 'position.y': finalPosition.y, opacity: 1 }, ANIMATE_DURATION);
+
+				setTimeout(() => {
+					pin.onMouseEnter = () => {
+						tooltip = {
+							name,
+							x: position[0],
+							y: position[1] - PIN_HEIGHT - PIN_TOOLTIP_OFFSET
+						};
+					};
+					pin.onMouseLeave = () => (tooltip = null);
+				}, ANIMATE_DURATION);
 			}, pointIndex * ANIMATE_DELAY_PER_POINT);
 		});
 	};
