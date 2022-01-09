@@ -7,6 +7,8 @@
 	}
 
 	export const DISTANCE_RADIUS_KM = [5, 2];
+	export const ANIMATE_DELAY_PER_POINT = 10;
+	export const ANIMATE_DURATION = 500;
 </script>
 
 <script lang="ts">
@@ -22,9 +24,6 @@
 	export let colors: string[];
 
 	const MAP_COLOR = '#E5E5E5';
-
-	const ANIMATE_DELAY_PER_POINT = 10;
-	const ANIMATE_DURATION = 500;
 
 	const PIN_HEIGHT = 20;
 	const PIN_DROP_OFFSET = 100;
