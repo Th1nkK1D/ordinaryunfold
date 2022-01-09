@@ -1,28 +1,27 @@
 <script lang="ts">
-	import { Tweened, tweened } from 'svelte/motion';
+	import { tweened } from 'svelte/motion';
 	import { ANIMATE_DELAY_PER_POINT, ANIMATE_DURATION } from '../_components/map.svelte';
 	import cities from '../../../data/whats-in-the-city/cities.json';
+
+	const CITY_TWEEN_DURATION = 500;
 
 	export let selectedCity: string;
 	export let locationCount: number;
 
 	const locationTween = tweened(0);
-	const populationTween = tweened(0);
-	const areaTween = tweened(0);
+	const populationTween = tweened(0, { duration: CITY_TWEEN_DURATION });
+	const areaTween = tweened(0, { duration: CITY_TWEEN_DURATION });
 
-	const updateTween = (tween: Tweened<number>, value: number) =>
-		tween.set(value, {
-			duration: locationCount * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
-		});
-
-	$: updateTween(locationTween, locationCount);
+	$: locationTween.set(locationCount, {
+		duration: locationCount * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
+	});
 
 	$: {
 		let city = cities.find(({ key }) => key === selectedCity);
 
 		if (city) {
-			updateTween(populationTween, city.population);
-			updateTween(areaTween, city.area);
+			$populationTween = city.population;
+			$areaTween = city.area;
 		}
 	}
 </script>
