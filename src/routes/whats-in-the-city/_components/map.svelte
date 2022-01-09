@@ -44,7 +44,7 @@
 
 		const projection = geoMercator().fitExtent(
 			[
-				[0, 0],
+				[0, PIN_HEIGHT],
 				[clientWidth, clientHeight]
 			],
 			map
