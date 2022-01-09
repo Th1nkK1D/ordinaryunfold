@@ -1,8 +1,8 @@
 [
-	{ "key": "bangkok", "name": "Bangkok" },
-	{ "key": "chiangmai", "name": "Chiang Mai" },
-	{ "key": "chonburi", "name": "Chon Buri" },
-	{ "key": "khonkaen", "name": "Khon Kaen" },
-	{ "key": "phuket", "name": "Phuket" },
-	{ "key": "ratchaburi", "name": "Ratchaburi" }
+	{ "key": "bangkok", "name": "Bangkok", "population": "5,588,222" },
+	{ "key": "chiangmai", "name": "Chiang Mai", "population": "1,784,370" },
+	{ "key": "chonburi", "name": "Chon Buri", "population": "1,566,885" },
+	{ "key": "khonkaen", "name": "Khon Kaen", "population": "1,794,531" },
+	{ "key": "phuket", "name": "Phuket", "population": "414,471" },
+	{ "key": "ratchaburi", "name": "Ratchaburi", "population": "869,313" }
 ]

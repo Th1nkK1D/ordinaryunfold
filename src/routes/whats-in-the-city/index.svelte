@@ -15,6 +15,7 @@
 	import Metadata from '../../components/metadata.svelte';
 	import Spinner from './_components/spinner.svelte';
 	import { tweened } from 'svelte/motion';
+	import Statistics from './_components/statistics.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
@@ -25,7 +26,7 @@
 	let selectedCategory: string = '';
 	let selectedCity: string = cities[0].key;
 
-	const locationCount = tweened(0);
+	const locationCount = tweened(-1);
 
 	const fetchJson = async (path: string) => {
 		pendingTask++;
@@ -68,7 +69,7 @@
 		<Logo dark />
 	</div>
 	<div class="flex flex-col-reverse md:(flex-row space-x-12) flex-1">
-		<div class="space-y-6 md:(space-y-10 w-sm mt-48) -md:(text-center my-6)">
+		<div class="space-y-4 md:(space-y-8 w-sm mt-48) -md:(text-center my-6)">
 			<div class="font-head font-bold md:space-y-2">
 				<h1 class="text-3xl md:text-4xl">
 					<Dropdown
@@ -90,9 +91,7 @@
 				</h2>
 			</div>
 
-			<p class={locations.length ? '' : 'invisible'}>
-				{Math.round($locationCount)} locations found
-			</p>
+			<Statistics {selectedCity} locationCount={$locationCount} />
 		</div>
 		<div class="flex-1 flex flex-col relative items-center">
 			{#if pendingTask > 0}
