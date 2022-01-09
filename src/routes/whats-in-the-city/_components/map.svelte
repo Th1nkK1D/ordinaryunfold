@@ -33,11 +33,7 @@
 
 	let tooltip: { x: number; y: number; name: string } = null;
 
-	onMount(() => {
-		paper.setup(canvas);
-	});
-
-	const draw = (map: GeoPermissibleObjects, locations: Location[]) => {
+	const draw = (map: GeoPermissibleObjects, locations: Location[], withTransition = true) => {
 		paper.project.clear();
 
 		const { clientWidth, clientHeight } = canvas;
@@ -79,12 +75,15 @@
 				const circle = new paper.Path(path(createCircle.center([lon, lat])()));
 				circle.fillColor = colors[distanceIndex];
 				circle.applyMatrix = false;
-				circle.scaling = 0.00001;
-				circle.opacity = 0;
 
-				setTimeout(() => {
-					circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION);
-				}, ANIMATE_DURATION + pointIndex * ANIMATE_DELAY_PER_POINT);
+				if (withTransition) {
+					circle.scaling = 0.00001;
+					circle.opacity = 0;
+
+					setTimeout(() => {
+						circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION);
+					}, ANIMATE_DURATION + pointIndex * ANIMATE_DELAY_PER_POINT);
+				}
 
 				return circle;
 			});
@@ -109,13 +108,18 @@
 			finalPosition.y -= PIN_HEIGHT / 2;
 
 			pin.position = finalPosition;
-			pin.position.y -= PIN_DROP_OFFSET;
-			pin.opacity = 0;
 
-			setTimeout(() => {
-				pin.tweenTo({ 'position.y': finalPosition.y, opacity: 1 }, ANIMATE_DURATION);
+			if (withTransition) {
+				pin.position.y -= PIN_DROP_OFFSET;
+				pin.opacity = 0;
 
 				setTimeout(() => {
+					pin.tweenTo({ 'position.y': finalPosition.y, opacity: 1 }, ANIMATE_DURATION);
+				}, pointIndex * ANIMATE_DELAY_PER_POINT);
+			}
+
+			setTimeout(
+				() => {
 					pin.onMouseEnter = () => {
 						tooltip = {
 							name,
@@ -124,20 +128,22 @@
 						};
 					};
 					pin.onMouseLeave = () => (tooltip = null);
-				}, ANIMATE_DURATION);
-			}, pointIndex * ANIMATE_DELAY_PER_POINT);
+				},
+				withTransition ? pointIndex * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION : 0
+			);
 		});
 	};
 
-	$: {
-		if (canvas) {
-			draw(map, locations);
-		}
-	}
+	onMount(() => {
+		paper.setup(canvas);
+		paper.view.onResize = () => draw(map, locations, false);
+	});
+
+	$: if (canvas) draw(map, locations);
 </script>
 
 <div class="relative h-full w-full">
-	<canvas class="h-full w-full" bind:this={canvas} />
+	<canvas class="h-full w-full" bind:this={canvas} resize />
 	{#if tooltip}
 		<div
 			class="absolute bg-black text-white rounded px-2 py-1 text-center text-sm whitespace-nowrap shadow transform -translate-x-1/2 -translate-y-full"
