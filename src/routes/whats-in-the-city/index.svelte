@@ -14,6 +14,7 @@
 	import Comparison from './_components/comparison.svelte';
 	import Footer from '../../components/footer.svelte';
 	import ExternalLink from '../../components/external-link.svelte';
+	import Sharer from '../../components/sharer.svelte';
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
@@ -103,7 +104,11 @@
 	<Comparison />
 </div>
 
-<div class="px-3 py-12 md:(px-16 py-24) space-y-4">
+<div class="flex justify-center px-3 py-20 md:(px-16 py-32)">
+	<Sharer url="https://www.ordinaryunfold.com/whats-in-the-city/" />
+</div>
+
+<div class="px-3 pb-6 md:(px-16 pb-24) space-y-4">
 	<h2 class="text-2xl font-bold">Data Sources</h2>
 	<div class="flex flex-col lg:(flex-row items-end) -lg:space-y-16">
 		<ul class="space-y-1">
