@@ -97,6 +97,6 @@
 	</div>
 </div>
 
-<div class="p-3 md:p-16 bg-gray-100 overflow-x-auto">
+<div class="px-3 py-20 md:(px-16 py-32) bg-gray-100 overflow-x-auto">
 	<Comparison />
 </div>

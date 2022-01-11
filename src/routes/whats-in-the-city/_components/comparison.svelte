@@ -4,7 +4,7 @@
 	import placeStats from '../../../data/whats-in-the-city/places-stats.json';
 	import categories from '../../../data/whats-in-the-city/categories.json';
 
-	const MIN_COLUMN_WIDTH = 180;
+	const MIN_COLUMN_WIDTH = 160;
 	const POPULATION_PER_CIRCLE = 100000;
 	const MAX_AREA_SIZE = 120;
 	const MAX_CHART_HEIGHT = 200;
@@ -44,7 +44,7 @@
 	<div />
 
 	{#each cities as { name }}
-		<div class="cell text-lg font-bold text-center">{name}</div>
+		<div class="cell text-xl font-bold text-center">{name}</div>
 	{/each}
 
 	<div class="row-label">Population</div>
@@ -64,12 +64,12 @@
 		</div>
 	{/each}
 
-	<div class="row-label">Area</div>
+	<div class="row-label">Area (km<sup>2</sup>)</div>
 
 	{#each areaVis as { area, size }}
 		<div class="cell space-y-1 flex flex-col justify-center items-center">
-			<div class="bg-green-300" style="width: {size}px; height: {size}px;" />
-			<p class="text-center text-sm">{area.toLocaleString()} km<sup>2</sup></p>
+			<div class="bg-gray-400" style="width: {size}px; height: {size}px;" />
+			<p class="text-center text-sm">{area.toLocaleString()}</p>
 		</div>
 	{/each}
 
@@ -112,6 +112,6 @@
 	}
 
 	.population-dot {
-		@apply w-2 h-2 rounded-full bg-blue-500;
+		@apply w-2 h-2 rounded-full bg-gray-400;
 	}
 </style>
