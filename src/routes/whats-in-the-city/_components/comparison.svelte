@@ -47,6 +47,12 @@
 		<div class="cell text-xl font-bold text-center">{name}</div>
 	{/each}
 
+	<div class="row-label">Region</div>
+
+	{#each cities as { region }}
+		<div class="cell text-center">{region}</div>
+	{/each}
+
 	<div class="row-label">Population</div>
 
 	{#each populationVis as { population, integer, fraction }}

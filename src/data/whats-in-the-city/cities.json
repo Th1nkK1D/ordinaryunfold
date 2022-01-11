@@ -1,8 +1,32 @@
 [
-	{ "key": "bangkok", "name": "Bangkok", "population": 5588222, "area": 1568.7 },
-	{ "key": "chiangmai", "name": "Chiang Mai", "population": 1784370, "area": 20107 },
-	{ "key": "chonburi", "name": "Chon Buri", "population": 1566885, "area": 4363 },
-	{ "key": "khonkaen", "name": "Khon Kaen", "population": 1794531, "area": 10886 },
-	{ "key": "phuket", "name": "Phuket", "population": 414471, "area": 543 },
-	{ "key": "ratchaburi", "name": "Ratchaburi", "population": 869313, "area": 5196.5 }
+	{
+		"key": "bangkok",
+		"name": "Bangkok",
+		"region": "Central",
+		"population": 5588222,
+		"area": 1568.7
+	},
+	{
+		"key": "chiangmai",
+		"name": "Chiang Mai",
+		"region": "North",
+		"population": 1784370,
+		"area": 20107
+	},
+	{ "key": "chonburi", "name": "Chon Buri", "region": "East", "population": 1566885, "area": 4363 },
+	{
+		"key": "khonkaen",
+		"name": "Khon Kaen",
+		"region": "North-East",
+		"population": 1794531,
+		"area": 10886
+	},
+	{ "key": "phuket", "name": "Phuket", "region": "South", "population": 414471, "area": 543 },
+	{
+		"key": "ratchaburi",
+		"name": "Ratchaburi",
+		"region": "West",
+		"population": 869313,
+		"area": 5196.5
+	}
 ]
