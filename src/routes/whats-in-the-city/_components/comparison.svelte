@@ -38,7 +38,7 @@
 </script>
 
 <div
-	class="grid"
+	class="grid max-w-screen-xl mx-auto"
 	style="grid-template-columns: repeat({cities.length + 1}, minmax({MIN_COLUMN_WIDTH}px, 1fr)"
 >
 	<div />
