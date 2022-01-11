@@ -108,7 +108,7 @@
 	<Sharer url="https://www.ordinaryunfold.com/whats-in-the-city/" />
 </div>
 
-<div class="px-3 pb-6 md:(px-16 pb-24) space-y-4">
+<div class="px-3 pb-6 md:(px-16 pb-24) space-y-4 max-w-screen-2xl mx-auto">
 	<h2 class="text-2xl font-bold">Data Sources</h2>
 	<div class="flex flex-col lg:(flex-row items-end) -lg:space-y-16">
 		<ul class="space-y-1">
