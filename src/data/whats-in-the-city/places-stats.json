@@ -1,56 +1,56 @@
 {
-	"bangkok": [
-		{ "category": "cinema-theater", "count": 86 },
-		{ "category": "garden", "count": 55 },
-		{ "category": "hospital", "count": 253 },
-		{ "category": "library", "count": 52 },
-		{ "category": "museum", "count": 81 },
-		{ "category": "supermarket", "count": 190 },
-		{ "category": "transport", "count": 374 }
-	],
-	"chiangmai": [
-		{ "category": "cinema-theater", "count": 3 },
-		{ "category": "garden", "count": 10 },
-		{ "category": "hospital", "count": 296 },
-		{ "category": "library", "count": 16 },
-		{ "category": "museum", "count": 21 },
-		{ "category": "supermarket", "count": 8 },
-		{ "category": "transport", "count": 22 }
-	],
-	"chonburi": [
-		{ "category": "cinema-theater", "count": 13 },
-		{ "category": "garden", "count": 11 },
-		{ "category": "hospital", "count": 157 },
-		{ "category": "library", "count": 10 },
-		{ "category": "museum", "count": 17 },
-		{ "category": "supermarket", "count": 29 },
-		{ "category": "transport", "count": 49 }
-	],
-	"phuket": [
-		{ "category": "cinema-theater", "count": 5 },
-		{ "category": "garden", "count": 4 },
-		{ "category": "hospital", "count": 30 },
-		{ "category": "library", "count": 8 },
-		{ "category": "museum", "count": 6 },
-		{ "category": "supermarket", "count": 5 },
-		{ "category": "transport", "count": 22 }
-	],
-	"khonkaen": [
-		{ "category": "cinema-theater", "count": 3 },
-		{ "category": "garden", "count": 4 },
-		{ "category": "hospital", "count": 286 },
-		{ "category": "library", "count": 13 },
-		{ "category": "museum", "count": 4 },
-		{ "category": "supermarket", "count": 3 },
-		{ "category": "transport", "count": 30 }
-	],
-	"ratchaburi": [
-		{ "category": "cinema-theater", "count": 3 },
-		{ "category": "garden", "count": 1 },
-		{ "category": "hospital", "count": 182 },
-		{ "category": "library", "count": 12 },
-		{ "category": "museum", "count": 10 },
-		{ "category": "supermarket", "count": 3 },
-		{ "category": "transport", "count": 23 }
-	]
+	"bangkok": {
+		"cinema-theater": 86,
+		"garden": 55,
+		"hospital": 253,
+		"library": 52,
+		"museum": 81,
+		"supermarket": 190,
+		"transport": 374
+	},
+	"chiangmai": {
+		"cinema-theater": 3,
+		"garden": 10,
+		"hospital": 296,
+		"library": 16,
+		"museum": 21,
+		"supermarket": 8,
+		"transport": 22
+	},
+	"chonburi": {
+		"cinema-theater": 13,
+		"garden": 11,
+		"hospital": 157,
+		"library": 10,
+		"museum": 17,
+		"supermarket": 29,
+		"transport": 49
+	},
+	"phuket": {
+		"cinema-theater": 5,
+		"garden": 4,
+		"hospital": 30,
+		"library": 8,
+		"museum": 6,
+		"supermarket": 5,
+		"transport": 22
+	},
+	"khonkaen": {
+		"cinema-theater": 3,
+		"garden": 4,
+		"hospital": 286,
+		"library": 13,
+		"museum": 4,
+		"supermarket": 3,
+		"transport": 30
+	},
+	"ratchaburi": {
+		"cinema-theater": 3,
+		"garden": 1,
+		"hospital": 182,
+		"library": 12,
+		"museum": 10,
+		"supermarket": 3,
+		"transport": 23
+	}
 }

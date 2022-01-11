@@ -20,16 +20,12 @@ const contentCounts = (
 
 const stats = placeFiles.reduce<{
 	[city: string]: {
-		category: string;
-		count: number;
-	}[];
+		[category: string]: number;
+	};
 }>((obj, { city, category }, index) => {
-	if (!obj[city]) obj[city] = [];
+	if (!obj[city]) obj[city] = {};
 
-	obj[city].push({
-		category,
-		count: contentCounts[index]
-	});
+	obj[city][category] = contentCounts[index];
 
 	return obj;
 }, {});

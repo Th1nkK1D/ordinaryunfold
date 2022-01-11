@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { scaleLinear } from 'd3-scale';
 	import cities from '../../../data/whats-in-the-city/cities.json';
+	import placeStats from '../../../data/whats-in-the-city/places-stats.json';
+	import categories from '../../../data/whats-in-the-city/categories.json';
 
 	const MIN_COLUMN_WIDTH = 180;
 	const POPULATION_PER_CIRCLE = 100000;
 	const MAX_AREA_SIZE = 120;
+	const MAX_CHART_HEIGHT = 200;
 
 	const populationVis = cities.map(({ population }) => {
 		const amount = population / POPULATION_PER_CIRCLE;
@@ -20,6 +23,18 @@
 		area,
 		size: Math.round(mapArea(area))
 	}));
+
+	const placeChartHeight = scaleLinear()
+		.domain([0, Math.max(...Object.values(placeStats).flatMap((place) => Object.values(place)))])
+		.range([0, MAX_CHART_HEIGHT]);
+
+	const placeVis = cities.map(({ key: city }) =>
+		categories.map(({ key: category, colors }) => ({
+			count: placeStats[city][category],
+			height: Math.round(placeChartHeight(placeStats[city][category])),
+			color: colors[3]
+		}))
+	);
 </script>
 
 <div
@@ -57,6 +72,34 @@
 			<p class="text-center text-sm">{area.toLocaleString()} km<sup>2</sup></p>
 		</div>
 	{/each}
+
+	<div class="row-label">Places</div>
+
+	{#each placeVis as city}
+		<div class="cell flex flex-row space-x-1 items-end">
+			{#each city as { height, color, count }}
+				<div class="flex-1 relative mt-4" style="height: {height}px; background-color: {color};">
+					<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full text-xs">
+						{count}
+					</div>
+				</div>
+			{/each}
+		</div>
+	{/each}
+
+	<div />
+
+	<div
+		class="cell flex flex-row space-x-4 justify-center"
+		style="-ms-grid-column-span: span {cities.length} / span {cities.length}; grid-column: span {cities.length} / span {cities.length}"
+	>
+		{#each categories as { name, colors }}
+			<div class="flex flex-row flex-wrap space-x-1 items-center">
+				<div class="w-3 h-3" style="background-color: {colors[3]};" />
+				<p class="text-sm">{name}</p>
+			</div>
+		{/each}
+	</div>
 </div>
 
 <style>
