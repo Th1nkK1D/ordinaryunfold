@@ -51,7 +51,7 @@
 
 <Metadata
 	title="What's in the city?"
-	description="What kind of place does Thailand flavor?"
+	description="What kind of place does Thailand flavor in the different cities?"
 	path="/whats-in-the-city/"
 	image="/whats-in-the-city/og.png"
 />
