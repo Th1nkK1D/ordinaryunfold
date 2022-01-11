@@ -1,13 +1,12 @@
 <script lang="ts">
+	import ExternalLink from '../../../components/external-link.svelte';
+
 	export let source: string;
 	export let url: string;
-
 </script>
 
-<a
+<ExternalLink
 	href={url}
-	target="_blank"
-	rel="noreferrer noopener"
 	class="text-light-blue-700 inline-flex text-sm hover:underline {$$props.class || ''}"
 >
 	- {source}
@@ -24,4 +23,4 @@
 			fill="currentColor"
 		/>
 	</svg>
-</a>
+</ExternalLink>

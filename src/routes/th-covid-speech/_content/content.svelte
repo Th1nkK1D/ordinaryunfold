@@ -4,6 +4,7 @@
 	import { contentBlocks, lastUpdated } from '../_data';
 	import ContentBox from './content-box.svelte';
 	import SortButton from './sort-button.svelte';
+	import ExternalLink from '../../../components/external-link.svelte';
 
 	export let activeContentId: number;
 
@@ -94,30 +95,24 @@
 				<p class="text-xl font-head">ที่มาของข้อมูล</p>
 				<ul class="space-y-2">
 					<li>
-						จำนวนผู้ติดเชื้อใหม่รายวันจาก <a
+						จำนวนผู้ติดเชื้อใหม่รายวันจาก <ExternalLink
 							href="https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all"
 							class="text-light-blue-700 hover:underline"
-							target="_black"
-							rel="noreferrer noopener"
 						>
 							Open API กรมควบคุมโรค
-						</a>
-						(<a
+						</ExternalLink>
+						(<ExternalLink
 							href="https://covid19.th-stat.com/th/api"
 							class="text-light-blue-700 hover:underline"
-							target="_black"
-							rel="noreferrer noopener"
 						>
 							เวอร์ชั่นเก่า
-						</a> ที่ใช้ไม่ได้แล้ว)
+						</ExternalLink> ที่ใช้ไม่ได้แล้ว)
 					</li>
 					<li>ข่าวและคำพูดต่างๆ ตามลิ้งค์ที่ได้แนบไว้</li>
 					<li>
-						มีคำพูดหรือเหตุการที่น่าสนใจ? <a
+						มีคำพูดหรือเหตุการที่น่าสนใจ? <ExternalLink
 							href="https://docs.google.com/forms/d/e/1FAIpQLSdx-AyhmdZh9gd-oJvS51MRbTy5ehQ9_n2B1hLkMMREJv3I6g/viewform?usp=sf_link"
-							class="text-light-blue-700 hover:underline"
-							target="_black"
-							rel="noreferrer noopener">บอกเราได้ที่นี่</a
+							class="text-light-blue-700 hover:underline">บอกเราได้ที่นี่</ExternalLink
 						>
 					</li>
 				</ul>

@@ -108,27 +108,28 @@
 	<div class="flex flex-col lg:(flex-row items-end) -lg:space-y-16">
 		<ul class="space-y-1">
 			<li>
-				Places data from <ExternalLink href="https://map.longdo.com/" class="underline"
-					>Longdo Map API</ExternalLink
+				Places data from <ExternalLink
+					href="https://map.longdo.com/"
+					class="text-light-blue-700 hover:underline">Longdo Map API</ExternalLink
 				> (Latest queried on 9/1/2022)
 			</li>
 			<li>
 				GeoJSON shapefiles from <ExternalLink
 					href="https://github.com/cvibhagool/thailand-map/"
-					class="underline">cvibhagool/thailand-map</ExternalLink
+					class="text-light-blue-700 hover:underline">cvibhagool/thailand-map</ExternalLink
 				>
 			</li>
 			<li>
 				Population data from <ExternalLink
 					href="https://opendata.data.go.th/dataset/statbyyear"
-					class="underline"
+					class="text-light-blue-700 hover:underline"
 					>Open Government Data of Thailand
 				</ExternalLink>
 			</li>
 			<li>
 				City's area from <ExternalLink
 					href="https://th.wikipedia.org/wiki/จังหวัดของประเทศไทย"
-					class="underline"
+					class="text-light-blue-700 hover:underline"
 					>Wikipedia Thailand
 				</ExternalLink>
 			</li>
