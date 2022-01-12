@@ -62,7 +62,7 @@
 			>
 		</ExternalLink>
 		<ExternalLink
-			href="https://www.facebook.com/ordinaryunfold"
+			href="https://twitter.com/ordinaryunfold"
 			class="text-gray-500 hover:text-light-blue-600"
 			ariaLabel="Follow us on Twitter"
 		>
