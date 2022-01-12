@@ -21,7 +21,7 @@
 	class="inline font-bold bg-white border-b-3 border-solid border-gray-200"
 	style="color: {selectedOption
 		? options.find(({ key }) => key === selectedOption)?.colors?.[3]
-		: '#BDBDBD'}"
+		: '#9E9E9E'}"
 	{placeholder}
 	on:change={() => dispatch('select', selectedOption)}
 >

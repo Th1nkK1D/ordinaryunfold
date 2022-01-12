@@ -56,7 +56,7 @@
 	image="/whats-in-the-city/og.png"
 />
 
-<div class="flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-16 space-y-1">
+<div class="relative flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-16 space-y-1">
 	<div class="flex -md:justify-center">
 		<Logo dark />
 	</div>
@@ -98,6 +98,15 @@
 			<Legend {colors} />
 		</div>
 	</div>
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 24 24"
+		class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-6 text-gray-300"
+		fill="currentColor"
+		><path d="M24 24H0V0h24v24z" fill="none" /><path
+			d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
+		/></svg
+	>
 </div>
 
 <div class="px-3 py-20 md:(px-16 py-32) bg-gray-100 overflow-x-auto">
