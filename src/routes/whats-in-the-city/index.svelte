@@ -114,7 +114,10 @@
 </div>
 
 <div class="flex justify-center px-3 py-20 md:(px-16 py-32)">
-	<Sharer url="https://www.ordinaryunfold.com/whats-in-the-city/" />
+	<Sharer
+		url="https://www.ordinaryunfold.com/whats-in-the-city/"
+		linkClass="text-blue-400 hover:text-blue-600"
+	/>
 </div>
 
 <div class="px-3 pb-6 md:(px-16 pb-24) space-y-4 max-w-screen-2xl mx-auto">
