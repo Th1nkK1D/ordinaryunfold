@@ -6,6 +6,8 @@
 	<p>
 		Follow us on <ExternalLink href="https://www.facebook.com/ordinaryunfold" class="underline"
 			>Facebook</ExternalLink
+		> and <ExternalLink href="https://twitter.com/OrdinaryUnfold" class="underline"
+			>Twitter</ExternalLink
 		>
 		- Crafted with &lt;3 by
 		<ExternalLink href="https://th1nkk1d.xyz" class="underline">Th1nkK1D</ExternalLink>
