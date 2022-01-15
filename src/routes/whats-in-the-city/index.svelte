@@ -133,37 +133,40 @@
 	</div>
 </div>
 
-<div class="px-3 py-20 md:(px-16 py-32) space-y-4 max-w-screen-2xl mx-auto bg-gray-100">
-	<h2 class="text-2xl font-bold">Data Sources</h2>
-	<div class="flex flex-col lg:(flex-row items-end) -lg:space-y-16">
-		<ul class="space-y-1">
-			<li>
-				Places data from <ExternalLink
-					href="https://map.longdo.com/"
-					class="text-light-blue-700 hover:underline">Longdo Map API</ExternalLink
-				> (Latest query on 9/1/2022)
-			</li>
-			<li>
-				GeoJSON shapefiles from <ExternalLink
-					href="https://github.com/cvibhagool/thailand-map/"
-					class="text-light-blue-700 hover:underline">cvibhagool/thailand-map</ExternalLink
-				>
-			</li>
-			<li>
-				Population data from <ExternalLink
-					href="https://opendata.data.go.th/dataset/statbyyear"
-					class="text-light-blue-700 hover:underline"
-					>Open Government Data of Thailand
-				</ExternalLink>
-			</li>
-			<li>
-				City's area from <ExternalLink
-					href="https://th.wikipedia.org/wiki/จังหวัดของประเทศไทย"
-					class="text-light-blue-700 hover:underline"
-					>Wikipedia Thailand
-				</ExternalLink>
-			</li>
-		</ul>
-		<Footer class="flex-1 text-center lg:text-right" />
+<div class="px-3 py-20 md:(px-16 py-32) space-y-4 bg-gray-100">
+	<div class="max-w-screen-xl mx-auto flex flex-col lg:(flex-row items-end) -lg:space-y-16">
+		<div class="space-y-2">
+			<h2 class="text-2xl font-bold">Data Sources</h2>
+
+			<ul class="space-y-1">
+				<li>
+					Places data from <ExternalLink
+						href="https://map.longdo.com/"
+						class="text-light-blue-700 hover:underline">Longdo Map API</ExternalLink
+					> (Latest query on 9/1/2022)
+				</li>
+				<li>
+					GeoJSON shapefiles from <ExternalLink
+						href="https://github.com/cvibhagool/thailand-map/"
+						class="text-light-blue-700 hover:underline">cvibhagool/thailand-map</ExternalLink
+					>
+				</li>
+				<li>
+					Population data from <ExternalLink
+						href="https://opendata.data.go.th/dataset/statbyyear"
+						class="text-light-blue-700 hover:underline"
+						>Open Government Data of Thailand
+					</ExternalLink>
+				</li>
+				<li>
+					City's area from <ExternalLink
+						href="https://th.wikipedia.org/wiki/จังหวัดของประเทศไทย"
+						class="text-light-blue-700 hover:underline"
+						>Wikipedia Thailand
+					</ExternalLink>
+				</li>
+			</ul>
+		</div>
+		<Footer class="flex-1 lg:text-right" />
 	</div>
 </div>
