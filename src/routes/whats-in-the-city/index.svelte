@@ -109,18 +109,31 @@
 	>
 </div>
 
-<div class="px-3 py-20 md:(px-16 py-32) bg-gray-100 overflow-x-auto">
+<div class="px-3 py-20 md:(px-16 py-32) bg-gray-100 overflow-x-auto space-y-24">
 	<Comparison />
 </div>
 
-<div class="flex justify-center px-3 py-20 md:(px-16 py-32)">
-	<Sharer
-		url="https://www.ordinaryunfold.com/whats-in-the-city/"
-		linkClass="text-blue-400 hover:text-blue-600"
-	/>
+<div class="px-3 py-20 md:(px-16 py-32) max-w-2xl mx-auto space-y-16">
+	<div class="space-y-2">
+		<h3 class="font-bold">DISCLAIMER</h3>
+		<p>
+			The places data is not officially provided by the public sector. Even though Thailand is
+			considered to be a single-metropolitan-growth country in which sub-urban provinces are
+			expected to have less development, some locations might be missing or mislabeled. Please
+			expect some level of error in data accuracy.
+		</p>
+	</div>
+
+	<div class="flex justify-center items-center space-x-4">
+		<span class="text-xs">Share</span>
+		<Sharer
+			url="https://www.ordinaryunfold.com/whats-in-the-city/"
+			linkClass="text-blue-400 hover:text-blue-600"
+		/>
+	</div>
 </div>
 
-<div class="px-3 pb-6 md:(px-16 pb-24) space-y-4 max-w-screen-2xl mx-auto">
+<div class="px-3 py-20 md:(px-16 py-32) space-y-4 max-w-screen-2xl mx-auto bg-gray-100">
 	<h2 class="text-2xl font-bold">Data Sources</h2>
 	<div class="flex flex-col lg:(flex-row items-end) -lg:space-y-16">
 		<ul class="space-y-1">
@@ -128,7 +141,7 @@
 				Places data from <ExternalLink
 					href="https://map.longdo.com/"
 					class="text-light-blue-700 hover:underline">Longdo Map API</ExternalLink
-				> (Latest queried on 9/1/2022)
+				> (Latest query on 9/1/2022)
 			</li>
 			<li>
 				GeoJSON shapefiles from <ExternalLink

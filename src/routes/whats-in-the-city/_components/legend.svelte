@@ -37,7 +37,7 @@
 		? 'opacity-100'
 		: 'opacity-0'}"
 >
-	<div class="text-right">Distance (km)</div>
+	<div class="text-right">Reachable by<br />(distance in km)</div>
 	<div class="flex flex-row w-48 md:w-64">
 		{#each legends as { label, size, color, icon }, index (index)}
 			<div class="flex flex-col" style="width: {size}%">

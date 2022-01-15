@@ -16,14 +16,14 @@
 	<div
 		class="flex-1 flex flex-col w-full max-w-screen-lg px-2 space-y-10 md:(px-6 space-y-12) mx-auto "
 	>
-		<!-- <ProjectCard
+		<ProjectCard
 			title="What's in the city?"
-			description="Explore different places in six example cities of Thailand. What kind of place does Thai flavor? What is the difference in each city?"
+			description="Explore different places in six example cities of Thailand. What kind of place does Thai flavor? Is it easy to be reached? What is the difference in each city?"
 			href="/whats-in-the-city/"
 			image="/whats-in-the-city/og.png"
-			date="12 Jan 2022"
+			date="15 Jan 2022"
 			lang="EN"
-		/> -->
+		/>
 		<ProjectCard
 			title="Losses in Myanmar"
 			description="Get to know the victims demography during the 2021 coup d'état in Myanmar. #StandWithMyanmar"
