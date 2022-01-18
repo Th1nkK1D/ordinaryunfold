@@ -16,12 +16,12 @@
 	});
 
 	const mapArea = scaleLinear()
-		.domain([0, Math.max(...cities.map(({ area }) => area))])
+		.domain([0, Math.max(...cities.map(({ area }) => Math.sqrt(area)))])
 		.range([0, MAX_AREA_SIZE]);
 
 	const areaVis = cities.map(({ area }) => ({
 		area,
-		size: Math.round(mapArea(area))
+		size: Math.round(Math.sqrt(area))
 	}));
 
 	const placeChartHeight = scaleLinear()
