@@ -4,7 +4,8 @@
 	import { fade } from 'svelte/transition';
 	import Logo from '../../components/logo.svelte';
 	import Dropdown from './_components/dropdown.svelte';
-	import Map, { Location } from './_components/map.svelte';
+	import Map from './_components/map.svelte';
+	import type { Location } from './_components/map.svelte';
 	import categories from '../../data/whats-in-the-city/categories.json';
 	import cities from '../../data/whats-in-the-city/cities.json';
 	import Legend from './_components/legend.svelte';
@@ -38,7 +39,7 @@
 	};
 
 	const loadCategoryJson = async (city: string, category: string) => {
-		locations = await fetchJson(`${city}-${category}.json`);
+		locations = (await fetchJson(`${city}-${category}.json`)) as Location[];
 	};
 
 	onMount(() => {
@@ -46,7 +47,7 @@
 		pendingTask--;
 	});
 
-	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors;
+	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors as string[];
 </script>
 
 <Metadata

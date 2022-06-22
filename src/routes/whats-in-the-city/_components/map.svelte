@@ -14,7 +14,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
-	import { geoPath, geoMercator, geoCircle, geoDistance, GeoPermissibleObjects } from 'd3-geo';
+	import { geoPath, geoMercator, geoCircle, geoDistance } from 'd3-geo';
+	import type { GeoPermissibleObjects } from 'd3-geo';
 	import { lengthToDegrees, radiansToDegrees } from '@turf/helpers';
 	import paper from 'paper';
 	import { createPinDefinition } from './symbols';
@@ -31,7 +32,7 @@
 
 	let canvas: HTMLCanvasElement;
 
-	let tooltip: { x: number; y: number; name: string } = null;
+	let tooltip: { x: number; y: number; name: string } | null = null;
 
 	const draw = (map: GeoPermissibleObjects, locations: Location[], withTransition = true) => {
 		paper.project.clear();

@@ -5,16 +5,14 @@ import dsv from '@rollup/plugin-dsv';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
 	preprocess: preprocess(),
-
 	kit: {
-		// hydrate the <div id="svelte"> element in src/app.html
-		target: '#svelte',
+		prerender: {
+			default: true
+		},
 		adapter: adapter(),
 		vite: {
-			plugins: [WindiCSS.default(), dsv()]
+			plugins: [WindiCSS(), dsv()]
 		}
 	}
 };
