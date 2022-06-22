@@ -29,7 +29,7 @@
 	<div class="flex flex-col space-y-1 -md:text-sm">
 		<img
 			class="w-24 mx-auto rounded-full object-cover"
-			src="/th-covid-speech/speakers/{speaker.id}.jpeg"
+			src="/th-covid-speech/speakers/{speaker.id}.webp"
 			alt={speaker.name}
 		/>
 		<p class="font-bold">{speaker.name}</p>

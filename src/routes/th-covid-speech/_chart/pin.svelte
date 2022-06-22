@@ -44,7 +44,7 @@
 >
 	{#if type === 'speech'}
 		<img
-			src="/th-covid-speech/speakers/{speaker.id}.jpeg"
+			src="/th-covid-speech/speakers/{speaker.id}.webp"
 			alt={speaker.name}
 			class="rounded-full p-0.5 md:p-1 m-auto"
 		/>
