@@ -9,7 +9,11 @@
 
 <div class="flex flex-col min-h-screen">
 	<section class="bg-geometries-top bg-top space-y-4 text-center px-4">
-		<img src="/images/logo-black.png" alt="OrdinaryUnfold" class="w-full max-w-72 md:max-w-96" />
+		<img
+			src="/images/logo-black.png"
+			alt="OrdinaryUnfold"
+			class="w-full max-w-72 md:max-w-96 mt-6 md:mt-24"
+		/>
 		<p class="md:text-lg">Bite-size visualization and storytelling experiments</p>
 	</section>
 
@@ -89,6 +93,6 @@
 
 <style>
 	section {
-		@apply flex flex-col justify-center items-center bg-no-repeat bg-contain h-30vw min-h-64;
+		@apply flex flex-col justify-center items-center bg-no-repeat bg-contain h-30vw min-h-64 max-h-128;
 	}
 </style>
