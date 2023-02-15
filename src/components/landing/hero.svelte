@@ -8,7 +8,6 @@
 		'M560.147 238.869C476.919 257.319 422.972 235.331 413.686 204.698V299.769C422.53 342.219 511.852 351.675 558.282 329.521L547.729 312.846L558.282 301.266L549.496 286.946L560.147 272.339L547.729 260.456L560.147 238.869Z'
 	];
 
-	let containerEl: HTMLDivElement;
 	let svgEl: SVGElement;
 	let textEl: SVGPathElement;
 	let paperHoleEl: SVGCircleElement;
@@ -16,6 +15,8 @@
 	let paperBodyEl: SVGRectElement;
 	let paperSideEl: SVGPathElement;
 	let subtitleEl: HTMLParagraphElement;
+
+	let isIntroAnimationFinished = false;
 
 	onMount(async () => {
 		await anime
@@ -66,25 +67,24 @@
 					easing: 'easeOutElastic'
 				},
 				2000
-				// Pull up content
 			)
-			.add({
-				targets: subtitleEl,
-				opacity: [0, 1]
-			})
+			// Show subtitle
 			.add(
 				{
-					targets: containerEl,
-					height: ['100vh', '75vh']
+					targets: subtitleEl,
+					opacity: [0, 1]
 				},
-				'-=1000'
+				'-=500'
 			)
 			// Peel
-			.add({
-				targets: paperSideEl,
-				fill: ['none', '#f2f2f2'],
-				duration: 1
-			})
+			.add(
+				{
+					targets: paperSideEl,
+					fill: ['none', '#f2f2f2'],
+					duration: 1
+				},
+				'-=500'
+			)
 			.add({
 				targets: paperBodyEl,
 				fill: ['#f2f2f2', '#bdbdbd'],
@@ -98,6 +98,8 @@
 				'-=200'
 			).finished;
 
+		isIntroAnimationFinished = true;
+
 		anime({
 			targets: paperSideEl,
 			d: PAPER_SIDE_STEPS.slice(1),
@@ -107,7 +109,11 @@
 	});
 </script>
 
-<div bind:this={containerEl} class="h-screen flex justify-center items-center">
+<div
+	class="flex justify-center items-center transition-height ease-in-out duration-1500 py-12 md:py-24 {isIntroAnimationFinished
+		? 'min-h-[360px] md:min-h-[520px]'
+		: 'min-h-screen'}"
+>
 	<div class="flex flex-col w-full max-w-2xl space-y-8">
 		<svg
 			class="opacity-0 w-full h-full"

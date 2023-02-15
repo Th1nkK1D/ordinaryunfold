@@ -8,7 +8,8 @@ export default defineConfig({
 		},
 		extend: {
 			transitionProperty: {
-				'transform-shadow': 'transform box-shadow'
+				'transform-shadow': 'transform box-shadow',
+				height: 'min-height'
 			}
 		}
 	}
