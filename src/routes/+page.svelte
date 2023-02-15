@@ -11,12 +11,12 @@
 
 <BlurryBackground />
 
-<div class=" text-white min-h-screen p-4">
+<div class=" text-light-100 min-h-screen p-4">
 	<div class="flex flex-col w-full max-w-2xl mx-auto">
 		<Hero />
 	</div>
 
-	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 md:space-y-36">
+	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 mb-12 md:(space-y-36 mb-18)">
 		<div class="grid grid-cols-1 gap-4 md:(grid-cols-2 gap-6)">
 			<ProjectCard
 				title="What's in the city?"

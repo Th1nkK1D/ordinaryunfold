@@ -49,4 +49,4 @@
 	}
 </script>
 
-<div bind:this={containerEl} class="fixed inset-0 bg-black -z-1" />
+<div bind:this={containerEl} class="fixed inset-0 bg-dark-900 -z-1" />
