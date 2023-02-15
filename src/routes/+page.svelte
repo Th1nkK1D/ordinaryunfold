@@ -1,15 +1,17 @@
 <script>
 	import Metadata from '../components/metadata.svelte';
 	import Hero from '../components/landing/hero.svelte';
-
 	import Footer from '../components/footer.svelte';
 	import ProjectCard from '../components/landing/project-card.svelte';
 	import ExternalLink from '../components/external-link.svelte';
+	import BlurryBackground from '../components/landing/blurry-background.svelte';
 </script>
 
 <Metadata />
 
-<div class="bg-black text-white min-h-screen p-4">
+<BlurryBackground />
+
+<div class=" text-white min-h-screen p-4">
 	<div class="flex flex-col w-full max-w-2xl mx-auto">
 		<Hero />
 	</div>
