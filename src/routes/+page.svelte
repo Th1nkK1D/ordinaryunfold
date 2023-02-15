@@ -48,11 +48,10 @@
 			<div class="-md:text-sm">Follow us</div>
 			<ExternalLink
 				href="https://www.facebook.com/ordinaryunfold"
-				class="text-gray-500 hover:text-light-blue-600"
+				class="text-gray-500 hover:text-blue-600 transition duration-250 ease-in-out"
 				ariaLabel="Follow us on Facebook"
 			>
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
 					class="w-6 md:w-8"
 					viewBox="0 0 24 24"
 					fill="none"
@@ -65,11 +64,10 @@
 			</ExternalLink>
 			<ExternalLink
 				href="https://twitter.com/ordinaryunfold"
-				class="text-gray-500 hover:text-light-blue-600"
+				class="text-gray-500 hover:text-blue-600 transition duration-250 ease-in-out"
 				ariaLabel="Follow us on Twitter"
 			>
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
 					class="w-6 md:w-8"
 					viewBox="0 0 24 24"
 					fill="none"
