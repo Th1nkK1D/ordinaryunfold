@@ -1,15 +1,19 @@
 <script>
 	import ExternalLink from './external-link.svelte';
+
+	export let hideFollowLinks = false;
 </script>
 
 <footer class="text-sm {$$props.class || ''}">
 	<p>
-		Follow us on <ExternalLink href="https://www.facebook.com/ordinaryunfold" class="underline"
-			>Facebook</ExternalLink
-		> and <ExternalLink href="https://twitter.com/ordinaryunfold" class="underline"
-			>Twitter</ExternalLink
-		>
-		- Crafted with &lt;3 by
+		{#if !hideFollowLinks}
+			Follow us on <ExternalLink href="https://www.facebook.com/ordinaryunfold" class="underline"
+				>Facebook</ExternalLink
+			> and <ExternalLink href="https://twitter.com/ordinaryunfold" class="underline"
+				>Twitter</ExternalLink
+			> -
+		{/if}
+		Crafted with &lt;3 by
 		<ExternalLink href="https://th1nkk1d.xyz" class="underline">Th1nkK1D</ExternalLink>
 	</p>
 	<p>

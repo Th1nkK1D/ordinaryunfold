@@ -84,6 +84,6 @@
 			</ExternalLink>
 		</div>
 
-		<Footer class="opacity-70 text-center" />
+		<Footer hideFollowLinks class="opacity-70 text-center" />
 	</div>
 </div>
