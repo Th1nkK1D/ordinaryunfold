@@ -13,10 +13,12 @@
 	let paperHoleEl: SVGCircleElement;
 	let paperTopEl: SVGGElement;
 	let paperBodyEl: SVGRectElement;
+	let paperBottomEl: SVGCircleElement;
 	let paperSideEl: SVGPathElement;
 	let subtitleEl: HTMLParagraphElement;
 
 	let isIntroAnimationFinished = false;
+	let paperLoopAnimation: anime.AnimeInstance;
 
 	onMount(async () => {
 		await anime
@@ -86,7 +88,7 @@
 				'-=500'
 			)
 			.add({
-				targets: paperBodyEl,
+				targets: [paperBodyEl, paperBottomEl],
 				fill: ['#f2f2f2', '#bdbdbd'],
 				duration: 200
 			})
@@ -100,13 +102,46 @@
 
 		isIntroAnimationFinished = true;
 
-		anime({
+		paperLoopAnimation = anime({
 			targets: paperSideEl,
 			d: PAPER_SIDE_STEPS.slice(1),
 			direction: 'alternate',
 			loop: true
 		});
 	});
+
+	function touchPaper() {
+		if (!isIntroAnimationFinished) return;
+
+		paperLoopAnimation.pause();
+
+		anime
+			.timeline({ duration: 500, easing: 'easeInOutSine' })
+			.add({
+				targets: [paperBodyEl, paperBottomEl],
+				fill: '#f2f2f2'
+			})
+			.add(
+				{
+					targets: paperSideEl,
+					d: PAPER_SIDE_STEPS[0]
+				},
+				'-=500'
+			);
+	}
+
+	function leavePaper() {
+		if (!isIntroAnimationFinished) return;
+
+		anime({
+			targets: [paperBodyEl, paperBottomEl],
+			fill: '#bdbdbd',
+			easing: 'easeInOutSine',
+			duration: 200
+		});
+
+		paperLoopAnimation.restart();
+	}
 </script>
 
 <div
@@ -130,22 +165,25 @@
 					stroke="white"
 					stroke-width="-1"
 				/>
-				<g id="paper" filter="url(#filter0_d_301_2)">
-					<circle
-						cx="53.9"
-						cy="53.9"
-						r="53.9"
-						transform="matrix(0.866025 -0.5 0.872837 0.488012 386.27 296.991)"
-						fill="#f2f2f2"
-					/>
-					<rect
-						bind:this={paperBodyEl}
-						x="413.75"
-						y="203.7"
-						width="132.66"
-						height="92.86"
-						fill="#f2f2f2"
-					/>
+				<g filter="url(#filter0_d_301_2)">
+					<g on:mouseenter={touchPaper} on:mouseleave={leavePaper}>
+						<circle
+							bind:this={paperBottomEl}
+							cx="53.9"
+							cy="53.9"
+							r="53.9"
+							transform="matrix(0.866025 -0.5 0.872837 0.488012 386.27 296.991)"
+							fill="#f2f2f2"
+						/>
+						<rect
+							bind:this={paperBodyEl}
+							x="413.75"
+							y="203.7"
+							width="132.66"
+							height="92.86"
+							fill="#f2f2f2"
+						/>
+					</g>
 					<g bind:this={paperTopEl}>
 						<circle
 							cx="53.9"
@@ -164,7 +202,12 @@
 						/>
 					</g>
 
-					<path bind:this={paperSideEl} d={PAPER_SIDE_STEPS[0]} fill="none" />
+					<path
+						bind:this={paperSideEl}
+						class="pointer-events-none"
+						d={PAPER_SIDE_STEPS[0]}
+						fill="#ffffff"
+					/>
 				</g>
 			</g>
 			<defs>
