@@ -4,7 +4,7 @@
 
 	export let title: string = '';
 	export let description: string = 'Bite-size visualization and storytelling experiments';
-	export let image: string = '/images/og.png';
+	export let image: string = '/og.png';
 	export let path: string = '';
 </script>
 
