@@ -3,7 +3,7 @@
 	import Hero from '../components/landing/hero.svelte';
 
 	import Footer from '../components/footer.svelte';
-	import ProjectCard from '../components/project-card.svelte';
+	import ProjectCard from '../components/landing/project-card.svelte';
 	import ExternalLink from '../components/external-link.svelte';
 </script>
 
