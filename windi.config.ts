@@ -7,10 +7,6 @@ export default defineConfig({
 			body: ['Bai Jamjuree', 'serif']
 		},
 		extend: {
-			backgroundImage: {
-				'geometries-top': 'url(/images/bg-geometries-top.png)',
-				'geometries-bottom': 'url(/images/bg-geometries-bottom.png)'
-			},
 			transitionProperty: {
 				'transform-shadow': 'transform box-shadow'
 			}
