@@ -10,12 +10,12 @@
 <Metadata />
 
 <div class="bg-black text-white min-h-screen p-4">
-	<div class="flex flex-col max-w-2xl mx-auto space-y-24">
+	<div class="flex flex-col w-full max-w-2xl mx-auto">
 		<Hero />
+	</div>
 
-		<div
-			class="flex-1 flex flex-col w-full max-w-screen-lg px-2 space-y-10 md:(px-6 space-y-12) mx-auto "
-		>
+	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 md:space-y-36">
+		<div class="grid grid-cols-1 gap-4 md:(grid-cols-2 gap-6)">
 			<ProjectCard
 				title="What's in the city?"
 				description="Explore different places in six example cities of Thailand. What kind of place does Thai flavor? Is it easy to be reached? What is the difference in each city?"
@@ -42,7 +42,7 @@
 			/>
 		</div>
 
-		<div class="flex flex-row justify-center items-center space-x-2">
+		<div class="flex flex-row justify-center items-center space-x-4">
 			<div class="-md:text-sm">Follow us</div>
 			<ExternalLink
 				href="https://www.facebook.com/ordinaryunfold"
@@ -82,6 +82,6 @@
 			</ExternalLink>
 		</div>
 
-		<Footer class="opacity-50 text-center" />
+		<Footer class="opacity-70 text-center" />
 	</div>
 </div>

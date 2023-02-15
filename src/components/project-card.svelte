@@ -8,11 +8,11 @@
 </script>
 
 <a
-	class="w-full flex flex-col md:flex-row transition-transform-shadow duration-300 ease-in-out border border-gray-100 shadow-lg hover:(shadow-xl transform scale-101)"
+	class="flex flex-col rounded overflow-hidden border-gray-600 border duration-300 ease-in-out hover:(transform scale-101)"
 	{href}
 >
-	<img src={image} class="h-full w-full md:w-84 object-cover" alt={title} />
-	<div class="md:flex-1 p-5 space-y-2">
+	<img src={image} class="w-full border-b border-gray-100" alt={title} />
+	<div class="flex-1 p-5 space-y-2 text-black bg-white">
 		<div class="flex flex-row text-xs md:text-sm text-gray-500">
 			<div class="flex-1">{date}</div>
 			<div class="flex flex-row">
