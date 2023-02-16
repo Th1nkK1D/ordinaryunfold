@@ -18,6 +18,7 @@
 	let subtitleEl: HTMLParagraphElement;
 
 	let isIntroAnimationFinished = false;
+	let isPaperBodyTouch = false;
 	let paperLoopAnimation: anime.AnimeInstance;
 
 	onMount(async () => {
@@ -113,33 +114,21 @@
 	function touchPaper() {
 		if (!isIntroAnimationFinished) return;
 
+		isPaperBodyTouch = true;
 		paperLoopAnimation.pause();
 
-		anime
-			.timeline({ duration: 500, easing: 'easeInOutSine' })
-			.add({
-				targets: [paperBodyEl, paperBottomEl],
-				fill: '#f2f2f2'
-			})
-			.add(
-				{
-					targets: paperSideEl,
-					d: PAPER_SIDE_STEPS[0]
-				},
-				'-=500'
-			);
+		anime({
+			targets: paperSideEl,
+			d: PAPER_SIDE_STEPS[0],
+			duration: 300,
+			easing: 'easeInOutSine'
+		});
 	}
 
 	function leavePaper() {
 		if (!isIntroAnimationFinished) return;
 
-		anime({
-			targets: [paperBodyEl, paperBottomEl],
-			fill: '#bdbdbd',
-			easing: 'easeInOutSine',
-			duration: 200
-		});
-
+		isPaperBodyTouch = false;
 		paperLoopAnimation.restart();
 	}
 </script>
@@ -169,19 +158,21 @@
 					<g on:mouseenter={touchPaper} on:mouseleave={leavePaper}>
 						<circle
 							bind:this={paperBottomEl}
+							class="transition-colors duration-200 ease-in-out"
 							cx="53.9"
 							cy="53.9"
 							r="53.9"
 							transform="matrix(0.866025 -0.5 0.872837 0.488012 386.27 296.991)"
-							fill="#f2f2f2"
+							fill={isPaperBodyTouch ? '#f2f2f2' : '#bdbdbd'}
 						/>
 						<rect
 							bind:this={paperBodyEl}
+							class="transition-colors duration-200 ease-in-out"
 							x="413.75"
 							y="203.7"
 							width="132.66"
 							height="92.86"
-							fill="#f2f2f2"
+							fill={isPaperBodyTouch ? '#f2f2f2' : '#bdbdbd'}
 						/>
 					</g>
 					<g bind:this={paperTopEl}>
