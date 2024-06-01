@@ -34,18 +34,18 @@
 	};
 </script>
 
-<div bind:this={container} class="flex-1 overflow-y-scroll lg:max-w-3xl lg:h-screen)">
+<div bind:this={container} class="lg:h-screen) flex-1 overflow-y-scroll lg:max-w-3xl">
 	<div
-		class="flex flex-col pt-12 px-4 h-full lg:pt-20 lg:px-10 bg-no-repeat bg-contain bg-bottom text-center lg:text-left"
+		class="flex h-full flex-col bg-contain bg-bottom bg-no-repeat px-4 pt-12 text-center lg:px-10 lg:pt-20 lg:text-left"
 		style="background-image: url('/th-covid-speech/hero-cover.svg');"
 	>
-		<div class="flex-1 flex flex-col space-y-4 md:space-y-12">
-			<h1 class="font-head font-bold text-5xl md:text-8xl">
+		<div class="flex flex-1 flex-col space-y-4 md:space-y-12">
+			<h1 class="font-head text-5xl font-bold md:text-8xl">
 				วิวาทะ<br />
-				<span class="text-sky-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
+				<span class="text-6xl text-sky-700 md:text-9xl">โควิด ๑๙</span><br />
 			</h1>
 			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
-			<p class="italic font-sm text-gray-600">
+			<p class="font-sm italic text-gray-600">
 				ข้อมูลล่าสุด {new Date(lastUpdated).toLocaleDateString('TH-th', { dateStyle: 'medium' })}
 			</p>
 			<div class="mx-auto lg:mx-0">
@@ -56,7 +56,7 @@
 		<div class="flex flex-1">
 			<svg
 				viewBox="0 0 24 24"
-				class="w-12 cursor-pointer fill-sky-700 hover:fill-sky-500 m-auto lg:mx-0"
+				class="m-auto w-12 cursor-pointer fill-sky-700 hover:fill-sky-500 lg:mx-0"
 				on:click={() => sortButtonContainer.scrollIntoView({ behavior: 'smooth' })}
 				><path d="M0 0h24v24H0V0z" fill="none" /><path
 					d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
@@ -66,11 +66,11 @@
 	</div>
 
 	<div class="px-4 lg:px-10">
-		<div class="pt-6 -mb-4 md:pt-12" bind:this={sortButtonContainer}>
+		<div class="-mb-4 pt-6 md:pt-12" bind:this={sortButtonContainer}>
 			<SortButton {isReversed} on:click={onClickReverse} />
 		</div>
 
-		<div class="flex max-w-2xl mx-auto {isReversed ? 'flex-col-reverse' : 'flex-col'}">
+		<div class="mx-auto flex max-w-2xl {isReversed ? 'flex-col-reverse' : 'flex-col'}">
 			{#each contentBlocks as { id, type, date, ...contentBlock }}
 				<ContentBox
 					bind:this={contentBoxElements[id]}
@@ -83,15 +83,15 @@
 			{/each}
 		</div>
 
-		<div class="flex justify-center my-24">
+		<div class="my-24 flex justify-center">
 			<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
 		</div>
 
-		<div class="flex flex-col space-y-20 mb-12 text-center lg:text-left">
-			<div class="w-12 h-1 bg-black mx-auto lg:mx-0" />
+		<div class="mb-12 flex flex-col space-y-20 text-center lg:text-left">
+			<div class="mx-auto h-1 w-12 bg-black lg:mx-0" />
 
 			<div class="space-y-4">
-				<p class="text-xl font-head">ที่มาของข้อมูล</p>
+				<p class="font-head text-xl">ที่มาของข้อมูล</p>
 				<ul class="space-y-2">
 					<li>
 						จำนวนผู้ติดเชื้อใหม่รายวันจาก <ExternalLink

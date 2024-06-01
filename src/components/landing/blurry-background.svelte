@@ -50,4 +50,4 @@
 	}
 </script>
 
-<div bind:this={containerEl} class="fixed inset-0 bg-[#0f0f0f] -z-10" />
+<div bind:this={containerEl} class="fixed inset-0 -z-10 bg-[#0f0f0f]" />

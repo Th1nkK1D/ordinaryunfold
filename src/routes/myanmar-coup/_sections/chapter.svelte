@@ -12,17 +12,17 @@
 
 <Scrollama class="p-2" on:stepenter={onStepEnter}>
 	<section>
-		<h2 class="font-head font-bold text-4xl mx-6 md:mx-20 md:text-6xl"><slot /></h2>
+		<h2 class="mx-6 font-head text-4xl font-bold md:mx-20 md:text-6xl"><slot /></h2>
 	</section>
 
 	{#each steps as { heading, description, matchedMask }}
 		<section class="items-center">
-			<div class="bg-gray-900 bg-opacity-50 p-3 md:p-6 mx-auto space-y-3 text-center">
-				<h3 class="font-head font-bold text-xl md:text-3xl max-w-xl mx-auto">
+			<div class="mx-auto space-y-3 bg-gray-900 bg-opacity-50 p-3 text-center md:p-6">
+				<h3 class="mx-auto max-w-xl font-head text-xl font-bold md:text-3xl">
 					{@html heading(matchedMask.filter((value) => value).length)}
 				</h3>
 				{#if description}
-					<p class="text-sm md:text-lg md:max-w-3xl mx-auto">{description}</p>
+					<p class="mx-auto text-sm md:max-w-3xl md:text-lg">{description}</p>
 				{/if}
 			</div>
 		</section>
@@ -33,6 +33,6 @@
 
 <style>
 	section {
-		@apply flex flex-col justify-center min-h-screen;
+		@apply flex min-h-screen flex-col justify-center;
 	}
 </style>

@@ -11,12 +11,12 @@
 
 <BlurryBackground />
 
-<div class=" text-gray-100 min-h-screen p-4">
-	<div class="flex flex-col w-full max-w-2xl mx-auto">
+<div class=" min-h-screen p-4 text-gray-100">
+	<div class="mx-auto flex w-full max-w-2xl flex-col">
 		<Hero />
 	</div>
 
-	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 mb-12 md:space-y-36 md:mb-18">
+	<div class="md:mb-18 mx-auto mb-12 flex w-full max-w-4xl flex-col space-y-24 md:space-y-36">
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 			<ProjectCard
 				title="What's in the city?"
@@ -44,11 +44,11 @@
 			/>
 		</div>
 
-		<div class="flex flex-row justify-center items-center space-x-4">
+		<div class="flex flex-row items-center justify-center space-x-4">
 			<div class="text-sm md:text-base">Follow us</div>
 			<ExternalLink
 				href="https://www.facebook.com/ordinaryunfold"
-				class="text-gray-500 hover:text-blue-600 transition duration-250 ease-in-out"
+				class="duration-250 text-gray-500 transition ease-in-out hover:text-blue-600"
 				ariaLabel="Follow us on Facebook"
 			>
 				<svg
@@ -64,7 +64,7 @@
 			</ExternalLink>
 			<ExternalLink
 				href="https://twitter.com/ordinaryunfold"
-				class="text-gray-500 hover:text-blue-600 transition duration-250 ease-in-out"
+				class="duration-250 text-gray-500 transition ease-in-out hover:text-blue-600"
 				ariaLabel="Follow us on Twitter"
 			>
 				<svg
@@ -82,6 +82,6 @@
 			</ExternalLink>
 		</div>
 
-		<Footer hideFollowLinks class="opacity-70 text-center" />
+		<Footer hideFollowLinks class="text-center opacity-70" />
 	</div>
 </div>

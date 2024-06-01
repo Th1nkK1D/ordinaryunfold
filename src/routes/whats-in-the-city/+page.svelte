@@ -57,12 +57,12 @@
 	image="/whats-in-the-city/og.png"
 />
 
-<div class="relative flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-14 space-y-1">
+<div class="relative mx-auto flex h-screen w-full max-w-screen-2xl flex-col space-y-1 p-3 md:p-14">
 	<div class="flex justify-center md:justify-normal">
 		<Logo dark />
 	</div>
-	<div class="flex flex-col-reverse md:flex-row md:space-x-12 flex-1">
-		<div class="space-y-4 text-center my-6 md:text-left md:my-0 md:space-y-8 md:w-sm md:mt-48">
+	<div class="flex flex-1 flex-col-reverse md:flex-row md:space-x-12">
+		<div class="md:w-sm my-6 space-y-4 text-center md:my-0 md:mt-48 md:space-y-8 md:text-left">
 			<div class="font-head font-bold md:space-y-2">
 				<h1 class="text-3xl md:text-4xl">
 					<Dropdown
@@ -86,10 +86,10 @@
 
 			<Statistics {selectedCity} locationCount={locations.length} />
 		</div>
-		<div class="flex-1 flex flex-col relative items-center">
+		<div class="relative flex flex-1 flex-col items-center">
 			{#if pendingTask > 0}
 				<div
-					class="z-10 absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center"
+					class="absolute inset-0 z-10 flex items-center justify-center bg-white bg-opacity-50"
 					transition:fade|global
 				>
 					<Spinner />
@@ -101,7 +101,7 @@
 	</div>
 	<svg
 		viewBox="0 0 24 24"
-		class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-6 text-gray-300"
+		class="absolute bottom-2 left-1/2 h-6 w-6 -translate-x-1/2 transform text-gray-300"
 		fill="currentColor"
 		><path d="M24 24H0V0h24v24z" fill="none" /><path
 			d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"
@@ -109,11 +109,11 @@
 	>
 </div>
 
-<div class="px-3 py-20 md:px-16 md:py-32 bg-gray-100 overflow-x-auto space-y-24">
+<div class="space-y-24 overflow-x-auto bg-gray-100 px-3 py-20 md:px-16 md:py-32">
 	<Comparison />
 </div>
 
-<div class="px-3 py-20 md:px-16 md:py-32 max-w-2xl mx-auto space-y-16">
+<div class="mx-auto max-w-2xl space-y-16 px-3 py-20 md:px-16 md:py-32">
 	<div class="space-y-2">
 		<h3 class="font-bold">DISCLAIMER</h3>
 		<p>
@@ -124,7 +124,7 @@
 		</p>
 	</div>
 
-	<div class="flex justify-center items-center space-x-4">
+	<div class="flex items-center justify-center space-x-4">
 		<span class="text-xs">Share</span>
 		<Sharer
 			url="https://www.ordinaryunfold.com/whats-in-the-city/"
@@ -133,8 +133,10 @@
 	</div>
 </div>
 
-<div class="px-3 py-20 md:px-16 md:py-32 space-y-4 bg-gray-100">
-	<div class="max-w-screen-xl mx-auto flex flex-col space-y-16 lg:flex-row lg:items-end lg:space-y-0">
+<div class="space-y-4 bg-gray-100 px-3 py-20 md:px-16 md:py-32">
+	<div
+		class="mx-auto flex max-w-screen-xl flex-col space-y-16 lg:flex-row lg:items-end lg:space-y-0"
+	>
 		<div class="space-y-2">
 			<h2 class="text-2xl font-bold">Data Sources</h2>
 

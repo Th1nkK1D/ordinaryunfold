@@ -15,7 +15,6 @@
 	const dispatch = createEventDispatcher();
 
 	export const getBoundingClientRect = () => container.getBoundingClientRect();
-
 </script>
 
 <IntersectionObserver
@@ -24,12 +23,12 @@
 	on:intersect={() => dispatch('enter')}
 >
 	<div
-		class="transition-opacity duration-300 ease-in-out space-y-12 my-24 md:my-30 {isActive
+		class="md:my-30 my-24 space-y-12 transition-opacity duration-300 ease-in-out {isActive
 			? ''
 			: 'opacity-15'}"
 		bind:this={container}
 	>
-		<p class="font-head text-center text-xl text-sky-700">
+		<p class="text-center font-head text-xl text-sky-700">
 			[ {date.toLocaleDateString('TH-th', { dateStyle: 'medium' })} ]
 		</p>
 

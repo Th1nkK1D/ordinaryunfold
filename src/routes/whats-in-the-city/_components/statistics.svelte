@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div class="flex flex-col space-y-2 items-center text-sm md:space-y-6 md:items-start md:text-base">
+<div class="flex flex-col items-center space-y-2 text-sm md:items-start md:space-y-6 md:text-base">
 	<div class="flex flex-row space-x-4 {selectedCity ? '' : 'invisible'}">
 		<div class="stat">
 			<svg enable-background="new 0 0 24 24" viewBox="0 0 24 24"
@@ -68,10 +68,10 @@
 
 <style>
 	.stat {
-		@apply flex flex-row space-x-1 md:space-x-2 items-center;
+		@apply flex flex-row items-center space-x-1 md:space-x-2;
 	}
 
 	svg {
-		@apply fill-gray-600 size-5 md:size-6;
+		@apply size-5 fill-gray-600 md:size-6;
 	}
 </style>

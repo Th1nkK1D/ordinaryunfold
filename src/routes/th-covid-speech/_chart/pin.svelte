@@ -14,19 +14,18 @@
 	export let isActive: boolean = false;
 
 	let isHovered = false;
-
 </script>
 
 {#if isActive || isHovered}
 	<div
-		class="absolute mb-2 md:mb-4 shadow transform -translate-x-1/2 bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isScreenLarge() &&
+		class="absolute mb-2 w-auto -translate-x-1/2 transform rounded-lg bg-white px-3 py-1 text-center opacity-90 shadow md:mb-4 {isScreenLarge() &&
 		isHovered
 			? 'z-40 hidden md:flex'
 			: 'z-20'}"
 		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 		transition:fade|global={{ duration: 150 }}
 	>
-		<p class="text-xs whitespace-nowrap">
+		<p class="whitespace-nowrap text-xs">
 			{date.toLocaleDateString('TH-th', { year: '2-digit', month: 'short', day: 'numeric' })}
 		</p>
 		<p class="text-sm font-bold">+{count.toLocaleString('TH-th')}</p>
@@ -34,9 +33,9 @@
 {/if}
 
 <div
-	class="absolute w-6 h-6 md:w-8 md:h-8 text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
-		? 'bg-blue-500 scale-120 z-30'
-		: 'bg-gray-500 hover:z-50 hover:scale-130)'}"
+	class="absolute flex h-6 w-6 -translate-x-1/2 translate-y-1/2 transform cursor-pointer rounded-full text-white shadow transition duration-300 ease-in-out md:h-8 md:w-8 {isActive
+		? 'scale-120 z-30 bg-blue-500'
+		: 'hover:scale-130) bg-gray-500 hover:z-50'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 	on:click
 	on:mouseover={() => (isHovered = true)}
@@ -46,13 +45,10 @@
 		<img
 			src="/th-covid-speech/speakers/{speaker.id}.webp"
 			alt={speaker.name}
-			class="rounded-full p-0.5 md:p-1 m-auto"
+			class="m-auto rounded-full p-0.5 md:p-1"
 		/>
 	{:else}
-		<svg
-			viewBox="0 0 24 24"
-			class="h-4 md:h-5 m-auto fill-current"
-		>
+		<svg viewBox="0 0 24 24" class="m-auto h-4 fill-current md:h-5">
 			<path d="M0 0h24v24H0V0z" fill="none" />
 			<circle cx="12" cy="19" r="2" />
 			<path d="M10 3h4v12h-4z" />

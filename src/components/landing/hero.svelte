@@ -134,17 +134,12 @@
 </script>
 
 <div
-	class="flex justify-center items-center transition-[min-height] ease-in-out duration-[1500ms] py-12 md:py-24 {isIntroAnimationFinished
+	class="flex items-center justify-center py-12 transition-[min-height] duration-[1500ms] ease-in-out md:py-24 {isIntroAnimationFinished
 		? 'min-h-[360px] md:min-h-[520px]'
 		: 'min-h-screen'}"
 >
-	<div class="flex flex-col w-full max-w-2xl space-y-8">
-		<svg
-			class="opacity-0 w-full h-full"
-			bind:this={svgEl}
-			viewBox="0 0 703 480"
-			fill="none"
-		>
+	<div class="flex w-full max-w-2xl flex-col space-y-8">
+		<svg class="h-full w-full opacity-0" bind:this={svgEl} viewBox="0 0 703 480" fill="none">
 			<g clip-path="url(#clip0_301_2)">
 				<path
 					bind:this={textEl}
@@ -221,7 +216,7 @@
 			</defs>
 		</svg>
 
-		<p bind:this={subtitleEl} class="text-gray-300 font-head text-right md:text-xl opacity-0">
+		<p bind:this={subtitleEl} class="text-right font-head text-gray-300 opacity-0 md:text-xl">
 			Bite-size visualization<br />and storytelling experiments.
 		</p>
 	</div>

@@ -18,7 +18,7 @@
 
 <select
 	bind:value={selectedOption}
-	class="inline font-bold bg-white border-b-2 border-solid border-gray-200"
+	class="inline border-b-2 border-solid border-gray-200 bg-white font-bold"
 	style="color: {selectedOption
 		? options.find(({ key }) => key === selectedOption)?.colors?.[3]
 		: '#9E9E9E'}"

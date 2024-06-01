@@ -1,6 +1,6 @@
+import fatalitiesData from '../../data/myanmar-coup/recent-fatality.csv';
 import dayjs from 'dayjs';
 import customParseFormat from 'dayjs/plugin/customParseFormat.js';
-import fatalitiesData from '../../data/myanmar-coup/recent-fatality.csv';
 
 dayjs.extend(customParseFormat);
 
@@ -18,4 +18,4 @@ export const fatalities = fatalitiesData
 		...data
 	}));
 
-export type Person = typeof fatalities[0];
+export type Person = (typeof fatalities)[0];

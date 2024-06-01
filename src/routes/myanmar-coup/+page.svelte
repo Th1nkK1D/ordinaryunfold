@@ -27,7 +27,7 @@
 	<Landing />
 
 	<Scrollama
-		class="flex flex-col w-full"
+		class="flex w-full flex-col"
 		on:stepenter={({ detail: { index } }) => {
 			people = people.sort(chapters[index].sortBy);
 		}}
@@ -41,18 +41,13 @@
 		{/each}
 	</Scrollama>
 
-	<section class="h-screen flex flex-col justify-center items-center text-center p-8">
+	<section class="flex h-screen flex-col items-center justify-center p-8 text-center">
 		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over.</h2>
 	</section>
 
-	<section class="h-screen flex flex-col space-y-12 p-4 text-center">
-		<div class="flex-1 flex flex-col justify-center items-center space-y-4">
-			<svg
-				width="92"
-				height="92"
-				viewBox="0 0 92 92"
-				fill="none"
-			>
+	<section class="flex h-screen flex-col space-y-12 p-4 text-center">
+		<div class="flex flex-1 flex-col items-center justify-center space-y-4">
+			<svg width="92" height="92" viewBox="0 0 92 92" fill="none">
 				<path
 					d="M45.9998 81.8417L40.4415 76.7817C20.6998 58.88 7.6665 47.0733 7.6665 32.5833C7.6665 20.7767 16.9432 11.5 28.7498 11.5C35.4198 11.5 41.8215 14.605 45.9998 19.5117C50.1782 14.605 56.5798 11.5 63.2498 11.5C75.0565 11.5 84.3332 20.7767 84.3332 32.5833C84.3332 47.0733 71.2998 58.88 51.5582 76.82L45.9998 81.8417Z"
 					class="fill-yellow-500"
@@ -66,7 +61,7 @@
 				> for more information.
 			</p>
 			<p class="text-sm md:text-base">#StandWithMyanmar</p>
-			<div class="flex flex-col items-center py-6 md:py-12 space-y-2">
+			<div class="flex flex-col items-center space-y-2 py-6 md:py-12">
 				<Sharer
 					url="https://www.ordinaryunfold.com/myanmar-coup/"
 					linkClass="text-yellow-500 hover:text-yellow-300"
@@ -95,7 +90,7 @@
 					rel="papererrer noopener">Wikipedia</a
 				>
 			</p>
-			<Footer class="text-center text-gray-400 text-xs md:text-base" />
+			<Footer class="text-center text-xs text-gray-400 md:text-base" />
 		</div>
 	</section>
 </div>
@@ -106,7 +101,7 @@
 	}
 
 	h2 {
-		@apply font-head font-bold text-4xl md:text-6xl;
+		@apply font-head text-4xl font-bold md:text-6xl;
 	}
 
 	a {

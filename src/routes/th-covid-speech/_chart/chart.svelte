@@ -65,7 +65,7 @@
 			? matchedCases.count
 			: ([...dailyNewCases].reverse().find((newCase) => newCase.date <= date).count +
 					dailyNewCases.find((newCase) => newCase.date >= date).count) /
-			  2;
+				2;
 
 		return {
 			id,
@@ -103,14 +103,16 @@
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight>
-	<div class="absolute top-0 inset-0 md:right-auto md:justify-start flex md:p-4 z-10 justify-center p-3">
+	<div
+		class="absolute inset-0 top-0 z-10 flex justify-center p-3 md:right-auto md:justify-start md:p-4"
+	>
 		<Logo />
 	</div>
 	{#each yAxis as label, index}
 		<YLabel {index} {...label} />
 	{/each}
-	<div class="relative h-full overflow-x-scroll overflow-y-hidden" bind:this={horizontalScroll}>
-		<div class="absolute top-0 bottom-0 overflow-hidden" style="width: {canvasSize}px;">
+	<div class="relative h-full overflow-y-hidden overflow-x-scroll" bind:this={horizontalScroll}>
+		<div class="absolute bottom-0 top-0 overflow-hidden" style="width: {canvasSize}px;">
 			{#each xAxis as label}
 				<XLabel {...label} />
 			{/each}

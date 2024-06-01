@@ -38,13 +38,13 @@
 </script>
 
 <div
-	class="grid max-w-screen-xl mx-auto"
+	class="mx-auto grid max-w-screen-xl"
 	style="grid-template-columns: repeat({cities.length + 1}, minmax({MIN_COLUMN_WIDTH}px, 1fr)"
 >
 	<div />
 
 	{#each cities as { name }}
-		<div class="cell text-xl font-bold text-center">{name}</div>
+		<div class="cell text-center text-xl font-bold">{name}</div>
 	{/each}
 
 	<div class="row-label">Region</div>
@@ -73,7 +73,7 @@
 	<div class="row-label">Area (km<sup>2</sup>)</div>
 
 	{#each areaVis as { area, size }}
-		<div class="cell space-y-1 flex flex-col justify-center items-center">
+		<div class="cell flex flex-col items-center justify-center space-y-1">
 			<div class="bg-gray-400" style="width: {size}px; height: {size}px;" />
 			<p class="text-center text-sm">{area.toLocaleString()}</p>
 		</div>
@@ -82,10 +82,10 @@
 	<div class="row-label">Places</div>
 
 	{#each placeVis as city}
-		<div class="cell flex flex-row space-x-1 items-end">
+		<div class="cell flex flex-row items-end space-x-1">
 			{#each city as { height, color, count }}
-				<div class="flex-1 relative mt-4" style="height: {height}px; background-color: {color};">
-					<div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-full text-xs">
+				<div class="relative mt-4 flex-1" style="height: {height}px; background-color: {color};">
+					<div class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-full transform text-xs">
 						{count}
 					</div>
 				</div>
@@ -96,12 +96,12 @@
 	<div />
 
 	<div
-		class="cell flex flex-row space-x-4 justify-center"
+		class="cell flex flex-row justify-center space-x-4"
 		style="-ms-grid-column-span: span {cities.length} / span {cities.length}; grid-column: span {cities.length} / span {cities.length}"
 	>
 		{#each categories as { name, colors }}
-			<div class="flex flex-row flex-wrap space-x-1 items-center">
-				<div class="w-3 h-3" style="background-color: {colors[3]};" />
+			<div class="flex flex-row flex-wrap items-center space-x-1">
+				<div class="h-3 w-3" style="background-color: {colors[3]};" />
 				<p class="text-sm">{name}</p>
 			</div>
 		{/each}
@@ -114,10 +114,10 @@
 	}
 
 	.row-label {
-		@apply p-4 font-bold italic text-right;
+		@apply p-4 text-right font-bold italic;
 	}
 
 	.population-dot {
-		@apply w-2 h-2 rounded-full bg-gray-400;
+		@apply h-2 w-2 rounded-full bg-gray-400;
 	}
 </style>

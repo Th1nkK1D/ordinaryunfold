@@ -55,7 +55,7 @@
 							.split('M')
 							.filter((polygon) => polygon.length)
 							.map((polygon) => new paper.Path(`M${polygon}`))
-				  )
+					)
 				: new paper.Path(path(map));
 
 		const maxLength = geoDistance(
@@ -81,9 +81,12 @@
 					circle.scaling = 0.00001;
 					circle.opacity = 0;
 
-					setTimeout(() => {
-						circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION);
-					}, ANIMATE_DURATION + pointIndex * ANIMATE_DELAY_PER_POINT);
+					setTimeout(
+						() => {
+							circle.tweenTo({ scaling: 1, opacity: 1 }, ANIMATE_DURATION);
+						},
+						ANIMATE_DURATION + pointIndex * ANIMATE_DELAY_PER_POINT
+					);
 				}
 
 				return circle;
@@ -147,7 +150,7 @@
 	<canvas class="h-full w-full" bind:this={canvas} resize />
 	{#if tooltip}
 		<div
-			class="absolute bg-black text-white rounded px-2 py-1 text-center text-sm whitespace-nowrap shadow transform -translate-x-1/2 -translate-y-full"
+			class="absolute -translate-x-1/2 -translate-y-full transform whitespace-nowrap rounded bg-black px-2 py-1 text-center text-sm text-white shadow"
 			style="top: {tooltip.y}px; left: {tooltip.x}px"
 			transition:scale|global={{ duration: 200 }}
 		>

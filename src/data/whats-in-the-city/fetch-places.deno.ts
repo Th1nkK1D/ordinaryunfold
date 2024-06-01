@@ -1,6 +1,5 @@
 // To tun script with Deno
 // deno run --allow-net --allow-write fetch-places.deno.ts --key <TOKEN> --area 10 --tag supermarket --output bangkok-supermarket.json
-
 import { parse } from 'https://deno.land/std/flags/mod.ts';
 
 interface Place {

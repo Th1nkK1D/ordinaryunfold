@@ -1,7 +1,7 @@
-import speechesData from '../../data/th-covid-speech/speeches.csv';
+import dailycases from '../../data/th-covid-speech/dailycases.json';
 import newsData from '../../data/th-covid-speech/news.csv';
 import speakers from '../../data/th-covid-speech/speakers.csv';
-import dailycases from '../../data/th-covid-speech/dailycases.json';
+import speechesData from '../../data/th-covid-speech/speeches.csv';
 
 export interface Speaker {
 	id: string;

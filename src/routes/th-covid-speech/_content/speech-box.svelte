@@ -8,14 +8,13 @@
 	export let speaker: Speaker;
 	export let source: string;
 	export let url: string;
-
 </script>
 
-<div class="text-center space-y-6">
+<div class="space-y-6 text-center">
 	<div class="relative">
-		<Quote class="transform rotate-180 -translate-y-full" />
-		<Quote class="transform right-0 bottom-0 translate-y-full" />
-		<div class="p-2 md:p-4 space-y-2">
+		<Quote class="-translate-y-full rotate-180 transform" />
+		<Quote class="bottom-0 right-0 translate-y-full transform" />
+		<div class="space-y-2 p-2 md:p-4">
 			<p class="md:text-lg">
 				{@html quote}
 				<ReferenceLink {source} {url} />
@@ -28,7 +27,7 @@
 
 	<div class="flex flex-col space-y-1 text-sm md:text-base">
 		<img
-			class="w-24 mx-auto rounded-full object-cover"
+			class="mx-auto w-24 rounded-full object-cover"
 			src="/th-covid-speech/speakers/{speaker.id}.webp"
 			alt={speaker.name}
 		/>
