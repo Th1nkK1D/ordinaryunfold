@@ -54,7 +54,6 @@
     "dayjs": "^1.10.5",
     "intersection-observer": "^0.12.0",
     "paper": "^0.12.15",
-    "scrollama": "^2.2.2",
-    "smoothscroll-polyfill": "^0.4.4"
+    "scrollama": "^2.2.2"
   }
 }
