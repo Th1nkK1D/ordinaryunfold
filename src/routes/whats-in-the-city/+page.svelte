@@ -90,7 +90,7 @@
 			{#if pendingTask > 0}
 				<div
 					class="z-10 absolute inset-0 bg-white bg-opacity-50 flex justify-center items-center"
-					transition:fade
+					transition:fade|global
 				>
 					<Spinner />
 				</div>

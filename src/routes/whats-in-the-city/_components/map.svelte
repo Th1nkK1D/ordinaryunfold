@@ -149,7 +149,7 @@
 		<div
 			class="absolute bg-black text-white rounded px-2 py-1 text-center text-sm whitespace-nowrap shadow transform -translate-x-1/2 -translate-y-full"
 			style="top: {tooltip.y}px; left: {tooltip.x}px"
-			transition:scale={{ duration: 200 }}
+			transition:scale|global={{ duration: 200 }}
 		>
 			{tooltip.name}
 		</div>

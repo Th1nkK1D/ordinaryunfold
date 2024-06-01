@@ -24,7 +24,7 @@
 			? 'z-40 -md:hidden'
 			: 'z-20'}"
 		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
-		transition:fade={{ duration: 150 }}
+		transition:fade|global={{ duration: 150 }}
 	>
 		<p class="text-xs whitespace-nowrap">
 			{date.toLocaleDateString('TH-th', { year: '2-digit', month: 'short', day: 'numeric' })}
