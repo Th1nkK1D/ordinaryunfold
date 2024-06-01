@@ -66,17 +66,17 @@
 					rel="papererrer noopener">isupportmyanmar</a
 				> for more information.
 			</p>
-			<p class="-md:text-sm">#StandWithMyanmar</p>
+			<p class="text-sm md:text-base">#StandWithMyanmar</p>
 			<div class="flex flex-col items-center py-6 md:py-12 space-y-2">
 				<Sharer
 					url="https://www.ordinaryunfold.com/myanmar-coup/"
 					linkClass="text-yellow-500 hover:text-yellow-300"
 				/>
 			</div>
-			<a href="/" class="-md:text-xs">Return to home page</a>
+			<a href="/" class="text-xs md:text-base">Return to home page</a>
 		</div>
 
-		<div class="space-y-6 -md:text-xs">
+		<div class="space-y-6 text-xs md:text-base">
 			<p>
 				Fatality data from <a href="https://aappb.org/?cat=109" rel="papererrer noopener"
 					>AAPPB 2021 Coup Daily Briefings</a
@@ -96,7 +96,7 @@
 					rel="papererrer noopener">Wikipedia</a
 				>
 			</p>
-			<Footer class="text-center text-true-gray-400 -md:text-xs" />
+			<Footer class="text-center text-gray-400 text-xs md:text-base" />
 		</div>
 	</section>
 </div>

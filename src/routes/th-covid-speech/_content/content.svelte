@@ -34,30 +34,29 @@
 	};
 </script>
 
-<div bind:this={container} class="flex-1 overflow-y-scroll lg:(max-w-3xl h-screen)">
+<div bind:this={container} class="flex-1 overflow-y-scroll lg:max-w-3xl lg:h-screen)">
 	<div
-		class="flex flex-col pt-12 px-4 h-full lg:(pt-20 px-10) bg-no-repeat bg-contain bg-bottom -lg:text-center"
+		class="flex flex-col pt-12 px-4 h-full lg:pt-20 lg:px-10 bg-no-repeat bg-contain bg-bottom text-center lg:text-left"
 		style="background-image: url('/th-covid-speech/hero-cover.svg');"
 	>
 		<div class="flex-1 flex flex-col space-y-4 md:space-y-12">
-			<h1 class="font-head font-bold font-bold text-5xl md:text-8xl">
+			<h1 class="font-head font-bold text-5xl md:text-8xl">
 				วิวาทะ<br />
-				<span class="text-light-blue-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
+				<span class="text-sky-700 text-6xl md:text-9xl">โควิด ๑๙</span><br />
 			</h1>
 			<h2 class="font-head text-xl md:text-3xl">ใคร ได้พูดอะไร ในแต่ละช่วงของวิกฤติกาล</h2>
 			<p class="italic font-sm text-gray-600">
 				ข้อมูลล่าสุด {new Date(lastUpdated).toLocaleDateString('TH-th', { dateStyle: 'medium' })}
 			</p>
-			<div class="-lg:mx-auto">
+			<div class="mx-auto lg:mx-0">
 				<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
 			</div>
 		</div>
 
 		<div class="flex flex-1">
 			<svg
-				xmlns="http://www.w3.org/2000/svg"
 				viewBox="0 0 24 24"
-				class="w-12 cursor-pointer fill-light-blue-700 hover:fill-light-blue-500 my-auto -lg:mx-auto"
+				class="w-12 cursor-pointer fill-sky-700 hover:fill-sky-500 m-auto lg:mx-0"
 				on:click={() => sortButtonContainer.scrollIntoView({ behavior: 'smooth' })}
 				><path d="M0 0h24v24H0V0z" fill="none" /><path
 					d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
@@ -88,8 +87,8 @@
 			<Sharer url="https://www.ordinaryunfold.com/th-covid-speech/" />
 		</div>
 
-		<div class="flex flex-col space-y-20 mb-12 -lg:text-center">
-			<div class="w-12 h-1 bg-black -lg:mx-auto" />
+		<div class="flex flex-col space-y-20 mb-12 text-center lg:text-left">
+			<div class="w-12 h-1 bg-black mx-auto lg:mx-0" />
 
 			<div class="space-y-4">
 				<p class="text-xl font-head">ที่มาของข้อมูล</p>
@@ -97,13 +96,13 @@
 					<li>
 						จำนวนผู้ติดเชื้อใหม่รายวันจาก <ExternalLink
 							href="https://covid19.ddc.moph.go.th/api/Cases/timeline-cases-all"
-							class="text-light-blue-700 hover:underline"
+							class="text-sky-700 hover:underline"
 						>
 							Open API กรมควบคุมโรค
 						</ExternalLink>
 						(<ExternalLink
 							href="https://covid19.th-stat.com/th/api"
-							class="text-light-blue-700 hover:underline"
+							class="text-sky-700 hover:underline"
 						>
 							เวอร์ชั่นเก่า
 						</ExternalLink> ที่ใช้ไม่ได้แล้ว)
@@ -112,7 +111,7 @@
 					<li>
 						มีคำพูดหรือเหตุการที่น่าสนใจ? <ExternalLink
 							href="https://docs.google.com/forms/d/e/1FAIpQLSdx-AyhmdZh9gd-oJvS51MRbTy5ehQ9_n2B1hLkMMREJv3I6g/viewform?usp=sf_link"
-							class="text-light-blue-700 hover:underline">บอกเราได้ที่นี่</ExternalLink
+							class="text-sky-700 hover:underline">บอกเราได้ที่นี่</ExternalLink
 						>
 					</li>
 				</ul>

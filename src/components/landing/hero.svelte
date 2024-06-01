@@ -134,7 +134,7 @@
 </script>
 
 <div
-	class="flex justify-center items-center transition-height ease-in-out duration-1500 py-12 md:py-24 {isIntroAnimationFinished
+	class="flex justify-center items-center transition-[min-height] ease-in-out duration-[1500ms] py-12 md:py-24 {isIntroAnimationFinished
 		? 'min-h-[360px] md:min-h-[520px]'
 		: 'min-h-screen'}"
 >

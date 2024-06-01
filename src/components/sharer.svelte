@@ -2,7 +2,7 @@
 	import ExternalLink from './external-link.svelte';
 
 	export let url: string;
-	export let linkClass: string = 'text-light-blue-400 hover:text-light-blue-700';
+	export let linkClass: string = 'text-sky-400 hover:text-sky-700';
 
 	$: encodedUrl = encodeURI(url);
 </script>

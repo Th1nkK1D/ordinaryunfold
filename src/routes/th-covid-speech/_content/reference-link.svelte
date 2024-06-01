@@ -7,7 +7,7 @@
 
 <ExternalLink
 	href={url}
-	class="text-light-blue-700 inline-flex text-sm hover:underline {$$props.class || ''}"
+	class="text-sky-700 inline-flex text-sm hover:underline {$$props.class || ''}"
 >
 	- {source}
 	<svg

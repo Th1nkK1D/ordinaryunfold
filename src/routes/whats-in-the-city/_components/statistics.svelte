@@ -26,7 +26,7 @@
 	}
 </script>
 
-<div class="flex flex-col space-y-2 md:space-y-6 -md:(items-center text-sm)">
+<div class="flex flex-col space-y-2 items-center text-sm md:space-y-6 md:items-start md:text-base">
 	<div class="flex flex-row space-x-4 {selectedCity ? '' : 'invisible'}">
 		<div class="stat">
 			<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"
@@ -72,6 +72,6 @@
 	}
 
 	svg {
-		@apply fill-gray-600 w-5 h-5 md:(w-6 h-6);
+		@apply fill-gray-600 size-5 md:size-6;
 	}
 </style>

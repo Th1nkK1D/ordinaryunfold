@@ -57,12 +57,12 @@
 	image="/whats-in-the-city/og.png"
 />
 
-<div class="relative flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-16 space-y-1">
-	<div class="flex -md:justify-center">
+<div class="relative flex flex-col w-full h-screen max-w-screen-2xl mx-auto p-3 md:p-14 space-y-1">
+	<div class="flex justify-center md:justify-normal">
 		<Logo dark />
 	</div>
-	<div class="flex flex-col-reverse md:(flex-row space-x-12) flex-1">
-		<div class="space-y-4 md:(space-y-8 w-sm mt-48) -md:(text-center my-6)">
+	<div class="flex flex-col-reverse md:flex-row md:space-x-12 flex-1">
+		<div class="space-y-4 text-center my-6 md:text-left md:my-0 md:space-y-8 md:w-sm md:mt-48">
 			<div class="font-head font-bold md:space-y-2">
 				<h1 class="text-3xl md:text-4xl">
 					<Dropdown
@@ -110,11 +110,11 @@
 	>
 </div>
 
-<div class="px-3 py-20 md:(px-16 py-32) bg-gray-100 overflow-x-auto space-y-24">
+<div class="px-3 py-20 md:px-16 md:py-32 bg-gray-100 overflow-x-auto space-y-24">
 	<Comparison />
 </div>
 
-<div class="px-3 py-20 md:(px-16 py-32) max-w-2xl mx-auto space-y-16">
+<div class="px-3 py-20 md:px-16 md:py-32 max-w-2xl mx-auto space-y-16">
 	<div class="space-y-2">
 		<h3 class="font-bold">DISCLAIMER</h3>
 		<p>
@@ -134,8 +134,8 @@
 	</div>
 </div>
 
-<div class="px-3 py-20 md:(px-16 py-32) space-y-4 bg-gray-100">
-	<div class="max-w-screen-xl mx-auto flex flex-col lg:(flex-row items-end) -lg:space-y-16">
+<div class="px-3 py-20 md:px-16 md:py-32 space-y-4 bg-gray-100">
+	<div class="max-w-screen-xl mx-auto flex flex-col space-y-16 lg:flex-row lg:items-end lg:space-y-0">
 		<div class="space-y-2">
 			<h2 class="text-2xl font-bold">Data Sources</h2>
 
@@ -143,26 +143,26 @@
 				<li>
 					Places data from <ExternalLink
 						href="https://map.longdo.com/"
-						class="text-light-blue-700 hover:underline">Longdo Map API</ExternalLink
+						class="text-sky-700 hover:underline">Longdo Map API</ExternalLink
 					> (Latest query on 9/1/2022)
 				</li>
 				<li>
 					GeoJSON shapefiles from <ExternalLink
 						href="https://github.com/cvibhagool/thailand-map/"
-						class="text-light-blue-700 hover:underline">cvibhagool/thailand-map</ExternalLink
+						class="text-sky-700 hover:underline">cvibhagool/thailand-map</ExternalLink
 					>
 				</li>
 				<li>
 					Population data from <ExternalLink
 						href="https://opendata.data.go.th/dataset/statbyyear"
-						class="text-light-blue-700 hover:underline"
+						class="text-sky-700 hover:underline"
 						>Open Government Data of Thailand
 					</ExternalLink>
 				</li>
 				<li>
 					City's area from <ExternalLink
 						href="https://th.wikipedia.org/wiki/จังหวัดของประเทศไทย"
-						class="text-light-blue-700 hover:underline"
+						class="text-sky-700 hover:underline"
 						>Wikipedia Thailand
 					</ExternalLink>
 				</li>

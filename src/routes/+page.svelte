@@ -11,13 +11,13 @@
 
 <BlurryBackground />
 
-<div class=" text-light-100 min-h-screen p-4">
+<div class=" text-gray-100 min-h-screen p-4">
 	<div class="flex flex-col w-full max-w-2xl mx-auto">
 		<Hero />
 	</div>
 
-	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 mb-12 md:(space-y-36 mb-18)">
-		<div class="grid grid-cols-1 gap-4 md:(grid-cols-2 gap-6)">
+	<div class="flex flex-col w-full max-w-4xl mx-auto space-y-24 mb-12 md:space-y-36 md:mb-18">
+		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 			<ProjectCard
 				title="What's in the city?"
 				description="Explore different places in six example cities of Thailand. What kind of place does Thai flavor? Is it easy to be reached? What is the difference in each city?"
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="flex flex-row justify-center items-center space-x-4">
-			<div class="-md:text-sm">Follow us</div>
+			<div class="text-sm md:text-base">Follow us</div>
 			<ExternalLink
 				href="https://www.facebook.com/ordinaryunfold"
 				class="text-gray-500 hover:text-blue-600 transition duration-250 ease-in-out"

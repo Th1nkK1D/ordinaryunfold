@@ -6,7 +6,7 @@
 </script>
 
 <button
-	class="pl-2 pr-3 py-1 text-sm text-light-blue-700 hover:bg-gray-100 rounded border"
+	class="pl-2 pr-3 py-1 text-sm text-sky-700 hover:bg-gray-100 rounded border"
 	on:click
 >
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 inline fill-current">

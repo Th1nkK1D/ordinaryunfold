@@ -29,7 +29,7 @@
 			: 'opacity-15'}"
 		bind:this={container}
 	>
-		<p class="font-head text-center text-xl text-light-blue-700">
+		<p class="font-head text-center text-xl text-sky-700">
 			[ {date.toLocaleDateString('TH-th', { dateStyle: 'medium' })} ]
 		</p>
 

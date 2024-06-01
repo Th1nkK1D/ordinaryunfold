@@ -1,7 +1,8 @@
 <script>
-	import 'virtual:windi.css';
 	import smoothscroll from 'smoothscroll-polyfill';
 	import { onMount } from 'svelte';
+
+	import "../app.css";
 
 	onMount(() => smoothscroll.polyfill());
 

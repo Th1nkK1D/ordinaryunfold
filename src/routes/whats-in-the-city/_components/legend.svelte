@@ -33,7 +33,7 @@
 </script>
 
 <div
-	class="flex flex-row items-center space-x-4 text-xs md:(space-x-6 text-sm) text-gray-600 transition-opacity duration-1000 {colors
+	class="flex flex-row items-center space-x-4 text-xs md:space-x-6 md:text-sm text-gray-600 transition-opacity duration-1000 {colors
 		? 'opacity-100'
 		: 'opacity-0'}"
 >

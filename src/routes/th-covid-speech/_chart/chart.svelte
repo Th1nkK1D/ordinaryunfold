@@ -103,7 +103,7 @@
 </script>
 
 <div class="relative h-full w-full" bind:clientHeight>
-	<div class="absolute top-0 left-0 flex p-4 z-10 -md:(justify-center p-3 right-0)">
+	<div class="absolute top-0 inset-0 md:right-auto md:justify-start flex md:p-4 z-10 justify-center p-3">
 		<Logo />
 	</div>
 	{#each yAxis as label, index}

@@ -20,7 +20,8 @@
 				'transform',
 				'-translate-x-1/2',
 				'-translate-y-1/2',
-				'-md:scale-50',
+				'scale-50',
+				'md:scale-100',
 				bgColorClass
 			);
 			circleEl.style.width = `${size}px`;
@@ -49,4 +50,4 @@
 	}
 </script>
 
-<div bind:this={containerEl} class="fixed inset-0 bg-dark-900 -z-1" />
+<div bind:this={containerEl} class="fixed inset-0 bg-[#0f0f0f] -z-10" />

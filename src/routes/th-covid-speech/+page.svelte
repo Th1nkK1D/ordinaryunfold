@@ -15,7 +15,7 @@
 />
 
 <div class="relative flex flex-col lg:flex-row h-screen">
-	<div class="bg-blue-gray-900 lg:flex-1 -lg:h-32vh">
+	<div class="bg-gray-900 h-[32vh] lg:flex-1 lg:h-auto">
 		<Chart bind:activeContentId on:selectspeech={({ detail: id }) => scrollToSpeech(id)} />
 	</div>
 

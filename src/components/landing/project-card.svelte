@@ -8,11 +8,11 @@
 </script>
 
 <a
-	class="flex flex-col rounded-lg overflow-hidden border-gray-600 border duration-300 ease-in-out hover:(transform scale-101)"
+	class="flex flex-col rounded-lg overflow-hidden border-gray-600 border duration-300 ease-in-out hover:transform hover:scale-101"
 	{href}
 >
 	<img src={image} class="w-full border-b border-gray-100" alt={title} />
-	<div class="flex-1 p-5 space-y-2 text-dark-900 bg-light-100">
+	<div class="flex-1 p-5 space-y-2 text-gray-900 bg-gray-100">
 		<div class="flex flex-row text-xs md:text-sm text-gray-500">
 			<div class="flex-1">{date}</div>
 			<div class="flex flex-row">
@@ -30,6 +30,6 @@
 			</div>
 		</div>
 		<h1 class="font-head font-bold md:text-xl !leading-none">{title}</h1>
-		<p class="-md:text-sm">{description}</p>
+		<p class="text-sm md:text-base">{description}</p>
 	</div>
 </a>

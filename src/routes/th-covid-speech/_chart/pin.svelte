@@ -21,7 +21,7 @@
 	<div
 		class="absolute mb-2 md:mb-4 shadow transform -translate-x-1/2 bg-white rounded-lg px-3 py-1 w-auto text-center opacity-90 {isScreenLarge() &&
 		isHovered
-			? 'z-40 -md:hidden'
+			? 'z-40 hidden md:flex'
 			: 'z-20'}"
 		style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 		transition:fade|global={{ duration: 150 }}
@@ -34,9 +34,9 @@
 {/if}
 
 <div
-	class="absolute w-6 h-6 md:(w-8 h-8) text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
+	class="absolute w-6 h-6 md:w-8 md:h-8 text-white flex shadow rounded-full cursor-pointer transition duration-300 ease-in-out transform -translate-x-1/2 translate-y-1/2 {isActive
 		? 'bg-blue-500 scale-120 z-30'
-		: 'bg-gray-500 hover:(z-50 scale-130)'}"
+		: 'bg-gray-500 hover:z-50 hover:scale-130)'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
 	on:click
 	on:mouseover={() => (isHovered = true)}
