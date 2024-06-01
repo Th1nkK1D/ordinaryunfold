@@ -66,7 +66,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.stat {
 		@apply flex flex-row items-center space-x-1 md:space-x-2;
 	}

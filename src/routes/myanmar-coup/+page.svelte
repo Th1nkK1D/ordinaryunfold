@@ -95,7 +95,7 @@
 	</section>
 </div>
 
-<style>
+<style lang="postcss">
 	:global(mark) {
 		@apply bg-transparent text-yellow-500;
 	}

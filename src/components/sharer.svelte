@@ -42,7 +42,7 @@
 	</ExternalLink>
 </div>
 
-<style>
+<style lang="postcss">
 	svg {
 		@apply h-6 md:h-8;
 	}

@@ -31,7 +31,7 @@
 	<section />
 </Scrollama>
 
-<style>
+<style lang="postcss">
 	section {
 		@apply flex min-h-screen flex-col justify-center;
 	}

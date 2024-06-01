@@ -9,7 +9,7 @@
 
 <slot />
 
-<style>
+<style lang="postcss">
 	:global(body) {
 		@apply font-body;
 	}

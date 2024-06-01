@@ -108,7 +108,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	.cell {
 		@apply p-4;
 	}
