@@ -144,7 +144,6 @@
 			bind:this={svgEl}
 			viewBox="0 0 703 480"
 			fill="none"
-			xmlns="http://www.w3.org/2000/svg"
 		>
 			<g clip-path="url(#clip0_301_2)">
 				<path

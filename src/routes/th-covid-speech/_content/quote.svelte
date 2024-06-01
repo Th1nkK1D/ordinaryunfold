@@ -1,5 +1,4 @@
 <svg
-	xmlns="http://www.w3.org/2000/svg"
 	viewBox="0 0 14 10"
 	class="absolute fill-blue-200 w-12 {$$props.class || ''}"
 >

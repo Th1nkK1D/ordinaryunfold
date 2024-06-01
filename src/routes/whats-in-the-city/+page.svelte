@@ -100,7 +100,6 @@
 		</div>
 	</div>
 	<svg
-		xmlns="http://www.w3.org/2000/svg"
 		viewBox="0 0 24 24"
 		class="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-6 h-6 text-gray-300"
 		fill="currentColor"

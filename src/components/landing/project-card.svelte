@@ -17,7 +17,6 @@
 			<div class="flex-1">{date}</div>
 			<div class="flex flex-row">
 				<svg
-					xmlns="http://www.w3.org/2000/svg"
 					viewBox="0 0 24 24"
 					class="w-4 h-4 fill-gray-400 mr-1"
 				>
