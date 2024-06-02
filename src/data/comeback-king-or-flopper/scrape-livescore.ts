@@ -1,3 +1,4 @@
+import type { Match } from './model';
 import { $ } from 'bun';
 import pLimit from 'p-limit';
 import puppeteer from 'puppeteer';
@@ -36,7 +37,7 @@ console.log(
 
 console.log('\nFetching match scores...');
 
-const matches = await Promise.all(
+const matches: Match[] = await Promise.all(
 	leagues.flatMap((league) =>
 		league.matches.map((event: { [key: string]: unknown }) =>
 			limit(async () => {

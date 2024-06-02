@@ -1,20 +1,4 @@
-interface Match {
-	id: string;
-	league: string;
-	kickoffAt: number;
-	status: string;
-	teams: string[];
-	scores: { [minutes: string]: string };
-	url: string;
-}
-
-type Result = 'W' | 'D' | 'L';
-
-type StatsPerMin = Record<Result, number[]> & {
-	name: string;
-	points: number;
-	GD: number;
-};
+import type { Match, TeamStats, Result, LeagueStats } from './model';
 
 const matches = ((await Bun.file(`${import.meta.dir}/matches-2324.json`).json()) as Match[]).filter(
 	// TODO: prototype only with bundesliga
@@ -37,7 +21,7 @@ const timeScale = [
 
 console.log(timeScale);
 
-const teamStats: { [team: string]: StatsPerMin } = {};
+const teamStats: { [team: string]: TeamStats } = {};
 
 matches.forEach(({ teams, scores }) => {
 	teams.forEach((team) => {
@@ -78,14 +62,14 @@ matches.forEach(({ teams, scores }) => {
 	});
 });
 
-const output = {
+const leagueStats: LeagueStats = {
 	timeScale,
 	teams: Object.values(teamStats).sort((a, z) => z.points * 100 + z.GD - (a.points * 100 + a.GD))
 };
 
-console.table(output.teams.map(({ name, points, GD }) => ({ name, points, GD })));
+console.table(leagueStats.teams.map(({ name, points, GD }) => ({ name, points, GD })));
 
-Bun.write(`./static/comeback-king-or-flopper/json/bundesliga.json`, JSON.stringify(output));
+Bun.write(`./static/comeback-king-or-flopper/json/bundesliga.json`, JSON.stringify(leagueStats));
 
 function getMaxExtraTime(minutes: number): number {
 	const keyword = `${minutes}+`;
