@@ -12,9 +12,11 @@
 	});
 </script>
 
-{#if league}
-	{@const team = league.teams[teamIndex]}
-	<h1 class="text-2xl">{team.name}</h1>
-	<ScoreChart class="h-[70vh] w-full" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
-	<input type="number" name="team" bind:value={teamIndex} min="0" max={league.teams.length - 1} />
-{/if}
+<div class="flex h-full min-h-screen flex-col items-center space-y-6 bg-gray-100 py-6">
+	{#if league}
+		{@const team = league.teams[teamIndex]}
+		<h1 class="text-3xl font-bold">{team.name}</h1>
+		<ScoreChart class="h-[70vh] w-full" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
+		<input type="number" name="team" bind:value={teamIndex} min="0" max={league.teams.length - 1} />
+	{/if}
+</div>

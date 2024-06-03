@@ -3,6 +3,8 @@
 	import { scaleLinear, type ScaleLinear } from 'd3-scale';
 	import { area, curveBasis } from 'd3-shape';
 	import type { TeamStats } from '../../../data/comeback-king-or-flopper/model';
+	import RangeBoxX from './range-box-x.svelte';
+	import MinutesLine from './minutes-line.svelte';
 
 	export let timeScale: string[];
 	export let maxMatch: number;
@@ -17,6 +19,7 @@
 	let height = 0;
 
 	$: x = scaleLinear([0, timeScale.length - 1], [0, width]);
+	$: xFromMinutes = (minutes: string) => x(timeScale.indexOf(minutes));
 	$: upperY = scaleLinear([0, maxMatch], [height / 2, 0]);
 	$: lowerY = scaleLinear([0, maxMatch], [height / 2, height]);
 
@@ -52,11 +55,28 @@
 
 <div bind:clientWidth={width} bind:clientHeight={height} class={$$restProps.class}>
 	<svg {width} {height} viewBox="0 0 {width} {height}">
-		<path bind:this={winPath} class="fill-green-600" />
-		<path bind:this={lostPath} class="fill-red-500" />
-		<path bind:this={drawLowerPath} class="fill-gray-400" />
-		<path bind:this={drawUpperPath} class="fill-gray-400" />
+		<RangeBoxX
+			{height}
+			{xFromMinutes}
+			range={[
+				{ minutes: '45', label: `45'` },
+				{ minutes: '46', label: `HT` }
+			]}
+		/>
+		<RangeBoxX
+			{height}
+			{xFromMinutes}
+			range={[{ minutes: '90', label: `90'` }, { minutes: timeScale.at(-1) || '90' }]}
+		/>
 
-		<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-white stroke-2" />
+		{#each ['15', '30', '60', '75'] as minutes}
+			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-60" />
+		{/each}
+
+		<path bind:this={winPath} class="fill-green-500" />
+		<path bind:this={lostPath} class="fill-red-400" />
+		<path bind:this={drawLowerPath} class="fill-blue-500" />
+		<path bind:this={drawUpperPath} class="fill-blue-500" />
+		<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-blue-500 stroke-1" />
 	</svg>
 </div>
