@@ -4,9 +4,6 @@
 	import { area, curveBasis } from 'd3-shape';
 	import type { TeamStats } from '../../../data/comeback-king-or-flopper/model';
 
-	const width = 1000;
-	const height = 500;
-
 	export let timeScale: string[];
 	export let maxMatch: number;
 	export let team: TeamStats;
@@ -15,6 +12,9 @@
 	let drawLowerPath: SVGPathElement;
 	let drawUpperPath: SVGPathElement;
 	let lostPath: SVGPathElement;
+
+	let width = 0;
+	let height = 0;
 
 	$: x = scaleLinear([0, timeScale.length - 1], [0, width]);
 	$: upperY = scaleLinear([0, maxMatch], [height / 2, 0]);
@@ -50,11 +50,13 @@
 	}
 </script>
 
-<svg {width} {height} viewBox="0 0 {width} {height}">
-	<path bind:this={winPath} class="fill-green-600" />
-	<path bind:this={lostPath} class="fill-red-500" />
-	<path bind:this={drawLowerPath} class="fill-gray-400" />
-	<path bind:this={drawUpperPath} class="fill-gray-400" />
+<div bind:clientWidth={width} bind:clientHeight={height} class={$$restProps.class}>
+	<svg {width} {height} viewBox="0 0 {width} {height}">
+		<path bind:this={winPath} class="fill-green-600" />
+		<path bind:this={lostPath} class="fill-red-500" />
+		<path bind:this={drawLowerPath} class="fill-gray-400" />
+		<path bind:this={drawUpperPath} class="fill-gray-400" />
 
-	<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-white stroke-2" />
-</svg>
+		<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-white stroke-2" />
+	</svg>
+</div>

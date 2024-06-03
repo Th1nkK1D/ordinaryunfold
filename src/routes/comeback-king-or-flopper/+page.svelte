@@ -15,6 +15,6 @@
 {#if league}
 	{@const team = league.teams[teamIndex]}
 	<h1 class="text-2xl">{team.name}</h1>
-	<ScoreChart timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
+	<ScoreChart class="h-[70vh] w-full" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
 	<input type="number" name="team" bind:value={teamIndex} min="0" max={league.teams.length - 1} />
 {/if}
