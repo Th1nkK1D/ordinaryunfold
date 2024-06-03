@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import type { LeagueStats } from '../../data/comeback-king-or-flopper/model';
 	import ScoreChart from './_chart/score-chart.svelte';
+	import Logo from '../../components/logo.svelte';
 
 	let teamIndex = 0;
 	let league: LeagueStats;
@@ -12,11 +13,35 @@
 	});
 </script>
 
-<div class="flex h-full min-h-screen flex-col items-center space-y-6 bg-gray-100 py-6">
+<div class="relative flex h-screen flex-col bg-gray-100">
 	{#if league}
 		{@const team = league.teams[teamIndex]}
-		<h1 class="text-3xl font-bold">{team.name}</h1>
-		<ScoreChart class="h-[70vh] w-full" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
-		<input type="number" name="team" bind:value={teamIndex} min="0" max={league.teams.length - 1} />
+		<div
+			class="relative mx-auto flex w-full max-w-screen-lg flex-col space-y-1 p-3 md:flex-row md:items-end md:justify-between md:py-6"
+		>
+			<div>
+				<select class="bg-transparent text-lg">
+					<option>🇪🇸 Bundesliga</option>
+				</select>
+				<h1 class="text-3xl font-bold md:text-5xl">
+					{teamIndex + 1}. {team.name}
+				</h1>
+			</div>
+			<p class="text-gray-400 md:text-xl">
+				<span class="font-bold text-green-500">{team.W.at(-1)}W</span> +
+				<span class="font-bold text-blue-500">{team.D.at(-1)}D</span> +
+				<span class="font-bold text-red-400">{team.L.at(-1)}L</span> =
+				<span class="font-bold text-black">{team.points} points</span>
+			</p>
+		</div>
+		<ScoreChart class="flex-1" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
+		<input
+			class="absolute bottom-1 right-1"
+			type="number"
+			name="team"
+			bind:value={teamIndex}
+			min="0"
+			max={league.teams.length - 1}
+		/>
 	{/if}
 </div>
