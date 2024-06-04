@@ -6,6 +6,7 @@
 
 	let teamIndex = 0;
 	let league: LeagueStats;
+	let activeTimeIndex: number = -1;
 
 	onMount(async () => {
 		const res = await fetch('/comeback-king-or-flopper/json/bundesliga.json');
@@ -17,6 +18,10 @@
 	<Logo dark class="mx-auto mt-3 md:mt-5" />
 	{#if league}
 		{@const team = league.teams[teamIndex]}
+		{@const wins = team.W.at(activeTimeIndex) || 0}
+		{@const draws = team.D.at(activeTimeIndex) || 0}
+		{@const losses = team.L.at(activeTimeIndex) || 0}
+		{@const points = wins * 3 + draws}
 		<div
 			class="relative mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-1 px-3 py-6 md:flex-row md:items-end md:justify-between"
 		>
@@ -29,13 +34,22 @@
 				</h1>
 			</div>
 			<p class="text-gray-400 md:text-xl">
-				<span class="font-bold text-green-500">{team.W.at(-1)}W</span> +
-				<span class="font-bold text-blue-500">{team.D.at(-1)}D</span> +
-				<span class="font-bold text-red-400">{team.L.at(-1)}L</span> =
-				<span class="font-bold text-black">{team.points} points</span>
+				{#if activeTimeIndex >= 0}
+					<span class="font-bold">{activeTimeIndex}'</span> :
+				{/if}
+				<span class="font-bold text-green-500">{wins}W</span> +
+				<span class="font-bold text-blue-500">{draws}D</span> +
+				<span class="font-bold text-red-400">{losses}L</span> =
+				<span class="font-bold text-gray-800">{points} points</span>
 			</p>
 		</div>
-		<ScoreChart class="flex-1" timeScale={league.timeScale} maxMatch={team.D[0]} {team} />
+		<ScoreChart
+			class="flex-1"
+			timeScale={league.timeScale}
+			maxMatch={team.D[0]}
+			{team}
+			bind:activeTimeIndex
+		/>
 		<input
 			class="absolute bottom-1 right-1"
 			type="number"

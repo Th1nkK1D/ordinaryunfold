@@ -9,11 +9,13 @@
 	export let timeScale: string[];
 	export let maxMatch: number;
 	export let team: TeamStats;
+	export let activeTimeIndex: number;
 
 	let winPath: SVGPathElement;
 	let drawLowerPath: SVGPathElement;
 	let drawUpperPath: SVGPathElement;
 	let lostPath: SVGPathElement;
+	let mouseX: number | null;
 
 	let width = 0;
 	let height = 0;
@@ -51,9 +53,26 @@
 			duration: 250
 		});
 	}
+
+	function updateCrosshair({ clientX }: MouseEvent) {
+		mouseX = clientX;
+		activeTimeIndex = Math.round(x.invert(clientX));
+	}
+
+	function removeCrosshair() {
+		mouseX = null;
+		activeTimeIndex = -1;
+	}
 </script>
 
-<div bind:clientWidth={width} bind:clientHeight={height} class={$$restProps.class}>
+<div
+	bind:clientWidth={width}
+	bind:clientHeight={height}
+	class={$$restProps.class}
+	on:mousemove={updateCrosshair}
+	on:mouseleave={removeCrosshair}
+	role="region"
+>
 	<svg {width} {height} viewBox="0 0 {width} {height}">
 		<RangeBoxX
 			{height}
@@ -78,5 +97,7 @@
 		<path bind:this={drawLowerPath} class="fill-blue-500" />
 		<path bind:this={drawUpperPath} class="fill-blue-500" />
 		<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-blue-500 stroke-1" />
+
+		<line x1={mouseX} y1="0" x2={mouseX} y2={height} class="stroke-gray-800 stroke-1" />
 	</svg>
 </div>
