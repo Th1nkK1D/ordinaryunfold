@@ -14,12 +14,13 @@
 </script>
 
 <div class="relative flex h-screen flex-col bg-gray-100">
+	<Logo dark class="mx-auto mt-3 md:mt-5" />
 	{#if league}
 		{@const team = league.teams[teamIndex]}
 		<div
-			class="relative mx-auto flex w-full max-w-screen-lg flex-col space-y-1 p-3 md:flex-row md:items-end md:justify-between md:py-6"
+			class="relative mx-auto flex w-full max-w-screen-lg flex-col items-center space-y-1 px-3 py-6 md:flex-row md:items-end md:justify-between"
 		>
-			<div>
+			<div class="flex flex-col items-center md:items-start">
 				<select class="bg-transparent text-lg">
 					<option>🇪🇸 Bundesliga</option>
 				</select>
