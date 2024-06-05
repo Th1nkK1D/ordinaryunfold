@@ -68,12 +68,12 @@
 <div
 	bind:clientWidth={width}
 	bind:clientHeight={height}
-	class={$$restProps.class}
+	class="relative {$$restProps.class}"
 	on:mousemove={updateCrosshair}
 	on:mouseleave={removeCrosshair}
 	role="region"
 >
-	<svg {width} {height} viewBox="0 0 {width} {height}">
+	<svg class="absolute inset-0" {width} {height}>
 		<RangeBoxX
 			{height}
 			{xFromMinutes}
