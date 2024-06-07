@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import type { LeagueStats } from '../../data/comeback-king-or-flopper/model';
-	import ScoreChart from './_chart/score-chart.svelte';
+	import ScoreChart from './_components/score-chart.svelte';
 	import Logo from '../../components/logo.svelte';
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
+	import TeamNavigation from './_components/team-navigation.svelte';
 
 	let teamIndex = 0;
 	let league: LeagueStats;
@@ -24,12 +25,12 @@
 		{@const draws = team.D.at(activeTimeIndex) || 0}
 		{@const losses = team.L.at(activeTimeIndex) || 0}
 		{@const points = wins * 3 + draws}
-		<section class="flex-col items-center gap-1 md:flex-row md:items-end md:justify-between">
-			<div class="flex flex-col items-center md:items-start">
+		<section class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between">
+			<div class="flex flex-col items-center gap-2 md:items-start">
 				<select class="bg-transparent text-lg">
 					<option>🇪🇸 Bundesliga</option>
 				</select>
-				<h1 class="text-3xl font-bold md:text-5xl">
+				<h1 class="text-center text-3xl font-bold md:text-left md:text-5xl">
 					{teamIndex + 1}. {team.name}
 				</h1>
 			</div>
@@ -50,18 +51,22 @@
 			{team}
 			bind:activeTimeIndex
 		/>
-		<section class="relative flex-col items-center justify-between gap-3 md:flex-row-reverse">
-			<div class="flex items-center justify-center gap-3 md:gap-5">
-				<span class="text-xs text-gray-400 md:text-sm">Share</span>
-				<Sharer
-					url="https://ordinaryunfold.com/comeback-king-or-flopper"
-					linkClass="text-gray-400 hover:text-gray-600"
-				/>
-			</div>
-			<Footer class="text-center text-xs text-gray-600 md:text-left md:text-sm" />
+		<section class="flex-row">
+			<TeamNavigation bind:teamIndex teams={league.teams} />
 		</section>
 	{/if}
 </div>
+
+<section class="relative flex-col items-center justify-between gap-3 md:flex-row-reverse">
+	<div class="flex items-center justify-center gap-3 md:gap-5">
+		<span class="text-xs text-gray-400 md:text-sm">Share</span>
+		<Sharer
+			url="https://ordinaryunfold.com/comeback-king-or-flopper"
+			linkClass="text-gray-400 hover:text-gray-600"
+		/>
+	</div>
+	<Footer class="text-center text-xs text-gray-600 md:text-left md:text-sm" />
+</section>
 
 <style lang="postcss">
 	section {
