@@ -7,7 +7,7 @@
 	import Sharer from '../../components/sharer.svelte';
 	import TeamNavigation from './_components/team-navigation.svelte';
 
-	let teamIndex = 0;
+	let teamIndex = 13;
 	let league: LeagueStats;
 	let activeTimeIndex: number = -1;
 
@@ -24,16 +24,20 @@
 		{@const draws = team.D.at(activeTimeIndex) || 0}
 		{@const losses = team.L.at(activeTimeIndex) || 0}
 		{@const points = wins * 3 + draws}
-		<section class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between">
-			<div class="flex flex-col items-center gap-2 md:items-start">
+		<section
+			class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between md:gap-4"
+		>
+			<div class="flex w-full flex-col items-center gap-2 overflow-x-clip md:items-start">
 				<select class="bg-transparent md:text-lg">
 					<option>🇩🇪 Bundesliga</option>
 				</select>
-				<h1 class="text-center text-3xl font-bold md:text-left md:text-5xl">
+				<h1
+					class="w-full whitespace-nowrap text-center text-2xl font-bold md:text-left md:text-5xl"
+				>
 					{teamIndex + 1}. {team.name}
 				</h1>
 			</div>
-			<p class="text-lg text-gray-400 md:text-xl">
+			<p class="flex-1 whitespace-nowrap text-lg text-gray-400 md:text-right md:text-xl">
 				{#if activeTimeIndex >= 0}
 					<span class="font-bold text-gray-800">{league.timeScale[activeTimeIndex]}'</span> :
 				{/if}
