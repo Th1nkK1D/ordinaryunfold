@@ -55,8 +55,8 @@
 	}
 
 	function updateCrosshair({ clientX }: MouseEvent) {
-		mouseX = clientX;
-		activeTimeIndex = Math.round(x.invert(clientX));
+		mouseX = clientX - 1;
+		activeTimeIndex = Math.floor(x.invert(clientX));
 	}
 
 	function removeCrosshair() {
@@ -92,7 +92,7 @@
 			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-60" />
 		{/each}
 
-		<path bind:this={winPath} class="fill-green-500" />
+		<path bind:this={winPath} class="fill-green-600" />
 		<path bind:this={lostPath} class="fill-red-400" />
 		<path bind:this={drawLowerPath} class="fill-blue-500" />
 		<path bind:this={drawUpperPath} class="fill-blue-500" />

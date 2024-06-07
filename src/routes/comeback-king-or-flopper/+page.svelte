@@ -12,8 +12,7 @@
 	let activeTimeIndex: number = -1;
 
 	onMount(async () => {
-		const res = await fetch('/comeback-king-or-flopper/json/bundesliga.json');
-		league = await res.json();
+		league = await (await fetch('/comeback-king-or-flopper/json/bundesliga.json')).json();
 	});
 </script>
 
@@ -27,18 +26,18 @@
 		{@const points = wins * 3 + draws}
 		<section class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between">
 			<div class="flex flex-col items-center gap-2 md:items-start">
-				<select class="bg-transparent text-lg">
-					<option>🇪🇸 Bundesliga</option>
+				<select class="bg-transparent md:text-lg">
+					<option>🇩🇪 Bundesliga</option>
 				</select>
 				<h1 class="text-center text-3xl font-bold md:text-left md:text-5xl">
 					{teamIndex + 1}. {team.name}
 				</h1>
 			</div>
-			<p class="text-gray-400 md:text-xl">
+			<p class="text-lg text-gray-400 md:text-xl">
 				{#if activeTimeIndex >= 0}
-					<span class="font-bold text-gray-800">{activeTimeIndex}'</span> :
+					<span class="font-bold text-gray-800">{league.timeScale[activeTimeIndex]}'</span> :
 				{/if}
-				<span class="text-green-500"><b>{wins}</b>W</span> +
+				<span class="text-green-600"><b>{wins}</b>W</span> +
 				<span class="text-blue-500"><b>{draws}</b>D</span> +
 				<span class="text-red-400"><b>{losses}</b>L</span> =
 				<span class="text-gray-500"><b>{points}</b> points</span>
