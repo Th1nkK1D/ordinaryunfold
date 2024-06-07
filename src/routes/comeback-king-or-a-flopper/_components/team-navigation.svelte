@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TeamStats } from '../../../data/comeback-king-or-flopper/model';
+	import type { TeamStats } from '../../../data/comeback-king-or-a-flopper/model';
 
 	export let teamIndex: number;
 	export let teams: TeamStats[];

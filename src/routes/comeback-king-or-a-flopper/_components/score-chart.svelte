@@ -2,7 +2,7 @@
 	import anime from 'animejs';
 	import { scaleLinear, type ScaleLinear } from 'd3-scale';
 	import { area, curveBasis } from 'd3-shape';
-	import type { TeamStats } from '../../../data/comeback-king-or-flopper/model';
+	import type { TeamStats } from '../../../data/comeback-king-or-a-flopper/model';
 	import RangeBoxX from './range-box-x.svelte';
 	import MinutesLine from './minutes-line.svelte';
 

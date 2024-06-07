@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { LeagueStats } from '../../data/comeback-king-or-flopper/model';
+	import type { LeagueStats } from '../../data/comeback-king-or-a-flopper/model';
 	import ScoreChart from './_components/score-chart.svelte';
 	import Logo from '../../components/logo.svelte';
 	import Footer from '../../components/footer.svelte';
@@ -12,7 +12,7 @@
 	let activeTimeIndex: number = -1;
 
 	onMount(async () => {
-		league = await (await fetch('/comeback-king-or-flopper/json/bundesliga.json')).json();
+		league = await (await fetch('/comeback-king-or-a-flopper/json/bundesliga.json')).json();
 	});
 </script>
 
@@ -64,7 +64,7 @@
 	<div class="flex items-center justify-center gap-3 md:gap-5">
 		<span class="text-xs text-gray-400 md:text-sm">Share</span>
 		<Sharer
-			url="https://ordinaryunfold.com/comeback-king-or-flopper"
+			url="https://ordinaryunfold.com/comeback-king-or-a-flopper"
 			linkClass="text-gray-400 hover:text-gray-600"
 		/>
 	</div>
