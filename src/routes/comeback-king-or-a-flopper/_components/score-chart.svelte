@@ -1,9 +1,13 @@
 <script lang="ts">
+	import { fade } from 'svelte/transition';
 	import { clickOutside } from 'svelte-use-click-outside';
 	import anime from 'animejs';
 	import { scaleLinear, type ScaleLinear } from 'd3-scale';
 	import { area, curveBasis } from 'd3-shape';
+	import { flip } from 'svelte-floating-ui/dom';
+	import { createFloatingActions } from 'svelte-floating-ui';
 	import type { TeamStats } from '../../../data/comeback-king-or-a-flopper/model';
+	import highlightEvents from '../../../data/comeback-king-or-a-flopper/highlight-events.json';
 	import RangeBoxX from './range-box-x.svelte';
 	import MinutesLine from './minutes-line.svelte';
 
@@ -21,6 +25,11 @@
 	let width = 0;
 	let height = 0;
 
+	const [floatingRef, floatingContent] = createFloatingActions({
+		strategy: 'absolute',
+		middleware: [flip()]
+	});
+
 	$: x = scaleLinear([0, timeScale.length - 1], [0, width]);
 	$: xFromMinutes = (minutes: string) => x(timeScale.indexOf(minutes));
 	$: upperY = scaleLinear([0, maxMatch], [height / 2, 0]);
@@ -32,6 +41,10 @@
 			.y0(height / 2)
 			.y1((count) => y(count))
 			.curve(curveBasis);
+
+	$: events = Object.entries(
+		(highlightEvents as Record<string, Record<string, string>>)[team.name] || {}
+	);
 
 	$: {
 		animatePath(winPath, createArea(upperY)(team.W.map((c, i) => c + team.D[i] / 2)));
@@ -95,7 +108,16 @@
 		/>
 
 		{#each ['15', '30', '60', '75'] as minutes}
-			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-60" />
+			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-70" />
+		{/each}
+
+		{#each events as [minutes]}
+			<MinutesLine
+				{height}
+				{xFromMinutes}
+				{minutes}
+				class="fill-yellow-500 stroke-yellow-400 stroke-2"
+			/>
 		{/each}
 
 		<path bind:this={winPath} class="fill-green-600" />
@@ -106,4 +128,21 @@
 
 		<line x1={mouseX} y1="0" x2={mouseX} y2={height} class="stroke-gray-800 stroke-1" />
 	</svg>
+
+	{#each events as [minutes, caption]}
+		{@const minutesIndex = timeScale.indexOf(minutes)}
+		{@const isUpper = team.W[minutesIndex] < team.L[minutesIndex]}
+		<div
+			use:floatingRef
+			class="absolute {isUpper ? 'top-7' : 'bottom-4'}"
+			style="left: {xFromMinutes(minutes)}px;"
+		/>
+		<div
+			transition:fade={{ duration: 200, delay: 50 }}
+			use:floatingContent={{ placement: isUpper ? 'bottom-start' : 'top-start' }}
+			class=" max-w-64 text-pretty bg-yellow-400 p-2 text-sm leading-tight"
+		>
+			{caption}
+		</div>
+	{/each}
 </div>
