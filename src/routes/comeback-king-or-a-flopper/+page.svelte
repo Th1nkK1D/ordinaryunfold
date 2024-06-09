@@ -11,6 +11,9 @@
 	import StripeBackground from './_components/stripe-background.svelte';
 	import ExternalLink from '../../components/external-link.svelte';
 	import Spinner from '../../components/spinner.svelte';
+	import Metadata from '../../components/metadata.svelte';
+
+	const PROJECT_PATH = 'comeback-king-or-a-flopper';
 
 	let teamIndex = 0;
 	let selectedLeague = 'bundesliga';
@@ -24,14 +27,21 @@
 
 	async function loadSelectedLeagueData() {
 		isLoading = true;
-		league = await (await fetch(`/comeback-king-or-a-flopper/json/${selectedLeague}.json`)).json();
+		league = await (await fetch(`/${PROJECT_PATH}/json/${selectedLeague}.json`)).json();
 		teamIndex = 0;
 		isLoading = false;
 	}
 </script>
 
+<Metadata
+	title="Comeback King or a Flopper"
+	description="Explore how the top-five European league in 2023/24 teams perform in each minute of the game"
+	path="/{PROJECT_PATH}"
+	image="/{PROJECT_PATH}/og.png"
+/>
+
 <main
-	class="scroll- h-screen snap-y snap-proximity flex-col overflow-x-hidden overflow-y-scroll scroll-smooth"
+	class="h-screen snap-y snap-proximity flex-col overflow-x-hidden overflow-y-scroll scroll-smooth"
 >
 	<div class="relative h-screen">
 		<StripeBackground class="absolute inset-0" />
@@ -91,7 +101,7 @@
 			<section
 				class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between md:gap-4"
 			>
-				<div class="flex w-full flex-col items-center gap-2 overflow-x-clip md:items-start">
+				<div class="flex w-full flex-col items-center gap-4 overflow-x-clip md:items-start">
 					<div class="flex flex-row items-end gap-3 font-head">
 						<select
 							class="cursor-pointer border-b border-solid border-gray-300 bg-transparent pr-1 md:text-lg"
@@ -127,7 +137,7 @@
 		<div class="flex items-center justify-center gap-3 md:gap-5">
 			<span class="text-xs text-gray-400 md:text-sm">Share</span>
 			<Sharer
-				url="https://ordinaryunfold.com/comeback-king-or-a-flopper"
+				url="https://ordinaryunfold.com/{PROJECT_PATH}"
 				linkClass="text-gray-400 hover:text-gray-600"
 			/>
 		</div>
