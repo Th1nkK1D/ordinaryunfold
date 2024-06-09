@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { clickOutside } from 'svelte-use-click-outside';
 	import anime from 'animejs';
 	import { scaleLinear, type ScaleLinear } from 'd3-scale';
 	import { area, curveBasis } from 'd3-shape';
@@ -57,9 +58,9 @@
 		});
 	}
 
-	function updateCrosshair({ clientX }: MouseEvent) {
-		mouseX = clientX - 1;
-		activeTimeIndex = Math.floor(x.invert(clientX));
+	function updateCrosshair(clientX: number) {
+		mouseX = Math.min(Math.max(0, clientX), width);
+		activeTimeIndex = Math.floor(x.invert(mouseX));
 	}
 
 	function removeCrosshair() {
@@ -72,9 +73,11 @@
 	bind:clientWidth={width}
 	bind:clientHeight={height}
 	class="relative {$$restProps.class}"
-	on:mousemove={updateCrosshair}
+	on:mousemove={(e) => updateCrosshair(e.clientX)}
 	on:mouseleave={removeCrosshair}
+	on:touchmove={(e) => updateCrosshair(e.targetTouches[0].clientX)}
 	role="region"
+	use:clickOutside={removeCrosshair}
 >
 	<svg class="absolute inset-0" {width} {height}>
 		<RangeBoxX
