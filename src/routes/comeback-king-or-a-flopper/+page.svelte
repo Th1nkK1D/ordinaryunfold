@@ -117,7 +117,7 @@
 						<p class="text-gray-400">2023/24</p>
 					</div>
 					<h2
-						class="bebas-neue w-full whitespace-nowrap text-center text-3xl md:text-left md:text-5xl"
+						class="bebas-neue w-full whitespace-nowrap text-center text-3xl md:text-left md:text-6xl"
 					>
 						{teamIndex + 1}. {team.name}
 					</h2>
