@@ -17234,11 +17234,18 @@
     "id": "1029465",
     "league": "Serie A",
     "kickoffAt": 20240602230000,
-    "status": "NS",
+    "status": "FT",
     "teams": [
       "Atalanta",
       "Fiorentina"
     ],
+    "scores": {
+      "6": "0-1",
+      "12": "1-1",
+      "19": "1-2",
+      "32": "2-2",
+      "45+1": "2-3"
+    },
     "url": "https://www.livescore.com/en/football/italy/serie-a/atalanta-vs-fiorentina/1029465/"
   },
   {

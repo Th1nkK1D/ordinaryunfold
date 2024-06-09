@@ -1,88 +1,92 @@
 import type { Match, TeamStats, Result, LeagueStats } from './model';
 
-const matches = ((await Bun.file(`${import.meta.dir}/matches-2324.json`).json()) as Match[]).filter(
-	// TODO: prototype only with bundesliga
-	(match) => match.league === 'Bundesliga'
-);
+const allMatches = (await Bun.file(`${import.meta.dir}/matches-2324.json`).json()) as Match[];
 
-console.log(`Total ${matches.length} matches`);
+const leagues = [...new Set(allMatches.map((match) => match.league))];
 
-const maxFirstExtraTime = getMaxExtraTime(45);
-const maxSecondExtraTime = getMaxExtraTime(90);
+leagues.forEach((league) => {
+	const matches = allMatches.filter((match) => match.league === league && match.status === 'FT');
 
-console.log({ maxFirstExtraTime, maxSecondExtraTime });
+	console.log(`${league}: ${matches.length} matches`);
 
-const timeScale = [
-	...createStringRange(0, 45),
-	...createStringRange(1, maxFirstExtraTime).map((num) => `45+${num}`),
-	...createStringRange(46, 90),
-	...createStringRange(1, maxSecondExtraTime).map((num) => `90+${num}`)
-];
+	function getMaxExtraTime(minutes: number): number {
+		const keyword = `${minutes}+`;
+		return Math.max(
+			...new Set(
+				matches.flatMap(({ scores }) =>
+					Object.keys(scores)
+						.filter((time) => time.includes(keyword))
+						.map((time) => +time.replace(keyword, ''))
+				)
+			)
+		);
+	}
 
-console.log(timeScale);
+	const maxFirstExtraTime = getMaxExtraTime(45);
+	const maxSecondExtraTime = getMaxExtraTime(90);
 
-const teamStats: { [team: string]: TeamStats } = {};
+	console.log({ maxFirstExtraTime, maxSecondExtraTime });
 
-matches.forEach(({ teams, scores }) => {
-	teams.forEach((team) => {
-		if (!teamStats[team]) {
-			teamStats[team] = {
-				name: team,
-				points: 0,
-				GD: 0,
-				W: new Array(timeScale.length).fill(0),
-				D: new Array(timeScale.length).fill(0),
-				L: new Array(timeScale.length).fill(0)
-			};
-		}
-	});
+	const timeScale = [
+		...createStringRange(0, 45),
+		...createStringRange(1, maxFirstExtraTime).map((num) => `45+${num}`),
+		...createStringRange(46, 90),
+		...createStringRange(1, maxSecondExtraTime).map((num) => `90+${num}`)
+	];
 
-	let currentResult: [Result, Result] = ['D', 'D'];
-	let currentScore: [number, number] = [0, 0];
+	const teamStats: { [team: string]: TeamStats } = {};
 
-	timeScale.forEach((minutes, mi) => {
-		if (scores[minutes]) {
-			currentScore = scores[minutes].split('-').map((s) => +s) as [number, number];
-			currentResult =
-				currentScore[0] > currentScore[1]
-					? ['W', 'L']
-					: currentScore[0] < currentScore[1]
-						? ['L', 'W']
-						: ['D', 'D'];
-		}
+	matches.forEach(({ teams, scores }) => {
+		teams.forEach((team) => {
+			if (!teamStats[team]) {
+				teamStats[team] = {
+					name: team,
+					points: 0,
+					GD: 0,
+					W: new Array(timeScale.length).fill(0),
+					D: new Array(timeScale.length).fill(0),
+					L: new Array(timeScale.length).fill(0)
+				};
+			}
+		});
+
+		let currentResult: [Result, Result] = ['D', 'D'];
+		let currentScore: [number, number] = [0, 0];
+
+		timeScale.forEach((minutes, mi) => {
+			if (scores[minutes]) {
+				currentScore = scores[minutes].split('-').map((s) => +s) as [number, number];
+				currentResult =
+					currentScore[0] > currentScore[1]
+						? ['W', 'L']
+						: currentScore[0] < currentScore[1]
+							? ['L', 'W']
+							: ['D', 'D'];
+			}
+
+			teams.forEach((team, ti) => {
+				teamStats[team][currentResult[ti]][mi]++;
+			});
+		});
 
 		teams.forEach((team, ti) => {
-			teamStats[team][currentResult[ti]][mi]++;
+			teamStats[team].points += getPointsFromResult(currentResult[ti]);
+			teamStats[team].GD += currentScore[ti] - currentScore[(ti + 1) % 2];
 		});
 	});
 
-	teams.forEach((team, ti) => {
-		teamStats[team].points += getPointsFromResult(currentResult[ti]);
-		teamStats[team].GD += currentScore[ti] - currentScore[(ti + 1) % 2];
-	});
-});
+	const leagueStats: LeagueStats = {
+		timeScale,
+		teams: Object.values(teamStats).sort((a, z) => z.points * 100 + z.GD - (a.points * 100 + a.GD))
+	};
 
-const leagueStats: LeagueStats = {
-	timeScale,
-	teams: Object.values(teamStats).sort((a, z) => z.points * 100 + z.GD - (a.points * 100 + a.GD))
-};
+	console.table(leagueStats.teams.map(({ name, points, GD }) => ({ name, points, GD })));
 
-console.table(leagueStats.teams.map(({ name, points, GD }) => ({ name, points, GD })));
-
-Bun.write(`./static/comeback-king-or-flopper/json/bundesliga.json`, JSON.stringify(leagueStats));
-
-function getMaxExtraTime(minutes: number): number {
-	const keyword = `${minutes}+`;
-	return Math.max(
-		...new Set(
-			matches.flatMap(({ scores }) =>
-				Object.keys(scores)
-					.filter((time) => time.includes(keyword))
-					.map((time) => +time.replace(keyword, ''))
-			)
-		)
+	Bun.write(
+		`./static/comeback-king-or-a-flopper/json/${league.toLocaleLowerCase().replaceAll(' ', '-')}.json`,
+		JSON.stringify(leagueStats)
 	);
-}
+});
 
 function createStringRange(from: number, to: number): string[] {
 	return new Array(to - from + 1).fill(null).map((_, i) => `${from + i}`);

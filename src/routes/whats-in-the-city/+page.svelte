@@ -10,7 +10,7 @@
 	import cities from '../../data/whats-in-the-city/cities.json';
 	import Legend from './_components/legend.svelte';
 	import Metadata from '../../components/metadata.svelte';
-	import Spinner from './_components/spinner.svelte';
+	import Spinner from '../../components/spinner.svelte';
 	import Statistics from './_components/statistics.svelte';
 	import Comparison from './_components/comparison.svelte';
 	import Footer from '../../components/footer.svelte';

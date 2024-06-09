@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import { fade } from 'svelte/transition';
 	import type { LeagueStats } from '../../data/comeback-king-or-a-flopper/model';
 	import ScoreChart from './_components/score-chart.svelte';
 	import Logo from '../../components/logo.svelte';
@@ -9,14 +10,24 @@
 	import StatsCounter from './_components/stats-counter.svelte';
 	import StripeBackground from './_components/stripe-background.svelte';
 	import ExternalLink from '../../components/external-link.svelte';
+	import Spinner from '../../components/spinner.svelte';
 
 	let teamIndex = 0;
+	let selectedLeague = 'bundesliga';
+	let isLoading = true;
 	let league: LeagueStats;
 	let activeTimeIndex: number = -1;
 
-	onMount(async () => {
-		league = await (await fetch('/comeback-king-or-a-flopper/json/bundesliga.json')).json();
+	onMount(() => {
+		loadSelectedLeagueData();
 	});
+
+	async function loadSelectedLeagueData() {
+		isLoading = true;
+		league = await (await fetch(`/comeback-king-or-a-flopper/json/${selectedLeague}.json`)).json();
+		teamIndex = 0;
+		isLoading = false;
+	}
 </script>
 
 <main
@@ -62,7 +73,15 @@
 		</section>
 	</div>
 
-	<div id="explore" class="flex h-screen flex-col bg-gray-100">
+	<div id="explore" class="relative flex h-screen flex-col bg-gray-100">
+		{#if isLoading}
+			<div
+				transition:fade
+				class="absolute inset-0 z-10 flex items-center justify-center bg-white/40"
+			>
+				<Spinner />
+			</div>
+		{/if}
 		{#if league}
 			{@const { teams, timeScale } = league}
 			{@const team = teams[teamIndex]}
@@ -70,9 +89,16 @@
 				class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between md:gap-4"
 			>
 				<div class="flex w-full flex-col items-center gap-2 overflow-x-clip md:items-start">
-					<div class="flex flex-row items-center gap-2 font-head">
-						<select class="cursor-pointer bg-transparent md:text-lg">
-							<option>🇩🇪 Bundesliga</option>
+					<div class="flex flex-row items-end gap-3 font-head">
+						<select
+							class="cursor-pointer border-b border-solid border-gray-300 bg-transparent pr-1 md:text-lg"
+							bind:value={selectedLeague}
+							on:change={loadSelectedLeagueData}
+						>
+							<option value="bundesliga">🇩🇪 Bundesliga</option>
+							<option value="laliga">🇪🇸 LaLiga</option>
+							<option value="premier-league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</option>
+							<option value="serie-a">🇮🇹 Seria A</option>
 						</select>
 						<p class="text-gray-400">2023/24</p>
 					</div>
@@ -84,7 +110,9 @@
 				</div>
 				<StatsCounter class="flex-1" {team} {timeScale} {activeTimeIndex} />
 			</section>
-			<ScoreChart class="flex-1" {team} {timeScale} maxMatch={team.D[0]} bind:activeTimeIndex />
+			{#key league.teams[0].name}
+				<ScoreChart class="flex-1" {team} {timeScale} maxMatch={team.D[0]} bind:activeTimeIndex />
+			{/key}
 			<section class="flex-row">
 				<TeamNavigation bind:teamIndex {teams} />
 			</section>

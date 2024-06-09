@@ -42,15 +42,18 @@
 	function animatePath(path: SVGPathElement, d: string | null) {
 		if (!path || !d) return;
 
+		let duration = 250;
+
 		if (!path.getAttribute('d')) {
 			path.setAttribute('d', createArea(upperY)(new Array(team.D.length).fill(0)) as string);
+			duration *= 2;
 		}
 
 		anime({
 			targets: path,
 			d,
 			easing: 'easeInOutQuad',
-			duration: 250
+			duration
 		});
 	}
 
