@@ -8,7 +8,7 @@
 </script>
 
 <a
-	class="hover:scale-101 flex flex-col overflow-hidden rounded-lg border border-gray-600 duration-300 ease-in-out hover:transform"
+	class="flex flex-col overflow-hidden rounded-lg border border-gray-600 duration-200 ease-in-out hover:scale-[1.01] hover:transform"
 	{href}
 >
 	<img src={image} class="w-full border-b border-gray-100" alt={title} />
