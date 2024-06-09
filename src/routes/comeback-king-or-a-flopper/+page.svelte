@@ -62,8 +62,11 @@
 			</h1>
 			<p class="max-w-3xl text-pretty text-lg">
 				Inspired by Bayer Leverkusen's late comeback again and again to become an undefeated 2023/24
-				Bundesliga champion. Let's see how each top-four European league team performs in each
-				minute, from the kick-off to the final whistle.
+				Bundesliga champion. Let's see how <ExternalLink
+					class="underline"
+					href="https://www.uefa.com/nationalassociations/uefarankings/country/?year=2024"
+					>top-five European league</ExternalLink
+				> teams perform in each minute, from the kick-off to the final whistle.
 			</p>
 			<a href="#explore" class="md:self-end">
 				<svg viewBox="0 0 24 24" class="w-8 fill-current opacity-60 hover:opacity-100 md:w-10">
@@ -97,6 +100,7 @@
 						>
 							<option value="bundesliga">🇩🇪 Bundesliga</option>
 							<option value="laliga">🇪🇸 LaLiga</option>
+							<option value="ligue-1">🇫🇷 Ligue 1</option>
 							<option value="premier-league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</option>
 							<option value="serie-a">🇮🇹 Seria A</option>
 						</select>

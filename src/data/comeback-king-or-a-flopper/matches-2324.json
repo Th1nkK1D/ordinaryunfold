@@ -6246,6 +6246,4844 @@
     "url": "https://www.livescore.com/en/football/england/premier-league/sheffield-united-vs-tottenham-hotspur/968073/"
   },
   {
+    "id": "987056",
+    "league": "Ligue 1",
+    "kickoffAt": 20230812020000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Lille"
+    ],
+    "scores": {
+      "18": "1-0",
+      "90+4": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-lille/987056/"
+  },
+  {
+    "id": "987053",
+    "league": "Ligue 1",
+    "kickoffAt": 20230812220000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Reims"
+    ],
+    "scores": {
+      "10": "0-1",
+      "23": "1-1",
+      "39": "1-1",
+      "73": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-reims/987053/"
+  },
+  {
+    "id": "987055",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Lorient"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-lorient/987055/"
+  },
+  {
+    "id": "987058",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813180000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Lens"
+    ],
+    "scores": {
+      "11": "0-1",
+      "22": "0-2",
+      "56": "2-2",
+      "87": "3-2",
+      "45+2": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-lens/987058/"
+  },
+  {
+    "id": "987052",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Monaco"
+    ],
+    "scores": {
+      "7": "1-0",
+      "26": "1-1",
+      "43": "1-2",
+      "53": "2-2",
+      "70": "2-3",
+      "90+3": "2-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-monaco/987052/"
+  },
+  {
+    "id": "987054",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813200000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Le Havre"
+    ],
+    "scores": {
+      "5": "0-1",
+      "58": "1-1",
+      "60": "2-1",
+      "90": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-le-havre/987054/"
+  },
+  {
+    "id": "987059",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813200000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Toulouse"
+    ],
+    "scores": {
+      "13": "1-0",
+      "62": "1-1",
+      "90+1": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-toulouse/987059/"
+  },
+  {
+    "id": "987060",
+    "league": "Ligue 1",
+    "kickoffAt": 20230813220500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Metz"
+    ],
+    "scores": {
+      "20": "1-0",
+      "21": "1-1",
+      "51": "2-1",
+      "67": "3-1",
+      "87": "4-1",
+      "90+4": "5-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-metz/987060/"
+  },
+  {
+    "id": "987051",
+    "league": "Ligue 1",
+    "kickoffAt": 20230814014500,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Lyon"
+    ],
+    "scores": {
+      "63": "1-0",
+      "75": "2-0",
+      "88": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-lyon/987051/"
+  },
+  {
+    "id": "987306",
+    "league": "Ligue 1",
+    "kickoffAt": 20230819020000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Marseille"
+    ],
+    "scores": {
+      "14": "0-1",
+      "52": "0-1",
+      "65": "1-1",
+      "71": "2-1",
+      "82": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-marseille/987306/"
+  },
+  {
+    "id": "987308",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820000000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Montpellier"
+    ],
+    "scores": {
+      "20": "0-1",
+      "30": "0-1",
+      "39": "0-2",
+      "66": "0-3",
+      "69": "1-3",
+      "89": "1-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-montpellier/987308/"
+  },
+  {
+    "id": "987298",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820020000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "62": "0-1",
+      "87": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-paris-saint-germain/987298/"
+  },
+  {
+    "id": "987299",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820180000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Nantes"
+    ],
+    "scores": {
+      "66": "1-0",
+      "83": "1-0",
+      "90+4": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-nantes/987299/"
+  },
+  {
+    "id": "987305",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Brest"
+    ],
+    "scores": {
+      "28": "0-1",
+      "52": "1-1",
+      "56": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-brest/987305/"
+  },
+  {
+    "id": "987301",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820200000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Nice"
+    ],
+    "scores": {
+      "64": "0-1",
+      "77": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-nice/987301/"
+  },
+  {
+    "id": "987303",
+    "league": "Ligue 1",
+    "kickoffAt": 20230820200000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "17": "1-0",
+      "84": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-clermont-foot/987303/"
+  },
+  {
+    "id": "987300",
+    "league": "Ligue 1",
+    "kickoffAt": 20230821000000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Strasbourg"
+    ],
+    "scores": {
+      "20": "1-0",
+      "36": "2-0",
+      "58": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-strasbourg/987300/"
+  },
+  {
+    "id": "987304",
+    "league": "Ligue 1",
+    "kickoffAt": 20230821014500,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Rennes"
+    ],
+    "scores": {
+      "3": "1-0",
+      "53": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-rennes/987304/"
+  },
+  {
+    "id": "987323",
+    "league": "Ligue 1",
+    "kickoffAt": 20230826020000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Monaco"
+    ],
+    "scores": {
+      "5": "1-0",
+      "15": "2-0",
+      "27": "2-1",
+      "48": "3-1",
+      "59": "3-2",
+      "85": "3-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-monaco/987323/"
+  },
+  {
+    "id": "987288",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827000000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Brest"
+    ],
+    "scores": {
+      "4": "1-0",
+      "65": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-brest/987288/"
+  },
+  {
+    "id": "987302",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Lens"
+    ],
+    "scores": {
+      "45": "1-0",
+      "52": "2-0",
+      "90+1": "3-0",
+      "90+5": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-lens/987302/"
+  },
+  {
+    "id": "987293",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827180000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Le Havre"
+    ],
+    "scores": {
+      "10": "1-0",
+      "24": "2-0",
+      "40": "2-1",
+      "70": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-le-havre/987293/"
+  },
+  {
+    "id": "987296",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Metz"
+    ],
+    "scores": {
+      "69": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-metz/987296/"
+  },
+  {
+    "id": "987295",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827200000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Reims"
+    ],
+    "scores": {
+      "8": "0-1",
+      "41": "0-2",
+      "56": "1-3",
+      "64": "1-3",
+      "45+4": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-reims/987295/"
+  },
+  {
+    "id": "987290",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827200000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Toulouse"
+    ],
+    "scores": {
+      "52": "1-0",
+      "89": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-toulouse/987290/"
+  },
+  {
+    "id": "987310",
+    "league": "Ligue 1",
+    "kickoffAt": 20230827220500,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Lille"
+    ],
+    "scores": {
+      "9": "1-0",
+      "10": "2-0",
+      "55": "2-1",
+      "62": "3-1",
+      "67": "4-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-lille/987310/"
+  },
+  {
+    "id": "987291",
+    "league": "Ligue 1",
+    "kickoffAt": 20230828014500,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Lyon"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-lyon/987291/"
+  },
+  {
+    "id": "987571",
+    "league": "Ligue 1",
+    "kickoffAt": 20230902020000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Marseille"
+    ],
+    "scores": {
+      "4": "0-1",
+      "39": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-marseille/987571/"
+  },
+  {
+    "id": "987573",
+    "league": "Ligue 1",
+    "kickoffAt": 20230902220000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Rennes"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-rennes/987573/"
+  },
+  {
+    "id": "987567",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903020000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Lens"
+    ],
+    "scores": {
+      "24": "1-0",
+      "36": "2-0",
+      "59": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-lens/987567/"
+  },
+  {
+    "id": "987560",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903180000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "8": "1-0",
+      "14": "2-0",
+      "34": "2-1",
+      "90+6": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-clermont-foot/987560/"
+  },
+  {
+    "id": "987585",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Lorient"
+    ],
+    "scores": {
+      "53": "1-0",
+      "70": "2-0",
+      "90+6": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-lorient/987585/"
+  },
+  {
+    "id": "987580",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903200000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Montpellier"
+    ],
+    "scores": {
+      "2": "1-0",
+      "88": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-montpellier/987580/"
+  },
+  {
+    "id": "987575",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903200000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Reims"
+    ],
+    "scores": {
+      "7": "1-0",
+      "17": "1-1",
+      "52": "1-2",
+      "63": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-reims/987575/"
+  },
+  {
+    "id": "987569",
+    "league": "Ligue 1",
+    "kickoffAt": 20230903220500,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Strasbourg"
+    ],
+    "scores": {
+      "75": "2-0",
+      "45+2": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-strasbourg/987569/"
+  },
+  {
+    "id": "987568",
+    "league": "Ligue 1",
+    "kickoffAt": 20230904014500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "4": "0-1",
+      "20": "0-2",
+      "38": "0-3",
+      "74": "1-4",
+      "45+2": "0-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-paris-saint-germain/987568/"
+  },
+  {
+    "id": "987621",
+    "league": "Ligue 1",
+    "kickoffAt": 20230916020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Nice"
+    ],
+    "scores": {
+      "21": "0-1",
+      "29": "1-1",
+      "53": "1-2",
+      "68": "1-3",
+      "87": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-nice/987621/"
+  },
+  {
+    "id": "987642",
+    "league": "Ligue 1",
+    "kickoffAt": 20230916220000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Lille"
+    ],
+    "scores": {
+      "33": "0-1",
+      "62": "0-2",
+      "74": "1-2",
+      "89": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-lille/987642/"
+  },
+  {
+    "id": "987635",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917020000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Metz"
+    ],
+    "scores": {
+      "37": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-metz/987635/"
+  },
+  {
+    "id": "987630",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917180000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Monaco"
+    ],
+    "scores": {
+      "2": "1-0",
+      "17": "1-1",
+      "69": "1-2",
+      "90+8": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-monaco/987630/"
+  },
+  {
+    "id": "987632",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Nantes"
+    ],
+    "scores": {
+      "48": "0-1",
+      "90+6": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-nantes/987632/"
+  },
+  {
+    "id": "987640",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917200000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Brest"
+    ],
+    "scores": {
+      "19": "1-0",
+      "50": "1-1",
+      "56": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-brest/987640/"
+  },
+  {
+    "id": "987629",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917200000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Montpellier"
+    ],
+    "scores": {
+      "35": "0-1",
+      "40": "0-2",
+      "63": "1-2",
+      "69": "2-2",
+      "90+5": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-montpellier/987629/"
+  },
+  {
+    "id": "987628",
+    "league": "Ligue 1",
+    "kickoffAt": 20230917220500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Toulouse"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-toulouse/987628/"
+  },
+  {
+    "id": "987631",
+    "league": "Ligue 1",
+    "kickoffAt": 20230918014500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Le Havre"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-le-havre/987631/"
+  },
+  {
+    "id": "987647",
+    "league": "Ligue 1",
+    "kickoffAt": 20230923020000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Nice"
+    ],
+    "scores": {
+      "12": "0-0",
+      "56": "0-0",
+      "90+1": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-nice/987647/"
+  },
+  {
+    "id": "987646",
+    "league": "Ligue 1",
+    "kickoffAt": 20230923220000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Lorient"
+    ],
+    "scores": {
+      "6": "0-1",
+      "42": "1-1",
+      "46": "2-1",
+      "55": "3-1",
+      "75": "3-2",
+      "83": "4-2",
+      "85": "4-3",
+      "90+9": "5-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-lorient/987646/"
+  },
+  {
+    "id": "987638",
+    "league": "Ligue 1",
+    "kickoffAt": 20230924020000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Lyon"
+    ],
+    "scores": {
+      "87": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-lyon/987638/"
+  },
+  {
+    "id": "987644",
+    "league": "Ligue 1",
+    "kickoffAt": 20230924180000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Strasbourg"
+    ],
+    "scores": {
+      "83": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-strasbourg/987644/"
+  },
+  {
+    "id": "987648",
+    "league": "Ligue 1",
+    "kickoffAt": 20230924200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "4": "1-0",
+      "7": "2-0",
+      "45+2": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-clermont-foot/987648/"
+  },
+  {
+    "id": "987655",
+    "league": "Ligue 1",
+    "kickoffAt": 20230924200000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Toulouse"
+    ],
+    "scores": {
+      "33": "0-1",
+      "84": "2-1",
+      "45+2": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-toulouse/987655/"
+  },
+  {
+    "id": "987653",
+    "league": "Ligue 1",
+    "kickoffAt": 20230924220500,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Rennes"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-rennes/987653/"
+  },
+  {
+    "id": "987627",
+    "league": "Ligue 1",
+    "kickoffAt": 20230925014500,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Marseille"
+    ],
+    "scores": {
+      "8": "1-0",
+      "37": "2-0",
+      "47": "3-0",
+      "89": "4-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-marseille/987627/"
+  },
+  {
+    "id": "987643",
+    "league": "Ligue 1",
+    "kickoffAt": 20230927020000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Reims"
+    ],
+    "scores": {
+      "12": "0-1",
+      "16": "0-2",
+      "79": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-reims/987643/"
+  },
+  {
+    "id": "987651",
+    "league": "Ligue 1",
+    "kickoffAt": 20230930020000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Lens"
+    ],
+    "scores": {
+      "16": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-lens/987651/"
+  },
+  {
+    "id": "987650",
+    "league": "Ligue 1",
+    "kickoffAt": 20230930220000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Paris Saint-Germain"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-paris-saint-germain/987650/"
+  },
+  {
+    "id": "987684",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001020000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Marseille"
+    ],
+    "scores": {
+      "1": "0-1",
+      "8": "1-1",
+      "18": "1-2",
+      "23": "2-2",
+      "52": "3-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-marseille/987684/"
+  },
+  {
+    "id": "987652",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001180000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Lyon"
+    ],
+    "scores": {
+      "71": "2-0",
+      "45+1": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-lyon/987652/"
+  },
+  {
+    "id": "987649",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Lille"
+    ],
+    "scores": {
+      "40": "0-1",
+      "52": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-lille/987649/"
+  },
+  {
+    "id": "987681",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001200000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Brest"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-brest/987681/"
+  },
+  {
+    "id": "987658",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001200500,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Metz"
+    ],
+    "scores": {
+      "31": "1-0",
+      "43": "2-0",
+      "82": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-metz/987658/"
+  },
+  {
+    "id": "987657",
+    "league": "Ligue 1",
+    "kickoffAt": 20231001220500,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Montpellier"
+    ],
+    "scores": {
+      "30": "0-1",
+      "73": "0-2",
+      "89": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-montpellier/987657/"
+  },
+  {
+    "id": "987656",
+    "league": "Ligue 1",
+    "kickoffAt": 20231002014500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Nantes"
+    ],
+    "scores": {
+      "6": "1-0",
+      "45": "1-1",
+      "73": "2-1",
+      "90+7": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-nantes/987656/"
+  },
+  {
+    "id": "987692",
+    "league": "Ligue 1",
+    "kickoffAt": 20231007020000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Nantes"
+    ],
+    "scores": {
+      "50": "0-1",
+      "58": "0-2",
+      "90+2": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-nantes/987692/"
+  },
+  {
+    "id": "987691",
+    "league": "Ligue 1",
+    "kickoffAt": 20231007220000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Nice"
+    ],
+    "scores": {
+      "14": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-nice/987691/"
+  },
+  {
+    "id": "987703",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008020000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Monaco"
+    ],
+    "scores": {
+      "42": "0-1",
+      "46": "0-2",
+      "49": "0-3",
+      "57": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-monaco/987703/"
+  },
+  {
+    "id": "987701",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008180000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Le Havre"
+    ],
+    "scores": {
+      "18": "1-0",
+      "21": "2-0",
+      "84": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-le-havre/987701/"
+  },
+  {
+    "id": "987690",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008200000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Toulouse"
+    ],
+    "scores": {
+      "27": "0-1",
+      "90+3": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-toulouse/987690/"
+  },
+  {
+    "id": "987702",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008200000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Lorient"
+    ],
+    "scores": {
+      "16": "0-1",
+      "21": "1-1",
+      "22": "2-1",
+      "41": "3-1",
+      "54": "3-2",
+      "79": "3-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-lorient/987702/"
+  },
+  {
+    "id": "987689",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008200000,
+    "status": "Aband.",
+    "teams": [
+      "Montpellier",
+      "Clermont Foot"
+    ],
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-clermont-foot/987689/"
+  },
+  {
+    "id": "987694",
+    "league": "Ligue 1",
+    "kickoffAt": 20231008220500,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Lille"
+    ],
+    "scores": {
+      "70": "1-1",
+      "45+3": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-lille/987694/"
+  },
+  {
+    "id": "987687",
+    "league": "Ligue 1",
+    "kickoffAt": 20231009014500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "32": "0-1",
+      "36": "0-2",
+      "56": "1-2",
+      "58": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-paris-saint-germain/987687/"
+  },
+  {
+    "id": "987696",
+    "league": "Ligue 1",
+    "kickoffAt": 20231021020000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Lens"
+    ],
+    "scores": {
+      "90+2": "0-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-lens/987696/"
+  },
+  {
+    "id": "987704",
+    "league": "Ligue 1",
+    "kickoffAt": 20231021220000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Strasbourg"
+    ],
+    "scores": {
+      "10": "1-0",
+      "13": "1-0",
+      "31": "2-0",
+      "77": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-strasbourg/987704/"
+  },
+  {
+    "id": "987713",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022020000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Marseille"
+    ],
+    "scores": {
+      "79": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-marseille/987713/"
+  },
+  {
+    "id": "987698",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022180000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Rennes"
+    ],
+    "scores": {
+      "4": "1-0",
+      "21": "1-1",
+      "45+2": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-rennes/987698/"
+  },
+  {
+    "id": "987695",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022200000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Brest"
+    ],
+    "scores": {
+      "6": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-brest/987695/"
+  },
+  {
+    "id": "987700",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022200000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Montpellier"
+    ],
+    "scores": {
+      "44": "1-0",
+      "74": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-montpellier/987700/"
+  },
+  {
+    "id": "987717",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022200000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Reims"
+    ],
+    "scores": {
+      "48": "0-1",
+      "51": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-reims/987717/"
+  },
+  {
+    "id": "987699",
+    "league": "Ligue 1",
+    "kickoffAt": 20231022220500,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Metz"
+    ],
+    "scores": {
+      "4": "0-1",
+      "42": "1-1",
+      "55": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-metz/987699/"
+  },
+  {
+    "id": "987693",
+    "league": "Ligue 1",
+    "kickoffAt": 20231023014500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "10": "0-1",
+      "35": "0-2",
+      "52": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-clermont-foot/987693/"
+  },
+  {
+    "id": "987722",
+    "league": "Ligue 1",
+    "kickoffAt": 20231028020000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Nice"
+    ],
+    "scores": {
+      "37": "0-0",
+      "74": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-nice/987722/"
+  },
+  {
+    "id": "987725",
+    "league": "Ligue 1",
+    "kickoffAt": 20231028220000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Lorient"
+    ],
+    "scores": {
+      "84": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-lorient/987725/"
+  },
+  {
+    "id": "987720",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029020000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Nantes"
+    ],
+    "scores": {
+      "27": "1-0",
+      "58": "2-0",
+      "72": "3-0",
+      "89": "4-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-nantes/987720/"
+  },
+  {
+    "id": "987727",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029190000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "16": "0-1",
+      "28": "0-2",
+      "43": "1-2",
+      "52": "2-2",
+      "89": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-paris-saint-germain/987727/"
+  },
+  {
+    "id": "987719",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029210000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Monaco"
+    ],
+    "scores": {
+      "32": "1-0",
+      "42": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-monaco/987719/"
+  },
+  {
+    "id": "987716",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Le Havre"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-le-havre/987716/"
+  },
+  {
+    "id": "987723",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029210000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Toulouse"
+    ],
+    "scores": {
+      "13": "1-0",
+      "63": "2-0",
+      "72": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-toulouse/987723/"
+  },
+  {
+    "id": "987710",
+    "league": "Ligue 1",
+    "kickoffAt": 20231029230500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Strasbourg"
+    ],
+    "scores": {
+      "23": "1-0",
+      "81": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-strasbourg/987710/"
+  },
+  {
+    "id": "987740",
+    "league": "Ligue 1",
+    "kickoffAt": 20231104030000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Montpellier"
+    ],
+    "scores": {
+      "10": "1-0",
+      "58": "2-0",
+      "66": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-montpellier/987740/"
+  },
+  {
+    "id": "987738",
+    "league": "Ligue 1",
+    "kickoffAt": 20231104230000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Lens"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-lens/987738/"
+  },
+  {
+    "id": "987742",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105030000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Lille"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-lille/987742/"
+  },
+  {
+    "id": "987737",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105190000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Metz"
+    ],
+    "scores": {
+      "77": "0-1",
+      "84": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-metz/987737/"
+  },
+  {
+    "id": "987744",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105210000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Reims"
+    ],
+    "scores": {
+      "75": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-reims/987744/"
+  },
+  {
+    "id": "987743",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105210000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Clermont Foot"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-clermont-foot/987743/"
+  },
+  {
+    "id": "987739",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105210000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Le Havre"
+    ],
+    "scores": {
+      "49": "1-0",
+      "83": "1-1",
+      "45+3": "0-0",
+      "90+5": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-le-havre/987739/"
+  },
+  {
+    "id": "987736",
+    "league": "Ligue 1",
+    "kickoffAt": 20231105230500,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Brest"
+    ],
+    "scores": {
+      "11": "0-0",
+      "16": "1-0",
+      "26": "1-0",
+      "69": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-brest/987736/"
+  },
+  {
+    "id": "987745",
+    "league": "Ligue 1",
+    "kickoffAt": 20231106024500,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Rennes"
+    ],
+    "scores": {
+      "45": "1-0",
+      "87": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-rennes/987745/"
+  },
+  {
+    "id": "987539",
+    "league": "Ligue 1",
+    "kickoffAt": 20231111030000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Nice"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-nice/987539/"
+  },
+  {
+    "id": "987536",
+    "league": "Ligue 1",
+    "kickoffAt": 20231111230000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "3": "0-1",
+      "7": "0-1",
+      "59": "0-2",
+      "82": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-paris-saint-germain/987536/"
+  },
+  {
+    "id": "987548",
+    "league": "Ligue 1",
+    "kickoffAt": 20231112030000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Monaco"
+    ],
+    "scores": {
+      "90+10": "0-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-monaco/987548/"
+  },
+  {
+    "id": "987545",
+    "league": "Ligue 1",
+    "kickoffAt": 20231112210000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Lorient"
+    ],
+    "scores": {
+      "69": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-lorient/987545/"
+  },
+  {
+    "id": "987534",
+    "league": "Ligue 1",
+    "kickoffAt": 20231112210000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Toulouse"
+    ],
+    "scores": {
+      "30": "1-0",
+      "65": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-toulouse/987534/"
+  },
+  {
+    "id": "987538",
+    "league": "Ligue 1",
+    "kickoffAt": 20231112210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Nantes"
+    ],
+    "scores": {
+      "3": "1-0",
+      "12": "1-1",
+      "28": "2-1",
+      "85": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-nantes/987538/"
+  },
+  {
+    "id": "987554",
+    "league": "Ligue 1",
+    "kickoffAt": 20231112230500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Lyon"
+    ],
+    "scores": {
+      "67": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-lyon/987554/"
+  },
+  {
+    "id": "987537",
+    "league": "Ligue 1",
+    "kickoffAt": 20231113024500,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Marseille"
+    ],
+    "scores": {
+      "90": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-marseille/987537/"
+  },
+  {
+    "id": "987416",
+    "league": "Ligue 1",
+    "kickoffAt": 20231125030000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Monaco"
+    ],
+    "scores": {
+      "18": "1-0",
+      "22": "1-1",
+      "39": "2-1",
+      "70": "3-1",
+      "72": "4-1",
+      "75": "4-2",
+      "90+6": "5-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-monaco/987416/"
+  },
+  {
+    "id": "987418",
+    "league": "Ligue 1",
+    "kickoffAt": 20231125230000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Lens"
+    ],
+    "scores": {
+      "11": "0-1",
+      "50": "0-2",
+      "82": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-lens/987418/"
+  },
+  {
+    "id": "987426",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126030000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Marseille"
+    ],
+    "scores": {
+      "6": "1-0",
+      "27": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-marseille/987426/"
+  },
+  {
+    "id": "987419",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126190000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Toulouse"
+    ],
+    "scores": {
+      "54": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-toulouse/987419/"
+  },
+  {
+    "id": "987424",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126210000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Metz"
+    ],
+    "scores": {
+      "1": "0-1",
+      "7": "1-1",
+      "22": "2-1",
+      "65": "2-2",
+      "83": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-metz/987424/"
+  },
+  {
+    "id": "987435",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126210000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Brest"
+    ],
+    "scores": {
+      "20": "0-1",
+      "51": "1-1",
+      "64": "1-2",
+      "90+3": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-brest/987435/"
+  },
+  {
+    "id": "987423",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126210000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Le Havre"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-le-havre/987423/"
+  },
+  {
+    "id": "987422",
+    "league": "Ligue 1",
+    "kickoffAt": 20231126230500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Reims"
+    ],
+    "scores": {
+      "4": "1-0",
+      "46": "2-1",
+      "66": "3-1",
+      "45+1": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-reims/987422/"
+  },
+  {
+    "id": "987420",
+    "league": "Ligue 1",
+    "kickoffAt": 20231127024500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Lille"
+    ],
+    "scores": {
+      "27": "0-1",
+      "32": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-lille/987420/"
+  },
+  {
+    "id": "1111316",
+    "league": "Ligue 1",
+    "kickoffAt": 20231130010000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "7": "0-1",
+      "87": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-clermont-foot/1111316/"
+  },
+  {
+    "id": "987478",
+    "league": "Ligue 1",
+    "kickoffAt": 20231202030000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Strasbourg"
+    ],
+    "scores": {
+      "10": "1-0",
+      "42": "2-0",
+      "88": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-strasbourg/987478/"
+  },
+  {
+    "id": "987477",
+    "league": "Ligue 1",
+    "kickoffAt": 20231202230000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Lyon"
+    ],
+    "scores": {
+      "15": "0-1",
+      "26": "1-1",
+      "52": "2-1",
+      "72": "2-2",
+      "74": "3-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-lyon/987477/"
+  },
+  {
+    "id": "987479",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203030000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Nice"
+    ],
+    "scores": {
+      "25": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-nice/987479/"
+  },
+  {
+    "id": "987481",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203190000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "23": "0-1",
+      "89": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-paris-saint-germain/987481/"
+  },
+  {
+    "id": "987485",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203210000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "20": "1-0",
+      "34": "2-0",
+      "51": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-clermont-foot/987485/"
+  },
+  {
+    "id": "987482",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203210000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Montpellier"
+    ],
+    "scores": {
+      "9": "1-0",
+      "90+2": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-montpellier/987482/"
+  },
+  {
+    "id": "987475",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203210000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Lorient"
+    ],
+    "scores": {
+      "72": "1-0",
+      "90+1": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-lorient/987475/"
+  },
+  {
+    "id": "987490",
+    "league": "Ligue 1",
+    "kickoffAt": 20231203230500,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Metz"
+    ],
+    "scores": {
+      "29": "0-0",
+      "56": "2-0",
+      "45+2": "1-0",
+      "45+6": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-metz/987490/"
+  },
+  {
+    "id": "987480",
+    "league": "Ligue 1",
+    "kickoffAt": 20231204024500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Rennes"
+    ],
+    "scores": {
+      "8": "1-0",
+      "65": "2-0",
+      "78": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-rennes/987480/"
+  },
+  {
+    "id": "987721",
+    "league": "Ligue 1",
+    "kickoffAt": 20231207030000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Lyon"
+    ],
+    "scores": {
+      "21": "1-0",
+      "25": "2-0",
+      "55": "3-0",
+      "67": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-lyon/987721/"
+  },
+  {
+    "id": "987540",
+    "league": "Ligue 1",
+    "kickoffAt": 20231208023000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Strasbourg"
+    ],
+    "scores": {
+      "44": "1-0",
+      "80": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-strasbourg/987540/"
+  },
+  {
+    "id": "987390",
+    "league": "Ligue 1",
+    "kickoffAt": 20231209030000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Lens"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-lens/987390/"
+  },
+  {
+    "id": "987368",
+    "league": "Ligue 1",
+    "kickoffAt": 20231209230000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Monaco"
+    ],
+    "scores": {
+      "51": "0-1",
+      "85": "0-2",
+      "90": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-monaco/987368/"
+  },
+  {
+    "id": "987369",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210030000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Nantes"
+    ],
+    "scores": {
+      "41": "1-0",
+      "55": "1-1",
+      "83": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-nantes/987369/"
+  },
+  {
+    "id": "987370",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210190000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Reims"
+    ],
+    "scores": {
+      "55": "1-0",
+      "78": "1-1",
+      "82": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-reims/987370/"
+  },
+  {
+    "id": "987374",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210210000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Lille"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-lille/987374/"
+  },
+  {
+    "id": "987373",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Brest"
+    ],
+    "scores": {
+      "75": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-brest/987373/"
+  },
+  {
+    "id": "987371",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210210000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Le Havre"
+    ],
+    "scores": {
+      "21": "1-0",
+      "49": "1-1",
+      "90+7": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-le-havre/987371/"
+  },
+  {
+    "id": "987392",
+    "league": "Ligue 1",
+    "kickoffAt": 20231210230500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Toulouse"
+    ],
+    "scores": {
+      "24": "1-0",
+      "28": "2-0",
+      "79": "3-0",
+      "45+3": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-toulouse/987392/"
+  },
+  {
+    "id": "987372",
+    "league": "Ligue 1",
+    "kickoffAt": 20231211024500,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Marseille"
+    ],
+    "scores": {
+      "3": "0-1",
+      "9": "0-2",
+      "33": "0-3",
+      "41": "1-3",
+      "42": "1-4",
+      "52": "2-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-marseille/987372/"
+  },
+  {
+    "id": "987349",
+    "league": "Ligue 1",
+    "kickoffAt": 20231216030000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Lyon"
+    ],
+    "scores": {
+      "85": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-lyon/987349/"
+  },
+  {
+    "id": "987355",
+    "league": "Ligue 1",
+    "kickoffAt": 20231216230000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Nice"
+    ],
+    "scores": {
+      "5": "1-0",
+      "35": "2-0",
+      "51": "3-0",
+      "90+1": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-nice/987355/"
+  },
+  {
+    "id": "987354",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217030000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Reims"
+    ],
+    "scores": {
+      "43": "1-0",
+      "75": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-reims/987354/"
+  },
+  {
+    "id": "987351",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217190000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Brest"
+    ],
+    "scores": {
+      "49": "0-1",
+      "57": "0-2",
+      "90+4": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-brest/987351/"
+  },
+  {
+    "id": "987348",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217210000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Strasbourg"
+    ],
+    "scores": {
+      "14": "0-1",
+      "49": "0-2",
+      "53": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-strasbourg/987348/"
+  },
+  {
+    "id": "987360",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Montpellier"
+    ],
+    "scores": {
+      "9": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-montpellier/987360/"
+  },
+  {
+    "id": "987346",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217210000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Rennes"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-rennes/987346/"
+  },
+  {
+    "id": "987344",
+    "league": "Ligue 1",
+    "kickoffAt": 20231217230500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "26": "1-0",
+      "42": "2-0",
+      "58": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-clermont-foot/987344/"
+  },
+  {
+    "id": "987353",
+    "league": "Ligue 1",
+    "kickoffAt": 20231218024500,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "66": "0-1",
+      "90+4": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-paris-saint-germain/987353/"
+  },
+  {
+    "id": "987447",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Lorient"
+    ],
+    "scores": {
+      "22": "1-0",
+      "25": "2-0",
+      "29": "3-0",
+      "45+3": "4-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-lorient/987447/"
+  },
+  {
+    "id": "987438",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Rennes"
+    ],
+    "scores": {
+      "3": "1-0",
+      "52": "1-1",
+      "88": "1-2",
+      "90+7": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-rennes/987438/"
+  },
+  {
+    "id": "987431",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Nantes"
+    ],
+    "scores": {
+      "49": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-nantes/987431/"
+  },
+  {
+    "id": "987445",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Marseille"
+    ],
+    "scores": {
+      "14": "1-0",
+      "52": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-marseille/987445/"
+  },
+  {
+    "id": "987442",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Lens"
+    ],
+    "scores": {
+      "75": "1-0",
+      "77": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-lens/987442/"
+  },
+  {
+    "id": "987437",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Metz"
+    ],
+    "scores": {
+      "49": "1-0",
+      "60": "2-0",
+      "72": "2-1",
+      "83": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-metz/987437/"
+  },
+  {
+    "id": "987441",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Le Havre"
+    ],
+    "scores": {
+      "25": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-le-havre/987441/"
+  },
+  {
+    "id": "987425",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Lille"
+    ],
+    "scores": {
+      "20": "0-1",
+      "41": "1-1",
+      "76": "2-1",
+      "84": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-lille/987425/"
+  },
+  {
+    "id": "987427",
+    "league": "Ligue 1",
+    "kickoffAt": 20231221030000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Monaco"
+    ],
+    "scores": {
+      "5": "1-0",
+      "26": "1-1",
+      "44": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-monaco/987427/"
+  },
+  {
+    "id": "987111",
+    "league": "Ligue 1",
+    "kickoffAt": 20240113030000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Strasbourg"
+    ],
+    "scores": {
+      "3": "1-0",
+      "90+2": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-strasbourg/987111/"
+  },
+  {
+    "id": "987112",
+    "league": "Ligue 1",
+    "kickoffAt": 20240113230000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Reims"
+    ],
+    "scores": {
+      "35": "0-1",
+      "49": "1-1",
+      "55": "1-2",
+      "90+5": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-reims/987112/"
+  },
+  {
+    "id": "987107",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114030500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Nice"
+    ],
+    "scores": {
+      "31": "1-0",
+      "54": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-nice/987107/"
+  },
+  {
+    "id": "987105",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114190000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Lorient"
+    ],
+    "scores": {
+      "37": "1-0",
+      "90": "2-0",
+      "90+3": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-lorient/987105/"
+  },
+  {
+    "id": "987106",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114210000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Montpellier"
+    ],
+    "scores": {
+      "22": "0-0",
+      "48": "1-0",
+      "90+2": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-montpellier/987106/"
+  },
+  {
+    "id": "987104",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Toulouse"
+    ],
+    "scores": {
+      "12": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-toulouse/987104/"
+  },
+  {
+    "id": "987102",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114210000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "29": "0-1",
+      "47": "1-1",
+      "89": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-clermont-foot/987102/"
+  },
+  {
+    "id": "987110",
+    "league": "Ligue 1",
+    "kickoffAt": 20240114230500,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Lyon"
+    ],
+    "scores": {
+      "18": "1-0",
+      "50": "2-0",
+      "54": "2-1",
+      "62": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-lyon/987110/"
+  },
+  {
+    "id": "987103",
+    "league": "Ligue 1",
+    "kickoffAt": 20240115024500,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "7": "0-0",
+      "30": "0-1",
+      "89": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-paris-saint-germain/987103/"
+  },
+  {
+    "id": "987099",
+    "league": "Ligue 1",
+    "kickoffAt": 20240127030000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Rennes"
+    ],
+    "scores": {
+      "22": "0-1",
+      "36": "0-2",
+      "41": "0-3",
+      "57": "1-3",
+      "78": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-rennes/987099/"
+  },
+  {
+    "id": "987113",
+    "league": "Ligue 1",
+    "kickoffAt": 20240127230000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Metz"
+    ],
+    "scores": {
+      "77": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-metz/987113/"
+  },
+  {
+    "id": "987094",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128030000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Monaco"
+    ],
+    "scores": {
+      "7": "0-1",
+      "38": "1-1",
+      "50": "2-2",
+      "45+4": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-monaco/987094/"
+  },
+  {
+    "id": "987090",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128190000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Lille"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-lille/987090/"
+  },
+  {
+    "id": "987101",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128210000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Strasbourg"
+    ],
+    "scores": {
+      "34": "0-1",
+      "52": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-strasbourg/987101/"
+  },
+  {
+    "id": "987088",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128210000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Le Havre"
+    ],
+    "scores": {
+      "15": "0-1",
+      "33": "1-1",
+      "51": "2-1",
+      "85": "2-2",
+      "90+2": "3-2",
+      "90+4": "3-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-le-havre/987088/"
+  },
+  {
+    "id": "987092",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128210000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Nantes"
+    ],
+    "scores": {
+      "73": "0-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-nantes/987092/"
+  },
+  {
+    "id": "987089",
+    "league": "Ligue 1",
+    "kickoffAt": 20240128230500,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Lens"
+    ],
+    "scores": {
+      "42": "0-1",
+      "55": "0-2",
+      "84": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-lens/987089/"
+  },
+  {
+    "id": "987087",
+    "league": "Ligue 1",
+    "kickoffAt": 20240129024500,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Brest"
+    ],
+    "scores": {
+      "38": "1-0",
+      "45": "2-0",
+      "55": "2-1",
+      "80": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-brest/987087/"
+  },
+  {
+    "id": "987109",
+    "league": "Ligue 1",
+    "kickoffAt": 20240203030000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "6": "0-0",
+      "31": "0-1",
+      "49": "0-2",
+      "68": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-paris-saint-germain/987109/"
+  },
+  {
+    "id": "987098",
+    "league": "Ligue 1",
+    "kickoffAt": 20240203230000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Montpellier"
+    ],
+    "scores": {
+      "3": "1-0",
+      "48": "2-0",
+      "65": "2-0",
+      "73": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-montpellier/987098/"
+  },
+  {
+    "id": "987100",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204030000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Lens"
+    ],
+    "scores": {
+      "48": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-lens/987100/"
+  },
+  {
+    "id": "987091",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204190000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Le Havre"
+    ],
+    "scores": {
+      "63": "1-0",
+      "65": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-le-havre/987091/"
+  },
+  {
+    "id": "987093",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204210000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "10": "1-0",
+      "24": "2-0",
+      "38": "3-0",
+      "40": "4-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-clermont-foot/987093/"
+  },
+  {
+    "id": "987097",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Lorient"
+    ],
+    "scores": {
+      "19": "0-1",
+      "22": "1-1",
+      "58": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-lorient/987097/"
+  },
+  {
+    "id": "987114",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204210000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Toulouse"
+    ],
+    "scores": {
+      "11": "0-1",
+      "31": "0-2",
+      "49": "1-3",
+      "45+3": "0-3",
+      "90+1": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-toulouse/987114/"
+  },
+  {
+    "id": "987095",
+    "league": "Ligue 1",
+    "kickoffAt": 20240204230500,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Nice"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-nice/987095/"
+  },
+  {
+    "id": "987108",
+    "league": "Ligue 1",
+    "kickoffAt": 20240205024500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Marseille"
+    ],
+    "scores": {
+      "37": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-marseille/987108/"
+  },
+  {
+    "id": "987287",
+    "league": "Ligue 1",
+    "kickoffAt": 20240210030000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Metz"
+    ],
+    "scores": {
+      "56": "1-0",
+      "61": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-metz/987287/"
+  },
+  {
+    "id": "987285",
+    "league": "Ligue 1",
+    "kickoffAt": 20240210230000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Strasbourg"
+    ],
+    "scores": {
+      "16": "1-0",
+      "30": "2-0",
+      "43": "2-1",
+      "58": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-strasbourg/987285/"
+  },
+  {
+    "id": "987297",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211030000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Lille"
+    ],
+    "scores": {
+      "6": "0-1",
+      "10": "1-1",
+      "17": "2-1",
+      "80": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-lille/987297/"
+  },
+  {
+    "id": "987283",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211190000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Rennes"
+    ],
+    "scores": {
+      "60": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-rennes/987283/"
+  },
+  {
+    "id": "987289",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211210000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Brest"
+    ],
+    "scores": {
+      "50": "0-1",
+      "69": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-brest/987289/"
+  },
+  {
+    "id": "987294",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211210000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Reims"
+    ],
+    "scores": {
+      "69": "1-0",
+      "86": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-reims/987294/"
+  },
+  {
+    "id": "987286",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211210000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Nantes"
+    ],
+    "scores": {
+      "2": "0-1",
+      "51": "0-2",
+      "73": "0-2",
+      "90+6": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-nantes/987286/"
+  },
+  {
+    "id": "987307",
+    "league": "Ligue 1",
+    "kickoffAt": 20240211230500,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Lyon"
+    ],
+    "scores": {
+      "23": "1-0",
+      "74": "1-1",
+      "82": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-lyon/987307/"
+  },
+  {
+    "id": "987292",
+    "league": "Ligue 1",
+    "kickoffAt": 20240212024500,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Monaco"
+    ],
+    "scores": {
+      "16": "0-1",
+      "37": "1-1",
+      "50": "1-2",
+      "74": "2-2",
+      "77": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-monaco/987292/"
+  },
+  {
+    "id": "987225",
+    "league": "Ligue 1",
+    "kickoffAt": 20240217030000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Nice"
+    ],
+    "scores": {
+      "22": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-nice/987225/"
+  },
+  {
+    "id": "987196",
+    "league": "Ligue 1",
+    "kickoffAt": 20240217230000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Le Havre"
+    ],
+    "scores": {
+      "14": "1-0",
+      "44": "2-0",
+      "49": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-le-havre/987196/"
+  },
+  {
+    "id": "987214",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218030000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "60": "0-1",
+      "78": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-paris-saint-germain/987214/"
+  },
+  {
+    "id": "987192",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218190000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Lorient"
+    ],
+    "scores": {
+      "2": "0-1",
+      "49": "0-3",
+      "51": "1-3",
+      "45+2": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-lorient/987192/"
+  },
+  {
+    "id": "987203",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218210000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Toulouse"
+    ],
+    "scores": {
+      "41": "0-1",
+      "48": "1-1",
+      "70": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-toulouse/987203/"
+  },
+  {
+    "id": "987205",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218210000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Metz"
+    ],
+    "scores": {
+      "3": "1-0",
+      "50": "2-0",
+      "86": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-metz/987205/"
+  },
+  {
+    "id": "987187",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218210000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "31": "1-0",
+      "40": "1-0",
+      "58": "2-0",
+      "62": "2-1",
+      "64": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-clermont-foot/987187/"
+  },
+  {
+    "id": "987206",
+    "league": "Ligue 1",
+    "kickoffAt": 20240218230500,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Lens"
+    ],
+    "scores": {
+      "40": "1-0",
+      "45+1": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-lens/987206/"
+  },
+  {
+    "id": "987202",
+    "league": "Ligue 1",
+    "kickoffAt": 20240219024500,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Marseille"
+    ],
+    "scores": {
+      "88": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-marseille/987202/"
+  },
+  {
+    "id": "987220",
+    "league": "Ligue 1",
+    "kickoffAt": 20240224030000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Lyon"
+    ],
+    "scores": {
+      "13": "1-0",
+      "60": "1-2",
+      "45+1": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-lyon/987220/"
+  },
+  {
+    "id": "987210",
+    "league": "Ligue 1",
+    "kickoffAt": 20240224230000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Nantes"
+    ],
+    "scores": {
+      "49": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-nantes/987210/"
+  },
+  {
+    "id": "987201",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225030000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Brest"
+    ],
+    "scores": {
+      "33": "0-1",
+      "40": "0-2",
+      "60": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-brest/987201/"
+  },
+  {
+    "id": "987215",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225190000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Monaco"
+    ],
+    "scores": {
+      "19": "0-1",
+      "30": "0-2",
+      "31": "1-2",
+      "62": "1-2",
+      "77": "2-2",
+      "83": "2-2",
+      "90+2": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-monaco/987215/"
+  },
+  {
+    "id": "987217",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225210000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Reims"
+    ],
+    "scores": {
+      "64": "0-1",
+      "74": "1-1",
+      "90+7": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-reims/987217/"
+  },
+  {
+    "id": "987199",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225210000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "45+6": "0-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-clermont-foot/987199/"
+  },
+  {
+    "id": "987219",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225210000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Lille"
+    ],
+    "scores": {
+      "45": "0-1",
+      "49": "1-1",
+      "60": "2-1",
+      "67": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-lille/987219/"
+  },
+  {
+    "id": "987229",
+    "league": "Ligue 1",
+    "kickoffAt": 20240225230500,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Rennes"
+    ],
+    "scores": {
+      "33": "0-1",
+      "90+7": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-rennes/987229/"
+  },
+  {
+    "id": "987222",
+    "league": "Ligue 1",
+    "kickoffAt": 20240226024500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Montpellier"
+    ],
+    "scores": {
+      "5": "0-1",
+      "31": "1-1",
+      "43": "2-1",
+      "62": "3-1",
+      "82": "4-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-montpellier/987222/"
+  },
+  {
+    "id": "987258",
+    "league": "Ligue 1",
+    "kickoffAt": 20240302030000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Paris Saint-Germain"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-paris-saint-germain/987258/"
+  },
+  {
+    "id": "987247",
+    "league": "Ligue 1",
+    "kickoffAt": 20240302230000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Lille"
+    ],
+    "scores": {
+      "56": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-lille/987247/"
+  },
+  {
+    "id": "987244",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303030000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Marseille"
+    ],
+    "scores": {
+      "23": "0-1",
+      "53": "1-1",
+      "59": "1-2",
+      "67": "1-3",
+      "80": "1-4",
+      "90+2": "1-5"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-marseille/987244/"
+  },
+  {
+    "id": "987253",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303190000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Nice"
+    ],
+    "scores": {
+      "8": "0-1",
+      "65": "1-1",
+      "69": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-nice/987253/"
+  },
+  {
+    "id": "987264",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303210000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Le Havre"
+    ],
+    "scores": {
+      "34": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-le-havre/987264/"
+  },
+  {
+    "id": "987251",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303210000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Strasbourg"
+    ],
+    "scores": {
+      "47": "0-1",
+      "71": "1-1",
+      "83": "1-2",
+      "87": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-strasbourg/987251/"
+  },
+  {
+    "id": "987250",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303210000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Metz"
+    ],
+    "scores": {
+      "58": "0-1",
+      "60": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-metz/987250/"
+  },
+  {
+    "id": "987259",
+    "league": "Ligue 1",
+    "kickoffAt": 20240303230500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Lorient"
+    ],
+    "scores": {
+      "59": "0-1",
+      "90": "0-2",
+      "90+4": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-lorient/987259/"
+  },
+  {
+    "id": "987254",
+    "league": "Ligue 1",
+    "kickoffAt": 20240304024500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Lens"
+    ],
+    "scores": {
+      "43": "0-1",
+      "53": "0-2",
+      "87": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-lens/987254/"
+  },
+  {
+    "id": "987161",
+    "league": "Ligue 1",
+    "kickoffAt": 20240309030000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Montpellier"
+    ],
+    "scores": {
+      "10": "0-1",
+      "12": "1-1",
+      "42": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-montpellier/987161/"
+  },
+  {
+    "id": "987144",
+    "league": "Ligue 1",
+    "kickoffAt": 20240309230000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Lyon"
+    ],
+    "scores": {
+      "52": "0-1",
+      "64": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-lyon/987144/"
+  },
+  {
+    "id": "987156",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310030000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Brest"
+    ],
+    "scores": {
+      "32": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-brest/987156/"
+  },
+  {
+    "id": "987140",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310190000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Reims"
+    ],
+    "scores": {
+      "7": "0-1",
+      "17": "1-1",
+      "19": "2-1",
+      "45": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-reims/987140/"
+  },
+  {
+    "id": "987160",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310210000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Toulouse"
+    ],
+    "scores": {
+      "60": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-toulouse/987160/"
+  },
+  {
+    "id": "987158",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310210000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "33": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-clermont-foot/987158/"
+  },
+  {
+    "id": "987148",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310210000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Monaco"
+    ],
+    "scores": {
+      "72": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-monaco/987148/"
+  },
+  {
+    "id": "987159",
+    "league": "Ligue 1",
+    "kickoffAt": 20240310230500,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Rennes"
+    ],
+    "scores": {
+      "1": "0-1",
+      "20": "0-2",
+      "84": "1-2",
+      "90+2": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-rennes/987159/"
+  },
+  {
+    "id": "987152",
+    "league": "Ligue 1",
+    "kickoffAt": 20240311024500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Nantes"
+    ],
+    "scores": {
+      "17": "1-0",
+      "79": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-nantes/987152/"
+  },
+  {
+    "id": "987456",
+    "league": "Ligue 1",
+    "kickoffAt": 20240316030000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Lyon"
+    ],
+    "scores": {
+      "33": "0-1",
+      "53": "1-1",
+      "59": "2-1",
+      "77": "2-2",
+      "81": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-lyon/987456/"
+  },
+  {
+    "id": "987460",
+    "league": "Ligue 1",
+    "kickoffAt": 20240316230000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Strasbourg"
+    ],
+    "scores": {
+      "3": "0-1",
+      "35": "1-1",
+      "62": "1-2",
+      "78": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-strasbourg/987460/"
+  },
+  {
+    "id": "987457",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317030000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Nice"
+    ],
+    "scores": {
+      "11": "0-1",
+      "52": "0-1",
+      "53": "0-2",
+      "67": "0-3",
+      "76": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-nice/987457/"
+  },
+  {
+    "id": "987462",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317190000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Lille"
+    ],
+    "scores": {
+      "67": "0-1",
+      "79": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-lille/987462/"
+  },
+  {
+    "id": "987459",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317210000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Le Havre"
+    ],
+    "scores": {
+      "12": "1-0",
+      "59": "2-1",
+      "45+1": "1-1",
+      "45+5": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-le-havre/987459/"
+  },
+  {
+    "id": "987464",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317210000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Lorient"
+    ],
+    "scores": {
+      "1": "0-1",
+      "27": "1-1",
+      "60": "2-1",
+      "90+5": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-lorient/987464/"
+  },
+  {
+    "id": "987463",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317210000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Metz"
+    ],
+    "scores": {
+      "3": "1-0",
+      "14": "1-1",
+      "79": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-metz/987463/"
+  },
+  {
+    "id": "987461",
+    "league": "Ligue 1",
+    "kickoffAt": 20240317230500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Marseille"
+    ],
+    "scores": {
+      "21": "1-0",
+      "77": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-marseille/987461/"
+  },
+  {
+    "id": "987469",
+    "league": "Ligue 1",
+    "kickoffAt": 20240318024500,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "14": "0-1",
+      "22": "0-2",
+      "30": "1-2",
+      "50": "2-3",
+      "53": "2-4",
+      "63": "2-5",
+      "89": "2-6",
+      "45+2": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-paris-saint-germain/987469/"
+  },
+  {
+    "id": "987132",
+    "league": "Ligue 1",
+    "kickoffAt": 20240330030000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Lens"
+    ],
+    "scores": {
+      "9": "1-0",
+      "60": "2-0",
+      "78": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-lens/987132/"
+  },
+  {
+    "id": "987135",
+    "league": "Ligue 1",
+    "kickoffAt": 20240330230000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Monaco"
+    ],
+    "scores": {
+      "4": "0-1",
+      "10": "0-2",
+      "16": "0-3",
+      "76": "0-4",
+      "78": "1-4",
+      "84": "2-4",
+      "87": "2-5"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-monaco/987135/"
+  },
+  {
+    "id": "987141",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331030000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Reims"
+    ],
+    "scores": {
+      "55": "0-1",
+      "65": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-reims/987141/"
+  },
+  {
+    "id": "987128",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331180000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Brest"
+    ],
+    "scores": {
+      "86": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-brest/987128/"
+  },
+  {
+    "id": "987126",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Toulouse"
+    ],
+    "scores": {
+      "8": "0-1",
+      "73": "0-2",
+      "79": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-toulouse/987126/"
+  },
+  {
+    "id": "987129",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Montpellier"
+    ],
+    "scores": {
+      "72": "0-1",
+      "80": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-montpellier/987129/"
+  },
+  {
+    "id": "987139",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331200000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Nantes"
+    ],
+    "scores": {
+      "19": "0-1",
+      "72": "1-1",
+      "76": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-nantes/987139/"
+  },
+  {
+    "id": "987127",
+    "league": "Ligue 1",
+    "kickoffAt": 20240331220500,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Rennes"
+    ],
+    "scores": {
+      "71": "1-0",
+      "73": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-rennes/987127/"
+  },
+  {
+    "id": "987138",
+    "league": "Ligue 1",
+    "kickoffAt": 20240401014500,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "53": "0-1",
+      "85": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-paris-saint-germain/987138/"
+  },
+  {
+    "id": "987137",
+    "league": "Ligue 1",
+    "kickoffAt": 20240406020000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Marseille"
+    ],
+    "scores": {
+      "54": "1-0",
+      "71": "2-0",
+      "81": "2-1",
+      "84": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-marseille/987137/"
+  },
+  {
+    "id": "987142",
+    "league": "Ligue 1",
+    "kickoffAt": 20240406220000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Le Havre"
+    ],
+    "scores": {
+      "53": "0-0",
+      "58": "1-0",
+      "78": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-le-havre/987142/"
+  },
+  {
+    "id": "987125",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "32": "0-1",
+      "85": "1-1",
+      "45+6": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-clermont-foot/987125/"
+  },
+  {
+    "id": "987136",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407180000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Metz"
+    ],
+    "scores": {
+      "6": "0-1",
+      "12": "1-1",
+      "31": "2-1",
+      "38": "3-1",
+      "60": "4-1",
+      "74": "4-2",
+      "80": "4-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-metz/987136/"
+  },
+  {
+    "id": "987134",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407200000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Lorient"
+    ],
+    "scores": {
+      "54": "1-0",
+      "89": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-lorient/987134/"
+  },
+  {
+    "id": "987133",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407200000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Nice"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-nice/987133/"
+  },
+  {
+    "id": "987130",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407200000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Strasbourg"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-strasbourg/987130/"
+  },
+  {
+    "id": "987131",
+    "league": "Ligue 1",
+    "kickoffAt": 20240407220500,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Rennes"
+    ],
+    "scores": {
+      "25": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-rennes/987131/"
+  },
+  {
+    "id": "987143",
+    "league": "Ligue 1",
+    "kickoffAt": 20240408014500,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Lyon"
+    ],
+    "scores": {
+      "16": "1-0",
+      "75": "1-1",
+      "77": "1-2",
+      "90+7": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-lyon/987143/"
+  },
+  {
+    "id": "987275",
+    "league": "Ligue 1",
+    "kickoffAt": 20240413020000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Lens"
+    ],
+    "scores": {
+      "13": "0-1",
+      "34": "1-1",
+      "45+3": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-lens/987275/"
+  },
+  {
+    "id": "987256",
+    "league": "Ligue 1",
+    "kickoffAt": 20240413220000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Reims"
+    ],
+    "scores": {
+      "7": "0-1",
+      "44": "1-1",
+      "50": "2-1",
+      "90+2": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-reims/987256/"
+  },
+  {
+    "id": "987260",
+    "league": "Ligue 1",
+    "kickoffAt": 20240414020000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Toulouse"
+    ],
+    "scores": {
+      "20": "1-0",
+      "22": "1-1",
+      "32": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-toulouse/987260/"
+  },
+  {
+    "id": "987273",
+    "league": "Ligue 1",
+    "kickoffAt": 20240414180000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Nantes"
+    ],
+    "scores": {
+      "90+3": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-nantes/987273/"
+  },
+  {
+    "id": "987262",
+    "league": "Ligue 1",
+    "kickoffAt": 20240414200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Montpellier"
+    ],
+    "scores": {
+      "56": "1-1",
+      "45+5": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-montpellier/987262/"
+  },
+  {
+    "id": "987261",
+    "league": "Ligue 1",
+    "kickoffAt": 20240415014500,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Brest"
+    ],
+    "scores": {
+      "18": "1-0",
+      "60": "1-1",
+      "64": "1-2",
+      "67": "1-3",
+      "70": "2-3",
+      "79": "3-3",
+      "90+16": "4-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-brest/987261/"
+  },
+  {
+    "id": "987172",
+    "league": "Ligue 1",
+    "kickoffAt": 20240420020000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Lorient"
+    ],
+    "scores": {
+      "22": "1-0",
+      "53": "2-0",
+      "89": "3-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-lorient/987172/"
+  },
+  {
+    "id": "987177",
+    "league": "Ligue 1",
+    "kickoffAt": 20240420220000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Rennes"
+    ],
+    "scores": {
+      "66": "0-1",
+      "76": "0-2",
+      "90+1": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-rennes/987177/"
+  },
+  {
+    "id": "987165",
+    "league": "Ligue 1",
+    "kickoffAt": 20240421020000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "3": "1-0",
+      "61": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-clermont-foot/987165/"
+  },
+  {
+    "id": "987166",
+    "league": "Ligue 1",
+    "kickoffAt": 20240421200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Metz"
+    ],
+    "scores": {
+      "46": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-metz/987166/"
+  },
+  {
+    "id": "987164",
+    "league": "Ligue 1",
+    "kickoffAt": 20240421200000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Strasbourg"
+    ],
+    "scores": {
+      "12": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-strasbourg/987164/"
+  },
+  {
+    "id": "987167",
+    "league": "Ligue 1",
+    "kickoffAt": 20240421200000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Montpellier"
+    ],
+    "scores": {
+      "26": "0-1",
+      "66": "1-1",
+      "86": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-montpellier/987167/"
+  },
+  {
+    "id": "987162",
+    "league": "Ligue 1",
+    "kickoffAt": 20240421220500,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Monaco"
+    ],
+    "scores": {
+      "40": "0-1",
+      "48": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-monaco/987162/"
+  },
+  {
+    "id": "987176",
+    "league": "Ligue 1",
+    "kickoffAt": 20240422001500,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Marseille"
+    ],
+    "scores": {
+      "38": "0-1",
+      "82": "2-1",
+      "45+2": "1-1",
+      "90+6": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-marseille/987176/"
+  },
+  {
+    "id": "987189",
+    "league": "Ligue 1",
+    "kickoffAt": 20240422020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Lyon"
+    ],
+    "scores": {
+      "3": "1-0",
+      "6": "2-0",
+      "33": "3-0",
+      "37": "3-1",
+      "42": "4-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-lyon/987189/"
+  },
+  {
+    "id": "987257",
+    "league": "Ligue 1",
+    "kickoffAt": 20240425000000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "19": "0-1",
+      "22": "0-2",
+      "60": "0-3",
+      "73": "1-3",
+      "90": "1-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-paris-saint-germain/987257/"
+  },
+  {
+    "id": "987263",
+    "league": "Ligue 1",
+    "kickoffAt": 20240425020000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Nice"
+    ],
+    "scores": {
+      "13": "0-1",
+      "31": "1-1",
+      "56": "2-1",
+      "72": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-nice/987263/"
+  },
+  {
+    "id": "987266",
+    "league": "Ligue 1",
+    "kickoffAt": 20240425020000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Lille"
+    ],
+    "scores": {
+      "61": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-lille/987266/"
+  },
+  {
+    "id": "987178",
+    "league": "Ligue 1",
+    "kickoffAt": 20240427020000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Nantes"
+    ],
+    "scores": {
+      "2": "1-0",
+      "7": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-nantes/987178/"
+  },
+  {
+    "id": "987163",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Le Havre"
+    ],
+    "scores": {
+      "19": "0-1",
+      "29": "1-1",
+      "38": "1-2",
+      "61": "1-3",
+      "78": "2-3",
+      "90+5": "3-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-le-havre/987163/"
+  },
+  {
+    "id": "987181",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428180000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Lille"
+    ],
+    "scores": {
+      "23": "1-0",
+      "31": "1-1",
+      "44": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-lille/987181/"
+  },
+  {
+    "id": "987169",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428200000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Reims"
+    ],
+    "scores": {
+      "31": "1-0",
+      "33": "1-1",
+      "56": "2-1",
+      "79": "3-1",
+      "90": "4-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-reims/987169/"
+  },
+  {
+    "id": "987171",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428200000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Toulouse"
+    ],
+    "scores": {
+      "19": "1-0",
+      "59": "1-1",
+      "83": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-toulouse/987171/"
+  },
+  {
+    "id": "987170",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428200000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Nice"
+    ],
+    "scores": {
+      "18": "1-0",
+      "44": "1-1",
+      "52": "1-2",
+      "83": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-nice/987170/"
+  },
+  {
+    "id": "987175",
+    "league": "Ligue 1",
+    "kickoffAt": 20240428220500,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Brest"
+    ],
+    "scores": {
+      "4": "1-0",
+      "9": "2-0",
+      "11": "2-1",
+      "48": "2-2",
+      "54": "2-3",
+      "66": "2-4",
+      "68": "3-4",
+      "79": "4-4",
+      "90+6": "4-5"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-brest/987175/"
+  },
+  {
+    "id": "987191",
+    "league": "Ligue 1",
+    "kickoffAt": 20240429000000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Monaco"
+    ],
+    "scores": {
+      "1": "0-1",
+      "22": "1-1",
+      "26": "2-1",
+      "60": "2-2",
+      "84": "3-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-monaco/987191/"
+  },
+  {
+    "id": "987173",
+    "league": "Ligue 1",
+    "kickoffAt": 20240429020000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Lens"
+    ],
+    "scores": {
+      "1": "1-0",
+      "77": "1-1",
+      "85": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-lens/987173/"
+  },
+  {
+    "id": "987198",
+    "league": "Ligue 1",
+    "kickoffAt": 20240504000000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Montpellier"
+    ],
+    "scores": {
+      "27": "0-1",
+      "34": "1-1",
+      "81": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-montpellier/987198/"
+  },
+  {
+    "id": "987195",
+    "league": "Ligue 1",
+    "kickoffAt": 20240504020000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Lorient"
+    ],
+    "scores": {
+      "57": "1-0",
+      "81": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-lorient/987195/"
+  },
+  {
+    "id": "987193",
+    "league": "Ligue 1",
+    "kickoffAt": 20240504200000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Strasbourg"
+    ],
+    "scores": {
+      "24": "1-0",
+      "65": "2-0",
+      "86": "2-1",
+      "90+6": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-strasbourg/987193/"
+  },
+  {
+    "id": "987186",
+    "league": "Ligue 1",
+    "kickoffAt": 20240504220000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "16": "1-0",
+      "34": "1-1",
+      "37": "2-1",
+      "57": "3-1",
+      "87": "4-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-clermont-foot/987186/"
+  },
+  {
+    "id": "987200",
+    "league": "Ligue 1",
+    "kickoffAt": 20240505000000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Rennes"
+    ],
+    "scores": {
+      "17": "1-0",
+      "22": "1-1",
+      "45": "2-1",
+      "73": "2-2",
+      "90+3": "2-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-rennes/987200/"
+  },
+  {
+    "id": "987197",
+    "league": "Ligue 1",
+    "kickoffAt": 20240505020000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Nantes"
+    ],
+    "scores": {},
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-nantes/987197/"
+  },
+  {
+    "id": "987207",
+    "league": "Ligue 1",
+    "kickoffAt": 20240507020000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Lyon"
+    ],
+    "scores": {
+      "21": "1-0",
+      "37": "2-0",
+      "65": "2-1",
+      "82": "2-2",
+      "85": "3-2",
+      "88": "3-3",
+      "90+2": "3-4"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-lyon/987207/"
+  },
+  {
+    "id": "987238",
+    "league": "Ligue 1",
+    "kickoffAt": 20240511020000,
+    "status": "FT",
+    "teams": [
+      "Brest",
+      "Reims"
+    ],
+    "scores": {
+      "25": "0-1",
+      "45+2": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/brest-vs-reims/987238/"
+  },
+  {
+    "id": "987230",
+    "league": "Ligue 1",
+    "kickoffAt": 20240511020000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Le Havre"
+    ],
+    "scores": {
+      "12": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-le-havre/987230/"
+  },
+  {
+    "id": "987226",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Clermont Foot",
+      "Lyon"
+    ],
+    "scores": {
+      "53": "0-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/clermont-foot-vs-lyon/987226/"
+  },
+  {
+    "id": "987233",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Marseille",
+      "Lorient"
+    ],
+    "scores": {
+      "36": "1-0",
+      "41": "2-0",
+      "43": "2-1",
+      "54": "3-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/marseille-vs-lorient/987233/"
+  },
+  {
+    "id": "987246",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Montpellier",
+      "Monaco"
+    ],
+    "scores": {
+      "52": "0-1",
+      "65": "0-2",
+      "84": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/montpellier-vs-monaco/987246/"
+  },
+  {
+    "id": "987242",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Nantes",
+      "Lille"
+    ],
+    "scores": {
+      "8": "0-1",
+      "11": "0-2",
+      "54": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nantes-vs-lille/987242/"
+  },
+  {
+    "id": "987243",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Paris Saint-Germain",
+      "Toulouse"
+    ],
+    "scores": {
+      "8": "1-0",
+      "13": "1-1",
+      "68": "1-2",
+      "90+5": "1-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/paris-saint-germain-vs-toulouse/987243/"
+  },
+  {
+    "id": "987237",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Rennes",
+      "Lens"
+    ],
+    "scores": {
+      "48": "0-1",
+      "82": "1-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/rennes-vs-lens/987237/"
+  },
+  {
+    "id": "987239",
+    "league": "Ligue 1",
+    "kickoffAt": 20240513020000,
+    "status": "FT",
+    "teams": [
+      "Strasbourg",
+      "Metz"
+    ],
+    "scores": {
+      "54": "0-1",
+      "89": "1-1",
+      "90+1": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/strasbourg-vs-metz/987239/"
+  },
+  {
+    "id": "987204",
+    "league": "Ligue 1",
+    "kickoffAt": 20240516020000,
+    "status": "FT",
+    "teams": [
+      "Nice",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "18": "0-1",
+      "23": "0-2",
+      "32": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/nice-vs-paris-saint-germain/987204/"
+  },
+  {
+    "id": "987194",
+    "league": "Ligue 1",
+    "kickoffAt": 20240516020000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Marseille"
+    ],
+    "scores": {
+      "5": "0-0",
+      "33": "1-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-marseille/987194/"
+  },
+  {
+    "id": "987047",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Le Havre",
+      "Marseille"
+    ],
+    "scores": {
+      "64": "0-1",
+      "77": "0-2",
+      "90+1": "0-2",
+      "90+7": "1-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/le-havre-vs-marseille/987047/"
+  },
+  {
+    "id": "987057",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Lens",
+      "Montpellier"
+    ],
+    "scores": {
+      "4": "1-0",
+      "58": "2-1",
+      "74": "2-2",
+      "45+3": "2-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lens-vs-montpellier/987057/"
+  },
+  {
+    "id": "987049",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Lille",
+      "Nice"
+    ],
+    "scores": {
+      "10": "0-1",
+      "55": "1-1",
+      "73": "2-1",
+      "90+3": "2-2",
+      "90+7": "2-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lille-vs-nice/987049/"
+  },
+  {
+    "id": "987048",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Lorient",
+      "Clermont Foot"
+    ],
+    "scores": {
+      "38": "1-0",
+      "42": "2-0",
+      "54": "3-0",
+      "63": "4-0",
+      "90+1": "5-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lorient-vs-clermont-foot/987048/"
+  },
+  {
+    "id": "987045",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Lyon",
+      "Strasbourg"
+    ],
+    "scores": {
+      "39": "1-0",
+      "63": "1-1",
+      "77": "1-1",
+      "90+6": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/lyon-vs-strasbourg/987045/"
+  },
+  {
+    "id": "987046",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Metz",
+      "Paris Saint-Germain"
+    ],
+    "scores": {
+      "7": "0-1",
+      "12": "0-2"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/metz-vs-paris-saint-germain/987046/"
+  },
+  {
+    "id": "987050",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Monaco",
+      "Nantes"
+    ],
+    "scores": {
+      "6": "1-0",
+      "10": "2-0",
+      "24": "3-0",
+      "61": "4-0"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/monaco-vs-nantes/987050/"
+  },
+  {
+    "id": "987044",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Reims",
+      "Rennes"
+    ],
+    "scores": {
+      "48": "1-0",
+      "80": "2-0",
+      "90+5": "2-1"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/reims-vs-rennes/987044/"
+  },
+  {
+    "id": "987043",
+    "league": "Ligue 1",
+    "kickoffAt": 20240520020000,
+    "status": "FT",
+    "teams": [
+      "Toulouse",
+      "Brest"
+    ],
+    "scores": {
+      "48": "0-1",
+      "54": "0-2",
+      "90": "0-3"
+    },
+    "url": "https://www.livescore.com/en/football/france/ligue-1/toulouse-vs-brest/987043/"
+  },
+  {
     "id": "988969",
     "league": "Bundesliga",
     "kickoffAt": 20230819013000,

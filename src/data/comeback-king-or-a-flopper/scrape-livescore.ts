@@ -8,6 +8,7 @@ const limit = pLimit(10);
 // From https://www.livescore.com/en/football/england/premier-league/
 const leaguePaths = [
 	'england/premier-league',
+	'france/ligue-1',
 	'germany/bundesliga',
 	'italy/serie-a',
 	'spain/laliga'
@@ -74,14 +75,14 @@ async function scrapeScores(path: string, id: unknown, teams: string[]) {
 
 		await page.goto(url);
 
-		const scoreTable = await page.waitForSelector('div.Am', { timeout: 10000 });
+		const scoreTable = await page.waitForSelector('div.Rl', { timeout: 10000 });
 
 		const scores = await scoreTable?.evaluate((el) =>
 			// @ts-ignore
-			[...el.querySelectorAll('div.ls')]
+			[...el.querySelectorAll('div.ts')]
 				.map((event) => [
-					event.querySelector('span.qs').innerText.replace(`'`, '').replaceAll(' ', ''),
-					event.querySelector('div.ps').innerText.replaceAll(' ', '')
+					event.querySelector('span.ys').innerText.replace(`'`, '').replaceAll(' ', ''),
+					event.querySelector('div.xs').innerText.replaceAll(' ', '')
 				])
 				.filter((event) => event[1])
 				.reduce((obj, [mins, score]) => ({ ...obj, [mins]: score }), {})
