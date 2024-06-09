@@ -14,8 +14,7 @@
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
     "lint": "eslint . --fix",
-    "format": "prettier --write .",
-    "deploy": "netlify deploy --prod --dir=build"
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "@rollup/plugin-dsv": "^3.0.4",
