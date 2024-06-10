@@ -33,6 +33,6 @@
 
 <style lang="postcss">
 	section {
-		@apply flex min-h-screen flex-col justify-center;
+		@apply flex min-h-dvh flex-col justify-center;
 	}
 </style>

@@ -14,7 +14,7 @@
 	image="/th-covid-speech/og2.png"
 />
 
-<div class="relative flex h-screen flex-col lg:flex-row">
+<div class="relative flex h-dvh flex-col lg:flex-row">
 	<div class="h-[32vh] bg-gray-900 lg:h-auto lg:flex-1">
 		<Chart bind:activeContentId on:selectspeech={({ detail: id }) => scrollToSpeech(id)} />
 	</div>

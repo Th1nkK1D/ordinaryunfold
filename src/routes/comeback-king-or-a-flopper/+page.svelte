@@ -41,9 +41,9 @@
 />
 
 <main
-	class="h-screen snap-y snap-proximity flex-col overflow-x-hidden overflow-y-scroll scroll-smooth"
+	class="h-dvh snap-y snap-proximity flex-col overflow-x-hidden overflow-y-scroll scroll-smooth"
 >
-	<div class="relative h-screen">
+	<div class="relative h-dvh">
 		<StripeBackground class="absolute inset-0" />
 		<section
 			class="absolute inset-0 flex flex-col items-center justify-evenly gap-8 text-center text-white md:items-start md:justify-center md:gap-12 md:text-left"
@@ -87,7 +87,7 @@
 		</section>
 	</div>
 
-	<div id="explore" class="relative flex h-screen flex-col bg-gray-100">
+	<div id="explore" class="relative flex h-dvh flex-col bg-gray-100">
 		{#if isLoading}
 			<div
 				transition:fade

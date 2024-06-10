@@ -80,7 +80,7 @@
 	}
 </script>
 
-<div class="fixed -z-10 h-screen w-full bg-gray-900">
+<div class="fixed -z-10 h-dvh w-full bg-gray-900">
 	<canvas
 		class="h-full w-full {activePeopleMask.length === 0 ? 'opacity-60' : ''}"
 		bind:this={canvas}

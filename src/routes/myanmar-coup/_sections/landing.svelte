@@ -15,7 +15,7 @@
 	});
 </script>
 
-<section class="flex min-h-screen flex-col justify-between p-8 md:p-20">
+<section class="flex min-h-dvh flex-col justify-between p-8 md:p-20">
 	<Logo />
 	<h1 class="font-head text-5xl font-bold md:text-9xl">LOSSES IN<br />MYANMAR</h1>
 	<div class="font-head md:space-y-2">

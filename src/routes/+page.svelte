@@ -11,7 +11,7 @@
 
 <BlurryBackground />
 
-<div class=" min-h-screen p-4 text-gray-100">
+<div class=" min-h-dvh p-4 text-gray-100">
 	<div class="mx-auto flex w-full max-w-2xl flex-col">
 		<Hero />
 	</div>

@@ -57,7 +57,7 @@
 	image="/whats-in-the-city/og.png"
 />
 
-<div class="relative mx-auto flex h-screen w-full max-w-screen-2xl flex-col space-y-1 p-3 md:p-14">
+<div class="relative mx-auto flex h-dvh w-full max-w-screen-2xl flex-col space-y-1 p-3 md:p-14">
 	<div class="flex justify-center md:justify-normal">
 		<Logo dark />
 	</div>

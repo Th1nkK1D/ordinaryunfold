@@ -136,7 +136,7 @@
 <div
 	class="flex items-center justify-center py-12 transition-[min-height] duration-[1500ms] ease-in-out md:py-24 {isIntroAnimationFinished
 		? 'min-h-[360px] md:min-h-[520px]'
-		: 'min-h-screen'}"
+		: 'min-h-dvh'}"
 >
 	<div class="flex w-full max-w-2xl flex-col space-y-8">
 		<svg class="h-full w-full opacity-0" bind:this={svgEl} viewBox="0 0 703 480" fill="none">

@@ -41,11 +41,11 @@
 		{/each}
 	</Scrollama>
 
-	<section class="flex h-screen flex-col items-center justify-center p-8 text-center">
+	<section class="flex h-dvh flex-col items-center justify-center p-8 text-center">
 		<h2><mark>The fight</mark> is&nbsp;not&nbsp;over.</h2>
 	</section>
 
-	<section class="flex h-screen flex-col space-y-12 p-4 text-center">
+	<section class="flex h-dvh flex-col space-y-12 p-4 text-center">
 		<div class="flex flex-1 flex-col items-center justify-center space-y-4">
 			<svg width="92" height="92" viewBox="0 0 92 92" fill="none">
 				<path
