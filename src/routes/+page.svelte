@@ -19,6 +19,14 @@
 	<div class="md:mb-18 mx-auto mb-12 flex w-full max-w-4xl flex-col space-y-24 md:space-y-36">
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 			<ProjectCard
+				title="Comeback King or a Flopper"
+				description="Explore the top-five 2023/24 European football league teams. How many wins, draws, or lose they get in each minute of the game?"
+				href="/comeback-king-or-a-flopper/"
+				image="/comeback-king-or-a-flopper/og.png"
+				date="10 Jun 2024"
+				lang="EN"
+			/>
+			<ProjectCard
 				title="What's in the city?"
 				description="Explore different places in six example cities of Thailand. What kind of place does Thai flavor? Is it easy to be reached? What is the difference in each city?"
 				href="/whats-in-the-city/"
