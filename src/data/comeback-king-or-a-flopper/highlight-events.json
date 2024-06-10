@@ -3,13 +3,10 @@
     "90": "From 3 losses at 90', Leverkusen used 7 minutes of final extra-time to become an unbeaten champion."
   },
   "Bochum": {
-    "90": "Bochum lost 7 points in 7 minutes of final extra-time, forcing them to relegation play-off with just one point short."
+    "90": "Bochum lost 9 points in 7 minutes of final extra-time, forcing them to relegation play-off with just one point short."
   },
   "Arsenal": {
-    "5": "Together with Nottingham Forest, Arsenal led the league at 5'."
-  },
-  "Nottingham Forest": {
-    "5": "Together with Arsenal, Nottingham Forest led the league at 5' before a decline."
+    "6": "Quick shooter: Arsenal had six wins and led the league table at 6'."
   },
   "Crystal Palace": {
     "75": "Crystal Palace lost 14 points after 75'. They would finish 6th if they can keep the momentum."
@@ -27,7 +24,7 @@
     "78": "Real Madrid's unbeaten run was stopped by a single loss in El Derbi by their city rival, Atletico Madrid."
   },
   "Barcelona": {
-    "78": "Despite slow starts, Barcelona gain huge 21 points from 77' onward."
+    "77": "Despite slow starts, Barcelona gain huge 21 points after 77'"
   },
   "Paris Saint-Germain": {
     "45": "PSG took control early and well maintained the lead until the full-time."

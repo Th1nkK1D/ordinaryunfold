@@ -28,7 +28,7 @@ leagues.forEach((league) => {
 	console.log({ maxFirstExtraTime, maxSecondExtraTime });
 
 	const timeScale = [
-		...createStringRange(0, 45),
+		...createStringRange(1, 45),
 		...createStringRange(1, maxFirstExtraTime).map((num) => `45+${num}`),
 		...createStringRange(46, 90),
 		...createStringRange(1, maxSecondExtraTime).map((num) => `90+${num}`)

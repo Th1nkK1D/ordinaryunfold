@@ -39,8 +39,7 @@
 		area<number>()
 			.x((_, i) => x(i))
 			.y0(height / 2)
-			.y1((count) => y(count))
-			.curve(curveBasis);
+			.y1((count) => y(count));
 
 	$: events = Object.entries(
 		(highlightEvents as Record<string, Record<string, string>>)[team.name] || {}
@@ -73,7 +72,7 @@
 
 	function updateCrosshair(clientX: number) {
 		mouseX = Math.min(Math.max(0, clientX), width);
-		activeTimeIndex = Math.floor(x.invert(mouseX));
+		activeTimeIndex = Math.round(x.invert(mouseX));
 	}
 
 	function removeCrosshair() {
@@ -107,7 +106,7 @@
 			range={[{ minutes: '90', label: `90'` }, { minutes: timeScale.at(-1) || '90' }]}
 		/>
 
-		{#each ['15', '30', '60', '75'] as minutes}
+		{#each ['1', '15', '30', '60', '75'] as minutes}
 			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-70" />
 		{/each}
 
