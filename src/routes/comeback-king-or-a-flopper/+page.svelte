@@ -20,6 +20,7 @@
 	let isLoading = true;
 	let league: LeagueStats;
 	let activeTimeIndex: number = -1;
+	let chartSection: HTMLElement;
 
 	onMount(() => {
 		loadSelectedLeagueData();
@@ -40,9 +41,7 @@
 	image="/{PROJECT_PATH}/og.png"
 />
 
-<main
-	class="h-dvh snap-y snap-proximity flex-col overflow-x-hidden overflow-y-scroll scroll-smooth"
->
+<main class="h-dvh flex-col overflow-x-hidden overflow-y-scroll md:snap-y md:snap-proximity">
 	<div class="relative h-dvh">
 		<StripeBackground class="absolute inset-0" />
 		<section
@@ -79,15 +78,18 @@
 				> teams perform in 90 minutes and beyond. How many wins, draws, or losses, from the kick-off
 				to the final whistle?
 			</p>
-			<a href="#explore" class="md:self-end">
+			<button
+				on:click={() => chartSection.scrollIntoView({ behavior: 'smooth' })}
+				class="md:self-end"
+			>
 				<svg viewBox="0 0 24 24" class="w-8 fill-current opacity-60 hover:opacity-100 md:w-10">
 					<path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
 				</svg>
-			</a>
+			</button>
 		</section>
 	</div>
 
-	<div id="explore" class="relative flex h-dvh flex-col bg-gray-100">
+	<div bind:this={chartSection} class="relative flex h-dvh flex-col bg-gray-100">
 		{#if isLoading}
 			<div
 				transition:fade

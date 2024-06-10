@@ -26,7 +26,7 @@
 	use:floatingRef
 	on:mouseenter={() => (isShowingTooltip = true)}
 	on:mouseleave={() => (isShowingTooltip = false)}
-	class="flex gap-1 whitespace-nowrap break-words text-lg text-gray-400 md:mb-2 md:text-right md:text-xl {$$restProps.class}"
+	class="flex gap-1 whitespace-nowrap break-words text-gray-400 md:mb-2 md:text-right md:text-xl {$$restProps.class}"
 >
 	{#if activeTimeIndex >= 0}
 		<span class="font-bold text-gray-800">{timeScale[activeTimeIndex]}'</span> :
