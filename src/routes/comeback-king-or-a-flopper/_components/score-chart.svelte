@@ -30,6 +30,7 @@
 		middleware: [flip()]
 	});
 
+	$: midY = height / 2;
 	$: x = scaleLinear([0, timeScale.length - 1], [0, width]);
 	$: xFromMinutes = (minutes: string) => x(timeScale.indexOf(minutes));
 	$: upperY = scaleLinear([0, maxMatch], [height / 2, 0]);
@@ -92,6 +93,7 @@
 	use:clickOutside={removeCrosshair}
 >
 	<svg class="absolute inset-0" {width} {height}>
+		<!-- extra time boxes -->
 		<RangeBoxX
 			{height}
 			{xFromMinutes}
@@ -106,10 +108,12 @@
 			range={[{ minutes: '90', label: `90'` }, { minutes: timeScale.at(-1) || '90' }]}
 		/>
 
+		<!-- major minutes grid -->
 		{#each ['1', '15', '30', '60', '75'] as minutes}
 			<MinutesLine {height} {xFromMinutes} {minutes} label="{minutes}'" class="opacity-70" />
 		{/each}
 
+		<!-- event lines -->
 		{#each events as [minutes]}
 			<MinutesLine
 				{height}
@@ -119,12 +123,25 @@
 			/>
 		{/each}
 
+		<!-- areas -->
 		<path bind:this={winPath} class="fill-green-600" />
 		<path bind:this={lostPath} class="fill-red-400" />
 		<path bind:this={drawLowerPath} class="fill-blue-500" />
 		<path bind:this={drawUpperPath} class="fill-blue-500" />
-		<line x1="0" y1={height / 2} x2={width} y2={height / 2} class="stroke-blue-500 stroke-1" />
+		<line x1="0" y1={midY} x2={width} y2={midY} class="stroke-blue-500 stroke-1" />
 
+		<!-- kick-off and full-time mark -->
+		<g class="fill-white stroke-white stroke-1 opacity-70" font-size="13">
+			<circle cx="0" cy={midY} r="5" class="fill-none" />
+			<line x1="6" y1={midY} x2="12" y2={midY} />
+			<text x="16" y={midY + 4} class="stroke-none">kick-off</text>
+
+			<text x={width - 16} y={midY + 4} text-anchor="end" class="stroke-none">full-time</text>
+			<line x1={width - 12} y1={midY} x2={width} y2={midY} />
+			<path d="M{width - 5} {midY - 5} L{width} {midY} L{width - 5} {midY + 5}" class="fill-none" />
+		</g>
+
+		<!-- active minute crosshair -->
 		<line x1={mouseX} y1="0" x2={mouseX} y2={height} class="stroke-gray-800 stroke-1" />
 	</svg>
 
