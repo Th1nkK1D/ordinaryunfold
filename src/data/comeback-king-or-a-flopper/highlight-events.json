@@ -12,13 +12,13 @@
     "5": "Together with Arsenal, Nottingham Forest led the league at 5' before a decline."
   },
   "Crystal Palace": {
-    "75": "Crystal Palace lost 14 points since the 75'. They would finish 6th if they can keep the momentum."
+    "75": "Crystal Palace lost 14 points after 75'. They would finish 6th if they can keep the momentum."
   },
   "Liverpool": {
     "46": "Despite a slow 1st half, Liverpool gained the most points in the 2nd half (25 points)."
   },
   "Manchester City": {
-    "45": "Manchester City didn't look good at the 45', but they won the league nonetheless."
+    "45": "Manchester City didn't look like the best at 45', but they won the league nonetheless."
   },
   "Girona": {
     "45": "Girona would win the league if football was played for 45 minutes."
@@ -27,7 +27,7 @@
     "78": "Real Madrid's unbeaten run was stopped by a single loss in El Derbi by their city rival, Atletico Madrid."
   },
   "Barcelona": {
-    "78": "Barcelona gain huge 21 points from the 77' onward."
+    "78": "Despite slow starts, Barcelona gain huge 21 points from 77' onward."
   },
   "Paris Saint-Germain": {
     "45": "PSG took control early and well maintained the lead until the full-time."
@@ -36,7 +36,7 @@
     "19": "With 26 points at the 19' that could get them relegated, Brest bounced back beautifully to finish 3rd."
   },
   "Inter": {
-    "46": "Inter was dominating. They led the runner-up by 17 points in 1st half and didn't throw any points away."
+    "46": "Inter was dominating. They led the runner-up by 17 points at half-time and didn't throw any points away."
   },
   "Lazio": {
     "90+5": "Lazio ended full-time with the same points as half-time."
@@ -48,6 +48,6 @@
     "90+6": "Monza games were not so dramatic. They also ended full-time with the same points as half-time."
   },
   "Sassuolo": {
-    "90+6": "Upsettingly, good performances in the 1st half couldn't save Sassuolo from relegation.."
+    "90+6": "Upsettingly, good performances in the 1st half couldn't save Sassuolo from relegation."
   }
 }

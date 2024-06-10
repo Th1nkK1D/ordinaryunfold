@@ -35,7 +35,7 @@
 
 <Metadata
 	title="Comeback King or a Flopper"
-	description="Explore how the top-five European league in 2023/24 teams perform in each minute of the game"
+	description="Explore the top-five 2023/24 European football league teams. How many wins, draws, or lose they get in each minute of the game?"
 	path="/{PROJECT_PATH}"
 	image="/{PROJECT_PATH}/og.png"
 />
@@ -75,8 +75,9 @@
 				Bundesliga champion in 2023/24. Let's explore how the <ExternalLink
 					class="underline"
 					href="https://www.uefa.com/nationalassociations/uefarankings/country/?year=2024"
-					>top-five European league</ExternalLink
-				> teams perform in each minute. Win, draw, or lose, from the kick-off to the final whistle.
+					>top-five European football league</ExternalLink
+				> teams perform in 90 minutes and beyond. How many wins, draws, or losses, from the kick-off
+				to the final whistle?
 			</p>
 			<a href="#explore" class="md:self-end">
 				<svg viewBox="0 0 24 24" class="w-8 fill-current opacity-60 hover:opacity-100 md:w-10">
