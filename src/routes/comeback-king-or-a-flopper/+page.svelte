@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import type { LeagueStats } from '../../data/comeback-king-or-a-flopper/model';
-	import ScoreChart from './_components/score-chart.svelte';
+	import ScoreChart, { type TutorialStep } from './_components/score-chart.svelte';
 	import Logo from '../../components/logo.svelte';
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
@@ -20,6 +20,7 @@
 	let isLoading = true;
 	let league: LeagueStats;
 	let activeTimeIndex: number = -1;
+	let tutorialStep: TutorialStep = 0;
 	let chartSection: HTMLElement;
 
 	onMount(() => {
@@ -125,10 +126,23 @@
 						{teamIndex + 1}. {team.name}
 					</h2>
 				</div>
-				<StatsCounter class="flex-1" {team} {timeScale} {activeTimeIndex} />
+				<StatsCounter
+					class="flex-1"
+					{team}
+					{timeScale}
+					{activeTimeIndex}
+					isShowingStats={tutorialStep !== 0}
+				/>
 			</section>
 			{#key league.teams[0].name}
-				<ScoreChart class="flex-1" {team} {timeScale} maxMatch={team.D[0]} bind:activeTimeIndex />
+				<ScoreChart
+					class="flex-1"
+					{team}
+					{timeScale}
+					maxMatch={team.D[0]}
+					bind:activeTimeIndex
+					bind:tutorialStep
+				/>
 			{/key}
 			<section class="flex-row">
 				<TeamNavigation bind:teamIndex {teams} />
