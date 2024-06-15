@@ -30,10 +30,9 @@
 	class="flex gap-1 whitespace-nowrap break-words text-gray-400 md:mb-2 md:text-right md:text-xl {$$restProps.class}"
 >
 	{#if activeTimeIndex >= 0}
-		<span class="font-bold text-gray-800">{timeScale[activeTimeIndex]}'</span>
+		<span class="font-bold text-gray-800">{timeScale[activeTimeIndex]}' : </span>
 	{/if}
 	{#if isShowingStats}
-		:
 		<span class="text-green-600"><b>{wins}</b>W</span> +
 		<span class="text-blue-500"><b>{draws}</b>D</span> +
 		<span class="text-red-400"><b>{losses}</b>L</span> =
