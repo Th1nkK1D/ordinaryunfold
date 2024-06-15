@@ -102,13 +102,16 @@
 		{#if league}
 			{@const { teams, timeScale } = league}
 			{@const team = teams[teamIndex]}
-			<section
-				class="flex-col items-center gap-2 md:flex-row md:items-end md:justify-between md:gap-4"
-			>
-				<div class="flex w-full flex-col items-center gap-4 overflow-x-clip md:items-start">
-					<div class="flex flex-row items-end gap-3 font-head">
+			<section class="flex flex-col gap-6 !pb-6 {tutorialStep === 0 ? 'invisible' : ''}">
+				<div
+					class="flex flex-col items-center gap-2 md:flex-row md:items-end md:justify-between md:gap-4"
+				>
+					<div class="flex w-full flex-col items-center gap-4 overflow-x-clip md:items-start">
 						<select
-							class="cursor-pointer border-b border-solid border-gray-300 bg-transparent pr-1 md:text-lg"
+							class="cursor-pointer border-b border-solid border-gray-300 bg-transparent pr-1 font-head md:text-lg {tutorialStep !==
+							null
+								? 'invisible'
+								: ''}"
 							bind:value={selectedLeague}
 							on:change={loadSelectedLeagueData}
 						>
@@ -118,21 +121,21 @@
 							<option value="premier-league">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League</option>
 							<option value="serie-a">🇮🇹 Seria A</option>
 						</select>
-						<p class="text-gray-400">2023/24</p>
+						<h2
+							class="bebas-neue w-full whitespace-nowrap text-center text-3xl md:text-left md:text-6xl"
+						>
+							{teamIndex + 1}. {team.name}
+						</h2>
 					</div>
-					<h2
-						class="bebas-neue w-full whitespace-nowrap text-center text-3xl md:text-left md:text-6xl"
-					>
-						{teamIndex + 1}. {team.name}
-					</h2>
+					<StatsCounter
+						class="flex-1"
+						{team}
+						{timeScale}
+						{activeTimeIndex}
+						isShowingStats={tutorialStep !== 0}
+					/>
 				</div>
-				<StatsCounter
-					class="flex-1"
-					{team}
-					{timeScale}
-					{activeTimeIndex}
-					isShowingStats={tutorialStep !== 0}
-				/>
+				<TeamNavigation bind:teamIndex {teams} class={tutorialStep !== null ? 'invisible' : ''} />
 			</section>
 			{#key league.teams[0].name}
 				<ScoreChart
@@ -144,9 +147,6 @@
 					bind:tutorialStep
 				/>
 			{/key}
-			<section class="flex-row">
-				<TeamNavigation bind:teamIndex {teams} />
-			</section>
 		{/if}
 	</div>
 

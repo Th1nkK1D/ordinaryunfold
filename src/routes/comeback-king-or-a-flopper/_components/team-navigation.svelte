@@ -5,7 +5,7 @@
 	export let teams: TeamStats[];
 </script>
 
-<div class="flex w-full flex-row">
+<div class="flex w-full flex-row {$$restProps.class}">
 	{#if teamIndex > 0}
 		<button on:click={() => teamIndex--}>
 			<svg viewBox="0 0 24 24">
@@ -27,10 +27,10 @@
 
 <style lang="postcss">
 	button {
-		@apply flex flex-row items-center text-gray-500 hover:text-gray-900;
+		@apply flex flex-row items-center gap-1 py-2 text-gray-600 hover:text-black;
 	}
 	svg {
-		@apply size-10;
+		@apply -m-2 size-8;
 	}
 	path {
 		@apply fill-current;

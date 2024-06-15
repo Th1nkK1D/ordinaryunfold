@@ -23,7 +23,7 @@
 				description="Explore the top-five 2023/24 European football league teams. How many wins, draws, or lose they get in each minute of the game?"
 				href="/comeback-king-or-a-flopper/"
 				image="/comeback-king-or-a-flopper/og.png"
-				date="10 Jun 2024"
+				date="15 Jun 2024"
 				lang="EN"
 			/>
 			<ProjectCard
