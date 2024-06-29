@@ -1,4 +1,9 @@
-import { CANDIDATES_URL, TEXTS_DIR, type OfficialCandidate } from './config';
+import {
+	PROVINCE_CANDIDATES_OUTPUT,
+	CANDIDATES_URL,
+	TEXTS_DIR,
+	type OfficialCandidate
+} from './config';
 import { csvFormat } from 'd3-dsv';
 import { readdirSync } from 'fs';
 
@@ -62,12 +67,11 @@ const output = candidates.map((c) => {
 		group: c.job_group,
 		education,
 		experience,
-		imageUrl: c.image_url,
 		documentUrl: c.pdf_url
 	};
 });
 
-await Bun.write('candidates.csv', csvFormat(output));
+await Bun.write(PROVINCE_CANDIDATES_OUTPUT, csvFormat(output));
 
 console.log(`total: ${output.length}`);
 console.log(`with education: ${output.filter((d) => d.education).length}`);

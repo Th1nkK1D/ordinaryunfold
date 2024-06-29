@@ -1,5 +1,7 @@
 export const IMAGES_DIR = 'images';
 export const TEXTS_DIR = 'texts';
+export const PROVINCE_CANDIDATES_OUTPUT = 'province-candidates.csv';
+export const NATIONAL_CANDIDATES_OUTPUT = 'national-candidates.csv';
 
 export const CANDIDATES_URL =
 	'https://github.com/PanJ/senate67/raw/main/district-candidates-round3-1718623978749.json';
