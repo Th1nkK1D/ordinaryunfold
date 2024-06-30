@@ -1,1 +1,5 @@
-<button on:click class="border-[2px] px-5 py-3 font-bold {$$restProps.class}"><slot /></button>
+<button
+	on:click
+	class="rounded-sm px-5 py-3 font-bold shadow-lg hover:brightness-110 {$$restProps.class}"
+	><slot /></button
+>

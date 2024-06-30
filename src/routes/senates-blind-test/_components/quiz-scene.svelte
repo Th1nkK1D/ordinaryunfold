@@ -93,17 +93,23 @@
 	}
 </script>
 
-<div class="mx-auto flex max-w-screen-lg flex-col gap-4 px-3 py-16">
+<div class="mx-auto flex max-w-screen-lg flex-col gap-4 px-3 py-6 md:pt-16">
 	<h2 class="font-charmonman">
-		<span class="text-xl">กลุ่มที่ {formatThaiNumber(currentGroup)}</span>
+		<span class="text-xl leading-normal">กลุ่มที่ {formatThaiNumber(currentGroup)}</span>
 		<br />
-		<span class="text-4xl">{candidatesGroups?.get(currentGroup)?.name}</span>
+		<span class="text-3xl leading-normal md:text-4xl"
+			>{candidatesGroups?.get(currentGroup)?.name}</span
+		>
 	</h2>
-	<div class="flex flex-row justify-between">
-		<p>ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว. ? (๑ คะแนน)</p>
-		<p>คะแนนสะสม: {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})</p>
+	<div class="flex flex-col-reverse justify-between gap-3 md:flex-row md:gap-0">
+		<p>
+			{formatThaiNumber(totalQuizCompleted + 1)}. ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว.? (๑ คะแนน)
+		</p>
+		<p class="opacity-50">
+			คะแนนสะสม: {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})
+		</p>
 	</div>
-	<div class="grid grid-cols-2 gap-6">
+	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
 		{#each currentCandidates as candidate, i}
 			<Card
 				heading={isRevealed
@@ -127,17 +133,12 @@
 			/>
 		{/each}
 	</div>
-
-	<div class="fixed inset-x-0 bottom-12 flex justify-center">
+	<div class="sticky inset-x-0 bottom-12 mt-6 flex justify-center">
 		{#if isRevealed}
-			<Button
-				class="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-				on:click={startNextQuiz}>ข้อต่อไป ></Button
-			>
+			<Button class="bg-gray-700 text-white" on:click={startNextQuiz}>ข้อต่อไป ></Button>
 		{:else if selectedChoice !== null}
-			<Button
-				class="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-				on:click={submitAnswer}>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
+			<Button class="bg-blue-600 text-white" on:click={submitAnswer}
+				>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
 			>
 		{/if}
 	</div>

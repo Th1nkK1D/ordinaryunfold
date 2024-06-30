@@ -9,7 +9,7 @@
 </script>
 
 <div
-	class="relative h-lvh overflow-hidden transition-colors duration-700 ease-in-out {isGameStarted
+	class="relative min-h-lvh transition-colors duration-700 ease-in-out {isGameStarted
 		? 'bg-gray-200'
 		: 'bg-[#2B815F]'}"
 >
