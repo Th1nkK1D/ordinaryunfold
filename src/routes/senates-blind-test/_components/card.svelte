@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let heading: string;
-	export let body: string;
-	export let state: 'selected' | 'corrected' | 'incorrected' | 'revealed' | null;
+	export let body = '';
+	export let state: 'selected' | 'corrected' | 'incorrected' | 'revealed' | null = null;
 	export let disabled = false;
 	export let link = '';
 </script>
@@ -9,7 +9,7 @@
 <button
 	on:click
 	{disabled}
-	class="flex max-w-lg flex-col gap-3 overflow-hidden rounded border-[3px] bg-white p-3 text-left shadow-lg transition-all md:p-4 {disabled
+	class="flex max-w-lg flex-col gap-3 overflow-hidden rounded border-[3px] bg-white p-3 text-left text-black shadow-lg transition-all md:p-4 {disabled
 		? ''
 		: 'hover:shadow-xl'} {state === 'selected'
 		? 'border-blue-600'
@@ -17,7 +17,8 @@
 			? 'border-green-600'
 			: state === 'incorrected'
 				? 'border-red-500'
-				: 'border-white'}"
+				: 'border-white'} {$$restProps.class}"
+	style={$$restProps.style}
 >
 	<div class="flex w-full flex-row items-start justify-between">
 		<h3 class="font-charmonman text-2xl font-bold md:text-3xl">

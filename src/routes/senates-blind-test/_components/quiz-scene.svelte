@@ -6,8 +6,8 @@
 
 	const WINNING_CANDIDATE_PER_QUIZ = 1;
 	const LOSING_CANDIDATE_PER_QUIZ = 3;
-	const choiceLabels = ['ก.', 'ข.', 'ค.', 'ง.'];
 
+	export let choiceLabels: string[];
 	export let candidates: Candidate[];
 	export let groups: Group[];
 

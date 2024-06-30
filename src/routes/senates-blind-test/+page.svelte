@@ -1,6 +1,9 @@
 <script lang="ts">
+	import Metadata from '../../components/metadata.svelte';
 	import IntroScene from './_components/intro-scene.svelte';
 	import QuizScene from './_components/quiz-scene.svelte';
+
+	const choiceLabels = ['ก.', 'ข.', 'ค.', 'ง.'];
 
 	export let data;
 	$: ({ candidates, groups } = data);
@@ -8,15 +11,21 @@
 	let isGameStarted = false;
 </script>
 
+<Metadata
+	title="Senates Blind Test"
+	description="เกมทายใจ ใครเป็นผู้ชนะการเลือกตั้งสว. จากเอกสารแนะนำตัว ๕ บรรทัด"
+	path="/senates-blind-test"
+/>
+
 <div
-	class="relative min-h-lvh transition-colors duration-700 ease-in-out {isGameStarted
-		? 'bg-gray-200'
-		: 'bg-[#2B815F]'}"
+	class="relative min-h-lvh border-[6px] transition-colors duration-700 ease-in-out md:border-8 {isGameStarted
+		? 'border-gray-400 bg-gray-200'
+		: 'border-white/15 bg-[#2B815F]'}"
 >
 	{#if isGameStarted && candidates}
-		<QuizScene {candidates} {groups} />
+		<QuizScene {candidates} {groups} {choiceLabels} />
 	{:else}
-		<IntroScene on:start={() => (isGameStarted = true)} />
+		<IntroScene {choiceLabels} on:start={() => (isGameStarted = true)} />
 	{/if}
 </div>
 
