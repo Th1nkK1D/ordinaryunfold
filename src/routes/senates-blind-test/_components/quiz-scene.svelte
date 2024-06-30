@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { createEventDispatcher, onMount } from 'svelte';
 	import JSConfetti from 'js-confetti';
 	import type { Candidate, Group } from '../+page.server';
 	import Button from './button.svelte';
@@ -11,6 +11,8 @@
 	export let choiceLabels: string[];
 	export let candidates: Candidate[];
 	export let groups: Group[];
+
+	const dispatch = createEventDispatcher();
 
 	let candidatesGroups: Map<
 		number,
@@ -98,7 +100,7 @@
 	}
 </script>
 
-<div class="mx-auto flex max-w-screen-lg flex-col gap-4 px-3 py-6 md:pt-16">
+<div class="relative mx-auto my-6 flex max-w-screen-lg flex-col gap-4 px-3 md:mt-16">
 	<h2 class="font-charmonman">
 		<span class="text-xl leading-normal">กลุ่มที่ {formatThaiNumber(currentGroup)}</span>
 		<br />
@@ -111,10 +113,10 @@
 			{formatThaiNumber(totalQuizCompleted + 1)}. ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว.? (๑ คะแนน)
 		</p>
 		<p class="opacity-50">
-			คะแนนสะสม: {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})
+			คะแนน {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})
 		</p>
 	</div>
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 		{#each currentCandidates as candidate, i}
 			<Card
 				heading={isRevealed
@@ -147,4 +149,20 @@
 			>
 		{/if}
 	</div>
+	<button
+		class="absolute right-3 top-0 text-gray-400 hover:text-red-600"
+		on:click={() => dispatch('exit')}
+	>
+		<svg class="w-5 md:w-6" viewBox="0 0 14 14"
+			><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+				><path
+					d="M5.214 1.643c0-.493.4-.893.893-.893h6.25c.493 0 .893.4.893.893v10.714c0 .493-.4.893-.893.893H9.232"
+				/><path
+					d="M6.553 5.438a1.563 1.563 0 1 0 3.126 0a1.563 1.563 0 1 0-3.126 0m-4.017.669h1.818a1 1 0 0 1 .707.293L7.6 8.94a1 1 0 0 0 .707.292h1.371"
+				/><path d="M6.107 7.446L3.721 9.832a1 1 0 0 1-.707.293H.75" /><path
+					d="m4.321 9.232l1.493 1.493a1 1 0 0 1 .293.707v1.818"
+				/></g
+			></svg
+		>
+	</button>
 </div>

@@ -18,12 +18,12 @@
 />
 
 <div
-	class="relative min-h-lvh border-[6px] transition-colors duration-700 ease-in-out md:border-8 {isGameStarted
+	class="relative min-h-lvh border-[6px] transition-colors duration-500 md:border-8 {isGameStarted
 		? 'border-gray-400 bg-gray-200'
 		: 'border-white/15 bg-[#2B815F]'}"
 >
 	{#if isGameStarted && candidates}
-		<QuizScene {candidates} {groups} {choiceLabels} />
+		<QuizScene {candidates} {groups} {choiceLabels} on:exit={() => (isGameStarted = false)} />
 	{:else}
 		<IntroScene {choiceLabels} on:start={() => (isGameStarted = true)} />
 	{/if}
