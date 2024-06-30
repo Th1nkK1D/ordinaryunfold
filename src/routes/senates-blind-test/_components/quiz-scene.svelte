@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import JSConfetti from 'js-confetti';
 	import type { Candidate, Group } from '../+page.server';
 	import Button from './button.svelte';
 	import Card from './card.svelte';
@@ -26,6 +27,7 @@
 	let currentCandidates: Candidate[] = [];
 	let selectedChoice: number | null = null;
 	let isRevealed = false;
+	let confetti: JSConfetti;
 
 	onMount(() => {
 		candidatesGroups = new Map(
@@ -45,6 +47,8 @@
 		);
 
 		startNextQuiz();
+
+		confetti = new JSConfetti();
 	});
 
 	function startNextQuiz() {
@@ -82,6 +86,7 @@
 	function submitAnswer() {
 		if (selectedChoice && currentCandidates[selectedChoice].isWinner) {
 			score++;
+			confetti.addConfetti();
 		}
 		totalQuizCompleted++;
 		isRevealed = true;
