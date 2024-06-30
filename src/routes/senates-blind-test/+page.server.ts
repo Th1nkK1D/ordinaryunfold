@@ -6,7 +6,7 @@ const CandidatesTable = Table({
 	firstName: Column.String(),
 	middleName: Column.OptionalString(),
 	lastName: Column.String(),
-	group: Column.String(),
+	group: Column.Number(),
 	experience: Column.OptionalString(),
 	documentUrl: Column.String(),
 	isWinner: Column.Boolean()
@@ -14,7 +14,7 @@ const CandidatesTable = Table({
 
 export type Candidate = RowType<typeof CandidatesTable>;
 
-interface Group {
+export interface Group {
 	id: number;
 	name: string;
 }
@@ -25,7 +25,5 @@ export async function load() {
 		await fetch('https://github.com/PanJ/senate67/raw/main/job-groups.json')
 	).json();
 
-	const groupMap = new Map(groups.map(({ id, name }) => [id, name]));
-
-	return { candidates, groupMap };
+	return { candidates, groups };
 }

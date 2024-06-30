@@ -3,7 +3,7 @@
 	import QuizScene from './_components/quiz-scene.svelte';
 
 	export let data;
-	$: ({ candidates, groupMap } = data);
+	$: ({ candidates, groups } = data);
 
 	let isGameStarted = false;
 </script>
@@ -14,7 +14,7 @@
 		: 'bg-[#2B815F]'}"
 >
 	{#if isGameStarted && candidates}
-		<QuizScene {candidates} {groupMap} />
+		<QuizScene {candidates} {groups} />
 	{:else}
 		<IntroScene on:start={() => (isGameStarted = true)} />
 	{/if}

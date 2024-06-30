@@ -1,59 +1,144 @@
 <script lang="ts">
-	import type { Candidate } from '../+page.server';
+	import { onMount } from 'svelte';
+	import type { Candidate, Group } from '../+page.server';
 	import Button from './button.svelte';
 	import Card from './card.svelte';
 
+	const WINNING_CANDIDATE_PER_QUIZ = 1;
+	const LOSING_CANDIDATE_PER_QUIZ = 3;
 	const choiceLabels = ['ก.', 'ข.', 'ค.', 'ง.'];
 
 	export let candidates: Candidate[];
-	export let groupMap: Map<number, string>;
+	export let groups: Group[];
 
+	let candidatesGroups: Map<
+		number,
+		{
+			id: number;
+			name: string;
+			winningCandidates: Candidate[];
+			losingCandidates: Candidate[];
+		}
+	>;
+	let totalQuizCompleted = 0;
+	let score = 0;
 	let currentGroup = 1;
+	let currentCandidates: Candidate[] = [];
 	let selectedChoice: number | null = null;
 	let isRevealed = false;
+
+	onMount(() => {
+		candidatesGroups = new Map(
+			groups.map(({ id, name }) => {
+				const groupCandidates = candidates.filter(({ group }) => group === id);
+
+				return [
+					id,
+					{
+						id,
+						name,
+						winningCandidates: shuffleArray(groupCandidates.filter(({ isWinner }) => isWinner)),
+						losingCandidates: shuffleArray(groupCandidates.filter(({ isWinner }) => !isWinner))
+					}
+				];
+			})
+		);
+
+		startNextQuiz();
+	});
+
+	function startNextQuiz() {
+		const availableGroups = [...candidatesGroups.values()].filter(
+			(g) =>
+				g.losingCandidates.length > LOSING_CANDIDATE_PER_QUIZ &&
+				g.winningCandidates.length >= WINNING_CANDIDATE_PER_QUIZ
+		);
+
+		if (availableGroups.length < 0) {
+			alert('คุณเล่นจนครบทุกคนแล้ว ทำไปได้ ขยันกว่ากกต.อีก');
+			return;
+		}
+
+		const nextGroup = availableGroups[Math.floor(Math.random() * availableGroups.length)];
+
+		currentGroup = nextGroup.id;
+		currentCandidates = [
+			...nextGroup.losingCandidates.splice(0, LOSING_CANDIDATE_PER_QUIZ),
+			...nextGroup.winningCandidates.splice(0, WINNING_CANDIDATE_PER_QUIZ)
+		];
+		selectedChoice = null;
+		isRevealed = false;
+	}
+
+	function shuffleArray<T>(array: T[]) {
+		for (let i = array.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[array[i], array[j]] = [array[j], array[i]];
+		}
+
+		return array;
+	}
+
+	function submitAnswer() {
+		if (selectedChoice && currentCandidates[selectedChoice].isWinner) {
+			score++;
+		}
+		totalQuizCompleted++;
+		isRevealed = true;
+	}
+
+	function formatThaiNumber(value: number) {
+		// @ts-expect-error
+		return value.toLocaleString('th-TH', { numberingSystem: 'thai' });
+	}
 </script>
 
 <div class="mx-auto flex max-w-screen-lg flex-col gap-4 px-3 py-16">
 	<h2 class="font-charmonman">
-		<span class="text-xl">กลุ่มที่ {currentGroup}</span>
+		<span class="text-xl">กลุ่มที่ {formatThaiNumber(currentGroup)}</span>
 		<br />
-		<span class="text-4xl">{groupMap.get(currentGroup)}</span>
+		<span class="text-4xl">{candidatesGroups?.get(currentGroup)?.name}</span>
 	</h2>
 	<div class="flex flex-row justify-between">
-		<p>ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว.? (๑ คะแนน)</p>
-		<p>คะแนนสะสม: ๓ (เต็ม ๐)</p>
+		<p>ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว. ? (๑ คะแนน)</p>
+		<p>คะแนนสะสม: {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})</p>
 	</div>
 	<div class="grid grid-cols-2 gap-6">
-		{#each [...candidates.filter((c) => !c.isWinner).slice(0, 3), ...candidates
-				.filter((c) => c.isWinner)
-				.slice(0, 1)] as candidate, i}
-			<div>
-				<Card
-					heading={choiceLabels[i]}
-					body={candidate.experience || ''}
-					state={isRevealed
-						? selectedChoice === i
-							? candidate.isWinner
-								? 'corrected'
-								: 'incorrected'
-							: candidate.isWinner
-								? 'revealed'
-								: null
-						: selectedChoice === i
-							? 'selected'
-							: null}
-					on:click={() => (selectedChoice = selectedChoice !== i ? i : null)}
-				/>
-			</div>
+		{#each currentCandidates as candidate, i}
+			<Card
+				heading={isRevealed
+					? `${candidate.title}${candidate.firstName} ${candidate.lastName}`
+					: choiceLabels[i]}
+				body={candidate.experience || ''}
+				disabled={isRevealed}
+				link={isRevealed ? candidate.documentUrl : ''}
+				state={isRevealed
+					? selectedChoice === i
+						? candidate.isWinner
+							? 'corrected'
+							: 'incorrected'
+						: candidate.isWinner
+							? 'revealed'
+							: null
+					: selectedChoice === i
+						? 'selected'
+						: null}
+				on:click={() => (selectedChoice = selectedChoice !== i ? i : null)}
+			/>
 		{/each}
 	</div>
-	{#if selectedChoice !== null}
-		<div class="fixed inset-x-0 bottom-12 flex justify-center">
+
+	<div class="fixed inset-x-0 bottom-12 flex justify-center">
+		{#if isRevealed}
 			<Button
 				class="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-				on:click={() => (isRevealed = true)}
-				>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
+				on:click={startNextQuiz}>ข้อต่อไป ></Button
 			>
-		</div>
-	{/if}
+		{:else if selectedChoice !== null}
+			<Button
+				class="border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+				on:click={submitAnswer}>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
+			>
+		{/if}
+	</div>
 </div>
