@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { createEventDispatcher, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import JSConfetti from 'js-confetti';
 	import type { Candidate, Group } from '../+page.server';
 	import Button from './button.svelte';
 	import Card from './card.svelte';
+	import PostGameModal from './post-game-modal.svelte';
 
 	const WINNING_CANDIDATE_PER_QUIZ = 1;
 	const LOSING_CANDIDATE_PER_QUIZ = 3;
@@ -11,8 +12,7 @@
 	export let choiceLabels: string[];
 	export let candidates: Candidate[];
 	export let groups: Group[];
-
-	const dispatch = createEventDispatcher();
+	export let isGameStarted: boolean;
 
 	let candidatesGroups: Map<
 		number,
@@ -29,6 +29,7 @@
 	let currentCandidates: Candidate[] = [];
 	let selectedChoice: number | null = null;
 	let isRevealed = false;
+	let isGameEnded = false;
 	let confetti: JSConfetti;
 
 	onMount(() => {
@@ -94,6 +95,14 @@
 		isRevealed = true;
 	}
 
+	async function endGame() {
+		isGameEnded = true;
+
+		while (isGameStarted) {
+			await confetti.addConfetti();
+		}
+	}
+
 	function formatThaiNumber(value: number) {
 		// @ts-expect-error
 		return value.toLocaleString('th-TH', { numberingSystem: 'thai' });
@@ -140,29 +149,25 @@
 			/>
 		{/each}
 	</div>
-	<div class="sticky inset-x-0 bottom-12 mt-6 flex justify-center">
+	<div
+		class="mt:bottom-12 sticky inset-x-0 bottom-8 mt-2 flex justify-center gap-2 md:mt-6 md:gap-4"
+	>
 		{#if isRevealed}
-			<Button class="bg-gray-700 text-white" on:click={startNextQuiz}>ข้อต่อไป ></Button>
+			<Button
+				class="shadow- border border-red-500 bg-white text-red-500 hover:bg-red-500 hover:text-white"
+				on:click={endGame}>ออก</Button
+			>
+			<Button class="bg-gray-700 text-white shadow-lg" on:click={startNextQuiz}>ข้อต่อไป ></Button>
 		{:else if selectedChoice !== null}
-			<Button class="bg-blue-600 text-white" on:click={submitAnswer}
+			<Button class="bg-blue-600 text-white shadow-lg" on:click={submitAnswer}
 				>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
 			>
 		{/if}
 	</div>
-	<button
-		class="absolute right-3 top-0 text-gray-400 hover:text-red-600"
-		on:click={() => dispatch('exit')}
-	>
-		<svg class="w-5 md:w-6" viewBox="0 0 14 14"
-			><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-				><path
-					d="M5.214 1.643c0-.493.4-.893.893-.893h6.25c.493 0 .893.4.893.893v10.714c0 .493-.4.893-.893.893H9.232"
-				/><path
-					d="M6.553 5.438a1.563 1.563 0 1 0 3.126 0a1.563 1.563 0 1 0-3.126 0m-4.017.669h1.818a1 1 0 0 1 .707.293L7.6 8.94a1 1 0 0 0 .707.292h1.371"
-				/><path d="M6.107 7.446L3.721 9.832a1 1 0 0 1-.707.293H.75" /><path
-					d="m4.321 9.232l1.493 1.493a1 1 0 0 1 .293.707v1.818"
-				/></g
-			></svg
-		>
-	</button>
+
+	{#if isGameEnded}
+		<PostGameModal on:exit={() => (isGameStarted = false)}>
+			{formatThaiNumber(score)} / {formatThaiNumber(totalQuizCompleted)}
+		</PostGameModal>
+	{/if}
 </div>

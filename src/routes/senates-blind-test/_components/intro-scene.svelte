@@ -40,7 +40,9 @@
 			อาจมีข้อมูลที่คลาดเคลื่อน สามารถรายงานความผิดพลาดได้ แต่เราจะไม่รับผิดชอบใดๆ
 		</p>
 	</div>
-	<Button class="z-50 bg-white text-[#2B815F]" on:click={() => dispatch('start')}>เริ่มเล่น</Button>
+	<Button class="z-50 bg-white text-[#2B815F] shadow-lg" on:click={() => dispatch('start')}
+		>เริ่มเล่น</Button
+	>
 
 	<div class="fixed bottom-0 left-1/2 flex w-[60vw] -translate-x-1/2 flex-row md:max-w-xl">
 		{#each choiceLabels as label, i}

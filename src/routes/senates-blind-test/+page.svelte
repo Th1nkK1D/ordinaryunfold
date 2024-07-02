@@ -23,7 +23,7 @@
 		: 'border-white/15 bg-[#2B815F]'}"
 >
 	{#if isGameStarted && candidates}
-		<QuizScene {candidates} {groups} {choiceLabels} on:exit={() => (isGameStarted = false)} />
+		<QuizScene {candidates} {groups} {choiceLabels} bind:isGameStarted />
 	{:else}
 		<IntroScene {choiceLabels} on:start={() => (isGameStarted = true)} />
 	{/if}
