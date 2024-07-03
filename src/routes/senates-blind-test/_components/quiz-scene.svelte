@@ -42,7 +42,9 @@
 					{
 						id,
 						name,
-						winningCandidates: shuffleArray(groupCandidates.filter(({ isWinner }) => isWinner)),
+						winningCandidates: shuffleArray(
+							groupCandidates.filter(({ isWinner }) => isWinner)
+						).sort((a, z) => z.interestingScore - a.interestingScore),
 						losingCandidates: shuffleArray(groupCandidates.filter(({ isWinner }) => !isWinner))
 					}
 				];
@@ -69,10 +71,10 @@
 		const nextGroup = availableGroups[Math.floor(Math.random() * availableGroups.length)];
 
 		currentGroup = nextGroup.id;
-		currentCandidates = [
+		currentCandidates = shuffleArray([
 			...nextGroup.losingCandidates.splice(0, LOSING_CANDIDATE_PER_QUIZ),
 			...nextGroup.winningCandidates.splice(0, WINNING_CANDIDATE_PER_QUIZ)
-		];
+		]);
 		selectedChoice = null;
 		isRevealed = false;
 	}
@@ -128,9 +130,7 @@
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 		{#each currentCandidates as candidate, i}
 			<Card
-				heading={isRevealed
-					? `${candidate.title}${candidate.firstName} ${candidate.lastName}`
-					: choiceLabels[i]}
+				heading={isRevealed ? candidate.fullname : choiceLabels[i]}
 				body={candidate.experience || ''}
 				disabled={isRevealed}
 				link={isRevealed ? candidate.documentUrl : ''}
