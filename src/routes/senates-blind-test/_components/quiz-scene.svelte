@@ -121,7 +121,8 @@
 	</h2>
 	<div class="flex flex-col-reverse justify-between gap-3 md:flex-row md:gap-0">
 		<p>
-			{formatThaiNumber(totalQuizCompleted + 1)}. ผู้สมัครในข้อใดได้รับเลือกให้เป็นสว.? (๑ คะแนน)
+			{formatThaiNumber(totalQuizCompleted + 1)}. ผู้สมัครในข้อใดเป็นหนึ่งในผู้ชนะการโหวตของกลุ่ม?
+			(๑ คะแนน)
 		</p>
 		<p class="opacity-50">
 			คะแนน {formatThaiNumber(score)} (เต็ม {formatThaiNumber(totalQuizCompleted)})
