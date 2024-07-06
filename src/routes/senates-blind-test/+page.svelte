@@ -3,6 +3,7 @@
 	import Footer from '../../components/footer.svelte';
 	import Metadata from '../../components/metadata.svelte';
 	import Sharer from '../../components/sharer.svelte';
+	import Button from './_components/button.svelte';
 	import IntroScene from './_components/intro-scene.svelte';
 	import QuizScene from './_components/quiz-scene.svelte';
 
@@ -41,7 +42,18 @@
 			/>
 		</div>
 		<div class="flex flex-col gap-6 text-center md:text-left">
-			<p class="md:text-md text-sm">
+			<ExternalLink
+				href="https://github.com/Th1nkK1D/ordinaryunfold/tree/main/src/data/senates-blind-test#readme"
+				class="flex items-center justify-center gap-2 rounded-sm border border-white px-3 py-2 hover:bg-white hover:text-gray-800"
+			>
+				<svg class="w-6" viewBox="0 0 24 24"
+					><path
+						fill="currentColor"
+						d="m12 16l-5-5l1.4-1.45l2.6 2.6V4h2v8.15l2.6-2.6L17 11zm-6 4q-.825 0-1.412-.587T4 18v-3h2v3h12v-3h2v3q0 .825-.587 1.413T18 20z"
+					/></svg
+				> ดาวน์โหลดข้อมูล
+			</ExternalLink>
+			<p class="text-sm md:text-base">
 				ขอบคุณ <ExternalLink href="https://github.com/PanJ/senate67" class="underline"
 					>ข้อมูลผู้สมัครสว. จาก PanJ</ExternalLink
 				> และ <ExternalLink

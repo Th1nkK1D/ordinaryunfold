@@ -1,6 +1,6 @@
+import rawCandidates from '../../data/senates-blind-test/candidates-final.csv?raw';
 import rawInterestingWinners from '../../data/senates-blind-test/interesting-winners.csv?raw';
 import groups from '../../data/senates-blind-test/job-groups.json';
-import rawCandidates from '../../data/senates-blind-test/national-candidates.csv?raw';
 import { Column, Table, parseCSVFromString } from 'sheethuahua';
 
 const candidatesTable = Table({
