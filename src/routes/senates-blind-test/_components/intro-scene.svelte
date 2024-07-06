@@ -3,6 +3,7 @@
 	import Logo from '../../../components/logo.svelte';
 	import Button from './button.svelte';
 	import Card from './card.svelte';
+	import ExternalLink from '../../../components/external-link.svelte';
 
 	export let choiceLabels: string[];
 
@@ -15,30 +16,28 @@
 	>
 		<Logo />
 		<div class="flex flex-col gap-4 text-center md:gap-6">
-			<h1 class="font-chonburi text-4xl md:text-7xl">Senates Blind Test</h1>
+			<h1 class="font-chonburi text-4xl md:text-7xl">สว. Blind Test</h1>
 			<p class="font-charmonman text-xl md:text-3xl">
-				เกมทายใจ ใครเป็นผู้ชนะการเลือกตั้งสว. จากเอกสารแนะนำตัว ๕ บรรทัด
+				เกมทายใจ ใครเป็นผู้ชนะการเลือกตั้งจากเอกสารแนะนำตัว ๕ บรรทัด
 			</p>
 		</div>
-		<div class="flex max-w-screen-md flex-col gap-2 indent-8">
-			<p>
-				จากผู้สมัครทั้งหมด ๘๐๐ คน ในการเลือกตั้งสว. รอบสุดท้ายของปี ๒๕๖๗
-				ผู้ที่ได้คะแนนโหวตจากสว.ด้วยกันเองสูงสุด ๑๐ คนในแต่ละกลุ่มอาชีพ ๒๐ กลุ่ม (รวมเป็น ๒๐๐ คน)
-				จะได้รับการแต่งตั้งเป็นสว. <a
-					href="https://senates67.com"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="underline opacity-60">(อ่านเพิ่มเติมเกี่ยวกับระบบการเลือกตั้งสว.)</a
+		<div class="flex max-w-screen-md flex-col gap-2">
+			<p class="indent-6 md:indent-8">
+				จากผู้สมัคร ๘๐๐ คน ในการเลือกตั้งสว. รอบสุดท้ายของปี ๒๕๖๗ ผู้ที่ได้คะแนนโหวตจากสว.
+				ด้วยกันเองสูงสุด ๑๐ คนในแต่ละกลุ่มอาชีพ ๒๐ กลุ่ม จะได้รับการแต่งตั้งเป็นสว. <ExternalLink
+					href="https://senate67.com/#meet-the-campaign"
+					class="underline opacity-60"
 				>
-			</p>
-			<p>
-				เกม "สว. Blind Test จะสุ่มกลุ่มอาชีพพร้อมกับ
-				"ประวัติการทํางานหรือประสบการณ์ในการทํางานในกลุ่มที่สมัคร (ไม่เกิน ๕ บรรทัด)" จากใบสมัครของ
-				สว. ๔ คน ผู้เล่นต้องทายว่าคนที่ได้รับเลือกเป็นสว. ๑ ใน ๔ คนนั้นคือใคร?
+					(อ่านระบบการเลือกตั้ง)
+				</ExternalLink>
+				เกมจะสุ่ม "ประวัติการทํางานหรือประสบการณ์ในการทํางานในกลุ่มที่สมัคร (ไม่เกิน ๕ บรรทัด)" จากใบสมัครของ
+				สว. ๔ คนในแต่ละกลุ่มอาชีพ ผู้เล่นต้องทายว่า ๑ คนที่ได้คะแนนสูงสุดและมีสิทธิ์ได้รับการแต่งตั้งเป็นสว.
+				คือใคร?
 			</p>
 			<p class="text-sm opacity-60">
-				หมายเหตุ: เราใช้เทคนิค OCR ในการแปลงรูปใบสมัครต้นฉบับให้หลายเป็นตัวหนังสือ
-				อาจมีข้อมูลที่คลาดเคลื่อน สามารถรายงานความผิดพลาดได้ แต่เราจะไม่รับผิดชอบใดๆ
+				หมายเหตุ: ๑. เราใช้คอมพิวเตอร์แปลงรูปใบสมัครจากกกต.ให้หลายเป็นตัวหนังสือ (OCR)
+				อาจมีข้อมูลที่คลาดเคลื่อน โปรดตรวจเช็คกับต้นฉบับก่อนนำไปใช้ต่อ ๒.
+				ผู้ชนะในแต่ละกลุ่มยังไม่ใช่สว. ที่กกต. รับรองอย่างเป็นทางการ
 			</p>
 		</div>
 		<Button class="z-50 bg-white text-[#2B815F] shadow-lg" on:click={() => dispatch('start')}

@@ -15,9 +15,10 @@
 </script>
 
 <Metadata
-	title="Senates Blind Test"
-	description="เกมทายใจ ใครเป็นผู้ชนะการเลือกตั้งสว. จากเอกสารแนะนำตัว ๕ บรรทัด"
+	title="สว. Blind Test"
+	description="เกมทายใจ ใครเป็นผู้ชนะการเลือกตั้ง จากเอกสารแนะนำตัว ๕ บรรทัด"
 	path="/senates-blind-test"
+	image="/senates-blind-test/og.png"
 />
 
 <div class="relative min-h-lvh">
@@ -41,10 +42,9 @@
 		</div>
 		<div class="flex flex-col gap-6 text-center md:text-left">
 			<p class="md:text-md text-sm">
-				ข้อมูลผู้สมัครสว. จาก <ExternalLink
-					href="https://github.com/PanJ/senate67"
-					class="underline">PanJ/senate67</ExternalLink
-				> และข้อมูล <ExternalLink
+				ขอบคุณ <ExternalLink href="https://github.com/PanJ/senate67" class="underline"
+					>ข้อมูลผู้สมัครสว. จาก PanJ</ExternalLink
+				> และ <ExternalLink
 					href="https://docs.google.com/spreadsheets/d/1zJSO-l1nXAaj0g9YBoCzZrEyunBlRoHFiGsrN2fzDsQ/edit"
 					class="underline">ผลคะแนนดิบสว.67 รอบระดับประเทศจาก iLaw</ExternalLink
 				>

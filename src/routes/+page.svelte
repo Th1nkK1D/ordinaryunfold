@@ -19,6 +19,14 @@
 	<div class="md:mb-18 mx-auto mb-12 flex w-full max-w-4xl flex-col space-y-24 md:space-y-36">
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 			<ProjectCard
+				title="Senates Blind Test"
+				description="From Thailand's Senates Election in 2024, guessing which candidate get the most votes by reading their 5-lines-introduction document."
+				href="/senates-blind-test/"
+				image="/senates-blind-test/og.png"
+				date="6 Jul 2024"
+				lang="TH"
+			/>
+			<ProjectCard
 				title="Comeback King or a Flopper"
 				description="Explore the top-five 2023/24 European football league teams. How many wins, draws, or lose they get in each minute of the game?"
 				href="/comeback-king-or-a-flopper/"
