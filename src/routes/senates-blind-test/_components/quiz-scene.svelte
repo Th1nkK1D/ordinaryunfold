@@ -161,9 +161,18 @@
 		{#if isRevealed}
 			<Button
 				class="shadow- border border-red-500 bg-white text-red-500 hover:bg-red-500 hover:text-white"
-				on:click={endGame}>ออก</Button
+				on:click={endGame}>พอแค่นี้</Button
 			>
-			<Button class="bg-gray-700 text-white shadow-lg" on:click={startNextQuiz}>ข้อต่อไป ></Button>
+			<Button
+				class="flex items-center gap-1 bg-gray-700 text-white shadow-lg"
+				on:click={startNextQuiz}
+				>ไปต่อ <svg class="-mr-2 w-6" viewBox="0 0 24 24"
+					><path
+						fill="currentColor"
+						d="m14 18l-1.4-1.45L16.15 13H4v-2h12.15L12.6 7.45L14 6l6 6z"
+					/></svg
+				></Button
+			>
 		{:else if selectedChoice !== null}
 			<Button class="bg-blue-600 text-white shadow-lg" on:click={submitAnswer}
 				>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
@@ -173,7 +182,7 @@
 
 	{#if isGameEnded}
 		<PostGameModal on:exit={() => (isGameStarted = false)}>
-			{formatThaiNumber(score)} / {formatThaiNumber(totalQuizCompleted)}
+			{formatThaiNumber(score)}/{formatThaiNumber(totalQuizCompleted)}
 		</PostGameModal>
 	{/if}
 </div>
