@@ -1,6 +1,7 @@
 import rawInterestingWinners from '../../data/senates-blind-test/interesting-winners.csv?raw';
+import groups from '../../data/senates-blind-test/job-groups.json';
 import rawCandidates from '../../data/senates-blind-test/national-candidates.csv?raw';
-import { Column, Table, parseCSVFromString, type RowType } from 'sheethuahua';
+import { Column, Table, parseCSVFromString } from 'sheethuahua';
 
 const candidatesTable = Table({
 	title: Column.String(),
@@ -8,9 +9,11 @@ const candidatesTable = Table({
 	middleName: Column.OptionalString(),
 	lastName: Column.String(),
 	group: Column.Number(),
+	province: Column.String(),
 	experience: Column.OptionalString(),
 	documentUrl: Column.String(),
-	isWinner: Column.Boolean()
+	isWinner: Column.Boolean(),
+	score: Column.Number()
 });
 
 const interestingWinnersTable = Table({
@@ -29,20 +32,20 @@ export async function load() {
 		rawInterestingWinners,
 		interestingWinnersTable
 	);
-	const groups: Group[] = await (
-		await fetch('https://github.com/PanJ/senate67/raw/main/job-groups.json')
-	).json();
 
 	return {
-		candidates: candidates.map(({ title, firstName, middleName, lastName, ...rest }) => ({
-			fullname: `${title}${[firstName, middleName, lastName].join(' ')}`.replace(/\s+/g, ' '),
-			...rest,
-			interestingScore: interestingWinners.some(
-				(w) => w.firstName === firstName && w.lastName === lastName
-			)
-				? 1
-				: 0
-		})),
+		candidates: candidates.map(
+			({ title, firstName, middleName, lastName, documentUrl, ...rest }) => ({
+				fullname: `${title}${[firstName, middleName, lastName].join(' ')}`.replace(/\s+/g, ' '),
+				...rest,
+				imageName: documentUrl.split('/').at(-1),
+				interestingScore: interestingWinners.some(
+					(w) => w.firstName === firstName && w.lastName === lastName
+				)
+					? 1
+					: 0
+			})
+		),
 		groups
 	};
 }

@@ -2,9 +2,22 @@ import { NATIONAL_CANDIDATES_OUTPUT, PROVINCE_CANDIDATES_OUTPUT } from './config
 import { csvFormat, csvParse } from 'd3-dsv';
 import { Column, Spreadsheet, Table, parseCSVFromString } from 'sheethuahua';
 
+interface ProvinceDistrict {
+	id: number;
+	name: string;
+	districts: {
+		id: number;
+		name: string;
+	}[];
+}
+
 const candidates = csvParse(await Bun.file(PROVINCE_CANDIDATES_OUTPUT).text());
 
 const groupNumbers = new Array(20).fill(null).map((_, i) => i + 1);
+
+const provinceDistricts: ProvinceDistrict[] = await (
+	await fetch('https://github.com/PanJ/senate67/raw/main/province-districts.json')
+).json();
 
 const semifinalGroupTable = Table({
 	province: Column.String(),
@@ -55,10 +68,19 @@ const output = candidates
 	.filter((c) =>
 		finalCandidates.some((fc) => c.firstName === fc.first_name && c.lastName === fc.last_name)
 	)
-	.map((c) => ({
-		...c,
-		isWinner: winners.some((w) => c.firstName === w.first_name && c.lastName === w.last_name)
-	}));
+	.map((c) => {
+		const province = provinceDistricts.find((p) => p.id === +c.province);
+
+		return {
+			...c,
+			province: province?.name,
+			district: province?.districts.find((d) => d.id === +c.district)?.name,
+			score: finalCandidates.find(
+				(fc) => c.firstName === fc.first_name && c.lastName === fc.last_name
+			)?.คะแนน,
+			isWinner: winners.some((w) => c.firstName === w.first_name && c.lastName === w.last_name)
+		};
+	});
 
 console.log(`Matched national cadidates: ${output.length}`);
 console.log(`Winners: ${output.filter((c) => c.isWinner).length}`);

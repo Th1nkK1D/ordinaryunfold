@@ -54,8 +54,12 @@
 	</div>
 </section>
 
-<style>
+<style lang="postcss">
 	@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&family=Chonburi&display=swap');
+
+	:global(body) {
+		@apply bg-gray-200;
+	}
 
 	:global(.font-charmonman) {
 		font-family: 'Charmonman', cursive;

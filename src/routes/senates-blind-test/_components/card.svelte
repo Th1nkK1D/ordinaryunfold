@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let heading: string;
+	export let subtitle = '';
 	export let body = '';
 	export let state: 'selected' | 'corrected' | 'incorrected' | 'revealed' | null = null;
 	export let disabled = false;
@@ -9,7 +10,7 @@
 <button
 	on:click
 	{disabled}
-	class="flex max-w-lg flex-col gap-3 overflow-hidden rounded border-[3px] bg-white p-3 text-left text-black shadow-lg transition-all md:p-4 {disabled
+	class="flex max-w-lg flex-col overflow-hidden rounded border-[3px] bg-white p-3 text-left text-black shadow-lg transition-all md:p-4 {disabled
 		? ''
 		: 'hover:shadow-xl'} {state === 'selected'
 		? 'border-blue-600'
@@ -33,7 +34,6 @@
 				</a>
 			{/if}
 		</h3>
-
 		<svg class="w-8" viewBox="0 0 24 24">
 			{#if state}
 				{#if state === 'selected' || state === 'corrected'}
@@ -55,5 +55,6 @@
 			{/if}
 		</svg>
 	</div>
-	<p>{body}</p>
+	<h4 class="text-gray-500">{subtitle}</h4>
+	<p class="mt-3">{body}</p>
 </button>

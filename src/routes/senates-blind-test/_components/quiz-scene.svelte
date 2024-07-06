@@ -129,20 +129,26 @@
 	</div>
 	<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 		{#each currentCandidates as candidate, i}
+			{@const isSelecting = selectedChoice === i}
 			<Card
 				heading={isRevealed ? candidate.fullname : choiceLabels[i]}
+				subtitle={isRevealed
+					? `${formatThaiNumber(candidate.score)} โหวต | ${candidate.province}`
+					: ''}
 				body={candidate.experience || ''}
 				disabled={isRevealed}
-				link={isRevealed ? candidate.documentUrl : ''}
+				link={isRevealed
+					? `https://smart-vote.s3.ap-southeast-1.amazonaws.com/level03/${candidate.imageName}`
+					: undefined}
 				state={isRevealed
-					? selectedChoice === i
+					? isSelecting
 						? candidate.isWinner
 							? 'corrected'
 							: 'incorrected'
 						: candidate.isWinner
 							? 'revealed'
 							: null
-					: selectedChoice === i
+					: isSelecting
 						? 'selected'
 						: null}
 				on:click={() => (selectedChoice = selectedChoice !== i ? i : null)}
