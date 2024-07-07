@@ -89,7 +89,7 @@
 	}
 
 	function submitAnswer() {
-		if (selectedChoice && currentCandidates[selectedChoice].isWinner) {
+		if (selectedChoice !== null && currentCandidates[selectedChoice].isWinner) {
 			score++;
 			confetti.addConfetti();
 		}
