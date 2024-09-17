@@ -50,7 +50,7 @@
 				</div>
 			</div>
 		{/each}
-		<svg class="mt-24px h-1.5 md:h-2" viewBox="0 0 100 100" fill="none">
+		<svg class="mt-[24px] h-1.5 md:h-2" viewBox="0 0 100 100" fill="none">
 			<polygon points="0,0 0,100 100,50" fill={colors?.[0]} />
 		</svg>
 	</div>
