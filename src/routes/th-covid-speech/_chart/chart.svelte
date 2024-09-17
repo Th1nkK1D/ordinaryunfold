@@ -104,7 +104,7 @@
 
 <div class="relative h-full w-full" bind:clientHeight>
 	<div
-		class="absolute inset-0 top-0 z-10 flex justify-center p-3 md:right-auto md:justify-start md:p-4"
+		class="absolute inset-0 top-0 z-10 flex justify-center p-3 md:right-auto md:justify-start md:p-4 bottom-auto"
 	>
 		<Logo />
 	</div>
