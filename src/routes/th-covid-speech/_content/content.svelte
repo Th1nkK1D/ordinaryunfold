@@ -6,25 +6,39 @@
 	import SortButton from './sort-button.svelte';
 	import ExternalLink from '../../../components/external-link.svelte';
 
-	export let activeContentId: number;
+	const OFFSET_TOP = 12;
 
-	let contentBoxElements = new Map<number, ContentBox>();
-	let isReversed: boolean = true;
+	interface Props {
+		activeContentId: number;
+		scrollToSpeech: (id: number) => void;
+	}
+
+	let { activeContentId = $bindable(), scrollToSpeech = $bindable() }: Props = $props();
+
+	let contentBoxParent: HTMLElement;
+	let isReversed: boolean = $state(true);
 	let container: HTMLElement;
 	let sortButtonContainer: HTMLElement;
 
-	export const scrollToSpeech = (id: number) => {
-		const OFFSET_TOP = 12;
-		const { top, height }: DOMRect = contentBoxElements[id].getBoundingClientRect();
+	$effect(() => {
+		scrollToSpeech = (id: number) => {
+			const contentBox = contentBoxParent.children.item(
+				contentBlocks.findIndex((c) => c.id === id)
+			);
 
-		container.scrollBy({
-			top:
-				top -
-				container.offsetTop -
-				(height < container.clientHeight ? (container.clientHeight - height) / 2 : OFFSET_TOP),
-			behavior: 'smooth'
-		});
-	};
+			if (!contentBox) return;
+
+			const { top, height }: DOMRect = contentBox.getBoundingClientRect();
+
+			container.scrollBy({
+				top:
+					top -
+					container.offsetTop -
+					(height < container.clientHeight ? (container.clientHeight - height) / 2 : OFFSET_TOP),
+				behavior: 'smooth'
+			});
+		};
+	});
 
 	const getTopContentId = () => contentBlocks[isReversed ? contentBlocks.length - 1 : 0].id;
 
@@ -54,31 +68,37 @@
 		</div>
 
 		<div class="flex flex-1">
-			<svg
-				viewBox="0 0 24 24"
-				class="m-auto w-12 cursor-pointer fill-sky-700 hover:fill-sky-500 lg:mx-0"
-				on:click={() => sortButtonContainer.scrollIntoView({ behavior: 'smooth' })}
-				><path d="M0 0h24v24H0V0z" fill="none" /><path
-					d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-				/></svg
+			<button
+				onclick={() => sortButtonContainer.scrollIntoView({ behavior: 'smooth' })}
+				aria-label="ดู"
 			>
+				<svg
+					viewBox="0 0 24 24"
+					class="m-auto w-12 cursor-pointer fill-sky-700 hover:fill-sky-500 lg:mx-0"
+					><path d="M0 0h24v24H0V0z" fill="none" /><path
+						d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+					/></svg
+				>
+			</button>
 		</div>
 	</div>
 
 	<div class="px-4 lg:px-10">
 		<div class="-mb-4 pt-6 md:pt-12" bind:this={sortButtonContainer}>
-			<SortButton {isReversed} on:click={onClickReverse} />
+			<SortButton {isReversed} onclick={onClickReverse} />
 		</div>
 
-		<div class="mx-auto flex max-w-2xl {isReversed ? 'flex-col-reverse' : 'flex-col'}">
+		<div
+			class="mx-auto flex max-w-2xl {isReversed ? 'flex-col-reverse' : 'flex-col'}"
+			bind:this={contentBoxParent}
+		>
 			{#each contentBlocks as { id, type, date, ...contentBlock }}
 				<ContentBox
-					bind:this={contentBoxElements[id]}
 					{type}
 					{date}
 					{contentBlock}
 					isActive={activeContentId === id}
-					on:enter={() => (activeContentId = id)}
+					onenter={() => (activeContentId = id)}
 				/>
 			{/each}
 		</div>
@@ -88,7 +108,7 @@
 		</div>
 
 		<div class="mb-12 flex flex-col space-y-20 text-center lg:text-left">
-			<div class="mx-auto h-1 w-12 bg-black lg:mx-0" />
+			<div class="mx-auto h-1 w-12 bg-black lg:mx-0"></div>
 
 			<div class="space-y-4">
 				<p class="font-head text-xl">ที่มาของข้อมูล</p>

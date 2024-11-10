@@ -10,8 +10,8 @@
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
 
-	let people: Person[] = fatalities;
-	let activePeopleMask: boolean[] = [];
+	let people: Person[] = $state(fatalities);
+	let activePeopleMask: boolean[] = $state([]);
 </script>
 
 <Metadata
@@ -28,8 +28,8 @@
 
 	<Scrollama
 		class="flex w-full flex-col"
-		on:stepenter={({ detail: { index } }) => {
-			people = people.sort(chapters[index].sortBy);
+		onstepenter={({ index }) => {
+			people = people.toSorted(chapters[index].sortBy);
 		}}
 	>
 		{#each chapters as { title, steps }, index}

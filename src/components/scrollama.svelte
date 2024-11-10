@@ -1,26 +1,31 @@
 <script lang="ts">
 	import 'intersection-observer';
 	import scrollama from 'scrollama';
-	import { createEventDispatcher, onMount, onDestroy } from 'svelte';
+	import { type Snippet } from 'svelte';
+	interface Props {
+		children?: Snippet;
+		class?: string;
+		onstepenter?: (res: scrollama.CallbackResponse) => unknown;
+	}
 
-	const dispatch = createEventDispatcher();
+	let { children, class: className = '', onstepenter = () => {} }: Props = $props();
 
 	let container: HTMLElement;
 	let scroller = scrollama();
 
-	onMount(() => {
+	$effect(() => {
 		scroller
 			.setup({
 				step: Array.from(container.children) as HTMLElement[]
 			})
-			.onStepEnter((event) => dispatch('stepenter', event));
-	});
+			.onStepEnter(onstepenter);
 
-	onDestroy(scroller.destroy);
+		return scroller.destroy;
+	});
 </script>
 
-<svelte:window on:resize={scroller.resize} />
+<svelte:window onresize={scroller.resize} />
 
-<div bind:this={container} class={$$props.class || ''}>
-	<slot />
+<div bind:this={container} class={className}>
+	{@render children?.()}
 </div>

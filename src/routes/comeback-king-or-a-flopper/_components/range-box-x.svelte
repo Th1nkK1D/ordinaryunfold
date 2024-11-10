@@ -6,9 +6,13 @@
 		label?: string;
 	}
 
-	export let xFromMinutes: (m: string) => number;
-	export let height: number;
-	export let range: [RangePoint, RangePoint];
+	interface Props {
+		xFromMinutes: (m: string) => number;
+		height: number;
+		range: [RangePoint, RangePoint];
+	}
+
+	let { xFromMinutes, height, range }: Props = $props();
 </script>
 
 <rect

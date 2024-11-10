@@ -1,10 +1,21 @@
 <script lang="ts">
-	export let image: string;
-	export let href: string;
-	export let date: string;
-	export let lang: string;
-	export let title: string;
-	export let description: string;
+	interface Props {
+		image: string;
+		href: string;
+		date: string;
+		lang: string;
+		title: string;
+		description: string;
+	}
+
+	let {
+		image,
+		href,
+		date,
+		lang,
+		title,
+		description
+	}: Props = $props();
 </script>
 
 <a

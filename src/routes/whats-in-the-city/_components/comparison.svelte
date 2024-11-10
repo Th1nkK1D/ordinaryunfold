@@ -4,6 +4,9 @@
 	import placeStats from '../../../data/whats-in-the-city/places-stats.json';
 	import categories from '../../../data/whats-in-the-city/categories.json';
 
+	type CityKey = keyof typeof placeStats;
+	type CategoryKey = keyof (typeof placeStats)[CityKey];
+
 	const MIN_COLUMN_WIDTH = 160;
 	const POPULATION_PER_CIRCLE = 100000;
 	const MAX_AREA_SIZE = 120;
@@ -30,8 +33,8 @@
 
 	const placeVis = cities.map(({ key: city }) =>
 		categories.map(({ key: category, colors }) => ({
-			count: placeStats[city][category],
-			height: Math.round(placeChartHeight(placeStats[city][category])),
+			count: placeStats[city as CityKey][category as CategoryKey],
+			height: Math.round(placeChartHeight(placeStats[city as CityKey][category as CategoryKey])),
 			color: colors[3]
 		}))
 	);
@@ -41,7 +44,7 @@
 	class="mx-auto grid max-w-screen-xl"
 	style="grid-template-columns: repeat({cities.length + 1}, minmax({MIN_COLUMN_WIDTH}px, 1fr)"
 >
-	<div />
+	<div></div>
 
 	{#each cities as { name }}
 		<div class="cell text-center text-xl font-bold">{name}</div>
@@ -59,11 +62,11 @@
 		<div class="cell space-y-1">
 			<div class="flex flex-row flex-wrap content-start">
 				{#each Array(Math.floor(integer)) as _}
-					<div class="population-dot m-1" />
+					<div class="population-dot m-1"></div>
 				{/each}
 
 				<div class="m-1 overflow-hidden" style="width: {fraction * 8}px;">
-					<div class="population-dot" />
+					<div class="population-dot"></div>
 				</div>
 			</div>
 			<p class="text-center text-sm">{population.toLocaleString()}</p>
@@ -74,7 +77,7 @@
 
 	{#each areaVis as { area, size }}
 		<div class="cell flex flex-col items-center justify-center space-y-1">
-			<div class="bg-gray-400" style="width: {size}px; height: {size}px;" />
+			<div class="bg-gray-400" style="width: {size}px; height: {size}px;"></div>
 			<p class="text-center text-sm">{area.toLocaleString()}</p>
 		</div>
 	{/each}
@@ -93,7 +96,7 @@
 		</div>
 	{/each}
 
-	<div />
+	<div></div>
 
 	<div
 		class="cell flex flex-row justify-center space-x-4"
@@ -101,7 +104,7 @@
 	>
 		{#each categories as { name, colors }}
 			<div class="flex flex-row flex-wrap items-center space-x-1">
-				<div class="h-3 w-3" style="background-color: {colors[3]};" />
+				<div class="h-3 w-3" style="background-color: {colors[3]};"></div>
 				<p class="text-sm">{name}</p>
 			</div>
 		{/each}

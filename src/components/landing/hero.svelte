@@ -1,6 +1,5 @@
 <script lang="ts">
 	import anime from 'animejs';
-	import { onMount } from 'svelte';
 
 	const PAPER_SIDE_STEPS = [
 		'M544.574 212.216C521.58 255.992 423.856 248.475 413.686 208.236V299.327C422.972 344.43 529.097 345.757 545.458 302.422L540.594 294.905L544.132 282.524L538.383 270.142L544.132 255.992L538.383 243.169L544.574 212.216Z',
@@ -17,12 +16,12 @@
 	let paperSideEl: SVGPathElement;
 	let subtitleEl: HTMLParagraphElement;
 
-	let isIntroAnimationFinished = false;
-	let isPaperBodyTouch = false;
+	let isIntroAnimationFinished = $state(false);
+	let isPaperBodyTouch = $state(false);
 	let paperLoopAnimation: anime.AnimeInstance;
 
-	onMount(async () => {
-		await anime
+	$effect(() => {
+		anime
 			.timeline({
 				duration: 1000,
 				easing: 'easeInOutSine'
@@ -99,16 +98,17 @@
 					d: PAPER_SIDE_STEPS[1]
 				},
 				'-=200'
-			).finished;
+			)
+			.finished.then(() => {
+				isIntroAnimationFinished = true;
 
-		isIntroAnimationFinished = true;
-
-		paperLoopAnimation = anime({
-			targets: paperSideEl,
-			d: PAPER_SIDE_STEPS.slice(1),
-			direction: 'alternate',
-			loop: true
-		});
+				paperLoopAnimation = anime({
+					targets: paperSideEl,
+					d: PAPER_SIDE_STEPS.slice(1),
+					direction: 'alternate',
+					loop: true
+				});
+			});
 	});
 
 	function touchPaper() {
@@ -148,7 +148,7 @@
 					stroke-width="-1"
 				/>
 				<g filter="url(#filter0_d_301_2)">
-					<g on:mouseenter={touchPaper} on:mouseleave={leavePaper}>
+					<g onmouseenter={touchPaper} onmouseleave={leavePaper} role="none">
 						<circle
 							bind:this={paperBottomEl}
 							class="transition-colors duration-200 ease-in-out"

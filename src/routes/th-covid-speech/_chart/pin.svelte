@@ -5,15 +5,19 @@
 
 	const minBottom = 12;
 
-	export let x: number;
-	export let y: number;
-	export let date: Date;
-	export let count: number;
-	export let speaker: Speaker | undefined;
-	export let type: 'speech' | 'news';
-	export let isActive: boolean = false;
+	interface Props {
+		x: number;
+		y: number;
+		date: Date;
+		count: number;
+		speaker: Speaker | undefined;
+		isActive?: boolean;
+		onclick?: () => unknown;
+	}
 
-	let isHovered = false;
+	let { x, y, date, count, speaker, isActive = false, onclick }: Props = $props();
+
+	let isHovered = $state(false);
 </script>
 
 {#if isActive || isHovered}
@@ -32,16 +36,17 @@
 	</div>
 {/if}
 
-<div
+<button
 	class="absolute flex h-6 w-6 -translate-x-1/2 translate-y-1/2 transform cursor-pointer rounded-full text-white shadow transition duration-300 ease-in-out md:h-8 md:w-8 {isActive
 		? 'scale-120 z-30 bg-blue-500'
 		: 'hover:scale-130) bg-gray-500 hover:z-50'}"
 	style="left: {x}px; bottom: {Math.max(y, minBottom)}px;"
-	on:click
-	on:mouseover={() => (isHovered = true)}
-	on:mouseleave={() => (isHovered = false)}
+	{onclick}
+	onmouseover={() => (isHovered = true)}
+	onfocus={() => (isHovered = true)}
+	onmouseleave={() => (isHovered = false)}
 >
-	{#if type === 'speech'}
+	{#if speaker}
 		<img
 			src="/th-covid-speech/speakers/{speaker.id}.webp"
 			alt={speaker.name}
@@ -54,4 +59,4 @@
 			<path d="M10 3h4v12h-4z" />
 		</svg>
 	{/if}
-</div>
+</button>

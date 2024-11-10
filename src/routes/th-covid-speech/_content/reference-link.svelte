@@ -1,14 +1,16 @@
 <script lang="ts">
 	import ExternalLink from '../../../components/external-link.svelte';
 
-	export let source: string;
-	export let url: string;
+	interface Props {
+		source: string;
+		url: string;
+		class?: string;
+	}
+
+	let { source, url, class: className = '' }: Props = $props();
 </script>
 
-<ExternalLink
-	href={url}
-	class="inline-flex text-sm text-sky-700 hover:underline {$$props.class || ''}"
->
+<ExternalLink href={url} class="inline-flex text-sm text-sky-700 hover:underline {className}">
 	- {source}
 	<svg width="13" height="13" viewBox="0 0 13 13" fill="none" class="my-auto ml-1">
 		<path

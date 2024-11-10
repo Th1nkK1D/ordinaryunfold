@@ -1,9 +1,13 @@
 <script lang="ts">
 	import ReferenceLink from './reference-link.svelte';
 
-	export let content: string;
-	export let source: string;
-	export let url: string;
+	interface Props {
+		content: string;
+		source: string;
+		url: string;
+	}
+
+	let { content, source, url }: Props = $props();
 </script>
 
 <div class="flex flex-row space-x-2 rounded-lg bg-sky-50 p-4 md:p-6">

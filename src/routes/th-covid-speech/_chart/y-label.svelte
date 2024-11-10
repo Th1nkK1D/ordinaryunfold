@@ -1,7 +1,11 @@
 <script lang="ts">
-	export let index: number;
-	export let y: number;
-	export let count: number;
+	interface Props {
+		index: number;
+		y: number;
+		count: number;
+	}
+
+	let { index, y, count }: Props = $props();
 </script>
 
 <div

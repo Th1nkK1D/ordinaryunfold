@@ -15,12 +15,12 @@
 
 	const PROJECT_PATH = 'comeback-king-or-a-flopper';
 
-	let teamIndex = 0;
-	let selectedLeague = 'bundesliga';
-	let isLoading = true;
-	let league: LeagueStats;
-	let activeTimeIndex: number = -1;
-	let tutorialStep: TutorialStep = 0;
+	let teamIndex = $state(0);
+	let selectedLeague = $state('bundesliga');
+	let isLoading = $state(true);
+	let league = $state<LeagueStats | undefined>();
+	let activeTimeIndex = $state(-1);
+	let tutorialStep = $state<TutorialStep>(0);
 	let chartSection: HTMLElement;
 
 	onMount(() => {
@@ -80,8 +80,9 @@
 				to the final whistle?
 			</p>
 			<button
-				on:click={() => chartSection.scrollIntoView({ behavior: 'smooth' })}
+				onclick={() => chartSection.scrollIntoView({ behavior: 'smooth' })}
 				class="md:self-end"
+				aria-label="scroll down"
 			>
 				<svg viewBox="0 0 24 24" class="w-8 fill-current opacity-60 hover:opacity-100 md:w-10">
 					<path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z" />
@@ -113,7 +114,7 @@
 								? 'invisible'
 								: ''}"
 							bind:value={selectedLeague}
-							on:change={loadSelectedLeagueData}
+							onchange={loadSelectedLeagueData}
 						>
 							<option value="bundesliga">🇩🇪 Bundesliga</option>
 							<option value="laliga">🇪🇸 LaLiga</option>

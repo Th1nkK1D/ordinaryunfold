@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export type TutorialStep = 0 | 1 | null;
 </script>
 
@@ -16,57 +16,70 @@
 	import MinutesLine from './minutes-line.svelte';
 	import Tutorial from './tutorial.svelte';
 
-	export let timeScale: string[];
-	export let maxMatch: number;
-	export let team: TeamStats;
-	export let activeTimeIndex: number;
-	export let tutorialStep: TutorialStep;
+	interface Props {
+		timeScale: string[];
+		maxMatch: number;
+		team: TeamStats;
+		activeTimeIndex: number;
+		tutorialStep: TutorialStep;
+		class?: string;
+	}
+
+	let {
+		timeScale,
+		maxMatch,
+		team,
+		activeTimeIndex = $bindable(),
+		tutorialStep = $bindable(),
+		class: className
+	}: Props = $props();
 
 	let winPath: SVGPathElement;
 	let drawLowerPath: SVGPathElement;
 	let drawUpperPath: SVGPathElement;
 	let lostPath: SVGPathElement;
-	let mouseX: number | null;
-	let width = 0;
-	let height = 0;
+	let mouseX = $state<number | null>(null);
+	let width = $state(0);
+	let height = $state(0);
 
 	const [floatingRef, floatingContent] = createFloatingActions({
 		strategy: 'absolute',
 		middleware: [flip()]
 	});
 
-	$: midY = height / 2;
-	$: x = scaleLinear([0, timeScale.length - 1], [0, width]);
-	$: xFromMinutes = (minutes: string) => x(timeScale.indexOf(minutes));
-	$: upperY = scaleLinear([0, maxMatch], [height / 2, 0]);
-	$: lowerY = scaleLinear([0, maxMatch], [height / 2, height]);
-
-	$: createArea = (y: ScaleLinear<number, number, never>) =>
+	let midY = $derived(height / 2);
+	let x = $derived(scaleLinear([0, timeScale.length - 1], [0, width]));
+	let xFromMinutes = $derived((minutes: string) => x(timeScale.indexOf(minutes)));
+	let upperY = $derived(scaleLinear([0, maxMatch], [height / 2, 0]));
+	let lowerY = $derived(scaleLinear([0, maxMatch], [height / 2, height]));
+	let createArea = $derived((y: ScaleLinear<number, number, never>) =>
 		area<number>()
 			.x((_, i) => x(i))
 			.y0(height / 2)
-			.y1((count) => y(count));
-
-	$: events = Object.entries(
-		(highlightEvents as Record<string, Record<string, string>>)[team.name] || {}
+			.y1((count) => y(count))
 	);
+	let events = $derived(
+		Object.entries((highlightEvents as Record<string, Record<string, string>>)[team.name] || {})
+	);
+	let groundPathData = $derived(createArea(upperY)(new Array(timeScale.length).fill(0)));
 
-	$: {
+	$effect(() => {
 		if (tutorialStep !== 0) {
 			animatePath(winPath, createArea(upperY)(team.W.map((c, i) => c + team.D[i] / 2)));
 			animatePath(drawLowerPath, createArea(upperY)(team.D.map((c) => c / 2)));
 			animatePath(drawUpperPath, createArea(lowerY)(team.D.map((c) => c / 2)));
 			animatePath(lostPath, createArea(lowerY)(team.L.map((c, i) => c + team.D[i] / 2)));
 		}
-	}
+	});
 
 	function animatePath(path: SVGPathElement, d: string | null) {
 		if (!path || !d) return;
 
 		let duration = 250;
+		let currentPath = path.getAttribute('d');
 
-		if (!path.getAttribute('d')) {
-			path.setAttribute('d', createArea(upperY)(new Array(team.D.length).fill(0)) as string);
+		if (!currentPath || currentPath?.split('0,0').length === timeScale.length * 2 + 1) {
+			path.setAttribute('d', createArea(upperY)(new Array(timeScale.length).fill(0)) as string);
 			duration *= 2;
 		}
 
@@ -92,10 +105,10 @@
 <div
 	bind:clientWidth={width}
 	bind:clientHeight={height}
-	class="relative {$$restProps.class}"
-	on:mousemove={(e) => updateCrosshair(e.clientX)}
-	on:mouseleave={removeCrosshair}
-	on:touchmove={(e) => updateCrosshair(e.targetTouches[0].clientX)}
+	class="relative {className}"
+	onmousemove={(e) => updateCrosshair(e.clientX)}
+	onmouseleave={removeCrosshair}
+	ontouchmove={(e) => updateCrosshair(e.targetTouches[0].clientX)}
 	role="region"
 	use:clickOutside={removeCrosshair}
 >
@@ -147,13 +160,13 @@
 	</svg>
 
 	{#if tutorialStep === 0}
-		<Tutorial canSkip on:skip={() => (tutorialStep = null)} on:next={() => (tutorialStep = 1)}>
+		<Tutorial canSkip onskip={() => (tutorialStep = null)} onnext={() => (tutorialStep = 1)}>
 			Football is a 90-minute game, split into two halves at 45 minutes (half-time). The stoppage
 			time (gray area) can be added to the end of both halves to compensate for injuries,
 			substitution, celebration, or any incidents.
 		</Tutorial>
 	{:else if tutorialStep === 1}
-		<Tutorial nextLabel="Let's explore" on:next={() => (tutorialStep = null)}>
+		<Tutorial nextLabel="Let's explore" onnext={() => (tutorialStep = null)}>
 			From every game in the season, the chart shows how many games they are winning, losing, or
 			drawing in each minute. In the real world, only the results at full-time were counted, but
 			what was going on along the way?
@@ -166,7 +179,7 @@
 				use:floatingRef
 				class="absolute {isUpper ? 'top-7' : 'bottom-4'}"
 				style="left: {xFromMinutes(minutes)}px;"
-			/>
+			></div>
 			<div
 				transition:fade={{ duration: 200, delay: 50 }}
 				use:floatingContent={{ placement: isUpper ? 'bottom-start' : 'top-start' }}

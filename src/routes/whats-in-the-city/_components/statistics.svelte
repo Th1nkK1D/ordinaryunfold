@@ -5,25 +5,31 @@
 
 	const CITY_TWEEN_DURATION = 500;
 
-	export let selectedCity: string;
-	export let locationCount: number;
+	interface Props {
+		selectedCity: string;
+		locationCount: number;
+	}
+
+	let { selectedCity, locationCount }: Props = $props();
 
 	const locationTween = tweened(0);
 	const populationTween = tweened(0, { duration: CITY_TWEEN_DURATION });
 	const areaTween = tweened(0, { duration: CITY_TWEEN_DURATION });
 
-	$: locationTween.set(locationCount, {
-		duration: locationCount * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
+	$effect(() => {
+		locationTween.set(locationCount, {
+			duration: locationCount * ANIMATE_DELAY_PER_POINT + ANIMATE_DURATION
+		});
 	});
 
-	$: {
-		let city = cities.find(({ key }) => key === selectedCity);
+	$effect(() => {
+		const city = cities.find(({ key }) => key === selectedCity);
 
 		if (city) {
 			$populationTween = city.population;
 			$areaTween = city.area;
 		}
-	}
+	});
 </script>
 
 <div class="flex flex-col items-center space-y-2 text-sm md:items-start md:space-y-6 md:text-base">

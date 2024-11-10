@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export interface Location {
 		id: string;
 		name: string;
@@ -20,11 +20,15 @@
 	import paper from 'paper';
 	import { createPinDefinition } from './symbols';
 
-	export let map: GeoPermissibleObjects;
-	export let locations: Location[];
-	export let colors: string[];
+	interface Props {
+		map: GeoPermissibleObjects;
+		locations: Location[];
+		colors: string[];
+	}
 
-	const MAP_COLOR = '#E5E5E5';
+	let { map, locations, colors }: Props = $props();
+
+	const MAP_COLOR = new paper.Color('#E5E5E5');
 
 	const PIN_HEIGHT = 20;
 	const PIN_DROP_OFFSET = 100;
@@ -32,7 +36,7 @@
 
 	let canvas: HTMLCanvasElement;
 
-	let tooltip: { x: number; y: number; name: string } | null = null;
+	let tooltip: { x: number; y: number; name: string } | null = $state(null);
 
 	const draw = (map: GeoPermissibleObjects, locations: Location[], withTransition = true) => {
 		paper.project.clear();
@@ -143,11 +147,13 @@
 		paper.view.onResize = () => draw(map, locations, false);
 	});
 
-	$: if (canvas) draw(map, locations);
+	$effect(() => {
+		if (canvas) draw(map, locations);
+	});
 </script>
 
 <div class="relative h-full w-full">
-	<canvas class="h-full w-full" bind:this={canvas} resize />
+	<canvas class="h-full w-full" bind:this={canvas} resize></canvas>
 	{#if tooltip}
 		<div
 			class="absolute -translate-x-1/2 -translate-y-full transform whitespace-nowrap rounded bg-black px-2 py-1 text-center text-sm text-white shadow"

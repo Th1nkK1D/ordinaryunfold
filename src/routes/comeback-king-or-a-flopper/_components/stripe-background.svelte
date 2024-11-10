@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { spring, type SpringOpts } from 'svelte/motion';
+	interface Props {
+		class?: string;
+	}
+
+	let { class: className }: Props = $props();
 
 	const UPDATE_MS = 3000;
 
@@ -33,7 +38,7 @@
 	}
 </script>
 
-<div class="flex flex-row bg-black {$$restProps.class}">
+<div class="flex flex-row bg-black {className}">
 	<div class="bg-green-600 opacity-30" style="width: {$greenSize}%;"></div>
 	<div class="flex-1 bg-blue-500 opacity-30"></div>
 	<div class="bg-red-400 opacity-30" style="width: {$redSize}%;"></div>

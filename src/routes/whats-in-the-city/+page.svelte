@@ -19,12 +19,12 @@
 
 	const RESOURCES_PATH = '/whats-in-the-city/json';
 
-	let pendingTask = 1;
-	let map: GeoPermissibleObjects;
-	let locations: Location[] = [];
+	let pendingTask = $state(1);
+	let map = $state<GeoPermissibleObjects>();
+	let locations = $state<Location[]>([]);
 
-	let selectedCategory: string = '';
-	let selectedCity: string = cities[0].key;
+	let selectedCategory: string = $state('');
+	let selectedCity: string = $state(cities[0].key);
 
 	const fetchJson = async (path: string) => {
 		pendingTask++;
@@ -47,7 +47,7 @@
 		pendingTask--;
 	});
 
-	$: colors = categories.find(({ key }) => key === selectedCategory)?.colors as string[];
+	let colors = $derived(categories.find(({ key }) => key === selectedCategory)?.colors as string[]);
 </script>
 
 <Metadata
@@ -69,16 +69,16 @@
 						options={categories}
 						bind:selectedOption={selectedCategory}
 						placeholder="What's"
-						on:select={({ detail }) => loadCategoryJson(selectedCity, detail)}
+						onselect={(category) => loadCategoryJson(selectedCity, category)}
 					/> in
 				</h1>
 				<h2 class="text-5xl md:text-6xl">
 					<Dropdown
 						options={cities}
 						bind:selectedOption={selectedCity}
-						on:select={({ detail }) => {
-							loadCityJson(detail);
-							if (selectedCategory) loadCategoryJson(detail, selectedCategory);
+						onselect={(city) => {
+							loadCityJson(city);
+							if (selectedCategory) loadCategoryJson(city, selectedCategory);
 						}}
 					/>
 				</h2>
@@ -95,7 +95,9 @@
 					<Spinner />
 				</div>
 			{/if}
-			<Map {map} {locations} {colors} />
+			{#if map}
+				<Map {map} {locations} {colors} />
+			{/if}
 			<Legend {colors} />
 		</div>
 	</div>

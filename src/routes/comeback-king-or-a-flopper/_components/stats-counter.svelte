@@ -4,17 +4,22 @@
 	import { createFloatingActions } from 'svelte-floating-ui';
 	import type { TeamStats } from '../../../data/comeback-king-or-a-flopper/model';
 
-	export let timeScale: string[];
-	export let team: TeamStats;
-	export let activeTimeIndex: number;
-	export let isShowingStats: boolean;
+	interface Props {
+		timeScale: string[];
+		team: TeamStats;
+		activeTimeIndex: number;
+		isShowingStats: boolean;
+		class?: string;
+	}
 
-	let isShowingTooltip: boolean = false;
+	let { timeScale, team, activeTimeIndex, isShowingStats, class: className }: Props = $props();
 
-	$: wins = team.W.at(activeTimeIndex) || 0;
-	$: draws = team.D.at(activeTimeIndex) || 0;
-	$: losses = team.L.at(activeTimeIndex) || 0;
-	$: points = wins * 3 + draws;
+	let isShowingTooltip: boolean = $state(false);
+
+	let wins = $derived(team.W.at(activeTimeIndex) || 0);
+	let draws = $derived(team.D.at(activeTimeIndex) || 0);
+	let losses = $derived(team.L.at(activeTimeIndex) || 0);
+	let points = $derived(wins * 3 + draws);
 
 	const [floatingRef, floatingContent] = createFloatingActions({
 		strategy: 'absolute',
@@ -25,9 +30,9 @@
 
 <p
 	use:floatingRef
-	on:mouseenter={() => (isShowingTooltip = isShowingStats)}
-	on:mouseleave={() => (isShowingTooltip = false)}
-	class="flex gap-1 whitespace-nowrap break-words text-gray-400 md:mb-2 md:text-right md:text-xl {$$restProps.class}"
+	onmouseenter={() => (isShowingTooltip = isShowingStats)}
+	onmouseleave={() => (isShowingTooltip = false)}
+	class="flex gap-1 whitespace-nowrap break-words text-gray-400 md:mb-2 md:text-right md:text-xl {className}"
 >
 	{#if activeTimeIndex >= 0}
 		<span class="font-bold text-gray-800">{timeScale[activeTimeIndex]}' : </span>

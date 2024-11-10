@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import paper from 'paper';
 	import { generateAvatarSymbols, BASE_SIZE } from './avatar';
 	import type { Person } from '../_data';
@@ -13,10 +12,14 @@
 
 	const MUTE_OPACITY = 0.25;
 
-	export let people: Person[];
-	export let activePeopleMask: boolean[];
+	interface Props {
+		people: Person[];
+		activePeopleMask: boolean[];
+	}
 
-	let avatarSymbols: paper.SymbolDefinition[];
+	let { people, activePeopleMask }: Props = $props();
+
+	let avatarSymbols: paper.SymbolDefinition[] = [];
 
 	function randomPickIn<T>(array: T[]): T {
 		return array[Math.floor(Math.random() * array.length)];
@@ -26,7 +29,8 @@
 
 	let canvas: HTMLCanvasElement;
 
-	$: onMount(() => {
+	$effect(() => {
+		if (avatarSymbols.length) return;
 		paper.setup(canvas);
 
 		avatarSymbols = generateAvatarSymbols();
@@ -52,7 +56,7 @@
 
 		people.forEach((person, index) => {
 			setTimeout(() => {
-				const item = randomPickIn(avatarSymbols).place(getPositionFromIndex(person.id));
+				const item = randomPickIn(avatarSymbols).place(getPositionFromIndex?.(person.id));
 
 				item.scale(scale);
 				item.data = person;
@@ -60,29 +64,29 @@
 		});
 	});
 
-	$: {
-		if (people && getPositionFromIndex) {
+	$effect(() => {
+		if (people) {
 			paper.project.activeLayer.children.forEach((avatar) => {
 				const { x, y } = getPositionFromIndex(people.findIndex(({ id }) => id === avatar.data.id));
 
 				avatar.tween({ 'position.x': x, 'position.y': y }, TWEEN_TRANSLATE_CONFIG);
 			});
 		}
-	}
+	});
 
-	$: {
+	$effect(() => {
 		if (paper.project && activePeopleMask) {
 			paper.project.activeLayer.children.forEach((avatar, index) => {
 				avatar.opacity =
 					activePeopleMask.length === 0 || activePeopleMask[index] ? 1 : MUTE_OPACITY;
 			});
 		}
-	}
+	});
 </script>
 
 <div class="fixed -z-10 h-dvh w-full bg-gray-900">
 	<canvas
 		class="h-full w-full {activePeopleMask.length === 0 ? 'opacity-60' : ''}"
 		bind:this={canvas}
-	/>
+	></canvas>
 </div>

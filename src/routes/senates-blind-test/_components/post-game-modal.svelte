@@ -1,9 +1,13 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	import { type Snippet } from 'svelte';
 	import Button from './button.svelte';
 	import Sharer from '../../../components/sharer.svelte';
+	interface Props {
+		children?: Snippet;
+		onexit: () => unknown;
+	}
 
-	const dispatch = createEventDispatcher();
+	let { children, onexit }: Props = $props();
 </script>
 
 <div class="fixed inset-0 flex items-center justify-center bg-black/80 p-3">
@@ -13,7 +17,7 @@
 		<div class="space-y-4 text-center">
 			<h1 class="font-chonburi text-2xl">คุณได้คะแนน</h1>
 			<p class="font-charmonman text-6xl">
-				<slot />
+				{@render children?.()}
 			</p>
 		</div>
 		<img src="/senates-blind-test/award-giphy.webp" alt="" />
@@ -26,7 +30,7 @@
 		</div>
 		<Button
 			class="border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-			on:click={() => dispatch('exit')}>กลับสู่หน้าหลัก</Button
+			onclick={onexit}>กลับสู่หน้าหลัก</Button
 		>
 	</div>
 </div>

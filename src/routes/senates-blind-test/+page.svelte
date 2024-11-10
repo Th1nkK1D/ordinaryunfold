@@ -3,16 +3,15 @@
 	import Footer from '../../components/footer.svelte';
 	import Metadata from '../../components/metadata.svelte';
 	import Sharer from '../../components/sharer.svelte';
-	import Button from './_components/button.svelte';
 	import IntroScene from './_components/intro-scene.svelte';
 	import QuizScene from './_components/quiz-scene.svelte';
 
 	const choiceLabels = ['ก.', 'ข.', 'ค.', 'ง.'];
 
-	export let data;
-	$: ({ candidates, groups } = data);
+	let { data } = $props();
+	let { candidates, groups } = $derived(data);
 
-	let isGameStarted = false;
+	let isGameStarted = $state(false);
 </script>
 
 <Metadata
@@ -26,7 +25,7 @@
 	{#if isGameStarted && candidates}
 		<QuizScene {candidates} {groups} {choiceLabels} bind:isGameStarted />
 	{:else}
-		<IntroScene {choiceLabels} on:start={() => (isGameStarted = true)} />
+		<IntroScene {choiceLabels} onstart={() => (isGameStarted = true)} />
 	{/if}
 </div>
 

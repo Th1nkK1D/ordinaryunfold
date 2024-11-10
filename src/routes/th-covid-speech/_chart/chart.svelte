@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { scaleTime, scaleLinear } from 'd3-scale';
-	import { createEventDispatcher, onMount } from 'svelte';
 	import { contentBlocks, dailyNewCases } from '../_data';
 	import type { Speech } from '../_data';
 	import Pin from './pin.svelte';
@@ -8,89 +7,108 @@
 	import YLabel from './y-label.svelte';
 	import Logo from '../../../components/logo.svelte';
 
+	type DailyNewCase = (typeof dailyNewCases)[number];
+
 	const WIDTH_CASE_MULTIPLIER = 6;
 	const Y_STEP_SIZE = 5000;
 	const SCROLL_BAR_HEIGHT = 8;
 	const MARGIN_TOP = 60;
 	const MARGIN_RIGHT = 40;
 
-	export let activeContentId: number;
+	interface Props {
+		activeContentId: number;
+		onselectspeech: (id: number) => unknown;
+	}
 
-	const dispatch = createEventDispatcher();
+	let { activeContentId = $bindable(), onselectspeech }: Props = $props();
 
-	let clientHeight = SCROLL_BAR_HEIGHT;
+	let clientHeight = $state(SCROLL_BAR_HEIGHT);
 	let horizontalScroll: HTMLElement;
 
-	$: chartHeight = clientHeight - SCROLL_BAR_HEIGHT;
+	let chartHeight = $derived(clientHeight - SCROLL_BAR_HEIGHT);
 
 	const yMax = Math.max(...dailyNewCases.map(({ count }) => count));
 
-	$: xMaxWidth = dailyNewCases.length * WIDTH_CASE_MULTIPLIER;
-	$: canvasSize = xMaxWidth + MARGIN_RIGHT;
+	let xMaxWidth = $derived(dailyNewCases.length * WIDTH_CASE_MULTIPLIER);
+	let canvasSize = $derived(xMaxWidth + MARGIN_RIGHT);
 
-	$: xScale = scaleTime()
-		.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
-		.range([0, xMaxWidth]);
+	let xScale = $derived(
+		scaleTime()
+			.domain([dailyNewCases[0].date, dailyNewCases[dailyNewCases.length - 1].date])
+			.range([0, xMaxWidth])
+	);
 
-	$: yScale = scaleLinear()
-		.domain([0, yMax])
-		.range([0, chartHeight - MARGIN_TOP]);
+	let yScale = $derived(
+		scaleLinear()
+			.domain([0, yMax])
+			.range([0, chartHeight - MARGIN_TOP])
+	);
 
-	$: xAxis = dailyNewCases
-		.filter(({ date }) => date.getDate() === 1)
-		.map(({ date }) => ({
-			date,
-			x: xScale(date)
-		}));
+	let xAxis = $derived(
+		dailyNewCases
+			.filter(({ date }) => date.getDate() === 1)
+			.map(({ date }) => ({
+				date,
+				x: xScale(date)
+			}))
+	);
 
-	$: yAxis = new Array(Math.ceil(yMax / Y_STEP_SIZE)).fill(null).map((_, i) => {
-		const count = i * Y_STEP_SIZE;
+	let yAxis = $derived(
+		new Array(Math.ceil(yMax / Y_STEP_SIZE)).fill(null).map((_, i) => {
+			const count = i * Y_STEP_SIZE;
 
-		return {
-			count,
-			y: Math.round(yScale(count)) + SCROLL_BAR_HEIGHT
-		};
-	});
+			return {
+				count,
+				y: Math.round(yScale(count)) + SCROLL_BAR_HEIGHT
+			};
+		})
+	);
 
-	$: points = dailyNewCases
-		.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
-		.join(' ');
+	let points = $derived(
+		dailyNewCases
+			.map(({ count, date }) => `${xScale(date)},${chartHeight - yScale(count)}`)
+			.join(' ')
+	);
 
-	$: pins = contentBlocks.map(({ id, type, date, ...rest }) => {
-		const matchedCases = dailyNewCases.find(
-			(newCase) => newCase.date.toDateString() === date.toDateString()
-		);
+	let pins = $derived(
+		contentBlocks.map(({ id, type, date, ...rest }) => {
+			const matchedCases = dailyNewCases.find(
+				(newCase) => newCase.date.toDateString() === date.toDateString()
+			);
 
-		const count = matchedCases
-			? matchedCases.count
-			: ([...dailyNewCases].reverse().find((newCase) => newCase.date <= date).count +
-					dailyNewCases.find((newCase) => newCase.date >= date).count) /
-				2;
+			const count = matchedCases
+				? matchedCases.count
+				: ((dailyNewCases.toReversed().find((newCase) => newCase.date <= date) as DailyNewCase)
+						.count +
+						(dailyNewCases.find((newCase) => newCase.date >= date) as DailyNewCase).count) /
+					2;
 
-		return {
-			id,
-			type,
-			date,
-			count,
-			speaker: type === 'speech' ? (rest as Speech).speaker : undefined,
-			x: Math.round(xScale(date)),
-			y: Math.round(yScale(count))
-		};
-	});
+			return {
+				id,
+				type,
+				date,
+				count,
+				speaker: type === 'speech' ? (rest as Speech).speaker : undefined,
+				x: Math.round(xScale(date)),
+				y: Math.round(yScale(count))
+			};
+		})
+	);
 
-	$: {
+	$effect(() => {
 		if (activeContentId) {
-			const left =
-				pins.find(({ id }) => id === activeContentId).x - horizontalScroll.clientWidth / 2;
+			const x = pins.find(({ id }) => id === activeContentId)?.x;
+
+			if (x === undefined) return;
 
 			horizontalScroll.scrollTo({
-				left,
+				left: x - horizontalScroll.clientWidth / 2,
 				behavior: 'smooth'
 			});
 		}
-	}
+	});
 
-	onMount(() => {
+	$effect(() => {
 		setTimeout(
 			() =>
 				horizontalScroll.scrollTo({
@@ -104,7 +122,7 @@
 
 <div class="relative h-full w-full" bind:clientHeight>
 	<div
-		class="absolute inset-0 top-0 z-10 flex justify-center p-3 md:right-auto md:justify-start md:p-4 bottom-auto"
+		class="absolute inset-0 bottom-auto top-0 z-10 flex justify-center p-3 md:right-auto md:justify-start md:p-4"
 	>
 		<Logo />
 	</div>
@@ -134,11 +152,7 @@
 			/>
 		</svg>
 		{#each pins as { id, ...rest }}
-			<Pin
-				{...rest}
-				isActive={id === activeContentId}
-				on:click={() => dispatch('selectspeech', id)}
-			/>
+			<Pin {...rest} isActive={id === activeContentId} onclick={() => onselectspeech(id)} />
 		{/each}
 	</div>
 </div>

@@ -2,10 +2,19 @@
 	const SITE_NAME = 'OrdinaryUnfold';
 	const BASE_URL = 'https://www.ordinaryunfold.com';
 
-	export let title: string = '';
-	export let description: string = 'Bite-size visualization and storytelling experiments';
-	export let image: string = '/og.png';
-	export let path: string = '';
+	interface Props {
+		title?: string;
+		description?: string;
+		image?: string;
+		path?: string;
+	}
+
+	let {
+		title = '',
+		description = 'Bite-size visualization and storytelling experiments',
+		image = '/og.png',
+		path = ''
+	}: Props = $props();
 </script>
 
 <svelte:head>

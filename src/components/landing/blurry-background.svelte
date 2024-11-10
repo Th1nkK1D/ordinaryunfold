@@ -1,13 +1,12 @@
 <script lang="ts">
 	import anime from 'animejs';
-	import { onDestroy, onMount } from 'svelte';
 
 	const COLORS = ['bg-red-500', 'bg-yellow-500', 'bg-blue-500', 'bg-purple-500', 'bg-green-500'];
 
 	let containerEl: HTMLDivElement;
-	let intervalTimer: NodeJS.Timer;
+	let intervalTimer: Timer;
 
-	onMount(() => {
+	$effect(() => {
 		intervalTimer = setInterval(async () => {
 			const circleEl = document.createElement('div');
 			const size = randomIntBetween(400, 800);
@@ -41,13 +40,13 @@
 
 			circleEl.remove();
 		}, 1200);
-	});
 
-	onDestroy(() => clearInterval(intervalTimer));
+		return () => clearInterval(intervalTimer);
+	});
 
 	function randomIntBetween(min: number, max: number) {
 		return Math.round(min + Math.random() * (max - min));
 	}
 </script>
 
-<div bind:this={containerEl} class="fixed inset-0 -z-10 bg-[#0f0f0f]" />
+<div bind:this={containerEl} class="fixed inset-0 -z-10 bg-[#0f0f0f]"></div>

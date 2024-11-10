@@ -1,18 +1,25 @@
 <script lang="ts">
+	import type { Snippet } from 'svelte';
 	import Scrollama from '../../../components/scrollama.svelte';
 	import type { Step } from './chapters';
+	import type { CallbackResponse } from 'scrollama';
 
-	export let steps: Step[] = [];
-	export let activePeopleMask: boolean[];
+	interface Props {
+		steps?: Step[];
+		activePeopleMask: boolean[];
+		children?: Snippet;
+	}
 
-	const onStepEnter = ({ detail: { index } }) => {
+	let { steps = [], activePeopleMask = $bindable(), children }: Props = $props();
+
+	const onStepEnter = ({ index }: CallbackResponse) => {
 		activePeopleMask = index === 0 || index > steps.length ? [] : steps[index - 1].matchedMask;
 	};
 </script>
 
-<Scrollama class="p-2" on:stepenter={onStepEnter}>
+<Scrollama class="p-2" onstepenter={onStepEnter}>
 	<section>
-		<h2 class="mx-6 font-head text-4xl font-bold md:mx-20 md:text-6xl"><slot /></h2>
+		<h2 class="mx-6 font-head text-4xl font-bold md:mx-20 md:text-6xl">{@render children?.()}</h2>
 	</section>
 
 	{#each steps as { heading, description, matchedMask }}
@@ -28,7 +35,7 @@
 		</section>
 	{/each}
 
-	<section />
+	<section></section>
 </Scrollama>
 
 <style lang="postcss">

@@ -1,10 +1,15 @@
-<script>
+<script lang="ts">
 	import ExternalLink from './external-link.svelte';
 
-	export let hideFollowLinks = false;
+	interface Props {
+		hideFollowLinks?: boolean;
+		class?: string;
+	}
+
+	let { hideFollowLinks = false, class: className = '' }: Props = $props();
 </script>
 
-<footer class="text-sm {$$props.class || ''}">
+<footer class="text-sm {className}">
 	<p>
 		{#if !hideFollowLinks}
 			Follow us on <ExternalLink href="https://www.facebook.com/ordinaryunfold" class="underline"

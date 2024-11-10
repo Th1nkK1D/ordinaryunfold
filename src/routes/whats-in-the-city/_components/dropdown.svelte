@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export interface Option {
 		key: string;
 		name: string;
@@ -7,13 +7,14 @@
 </script>
 
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
+	interface Props {
+		placeholder?: string;
+		options: Option[];
+		selectedOption?: string;
+		onselect: (option: string) => unknown;
+	}
 
-	export let placeholder = '';
-	export let options: Option[];
-	export let selectedOption: string = '';
-
-	const dispatch = createEventDispatcher();
+	let { placeholder = '', options, selectedOption = $bindable(''), onselect }: Props = $props();
 </script>
 
 <select
@@ -23,7 +24,7 @@
 		? options.find(({ key }) => key === selectedOption)?.colors?.[3]
 		: '#9E9E9E'}"
 	{placeholder}
-	on:change={() => dispatch('select', selectedOption)}
+	onchange={(val) => onselect(val.currentTarget.value)}
 >
 	{#if placeholder}
 		<option value="" class="hidden">{placeholder}</option>

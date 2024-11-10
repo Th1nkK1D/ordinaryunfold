@@ -3,11 +3,21 @@
 	import Quote from './quote.svelte';
 	import ReferenceLink from './reference-link.svelte';
 
-	export let quote: string;
-	export let note: string;
-	export let speaker: Speaker;
-	export let source: string;
-	export let url: string;
+	interface Props {
+		quote: string;
+		note: string;
+		speaker: Speaker;
+		source: string;
+		url: string;
+	}
+
+	let {
+		quote,
+		note,
+		speaker,
+		source,
+		url
+	}: Props = $props();
 </script>
 
 <div class="space-y-6 text-center">

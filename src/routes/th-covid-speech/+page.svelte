@@ -3,8 +3,8 @@
 	import Chart from './_chart/chart.svelte';
 	import Content from './_content/content.svelte';
 
-	let activeContentId: number;
-	let scrollToSpeech: (id: number) => void;
+	let activeContentId = $state<number>(0);
+	let scrollToSpeech = $state<(id: number) => void>(() => {});
 </script>
 
 <Metadata
@@ -16,7 +16,7 @@
 
 <div class="relative flex h-dvh flex-col lg:flex-row">
 	<div class="h-[32vh] bg-gray-900 lg:h-auto lg:flex-1">
-		<Chart bind:activeContentId on:selectspeech={({ detail: id }) => scrollToSpeech(id)} />
+		<Chart bind:activeContentId onselectspeech={scrollToSpeech} />
 	</div>
 
 	<Content bind:activeContentId bind:scrollToSpeech />

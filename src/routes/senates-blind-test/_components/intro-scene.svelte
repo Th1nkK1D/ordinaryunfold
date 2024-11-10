@@ -1,13 +1,15 @@
 <script lang="ts">
-	import { createEventDispatcher } from 'svelte';
 	import Logo from '../../../components/logo.svelte';
 	import Button from './button.svelte';
 	import Card from './card.svelte';
 	import ExternalLink from '../../../components/external-link.svelte';
 
-	export let choiceLabels: string[];
+	interface Props {
+		choiceLabels: string[];
+		onstart: () => unknown;
+	}
 
-	const dispatch = createEventDispatcher();
+	let { choiceLabels, onstart }: Props = $props();
 </script>
 
 <div class="relative h-lvh w-full overflow-hidden">
@@ -40,9 +42,7 @@
 				ผู้ชนะในแต่ละกลุ่มยังไม่ใช่สว. ที่กกต. รับรองอย่างเป็นทางการ
 			</p>
 		</div>
-		<Button class="z-50 bg-white text-[#2B815F] shadow-lg" on:click={() => dispatch('start')}
-			>เริ่มเล่น</Button
-		>
+		<Button class="z-50 bg-white text-[#2B815F] shadow-lg" onclick={onstart}>เริ่มเล่น</Button>
 	</div>
 	<div class="absolute bottom-0 left-1/2 flex w-[60vw] -translate-x-1/2 flex-row md:max-w-xl">
 		{#each choiceLabels as label, i}

@@ -1,13 +1,18 @@
 <script lang="ts">
 	import ExternalLink from './external-link.svelte';
 
-	export let url: string;
-	export let linkClass: string = 'text-sky-400 hover:text-sky-700';
+	interface Props {
+		url: string;
+		linkClass?: string;
+		class?: string;
+	}
 
-	$: encodedUrl = encodeURI(url);
+	let { url, linkClass = 'text-sky-400 hover:text-sky-700', ...props }: Props = $props();
+
+	let encodedUrl = $derived(() => encodeURI(url));
 </script>
 
-<div class="flex flex-row space-x-4 md:space-x-6 {$$props.class || ''}">
+<div class="flex flex-row space-x-4 md:space-x-6 {props.class || ''}">
 	<ExternalLink
 		href="http://www.facebook.com/sharer/sharer.php?u={encodedUrl}"
 		ariaLabel="Share to Facebook"

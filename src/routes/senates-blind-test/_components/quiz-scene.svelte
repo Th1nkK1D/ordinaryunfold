@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import JSConfetti from 'js-confetti';
 	import type { Candidate, Group } from '../+page.server';
 	import Button from './button.svelte';
@@ -9,31 +8,25 @@
 	const WINNING_CANDIDATE_PER_QUIZ = 1;
 	const LOSING_CANDIDATE_PER_QUIZ = 3;
 
-	export let choiceLabels: string[];
-	export let candidates: Candidate[];
-	export let groups: Group[];
-	export let isGameStarted: boolean;
+	interface Props {
+		choiceLabels: string[];
+		candidates: Candidate[];
+		groups: Group[];
+		isGameStarted: boolean;
+	}
 
-	let candidatesGroups: Map<
-		number,
-		{
-			id: number;
-			name: string;
-			winningCandidates: Candidate[];
-			losingCandidates: Candidate[];
-		}
-	>;
-	let totalQuizCompleted = 0;
-	let score = 0;
-	let currentGroup = 1;
-	let currentCandidates: Candidate[] = [];
-	let selectedChoice: number | null = null;
-	let isRevealed = false;
-	let isGameEnded = false;
-	let confetti: JSConfetti;
+	let { choiceLabels, candidates, groups, isGameStarted = $bindable() }: Props = $props();
 
-	onMount(() => {
-		candidatesGroups = new Map(
+	let candidatesGroups = $derived(
+		new Map<
+			number,
+			{
+				id: number;
+				name: string;
+				winningCandidates: Candidate[];
+				losingCandidates: Candidate[];
+			}
+		>(
 			groups.map(({ id, name }) => {
 				const groupCandidates = candidates.filter(({ group }) => group === id);
 
@@ -49,8 +42,19 @@
 					}
 				];
 			})
-		);
+		)
+	);
 
+	let totalQuizCompleted = $state(0);
+	let score = $state(0);
+	let currentGroup = $state(1);
+	let currentCandidates: Candidate[] = $state([]);
+	let selectedChoice: number | null = $state(null);
+	let isRevealed = $state(false);
+	let isGameEnded = $state(false);
+	let confetti: JSConfetti;
+
+	$effect(() => {
 		startNextQuiz();
 
 		confetti = new JSConfetti();
@@ -106,7 +110,6 @@
 	}
 
 	function formatThaiNumber(value: number) {
-		// @ts-expect-error
 		return value.toLocaleString('th-TH', { numberingSystem: 'thai' });
 	}
 </script>
@@ -152,7 +155,7 @@
 					: isSelecting
 						? 'selected'
 						: null}
-				on:click={() => (selectedChoice = selectedChoice !== i ? i : null)}
+				onclick={() => (selectedChoice = selectedChoice !== i ? i : null)}
 			/>
 		{/each}
 	</div>
@@ -162,11 +165,11 @@
 		{#if isRevealed}
 			<Button
 				class="shadow- border border-red-500 bg-white text-red-500 hover:bg-red-500 hover:text-white"
-				on:click={endGame}>พอแค่นี้</Button
+				onclick={endGame}>พอแค่นี้</Button
 			>
 			<Button
 				class="flex items-center gap-1 bg-gray-700 text-white shadow-lg"
-				on:click={startNextQuiz}
+				onclick={startNextQuiz}
 				>ไปต่อ <svg class="-mr-2 w-6" viewBox="0 0 24 24"
 					><path
 						fill="currentColor"
@@ -175,14 +178,14 @@
 				></Button
 			>
 		{:else if selectedChoice !== null}
-			<Button class="bg-blue-600 text-white shadow-lg" on:click={submitAnswer}
+			<Button class="bg-blue-600 text-white shadow-lg" onclick={submitAnswer}
 				>เลือกข้อ {choiceLabels[selectedChoice]} เป็นคำตอบสุดท้าย!</Button
 			>
 		{/if}
 	</div>
 
 	{#if isGameEnded}
-		<PostGameModal on:exit={() => (isGameStarted = false)}>
+		<PostGameModal onexit={() => (isGameStarted = false)}>
 			{formatThaiNumber(score)}/{formatThaiNumber(totalQuizCompleted)}
 		</PostGameModal>
 	{/if}
