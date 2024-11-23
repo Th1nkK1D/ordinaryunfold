@@ -4,7 +4,7 @@
 		onclick?: () => unknown;
 	}
 
-	let { isReversed = false }: Props = $props();
+	let { isReversed = false, onclick }: Props = $props();
 
 	let text = $derived(isReversed ? 'ใหม่ไปเก่า' : 'เก่าไปใหม่');
 </script>
