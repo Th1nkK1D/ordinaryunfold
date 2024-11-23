@@ -195,3 +195,18 @@ ks.test(recommendRatings, notRecommendRatings)
 ```{r}
 cohen.d(recommendRatings, notRecommendRatings)
 ```
+
+# Export CSV file
+
+```{r}
+data |>
+  filter(reviewPeriod == "all") |>
+  mutate(
+    releaseYear = str_split_i(releaseDate, ", ", 2),
+    steamAppPath = str_split_i(gameUrl, "/app/", 2),
+    wokeLevel = if_else(label == "Recommended", 0, if_else(label == "Informational", 1, 2)),
+    explanation = if_else(label == "Recommended", "", description)
+  ) |>
+  select(name, releaseYear, wokeLevel, positivePercent, explanation, steamAppPath) |>
+  write_csv("../../../static/woke-game-is-bad-game/games.csv", na = "")
+```
