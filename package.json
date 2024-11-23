@@ -17,6 +17,8 @@
     "format": "prettier --write ."
   },
   "devDependencies": {
+    "@melt-ui/pp": "^0.3.2",
+    "@melt-ui/svelte": "^0.86.2",
     "@rollup/plugin-dsv": "^3.0.4",
     "@sveltejs/adapter-static": "^3.0.6",
     "@sveltejs/kit": "^2.5.27",
