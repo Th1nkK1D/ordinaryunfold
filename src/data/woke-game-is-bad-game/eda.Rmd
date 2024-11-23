@@ -1,0 +1,197 @@
+---
+title: Woke Game is Bad Game?
+author: LK
+date: "`r format(Sys.time(), '%d/%m/%y')`"
+output: html_document
+---
+
+```{r echo=FALSE, error=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(error = FALSE)
+knitr::opts_chunk$set(warning = FALSE)
+knitr::opts_chunk$set(message = FALSE)
+knitr::opts_chunk$set(out.width = "100%")
+```
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(ggbeeswarm)
+library(effsize)
+```
+
+# Data Wrangler
+
+```{r}
+wokeList <- read_csv("out/woke-content-detector-list.csv")
+games <- read_csv("out/related-steam-games.csv")
+```
+
+```{r}
+data <- full_join(
+  games |>
+    select(name, releaseDate, reviews, metacriticScore, gameUrl),
+  wokeList |>
+    select(label, description, gameUrl),
+) |>
+  separate_longer_delim(reviews, ".,") |>
+  mutate(
+    positivePercent = str_split_i(reviews, "%", 1) |> as.numeric(),
+    totalReview = str_match(reviews, "of the (.*?) user")[, 2] |> str_replace_all(",", "") |> as.numeric(),
+    reviewPeriod = if_else(str_detect(reviews, "30 days"), "last 30 days", "all")
+  ) |>
+  drop_na(positivePercent, totalReview) |>
+  select(-reviews)
+
+summary(data)
+```
+
+# Analyse
+
+## Game with most reviews
+
+### All-time
+
+```{r}
+data |>
+  filter(reviewPeriod == "all") |>
+  arrange(desc(totalReview)) |>
+  select(name, totalReview)
+```
+
+### Last 30 days
+
+```{r}
+data |>
+  filter(reviewPeriod == "last 30 days") |>
+  arrange(desc(totalReview)) |>
+  select(name, totalReview)
+```
+
+## Steam review
+
+```{r}
+data |>
+  group_by(label) |>
+  summarise(
+    median = median(positivePercent),
+    mean = mean(positivePercent),
+    variance = var(positivePercent)
+  )
+```
+
+```{r}
+data |>
+  select(name, label) |>
+  distinct() |>
+  ggplot(aes(x = label)) +
+  geom_bar() +
+  ggtitle("Game with steam reviews label count")
+```
+
+```{r}
+data |>
+  filter(reviewPeriod == "all", name != "Counter-Strike 2") |>
+  ggplot(aes(x = totalReview, y = positivePercent, color = label)) +
+  geom_point() +
+  ggtitle("Game label with total review and positive rating (all-time)")
+```
+
+```{r}
+data |>
+  filter(reviewPeriod == "last 30 days") |>
+  ggplot(aes(x = totalReview, y = positivePercent, color = label)) +
+  geom_point() +
+  ggtitle("Game label with total review and positive rating (last 30 days)")
+```
+
+```{r}
+data |>
+  filter(reviewPeriod == "all", name != "Counter-Strike 2") |>
+  ggplot(aes(x = label, y = totalReview)) +
+  geom_boxplot() +
+  ggtitle("Total review by game label (all-time)")
+```
+
+```{r}
+data |>
+  filter(reviewPeriod == "last 30 days", name != "Counter-Strike 2") |>
+  ggplot(aes(x = label, y = totalReview)) +
+  geom_boxplot() +
+  ggtitle("Total review by game label (last 30 days)")
+```
+
+```{r}
+data |>
+  ggplot(aes(x = label, y = positivePercent)) +
+  geom_boxplot() +
+  facet_wrap(~reviewPeriod) +
+  ggtitle("Positive rating by game label")
+```
+
+```{r}
+data |>
+  filter(reviewPeriod == "all") |>
+  ggplot(aes(x = label, y = positivePercent, color = label)) +
+  geom_beeswarm() +
+  ggtitle("Positive rating by game label (all-time)") +
+  theme_bw()
+```
+
+```{r}
+data |>
+  ggplot(aes(x = reviewPeriod, y = positivePercent, color = label)) +
+  geom_beeswarm() +
+  facet_wrap(~reviewPeriod) +
+  ggtitle("Positive rating") +
+  theme_bw()
+```
+
+## Metacritics
+
+```{r}
+data |>
+  drop_na(metacriticScore) |>
+  select(name, label) |>
+  distinct() |>
+  ggplot(aes(x = label)) +
+  geom_bar() +
+  ggtitle("Game reviewed by Metacritics label count")
+```
+
+```{r}
+data |>
+  drop_na(metacriticScore) |>
+  distinct(name, label, metacriticScore) |>
+  ggplot(aes(x = label, y = metacriticScore)) +
+  geom_boxplot() +
+  ggtitle("Metacritics score by game label")
+```
+
+# Hyphothesis Testing
+
+```{r}
+recommendRatings <- filter(data, label == "Recommended", reviewPeriod == "all")$positivePercent
+informationalRatings <- filter(data, label == "Informational", reviewPeriod == "all")$positivePercent
+notRecommendRatings <- filter(data, label == "Not Recommended", reviewPeriod == "all")$positivePercent
+```
+
+## T-Test
+
+```{r}
+t.test(recommendRatings, notRecommendRatings)
+```
+
+```{r}
+t.test(c(recommendRatings, informationalRatings), notRecommendRatings)
+```
+
+## Kolmogorov-Smirnov Test
+
+```{r}
+ks.test(recommendRatings, notRecommendRatings)
+```
+
+## Cohen's D
+
+```{r}
+cohen.d(recommendRatings, notRecommendRatings)
+```
