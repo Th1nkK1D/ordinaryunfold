@@ -1,24 +1,24 @@
 import rawCandidates from '../../data/senates-blind-test/candidates-final.csv?raw';
 import rawInterestingWinners from '../../data/senates-blind-test/interesting-winners.csv?raw';
 import groups from '../../data/senates-blind-test/job-groups.json';
-import { Column, Table, parseCSVFromString } from 'sheethuahua';
+import { Column, Object, parseCsv, asString, asNumber, asBoolean } from 'sheethuahua';
 
-const candidatesTable = Table({
-	title: Column.String(),
-	firstName: Column.String(),
-	middleName: Column.OptionalString(),
-	lastName: Column.String(),
-	group: Column.Number(),
-	province: Column.String(),
-	experience: Column.OptionalString(),
-	documentUrl: Column.String(),
-	isWinner: Column.Boolean(),
-	score: Column.Number()
+const candidateSchema = Object({
+	title: Column('title', asString()),
+	firstName: Column('firstName', asString()),
+	middleName: Column('middleName', asString().optional()),
+	lastName: Column('lastName', asString()),
+	group: Column('group', asNumber()),
+	province: Column('province', asString()),
+	experience: Column('experience', asString().optional()),
+	documentUrl: Column('documentUrl', asString()),
+	isWinner: Column('isWinner', asBoolean()),
+	score: Column('score', asNumber())
 });
 
-const interestingWinnersTable = Table({
-	firstName: Column.String(),
-	lastName: Column.String()
+const interestingWinnerSchema = Object({
+	firstName: Column('firstName', asString()),
+	lastName: Column('lastName', asString())
 });
 
 export interface Group {
@@ -26,12 +26,9 @@ export interface Group {
 	name: string;
 }
 
-export async function load() {
-	const candidates = await parseCSVFromString(rawCandidates, candidatesTable);
-	const interestingWinners = await parseCSVFromString(
-		rawInterestingWinners,
-		interestingWinnersTable
-	);
+export function load() {
+	const candidates = parseCsv(rawCandidates, candidateSchema);
+	const interestingWinners = parseCsv(rawInterestingWinners, interestingWinnerSchema);
 
 	return {
 		candidates: candidates.map(

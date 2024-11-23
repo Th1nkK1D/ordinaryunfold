@@ -1,6 +1,6 @@
 import { NATIONAL_CANDIDATES_OUTPUT, PROVINCE_CANDIDATES_OUTPUT } from './config';
 import { csvFormat, csvParse } from 'd3-dsv';
-import { Column, Spreadsheet, Table, parseCSVFromString } from 'sheethuahua';
+import { Column, Spreadsheet, Object, parseCsv, asString, asNumber } from 'sheethuahua';
 
 interface ProvinceDistrict {
 	id: number;
@@ -19,11 +19,11 @@ const provinceDistricts: ProvinceDistrict[] = await (
 	await fetch('https://github.com/PanJ/senate67/raw/main/province-districts.json')
 ).json();
 
-const semifinalGroupTable = Table({
-	province: Column.String(),
-	first_name: Column.String(),
-	last_name: Column.String(),
-	คะแนน: Column.Number()
+const semifinalGroupSchema = Object({
+	province: Column('province', asString()),
+	first_name: Column('first_name', asString()),
+	last_name: Column('last_name', asString()),
+	คะแนน: Column('คะแนน', asString())
 });
 
 const finalCandidates = (
@@ -41,28 +41,26 @@ const finalCandidates = (
 
 			const csvText = (await res.text()).replaceAll('Province', 'province');
 
-			return (await parseCSVFromString(csvText, semifinalGroupTable)).map((c) => ({ group, ...c }));
+			return parseCsv(csvText, semifinalGroupSchema).map((c) => ({ group, ...c }));
 		})
 	)
 ).flat();
 
-const winnerSheet = Spreadsheet(
-	'1zJSO-l1nXAaj0g9YBoCzZrEyunBlRoHFiGsrN2fzDsQ',
-	[
-		Table('รวมรายชื่อ 200 คน', {
-			กลุ่มที่: Column.Number(),
-			province: Column.String(),
-			title: Column.String(),
-			first_name: Column.String(),
-			middle_name: Column.OptionalString(),
-			last_name: Column.String(),
-			คะแนน: Column.Number()
-		})
-	],
-	{ range: 'A2:G' }
+const winners = await Spreadsheet('1zJSO-l1nXAaj0g9YBoCzZrEyunBlRoHFiGsrN2fzDsQ').get(
+	'รวมรายชื่อ 200 คน',
+	Object(
+		{
+			กลุ่มที่: Column('', asNumber()),
+			province: Column('', asString()),
+			title: Column('', asString()),
+			first_name: Column('', asString()),
+			middle_name: Column('', asString().optional()),
+			last_name: Column('', asString()),
+			คะแนน: Column('', asNumber())
+		},
+		{ range: 'A2:G' }
+	)
 );
-
-const winners = await winnerSheet.get('รวมรายชื่อ 200 คน');
 
 const output = candidates
 	.filter((c) =>
