@@ -39,7 +39,8 @@ data <- full_join(
     reviewPeriod = if_else(str_detect(reviews, "30 days"), "last 30 days", "all")
   ) |>
   drop_na(positivePercent, totalReview) |>
-  select(-reviews)
+  select(-reviews) |>
+  filter(totalReview >= 200)
 
 summary(data)
 ```
@@ -208,5 +209,6 @@ data |>
     explanation = if_else(label == "Recommended", "", description)
   ) |>
   select(name, releaseYear, wokeLevel, positivePercent, explanation, steamAppPath) |>
+  arrange(desc(releaseYear)) |>
   write_csv("../../../static/woke-game-is-bad-game/games.csv", na = "")
 ```
