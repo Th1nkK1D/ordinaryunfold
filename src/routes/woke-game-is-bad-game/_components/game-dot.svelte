@@ -1,13 +1,9 @@
 <script lang="ts">
 	import { createTooltip } from '@melt-ui/svelte';
 	import { fade } from 'svelte/transition';
-	import type { Game } from '../game';
+	import { wokeLevelMap, type Game } from '../game';
 
-	let { name, woke, releaseYear, steamAppPath }: Game = $props();
-
-	let bgClass = $derived(
-		woke.level === 0 ? 'bg-blue-500' : woke.level === 1 ? 'bg-purple-500' : 'bg-red-500'
-	);
+	let { name, woke, releaseYear, positivePercent, steamAppPath }: Game = $props();
 
 	const {
 		elements: { trigger, content, arrow },
@@ -21,9 +17,12 @@
 		closeDelay: 0,
 		group: 'game'
 	});
+
+	let { label, bgClass, textClass } = $derived(wokeLevelMap[woke.level]);
 </script>
 
-<button {...$trigger} use:trigger class="size-2 rounded-full {bgClass}" aria-label={name}></button>
+<button {...$trigger} use:trigger class="size-[6px] rounded-full {bgClass}" aria-label={name}
+></button>
 
 {#if $open}
 	<div
@@ -35,6 +34,10 @@
 		<div {...$arrow} use:arrow></div>
 		<div class="flex flex-col gap-2 rounded px-3 py-2">
 			<p><span class="font-bold">{name}</span> ({releaseYear})</p>
+			<p class="italic">
+				<span class="font-bold {textClass}">{label}</span>
+				- {positivePercent}% positive reviews
+			</p>
 			{#if woke.explanation}
 				<p class="text-sm">{woke.explanation}</p>
 			{/if}

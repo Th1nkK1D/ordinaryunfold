@@ -1,7 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fetchGames, type Game } from './game';
+	import { fetchGames, wokeLevelMap, type Game } from './game';
 	import WokeLevel from './_components/woke-level.svelte';
+	import ReviewScale from './_components/review-scale.svelte';
+	import BeeswarmChart from './_components/beeswarm-chart.svelte';
+	import Logo from '../../components/logo.svelte';
+	import { groups } from 'd3-array';
 
 	let games = $state<Game[]>([]);
 
@@ -13,41 +17,72 @@
 <div class="flex justify-center bg-zinc-100 text-neutral-950">
 	<div class="w-full max-w-screen-lg py-24">
 		<section>
+			<Logo dark />
 			<h1 class="text-8xl leading-tight">
 				<span>Woke</span> Game<br /> is <span>Bad</span> Game?
 			</h1>
-			<p class="text-2xl">
-				We analyses almost 1,400 games in Woke Content Detector's list to see if wokeness and user
+			<div class="text-2xl">
+				We analyses over 1,000 games in Woke Content Detector's list to see if wokeness and user
 				review are correlated.
+			</div>
+		</section>
+
+		<section>
+			<h2>What is bad (and good) game?</h2>
+			<p>
+				Good and bad game is subjective and opinionate, so we use Steam's game review as a
+				collective good/bad indicator. Steam is a video game digital distribution service. People
+				who bought game on Steam can give a "Positive" or "Negative" review to the game. When the
+				games has enough reviews, Steam will show the percentage of positive reviews.
 			</p>
+			<ReviewScale />
 		</section>
 
 		<section>
 			<h2>What is woke game?</h2>
+			<p>
+				There are many discussion about the definition of woke. To aligned with our main datasets,
+				Woke Content Detector (a group with over 2-thousand members aim to label computer games with
+				wokeness label), defines "Woke content" in their methodology as <i
+					>"Any images, messages, characters, storytelling, dialogue, music, or game mechanics that
+					include themes associated with the left-side of the political aisle in contemporary
+					western politics."</i
+				>
+			</p>
+			<p>
+				In the Woke Content Detector's list, there are {games.length.toLocaleString()} games with 200
+				or more reviews on Steam.* It was grouped into 3 level of wokeness:
+			</p>
 			<div class="flex flex-col gap-2">
-				<WokeLevel
-					title="1. Not woke"
-					description="No Woke themes present (Recommended)"
-					games={games.filter((g) => g.woke.level === 0)}
-				/>
-				<WokeLevel
-					title="2. Subtle woke"
-					description="Woke themes present with subtle/no specific messaging (Informational)"
-					games={games.filter((g) => g.woke.level === 1)}
-				/>
-				<WokeLevel
-					title="3. Overtly woke"
-					description="Woke themes present with overt messaging (Not Recommended)"
-					games={games.filter((g) => g.woke.level === 2)}
-				/>
-				<p>Total {games.length.toLocaleString()} game</p>
+				{#each wokeLevelMap as { label, description }, level}
+					<WokeLevel
+						title="{level + 1}. {label}"
+						{description}
+						games={games.filter((g) => g.woke.level === level)}
+					/>
+				{/each}
+				<p class="self-end text-sm italic">* Data collected on 20 November 2024</p>
 			</div>
+		</section>
+
+		<section>
+			<h2>Let's guess</h2>
+			<p>
+				If wokeness and badness are correlated, now can you guess the positive review percentage
+				which best saperate "Overtly Woke" and "Not Woke" games?
+			</p>
+			<BeeswarmChart groups={[games]} />
+		</section>
+
+		<section>
+			<h2>Statistical Comparison</h2>
+			<BeeswarmChart groups={groups(games, (g) => g.woke.level).map(([_, gs]) => gs)} />
 		</section>
 	</div>
 </div>
 
 <style lang="postcss">
-	@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700&display=swap');
 
 	h1,
 	h2 {
@@ -64,6 +99,10 @@
 	}
 
 	section {
-		@apply flex flex-col gap-8 px-3 py-12;
+		@apply flex flex-col gap-8 px-3 py-16;
+	}
+
+	section > p {
+		@apply indent-8;
 	}
 </style>
