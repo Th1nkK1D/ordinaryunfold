@@ -6,9 +6,10 @@
 
 	interface Props {
 		groups: Game[][];
+		disabled?: boolean;
 	}
 
-	let { groups }: Props = $props();
+	let { groups, disabled }: Props = $props();
 
 	let groupData = $derived(
 		groups.map((games) => ({
@@ -20,7 +21,7 @@
 	);
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col" class:pointer-events-none={disabled}>
 	<ReviewScale>
 		<div class="flex flex-col gap-1">
 			{#each groupData as { group, mean }}
@@ -38,7 +39,7 @@
 							style="left: {percentage}%;"
 						>
 							{#each games.sort((a, z) => z.woke.level - a.woke.level) as game}
-								<GameDot {...game} />
+								<GameDot {...game} {disabled} />
 							{/each}
 						</div>
 					{/each}
@@ -46,13 +47,14 @@
 			{/each}
 		</div>
 	</ReviewScale>
-
-	<div class="flex flex-row flex-wrap justify-center gap-4">
-		{#each wokeLevelMap as { label, bgClass }}
-			<div class="flex flex-row items-center gap-1">
-				<div class="size-2 rounded-full {bgClass}"></div>
-				<div class="text-sm">{label}</div>
-			</div>
-		{/each}
-	</div>
+	{#if !disabled}
+		<div class="flex flex-row flex-wrap justify-center gap-4">
+			{#each wokeLevelMap as { label, bgClass }}
+				<div class="flex flex-row items-center gap-1">
+					<div class="size-2 rounded-full {bgClass}"></div>
+					<div class="text-sm">{label}</div>
+				</div>
+			{/each}
+		</div>
+	{/if}
 </div>

@@ -6,6 +6,7 @@
 	import BeeswarmChart from './_components/beeswarm-chart.svelte';
 	import Logo from '../../components/logo.svelte';
 	import { groups } from 'd3-array';
+	import GuessingGame from './_components/guessing-game.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -71,7 +72,7 @@
 				If wokeness and badness are correlated, now can you guess the positive review percentage
 				which best saperate "Overtly Woke" and "Not Woke" games?
 			</p>
-			<BeeswarmChart groups={[games]} />
+			<GuessingGame {games} />
 		</section>
 
 		<section>
