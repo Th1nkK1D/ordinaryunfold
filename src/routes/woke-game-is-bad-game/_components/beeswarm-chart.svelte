@@ -3,6 +3,7 @@
 	import { type Game, wokeLevelMap } from '../game';
 	import GameDot from './game-dot.svelte';
 	import ReviewScale from './review-scale.svelte';
+	import { slide } from 'svelte/transition';
 
 	interface Props {
 		groups: Game[][];
@@ -21,7 +22,7 @@
 	);
 </script>
 
-<div class="flex flex-col" class:pointer-events-none={disabled}>
+<div class="flex flex-col {disabled ? 'pointer-events-none select-none' : ''}">
 	<ReviewScale>
 		<div class="flex flex-col gap-1">
 			{#each groupData as { group, mean }}
@@ -48,7 +49,7 @@
 		</div>
 	</ReviewScale>
 	{#if !disabled}
-		<div class="flex flex-row flex-wrap justify-center gap-4">
+		<div transition:slide class="flex flex-row flex-wrap justify-center gap-4">
 			{#each wokeLevelMap as { label, bgClass }}
 				<div class="flex flex-row items-center gap-1">
 					<div class="size-2 rounded-full {bgClass}"></div>

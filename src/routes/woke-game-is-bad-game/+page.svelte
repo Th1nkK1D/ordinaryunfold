@@ -69,8 +69,9 @@
 		<section>
 			<h2>Let's guess</h2>
 			<p>
-				If wokeness and badness are correlated, now can you guess the positive review percentage
-				which best saperate "Overtly Woke" and "Not Woke" games?
+				If woke game is bad game, now can you guess the positive review percentage which best
+				saperate "Overtly Woke" and "Not Woke" games? <i>(Let's ignore subtle woke games for now)</i
+				>
 			</p>
 			<GuessingGame {games} />
 		</section>
