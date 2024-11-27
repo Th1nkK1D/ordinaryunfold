@@ -21,7 +21,7 @@
 </script>
 
 <div class="flex flex-col {disabled ? 'pointer-events-none select-none' : ''}">
-	<ReviewScale>
+	<ReviewScale hideLegend={disabled}>
 		<div class="flex flex-col gap-1">
 			{#each groupData as { group, mean }}
 				<div class="relative flex w-full flex-1 flex-row">
@@ -46,14 +46,4 @@
 			{/each}
 		</div>
 	</ReviewScale>
-	{#if !disabled}
-		<div transition:slide class="flex flex-row flex-wrap justify-center gap-4">
-			{#each wokeLevelMap as { label, bgClass }}
-				<div class="flex flex-row items-center gap-1">
-					<div class="size-2 rounded-full {bgClass}"></div>
-					<div class="text-sm">{label}</div>
-				</div>
-			{/each}
-		</div>
-	{/if}
 </div>

@@ -47,7 +47,7 @@
 				who bought game on Steam can give a "Positive" or "Negative" review to the game. When the
 				games has enough reviews, Steam will show the percentage of positive reviews.
 			</p>
-			<ReviewScale />
+			<ReviewScale hideLegend />
 		</section>
 
 		<section>

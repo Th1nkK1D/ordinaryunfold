@@ -56,10 +56,14 @@
 	{#if isGuessing || result}
 		<div transition:fade class="absolute inset-x-0 inset-y-6 flex flex-row">
 			<div
-				class="{wokeLevelMap[2].bgClass} bg-opacity-25"
+				class="transition-opacity {wokeLevelMap[2].bgClass} {result ? 'opacity-15' : 'opacity-25'}"
 				style="width: {selectedPosition}px;"
 			></div>
-			<div class="flex-1 {wokeLevelMap[0].bgClass} bg-opacity-25"></div>
+			<div
+				class="flex-1 transition-opacity {wokeLevelMap[0].bgClass} {result
+					? 'opacity-15'
+					: 'opacity-25'}"
+			></div>
 		</div>
 	{/if}
 
