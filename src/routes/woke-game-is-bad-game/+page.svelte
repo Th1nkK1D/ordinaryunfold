@@ -5,10 +5,21 @@
 	import ReviewScale from './_components/review-scale.svelte';
 	import BeeswarmChart from './_components/beeswarm-chart.svelte';
 	import Logo from '../../components/logo.svelte';
-	import { groups } from 'd3-array';
+	import { groups as d3groups } from 'd3-array';
 	import GuessingGame from './_components/guessing-game.svelte';
 
 	let games = $state<Game[]>([]);
+
+	let groups = $derived<GameLevelGroup[]>(
+		d3groups(games, (g) => g.woke.level)
+			.sort((a, z) => a[0] - z[0])
+			.map(([_, gs]) => ({
+				games: gs as Game[],
+				mean: Math.round(
+					gs.reduce((sum, { positivePercent }) => sum + positivePercent, 0) / gs.length
+				)
+			}))
+	);
 
 	onMount(async () => {
 		games = await fetchGames();
@@ -77,8 +88,7 @@
 		</section>
 
 		<section>
-			<h2>Statistical Comparison</h2>
-			<BeeswarmChart groups={groups(games, (g) => g.woke.level).map(([_, gs]) => gs)} />
+			<BeeswarmChart {groups} />
 		</section>
 	</div>
 </div>

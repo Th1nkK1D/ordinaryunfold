@@ -4,8 +4,6 @@
 	import BeeswarmChart from './beeswarm-chart.svelte';
 	import { draggable } from '@neodrag/svelte';
 
-	const INITIAL_PERCENT = 86.8;
-
 	interface Props {
 		games: Game[];
 	}
@@ -17,13 +15,17 @@
 	let isGuessing = $state(true);
 	let result = $state<{ correct: number; total: number }>();
 
+	let mean = $derived(
+		Math.round(games.reduce((sum, { positivePercent }) => sum + positivePercent, 0) / games.length)
+	);
+
 	let selectedPercent = $derived(
 		contentBoxSize ? Math.round((selectedPosition / contentBoxSize[0].inlineSize) * 100) : 0
 	);
 
 	$effect(() => {
 		if (contentBoxSize && isGuessing) {
-			selectedPosition = Math.round((INITIAL_PERCENT / 100) * contentBoxSize[0].inlineSize);
+			selectedPosition = Math.round((mean / 100) * contentBoxSize[0].inlineSize);
 		}
 	});
 
@@ -61,7 +63,7 @@
 		</div>
 	{/if}
 
-	<BeeswarmChart groups={[games]} disabled={isGuessing} />
+	<BeeswarmChart groups={[{ games, mean }]} disabled={isGuessing} />
 
 	{#if isGuessing}
 		<div transition:fade class="absolute inset-x-0 inset-y-6 flex select-none flex-row">

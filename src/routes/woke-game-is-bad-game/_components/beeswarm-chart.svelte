@@ -1,23 +1,21 @@
 <script lang="ts">
 	import { groups as d3groups } from 'd3-array';
-	import { type Game, wokeLevelMap } from '../game';
+	import { type GameLevelGroup, wokeLevelMap } from '../game';
 	import GameDot from './game-dot.svelte';
 	import ReviewScale from './review-scale.svelte';
 	import { slide } from 'svelte/transition';
 
 	interface Props {
-		groups: Game[][];
+		groups: GameLevelGroup[];
 		disabled?: boolean;
 	}
 
 	let { groups, disabled }: Props = $props();
 
 	let groupData = $derived(
-		groups.map((games) => ({
+		groups.map(({ mean, games }) => ({
 			group: d3groups(games, (g) => g.positivePercent),
-			mean: Math.round(
-				games.reduce((sum, { positivePercent }) => sum + positivePercent, 0) / games.length
-			)
+			mean
 		}))
 	);
 </script>

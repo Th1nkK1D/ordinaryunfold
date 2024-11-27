@@ -1,5 +1,11 @@
 import { asNumber, asString, Column, fetchCsv, Object, type StaticDecode } from 'sheethuahua';
 
+export type Game = StaticDecode<typeof gameSchema>;
+
+export interface GameLevelGroup {
+	mean: number;
+	games: Game[];
+}
 export const wokeLevelMap = [
 	{
 		label: 'Not Woke',
@@ -21,6 +27,8 @@ export const wokeLevelMap = [
 	}
 ];
 
+export const fetchGames = () => fetchCsv('/woke-game-is-bad-game/games.csv', gameSchema);
+
 const gameSchema = Object({
 	name: Column('name', asString()),
 	releaseYear: Column('releaseYear', asNumber().optional()),
@@ -31,7 +39,3 @@ const gameSchema = Object({
 	}),
 	steamAppPath: Column('steamAppPath', asString())
 });
-
-export type Game = StaticDecode<typeof gameSchema>;
-
-export const fetchGames = () => fetchCsv('/woke-game-is-bad-game/games.csv', gameSchema);
