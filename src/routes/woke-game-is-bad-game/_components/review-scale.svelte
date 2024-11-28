@@ -5,15 +5,16 @@
 
 	interface Props {
 		hideLegend?: boolean;
+		xStarted?: number;
 		children?: Snippet;
 	}
 
-	let { hideLegend, children }: Props = $props();
+	let { hideLegend, xStarted = 0, children }: Props = $props();
 </script>
 
-<div class="flex h-full w-full flex-col gap-1">
+<div class="z-10 flex h-full w-full flex-col gap-1">
 	<div class="flex flex-row">
-		<span class="flex-1">0%</span>
+		<span class="flex-1">{xStarted}%</span>
 		<span>Positive Reviews (%)</span>
 		<span class="flex-1 text-right">100%</span>
 	</div>

@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fetchGames, wokeLevelMap, type Game } from './game';
+	import { fetchGames, wokeLevelMap, type Game, type GameLevelGroup } from './game';
 	import WokeLevel from './_components/woke-level.svelte';
 	import ReviewScale from './_components/review-scale.svelte';
 	import BeeswarmChart from './_components/beeswarm-chart.svelte';
 	import Logo from '../../components/logo.svelte';
 	import { groups as d3groups } from 'd3-array';
 	import GuessingGame from './_components/guessing-game.svelte';
+	import CohenDPlot from './_components/cohen-d-plot.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -88,7 +89,30 @@
 		</section>
 
 		<section>
+			<h2>So is there any difference?</h2>
+			<p>
+				Separating games into each wokeness levels, "Not Woke" games seems to have the highest
+				average positive rating at 88%, follow by "Subtle Woke" at 87%, and lastly, "Overtly Woke"
+				at 85%.
+			</p>
 			<BeeswarmChart {groups} />
+			<p>
+				Look like the more woke game is, the worst review it tends to be, by an average of 3%
+				between "Not Woke" and "Overtly Woke" group. <span class="font-bold"
+					>The question is, does this different matter?</span
+				>
+				In statistic, we can use "Cohen's D" to measure the how large is the difference between the average
+				of two group in the unit of Standard Deviations (SD). We calculated <i>Cohen's D</i>
+				value of two most extremed group, "Not Woke" and "Overtly Woke" and here is the result (we zoomed
+				in from 80% positive reviews and more to see the details):
+			</p>
+			<CohenDPlot groups={groups.filter((_, i) => i !== 1)} />
+			<p>
+				According to the Cohen's general guideline, the Cohen's D of 0.27 can be interpreted as
+				<span class="font-bold italic"
+					>"The difference between two groups is small and difficult to see with the naked eye"</span
+				>.
+			</p>
 		</section>
 	</div>
 </div>
