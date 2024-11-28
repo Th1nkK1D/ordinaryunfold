@@ -78,7 +78,7 @@
 
 			const count = matchedCases
 				? matchedCases.count
-				: ((dailyNewCases.toReversed().find((newCase) => newCase.date <= date) as DailyNewCase)
+				: (([...dailyNewCases].reverse().find((newCase) => newCase.date <= date) as DailyNewCase)
 						.count +
 						(dailyNewCases.find((newCase) => newCase.date >= date) as DailyNewCase).count) /
 					2;
