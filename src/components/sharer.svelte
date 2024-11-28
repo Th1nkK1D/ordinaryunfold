@@ -9,7 +9,7 @@
 
 	let { url, linkClass = 'text-sky-400 hover:text-sky-700', ...props }: Props = $props();
 
-	let encodedUrl = $derived(() => encodeURI(url));
+	let encodedUrl = $derived(encodeURI(url));
 </script>
 
 <div class="flex flex-row space-x-4 md:space-x-6 {props.class || ''}">
