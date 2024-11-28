@@ -121,7 +121,7 @@
 		<button onclick={() => (isGuessing = false)} class="hover:bg-zinc-200">Skip</button>
 	</div>
 {:else}
-	<p transition:slide class="indent-8">
+	<p transition:slide class="mx-auto max-w-screen-md indent-8">
 		{#if result}
 			{@const { correct, total } = result}
 			That's {Math.round((correct / total) * 100)}% ({correct}/{total}) corrected,
@@ -129,7 +129,7 @@
 		{:else}
 			Don't worry, because actually,
 		{/if}
-		positive review percentage cannot clearly separate overty woke and not woke games.
+		positive review cannot clearly separate overty woke and not woke games.
 	</p>
 {/if}
 
