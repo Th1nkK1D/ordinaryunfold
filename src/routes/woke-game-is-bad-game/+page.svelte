@@ -13,6 +13,7 @@
 	import QuoteBlock from './_components/quote-block.svelte';
 	import ReferenceText from './_components/reference-text.svelte';
 	import CohenDFormular from './_components/cohen-d-formular.svelte';
+	import Metadata from '../../components/metadata.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -32,6 +33,12 @@
 	});
 </script>
 
+<Metadata
+	title="Woke Game is Bad Game?"
+	description="We analyzed over 1,000 games to see if wokeness and user reviews are correlated"
+	path="/woke-game-is-bad-game"
+/>
+
 <div class="flex justify-center bg-zinc-100 text-neutral-950">
 	<div class="w-full max-w-screen-lg pb-16 pt-6 md:pt-16">
 		<div class="flex flex-col items-center gap-12 px-3 pb-12 md:items-start md:gap-24 md:pb-20">
@@ -39,11 +46,11 @@
 			<h1
 				class="max-w-72 text-balance text-center text-6xl leading-tight md:max-w-none md:text-left md:text-8xl md:leading-snug"
 			>
-				<span>Woke</span> Game<br /> is <span>Bad</span> Game?
+				<span>Woke</span> Game is <span>Bad</span> Game?
 			</h1>
 			<p class="mx-auto !max-w-none text-xl md:text-2xl">
 				We analyzed over 1,000 games in Woke Content Detector's list to see if wokeness and user
-				reviews are correlated.
+				positive reviews are correlated.
 			</p>
 		</div>
 
@@ -65,7 +72,26 @@
 		</div>
 
 		<section>
-			<h2>What is woke?</h2>
+			<p>
+				<i>"Woke"</i> might be the most popular word in the past few years. Not only do people use it
+				in discussion a lot, but people also blame it for destroying culture and fun in many sectors
+				including games, a lot. The problem is that not a lot of those accusations are backed by the
+				data when most of the discussion around woke topic are so subjective. So here we are.
+			</p>
+			<div class="flex justify-center">
+				<blockquote class="twitter-tweet" data-conversation="none">
+					<p lang="en" dir="ltr">Yeah, video games are *way* too woke. It kills the vibe.</p>
+					&mdash; Elon Musk (@elonmusk)<a
+						href="https://twitter.com/elonmusk/status/1768087733082227117?ref_src=twsrc%5Etfw"
+						>March 14, 2024</a
+					>
+				</blockquote>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			</div>
+		</section>
+
+		<section>
+			<h2>But first, what is woke?</h2>
 			<p>
 				There are many discussions about the definition of woke. <ReferenceText
 					href="https://www.merriam-webster.com/dictionary/woke">Merriam-Webster</ReferenceText
@@ -134,7 +160,7 @@
 		</section>
 
 		<section>
-			<h2>Is there a difference?</h2>
+			<h2>Analyse the difference</h2>
 			<p>
 				When divided into wokeness levels, <i>"Not Woke"</i> games seem to have the highest average
 				positive rating at 88%, followed by <i>"Subtle Woke"</i> at 87% and <i>"Overtly Woke"</i> at
@@ -169,9 +195,9 @@
 			</p>
 		</section>
 
-		<section class="text-center">
+		<section>
 			<h2>So, is woke game a bad game?</h2>
-			<div class="text-8xl">NO.</div>
+			<p class="text-8xl">NO.</p>
 			<p>
 				Using data from the Woke Content Detector, we cannot separate the game's wokeness with
 				positive reviews percentage. And the difference in averages between the wokeness group is
