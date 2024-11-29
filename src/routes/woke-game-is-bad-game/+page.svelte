@@ -10,6 +10,7 @@
 	import CohenDPlot from './_components/cohen-d-plot.svelte';
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
+	import QuoteBlock from './_components/quote-block.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -37,25 +38,34 @@
 				<span>Woke</span> Game<br /> is <span>Bad</span> Game?
 			</h1>
 			<div class="text-2xl">
-				We analyses over 1,000 games in Woke Content Detector's list to see if wokeness and user
-				review are correlated.
+				We analyzed over 1,000 games in Woke Content Detector's list to see if wokeness and user
+				reviews are correlated.
 			</div>
 		</section>
 
 		<section>
 			<h2>What is woke?</h2>
 			<p>
-				There are many discussion about the definition of woke. To aligned with our main datasets,
-				Woke Content Detector (a group with over 2-thousand members aim to label computer games with
-				wokeness label), defines "Woke content" in their methodology as <i
-					>"Any images, messages, characters, storytelling, dialogue, music, or game mechanics that
-					include themes associated with the left-side of the political aisle in contemporary
-					western politics."</i
-				>
+				There are many discussions about the definition of woke. Merriam-Webster describes <i
+					>"woke"</i
+				> as
 			</p>
+			<QuoteBlock>
+				(adj.) aware of and actively attentive to important societal facts and issues (especially
+				issues of racial and social justice)
+			</QuoteBlock>
+			<p>
+				Our main data source, Woke Content Detector (a group with over 2,000 members that aim to
+				label computer games with wokeness label), defines "Woke content" in their methodology as
+			</p>
+			<QuoteBlock>
+				any images, messages, characters, storytelling, dialogue, music, or game mechanics that
+				include themes associated with the left-side of the political aisle in contemporary western
+				politics.
+			</QuoteBlock>
 			<p>
 				In the Woke Content Detector's list, there are {games.length.toLocaleString()} games with 200
-				or more reviews on Steam.* It was grouped into 3 level of wokeness:
+				or more reviews on Steam.* It was grouped into 3 levels of wokeness:
 			</p>
 			<div class="mx-auto flex flex-col gap-2">
 				{#each wokeLevelMap as { label, description }, level}
@@ -70,12 +80,12 @@
 		</section>
 
 		<section>
-			<h2>What is bad (and good) game?</h2>
+			<h2>What is a bad (and good) game?</h2>
 			<p>
-				Good and bad game is subjective and opinionate, so we use Steam's game review as a
+				Good and bad games are subjective and opinionated. We use Steam's game reviews as a
 				collective good/bad indicator. Steam is a video game digital distribution service. People
-				who bought game on Steam can give a "Positive" or "Negative" review to the game. When the
-				games has enough reviews, Steam will show the percentage of positive reviews.
+				who buy games on Steam can give them a <i>"Positive"</i> or <i>"Negative"</i> review. When a
+				game has enough reviews, Steam will show the percentage of positive reviews.
 			</p>
 			<ReviewScale hideLegend />
 		</section>
@@ -83,36 +93,37 @@
 		<section>
 			<h2>Let's guess</h2>
 			<p>
-				If woke game is bad game, now can you guess the positive review percentage which best
-				saperate <i>"Not Woke"</i> and <i>"Overtly Woke"</i> games?
+				If a woke game is a bad game, now can you guess the positive review percentage that best
+				separates <i>"Not Woke"</i> and <i>"Overtly Woke"</i> games?
 				<i>(Let's ignore subtle woke games for now)</i>
 			</p>
 			<GuessingGame {games} />
 		</section>
 
 		<section>
-			<h2>Is there any difference?</h2>
+			<h2>Is there a difference?</h2>
 			<p>
-				Separating games into each wokeness levels, <i>"Not Woke"</i> games seems to have the
-				highest average positive rating at 88%, follow by "Subtle Woke" at 87%, and lastly,
-				<i>"Overtly Woke"</i>
-				at 85%.
+				When divided into wokeness levels, <i>"Not Woke"</i> games seem to have the highest average
+				positive rating at 88%, followed by <i>"Subtle Woke"</i> at 87% and <i>"Overtly Woke"</i> at
+				85%.
 			</p>
 			<BeeswarmChart {groups} />
 			<p>
-				Look like the more woke game is, the worst review it tends to be by an average of 3% between
-				<i>"Not Woke"</i> and <i>"Overtly Woke"</i> group. The question is,
+				Look like the more woke the game is, the worse review it tends to be by an average of 3%
+				between the
+				<i>"Not Woke"</i> and <i>"Overtly Woke"</i> groups. The question is,
 				<span class="font-bold">does this different matter?</span>
-				In statistic, we can use <i>"Cohen's D"</i> to measure the how large is the difference
-				between the average of two group in the unit of Standard Deviations (SD). We calculated
+				In statistics, we can use <i>"Cohen's D"</i> to measure how large the difference between the
+				average of two groups is compared to their sparsity (described by Standard Deviations: SD).
+				We calculated
 				<i>Cohen's D</i>
-				value of two most extremed group, <i>"Not Woke"</i> and <i>"Overtly Woke"</i> and here is
-				the result
-				<i>(let's focus only 80% positive reviews and above to see the details)</i>.
+				value of the two most extreme groups, <i>"Not Woke"</i> and <i>"Overtly Woke"</i> and here
+				is the result
+				<i>(let's focus only on 80% positive reviews and above to see the details)</i>.
 			</p>
 			<CohenDPlot groups={groups.filter((_, i) => i !== 1)} />
 			<p>
-				According to the Cohen's general guideline, the Cohen's D of 0.27 can be interpreted as
+				According to the Cohen's general guideline, Cohen's D of 0.27 can be interpreted as
 				<span class="font-bold italic"
 					>"The difference between two groups is small and difficult to see with the naked eye"</span
 				>.
@@ -123,8 +134,9 @@
 			<h2>So, is woke game a bad game?</h2>
 			<div class="text-8xl">NO.</div>
 			<p>
-				We cannot saperate game's wokeness with positive reviews percentage, and the difference of
-				averages between wokeness group is too small to be statistically significant.
+				Using data from the Woke Content Detector, we cannot separate the game's wokeness with
+				positive reviews percentage, and the difference in averages between the wokeness group is
+				too small to be statistically significant.
 			</p>
 		</section>
 
