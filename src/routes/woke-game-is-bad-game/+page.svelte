@@ -11,6 +11,7 @@
 	import Footer from '../../components/footer.svelte';
 	import Sharer from '../../components/sharer.svelte';
 	import QuoteBlock from './_components/quote-block.svelte';
+	import ReferenceText from './_components/reference-text.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -46,17 +47,23 @@
 		<section>
 			<h2>What is woke?</h2>
 			<p>
-				There are many discussions about the definition of woke. Merriam-Webster describes <i
-					>"woke"</i
-				> as
+				There are many discussions about the definition of woke. <ReferenceText
+					href="https://www.merriam-webster.com/dictionary/woke">Merriam-Webster</ReferenceText
+				> describes <i>"woke"</i> as
 			</p>
 			<QuoteBlock>
-				(adj.) aware of and actively attentive to important societal facts and issues (especially
-				issues of racial and social justice)
+				aware of and actively attentive to important societal facts and issues (especially issues of
+				racial and social justice)
 			</QuoteBlock>
 			<p>
-				Our main data source, Woke Content Detector (a group with over 2,000 members that aim to
-				label computer games with wokeness label), defines "Woke content" in their methodology as
+				Our main data source, <ReferenceText
+					href="https://steamcommunity.com/groups/Woke_Content_Detector"
+					>Woke Content Detector</ReferenceText
+				> (a group with over 2,000 members that aim to label computer games with wokeness label), defines
+				"Woke content" in their <ReferenceText
+					href="https://steamcommunity.com/groups/Woke_Content_Detector/discussions/0/6975585346734259204/"
+					>methodology</ReferenceText
+				> as
 			</p>
 			<QuoteBlock>
 				any images, messages, characters, storytelling, dialogue, music, or game mechanics that
@@ -64,8 +71,11 @@
 				politics.
 			</QuoteBlock>
 			<p>
-				In the Woke Content Detector's list, there are {games.length.toLocaleString()} games with 200
-				or more reviews on Steam.* It was grouped into 3 levels of wokeness:
+				In the <ReferenceText
+					href="https://store.steampowered.com/curator/44927664-Woke-Content-Detector/"
+					>Woke Content Detector's list</ReferenceText
+				>, there are {games.length.toLocaleString()} games with 200 or more reviews on Steam.* It was
+				grouped into 3 levels of wokeness:
 			</p>
 			<div class="mx-auto flex flex-col gap-2">
 				{#each wokeLevelMap as { label, description }, level}
@@ -83,9 +93,12 @@
 			<h2>What is a bad (and good) game?</h2>
 			<p>
 				Good and bad games are subjective and opinionated. We use Steam's game reviews as a
-				collective good/bad indicator. Steam is a video game digital distribution service. People
-				who buy games on Steam can give them a <i>"Positive"</i> or <i>"Negative"</i> review. When a
-				game has enough reviews, Steam will show the percentage of positive reviews.
+				collective good/bad indicator. <ReferenceText href="https://store.steampowered.com"
+					>Steam</ReferenceText
+				> is a video game digital distribution service. People who buy games on Steam can give them a
+				<i>"Positive"</i>
+				or <i>"Negative"</i> review. When a game has enough reviews, Steam will show the percentage of
+				positive reviews.
 			</p>
 			<ReviewScale hideLegend />
 		</section>
@@ -112,9 +125,12 @@
 				Look like the more woke the game is, the worse review it tends to be by an average of 3%
 				between the
 				<i>"Not Woke"</i> and <i>"Overtly Woke"</i> groups. The question is,
-				<span class="font-bold">does this different matter?</span>
+				<span class="font-bold italic">does this different matter?</span>
 				In statistics, we can use <i>"Cohen's D"</i> to measure how large the difference between the
-				average of two groups is compared to their sparsity (described by Standard Deviations: SD).
+				average of two groups is compared to their sparsity (described by the pooled Standard Deviations:
+				SD).
+			</p>
+			<p>
 				We calculated
 				<i>Cohen's D</i>
 				value of the two most extreme groups, <i>"Not Woke"</i> and <i>"Overtly Woke"</i> and here
@@ -123,7 +139,10 @@
 			</p>
 			<CohenDPlot groups={groups.filter((_, i) => i !== 1)} />
 			<p>
-				According to the Cohen's general guideline, Cohen's D of 0.27 can be interpreted as
+				According to the <ReferenceText
+					href="https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/cohens-d/"
+					>Cohen's general guideline</ReferenceText
+				>, Cohen's D of 0.27 can be interpreted as
 				<span class="font-bold italic"
 					>"The difference between two groups is small and difficult to see with the naked eye"</span
 				>.
@@ -135,13 +154,19 @@
 			<div class="text-8xl">NO.</div>
 			<p>
 				Using data from the Woke Content Detector, we cannot separate the game's wokeness with
-				positive reviews percentage, and the difference in averages between the wokeness group is
+				positive reviews percentage. And the difference in averages between the wokeness group is
 				too small to be statistically significant.
 			</p>
 		</section>
 
 		<div class="mt-32 flex flex-col items-center gap-16">
-			<Sharer url="https://ordinaryunfold.com/woke-game-is-bad-game" />
+			<div class="flex flex-row items-center gap-6">
+				<span class="text-sm">Share</span>
+				<Sharer
+					url="https://ordinaryunfold.com/woke-game-is-bad-game"
+					linkClass="text-amber-700 hover:text-amber-600"
+				/>
+			</div>
 			<Footer class="text-center" />
 		</div>
 	</div>
@@ -161,7 +186,7 @@
 	}
 
 	h1 > span {
-		@apply underline decoration-neutral-500 decoration-dotted;
+		@apply underline decoration-neutral-300 decoration-wavy;
 	}
 
 	h2 {
