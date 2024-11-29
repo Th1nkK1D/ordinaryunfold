@@ -11,7 +11,7 @@
 <div class="mx-auto flex max-w-screen-md flex-row" style="font-family: 'Libre Baskerville', serif;">
 	<span>&ldquo;</span>
 	<div class="italic text-neutral-600">{@render children?.()}</div>
-	<span>&bdquo;</span>
+	<span class="self-end">&bdquo;</span>
 </div>
 
 <style lang="postcss">

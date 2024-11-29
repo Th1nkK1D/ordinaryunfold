@@ -12,7 +12,7 @@
 </script>
 
 <div class="flex flex-row gap-2">
-	<div class="flex w-full max-w-72 flex-wrap gap-[1px]">
+	<div class="flex w-full max-w-32 flex-wrap place-content-start gap-[1px] md:max-w-72">
 		{#each games as game}
 			<GameDot {...game} />
 		{/each}

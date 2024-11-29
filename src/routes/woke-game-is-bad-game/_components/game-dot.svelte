@@ -28,10 +28,11 @@
 <button
 	{...$trigger}
 	use:trigger
-	class="size-[6px] rounded-full transition-colors {disabled
+	class="size-[5px] rounded-full transition-colors md:size-[6px] {disabled
 		? 'bg-zinc-400 bg-opacity-60'
 		: bgClass}"
 	aria-label={name}
+	onclick={() => open.set(true)}
 	{disabled}
 ></button>
 

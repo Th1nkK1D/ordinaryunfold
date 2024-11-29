@@ -9,9 +9,15 @@
 		groups: GameLevelGroup[];
 		disabled?: boolean;
 		xScale?: ScaleLinear<number, number, never>;
+		hideAxisHint?: boolean;
 	}
 
-	let { groups, disabled, xScale = scaleLinear([0, 100], [0, 100]) }: Props = $props();
+	let {
+		groups,
+		disabled,
+		xScale = scaleLinear([0, 100], [0, 100]),
+		hideAxisHint
+	}: Props = $props();
 
 	let xStarted = $derived(xScale.domain()[0]);
 
@@ -27,7 +33,7 @@
 </script>
 
 <div class="flex flex-col {disabled ? 'pointer-events-none select-none' : ''}">
-	<ReviewScale {xStarted} hideLegend={disabled}>
+	<ReviewScale {xStarted} hideLegend={disabled} {hideAxisHint}>
 		<div class="flex flex-col gap-1">
 			{#each groupData as { group, mean }}
 				<div class="relative flex w-full flex-1 flex-row">

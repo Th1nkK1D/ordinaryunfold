@@ -1,6 +1,6 @@
 <div class="mx-auto flex flex-col items-center gap-6 rounded border border-neutral-300 px-8 py-4">
 	<!-- https://temml.org/ -->
-	<div class="flex flex-row items-center justify-center gap-12">
+	<div class="flex flex-col items-center justify-center gap-6 md:flex-row md:gap-12">
 		<!-- d = \frac{M_{1}-M_{2}}{SD_{pooled}} -->
 		<math display="block">
 			<mrow>
@@ -86,6 +86,6 @@
 	}
 	span {
 		font-family: serif;
-		@apply italic;
+		@apply text-center italic;
 	}
 </style>

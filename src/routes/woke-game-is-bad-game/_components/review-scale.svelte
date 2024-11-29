@@ -6,10 +6,11 @@
 	interface Props {
 		hideLegend?: boolean;
 		xStarted?: number;
+		hideAxisHint?: boolean;
 		children?: Snippet;
 	}
 
-	let { hideLegend, xStarted = 0, children }: Props = $props();
+	let { hideLegend, xStarted = 0, hideAxisHint, children }: Props = $props();
 </script>
 
 <div class="z-10 flex h-full w-full flex-col gap-1">
@@ -38,10 +39,12 @@
 			</div>
 		{/if}
 	</div>
-	<div class="flex flex-row">
-		<span class="flex-1">Tend to be bad</span>
-		<span>Tend to be good</span>
-	</div>
+	{#if !hideAxisHint}
+		<div class="flex flex-row">
+			<span class="flex-1">Tend to be bad</span>
+			<span>Tend to be good</span>
+		</div>
+	{/if}
 </div>
 
 <style lang="postcss" scope>

@@ -70,7 +70,7 @@
 	<BeeswarmChart groups={[{ games, mean }]} disabled={isGuessing} />
 
 	{#if isGuessing}
-		<div transition:fade class="absolute inset-x-0 inset-y-6 flex select-none flex-row">
+		<div transition:fade class="absolute inset-x-0 inset-y-6 z-10 flex select-none flex-row">
 			<p class="area-label" style="width: {selectedPosition}px;">
 				Mostly<br />Overty Woke
 			</p>
@@ -83,7 +83,7 @@
 	{#if isGuessing || result}
 		<div
 			transition:fade
-			class="absolute inset-y-0 flex flex-row justify-center text-zinc-100 transition-opacity {isGuessing
+			class="absolute inset-y-0 z-20 flex flex-row justify-center text-zinc-100 transition-opacity {isGuessing
 				? 'cursor-move'
 				: 'pointer-events-none opacity-40'}"
 			use:draggable={{

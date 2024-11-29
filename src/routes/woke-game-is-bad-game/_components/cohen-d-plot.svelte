@@ -38,7 +38,7 @@
 		<div class="bg-lime-300" style="width: {sdAreaSize * 0.3}%"></div>
 		<div class="flex-1 bg-lime-400"></div>
 	</div>
-	<BeeswarmChart {groups} {xScale} />
+	<BeeswarmChart {groups} {xScale} hideAxisHint />
 	<div
 		class="relative flex flex-row items-center gap-1 border-l border-r border-neutral-800"
 		style="margin: 0 {sdOffsetRight}% 0 {sdOffsetLeft}%;"
@@ -48,33 +48,43 @@
 		<div class="h-[1px] flex-1 bg-neutral-800"></div>
 	</div>
 	<div
-		class="relative z-10 mt-4 flex flex-row items-center border-t border-neutral-950 text-center"
+		class="relative z-10 mt-4 flex flex-row border-t border-neutral-950 text-center text-sm md:text-base"
 	>
-		<div style="width: {sdOffsetLeft}%">
+		<div class="self-center" style="width: {sdOffsetLeft}%">
 			<span class="font-bold">Cohen's D</span>
 			<br />(Unit: SD)
 		</div>
-		<div class="border-l border-neutral-900 p-1" style="width: {sdAreaSize * 0.2}%">
-			&lt; 0.2<br /><span class="font-bold">Negligible</span>
+		<div class="range-cell" style="width: {sdAreaSize * 0.2}%">
+			<span> &lt; 0.2</span><span>Negligible</span>
 		</div>
-		<div class="border-l border-neutral-900 p-1" style="width: {sdAreaSize * 0.3}%">
-			&lt; 0.5<br /><span class="font-bold">Small</span>
+		<div class="range-cell" style="width: {sdAreaSize * 0.3}%">
+			<span> &lt; 0.5</span><span>Small</span>
 		</div>
-		<div class="border-l border-neutral-900 p-1" style="width: {sdAreaSize * 0.3}%">
-			&lt; 0.8<br /><span class="font-bold">Medium</span>
+		<div class="range-cell" style="width: {sdAreaSize * 0.3}%">
+			<span> &lt; 0.8</span><span>Medium</span>
 		</div>
-		<div class="flex-1 border-l border-neutral-900 p-1">
-			&gt;= 0.8<br /><span class="font-bold">Large</span>
+		<div class="range-cell flex-1">
+			<span>&gt;= 0.8</span><span>Large</span>
 		</div>
 	</div>
 	<div
-		class="absolute -inset-y-2 w-[2px] -translate-x-1/2 bg-lime-900"
+		class="absolute -inset-y-2 w-[2px] bg-lime-800"
 		style="left: {sdOffsetLeft + cohenD * sdAreaSize}%"
 	>
 		<div
-			class="absolute bottom-0 -translate-x-1/2 translate-y-full whitespace-nowrap rounded bg-lime-900 px-1 text-center font-bold text-zinc-100"
+			class="absolute bottom-0 -translate-x-1/2 translate-y-full whitespace-nowrap rounded bg-lime-800 px-1 text-center font-bold text-zinc-100"
 		>
 			d = {cohenD}
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+	.range-cell {
+		@apply flex flex-col items-center justify-center break-all border-l border-neutral-900 py-1 md:py-2;
+	}
+
+	.range-cell > :nth-child(2) {
+		@apply font-bold;
+	}
+</style>
