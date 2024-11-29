@@ -12,6 +12,7 @@
 	import Sharer from '../../components/sharer.svelte';
 	import QuoteBlock from './_components/quote-block.svelte';
 	import ReferenceText from './_components/reference-text.svelte';
+	import CohenDFormular from './_components/cohen-d-formular.svelte';
 
 	let games = $state<Game[]>([]);
 
@@ -126,10 +127,10 @@
 				between the
 				<i>"Not Woke"</i> and <i>"Overtly Woke"</i> groups. The question is,
 				<span class="font-bold italic">does this different matter?</span>
-				In statistics, we can use <i>"Cohen's D"</i> to measure how large the difference between the
-				average of two groups is compared to their sparsity (described by the pooled Standard Deviations:
-				SD).
+				In statistics, we can use <i>"Cohen's D"</i> to measure how large is the difference between the
+				average of two groups relative to their sparsity.
 			</p>
+			<CohenDFormular />
 			<p>
 				We calculated
 				<i>Cohen's D</i>
@@ -142,7 +143,7 @@
 				According to the <ReferenceText
 					href="https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/cohens-d/"
 					>Cohen's general guideline</ReferenceText
-				>, Cohen's D of 0.27 can be interpreted as
+				>, Cohen's D of 0.28 can be interpreted as
 				<span class="font-bold italic"
 					>"The difference between two groups is small and difficult to see with the naked eye"</span
 				>.

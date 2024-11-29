@@ -9,20 +9,24 @@
 
 	let { groups }: Props = $props();
 
-	let sd = $derived.by(() => {
-		const data = groups.map((g) => g.games.map(({ positivePercent }) => positivePercent)).flat();
-		const mean = data.reduce((sum, d) => sum + d, 0) / data.length;
-		return Math.sqrt(data.reduce((sum, d) => sum + Math.pow(d - mean, 2), 0) / data.length);
+	let pooledSd = $derived.by(() => {
+		const groupSds = groups.map(({ games, mean }) =>
+			Math.sqrt(
+				games.reduce((sum, g) => sum + Math.pow(g.positivePercent - mean, 2), 0) / games.length
+			)
+		);
+
+		return Math.sqrt(groupSds.reduce((sum, gsd) => sum + Math.pow(gsd, 2), 0) / groupSds.length);
 	});
 
 	const xScale = scaleLinear([80, 100], [0, 100]);
 
 	let sdOffsetLeft = $derived(xScale(groups[1]?.mean));
-	let sdOffsetRight = $derived(100 - xScale(groups[1]?.mean + sd));
+	let sdOffsetRight = $derived(100 - xScale(groups[1]?.mean + pooledSd));
 	let sdAreaSize = $derived(100 - sdOffsetRight - sdOffsetLeft);
 
 	let cohenD = $derived(
-		groups ? Math.round((Math.abs(groups[1]?.mean - groups[0]?.mean) / sd) * 100) / 100 : 0
+		groups ? Math.round((Math.abs(groups[1]?.mean - groups[0]?.mean) / pooledSd) * 100) / 100 : 0
 	);
 </script>
 
@@ -40,7 +44,7 @@
 		style="margin: 0 {sdOffsetRight}% 0 {sdOffsetLeft}%;"
 	>
 		<div class="h-[1px] flex-1 bg-neutral-800"></div>
-		<p>SD = {Math.round(sd * 100) / 100}</p>
+		<p>SD = {Math.round(pooledSd * 100) / 100}</p>
 		<div class="h-[1px] flex-1 bg-neutral-800"></div>
 	</div>
 	<div
@@ -68,9 +72,9 @@
 		style="left: {sdOffsetLeft + cohenD * sdAreaSize}%"
 	>
 		<div
-			class="absolute bottom-0 -translate-x-1/2 translate-y-full whitespace-nowrap rounded bg-lime-900 px-1 text-center text-zinc-100"
+			class="absolute bottom-0 -translate-x-1/2 translate-y-full whitespace-nowrap rounded bg-lime-900 px-1 text-center font-bold text-zinc-100"
 		>
-			Cohen's D = <span class="font-bold">{cohenD}</span>
+			d = {cohenD}
 		</div>
 	</div>
 </div>
