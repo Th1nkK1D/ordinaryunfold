@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { groups as d3groups } from 'd3-array';
 	import { scaleLinear, type ScaleLinear } from 'd3-scale';
-	import { type GameLevelGroup } from '../game';
+	import { wokeLevelMap, type GameLevelGroup } from '../game';
 	import GameDot from './game-dot.svelte';
 	import ReviewScale from './review-scale.svelte';
 
@@ -33,7 +33,15 @@
 </script>
 
 <div class="flex flex-col {disabled ? 'pointer-events-none select-none' : ''}">
-	<ReviewScale {xStarted} hideLegend={disabled} {hideAxisHint}>
+	<ReviewScale
+		{xStarted}
+		legendMap={disabled
+			? []
+			: wokeLevelMap.filter((_, level) =>
+					groups.some(({ games }) => games.some((game) => game.woke.level === level))
+				)}
+		{hideAxisHint}
+	>
 		<div class="flex flex-col gap-1">
 			{#each groupData as { group, mean }}
 				<div class="relative flex w-full flex-1 flex-row">

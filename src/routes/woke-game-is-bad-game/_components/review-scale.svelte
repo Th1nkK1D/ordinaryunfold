@@ -4,13 +4,13 @@
 	import { fade } from 'svelte/transition';
 
 	interface Props {
-		hideLegend?: boolean;
+		legendMap?: typeof wokeLevelMap;
 		xStarted?: number;
 		hideAxisHint?: boolean;
 		children?: Snippet;
 	}
 
-	let { hideLegend, xStarted = 0, hideAxisHint, children }: Props = $props();
+	let { legendMap = [], xStarted = 0, hideAxisHint, children }: Props = $props();
 </script>
 
 <div class="z-10 flex h-full w-full flex-col gap-1">
@@ -25,12 +25,12 @@
 		{:else}
 			<div class="absolute inset-x-0 top-1/2 h-[1px] bg-neutral-400"></div>
 		{/if}
-		{#if !hideLegend}
+		{#if legendMap.length > 0}
 			<div
 				transition:fade
-				class="absolute bottom-4 left-6 flex flex-col rounded border border-zinc-300 bg-zinc-100 px-2 py-1"
+				class="absolute bottom-2 left-3 flex flex-col rounded border border-zinc-300 bg-zinc-100 px-2 py-1 md:bottom-4 md:left-6"
 			>
-				{#each wokeLevelMap as { label, bgClass }}
+				{#each legendMap as { label, bgClass }}
 					<div class="flex flex-row items-center gap-2">
 						<div class="size-2 rounded-full {bgClass}"></div>
 						<div class="font-body text-sm">{label}</div>

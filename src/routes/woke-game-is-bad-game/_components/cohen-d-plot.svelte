@@ -44,16 +44,13 @@
 		style="margin: 0 {sdOffsetRight}% 0 {sdOffsetLeft}%;"
 	>
 		<div class="h-[1px] flex-1 bg-neutral-800"></div>
-		<p>SD = {Math.round(pooledSd * 100) / 100}</p>
+		<p>SD<sub>pooled</sub> = {Math.round(pooledSd * 100) / 100}</p>
 		<div class="h-[1px] flex-1 bg-neutral-800"></div>
 	</div>
 	<div
 		class="relative z-10 mt-4 flex flex-row border-t border-neutral-950 text-center text-sm md:text-base"
 	>
-		<div class="self-center" style="width: {sdOffsetLeft}%">
-			<span class="font-bold">Cohen's D</span>
-			<br />(Unit: SD)
-		</div>
+		<div class="self-center font-bold" style="width: {sdOffsetLeft}%">Cohen's D</div>
 		<div class="range-cell" style="width: {sdAreaSize * 0.2}%">
 			<span> &lt; 0.2</span><span>Negligible</span>
 		</div>
@@ -68,7 +65,7 @@
 		</div>
 	</div>
 	<div
-		class="absolute -inset-y-2 w-[2px] bg-lime-800"
+		class="absolute -inset-y-2 border-l-2 border-dashed border-lime-800"
 		style="left: {sdOffsetLeft + cohenD * sdAreaSize}%"
 	>
 		<div
@@ -84,7 +81,7 @@
 		@apply flex flex-col items-center justify-center break-all border-l border-neutral-900 py-1 md:py-2;
 	}
 
-	.range-cell > :nth-child(2) {
+	.range-cell > span {
 		@apply font-bold;
 	}
 </style>

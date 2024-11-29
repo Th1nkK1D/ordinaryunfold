@@ -146,7 +146,7 @@
 				or <i>"Negative"</i> review. When a game has enough reviews, Steam will show the percentage of
 				positive reviews.
 			</p>
-			<ReviewScale hideLegend />
+			<ReviewScale />
 		</section>
 
 		<section>
