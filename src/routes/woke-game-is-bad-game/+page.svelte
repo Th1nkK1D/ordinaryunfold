@@ -15,6 +15,8 @@
 	import CohenDFormular from './_components/cohen-d-formular.svelte';
 	import Metadata from '../../components/metadata.svelte';
 
+	const PROJECT_PATH = '/woke-game-is-bad-game';
+
 	let games = $state<Game[]>([]);
 
 	let groups = $derived<GameLevelGroup[]>(
@@ -36,7 +38,8 @@
 <Metadata
 	title="Woke Game is Bad Game?"
 	description="We analyzed over 1,000 games to see if wokeness and user reviews are correlated"
-	path="/woke-game-is-bad-game"
+	path={PROJECT_PATH}
+	image="{PROJECT_PATH}/og.png"
 />
 
 <div class="flex justify-center bg-zinc-100 text-neutral-950">
@@ -209,7 +212,7 @@
 			<div class="flex flex-row items-center gap-6">
 				<span class="text-sm">Share</span>
 				<Sharer
-					url="https://ordinaryunfold.com/woke-game-is-bad-game"
+					url="https://ordinaryunfold.com{PROJECT_PATH}"
 					linkClass="text-amber-700 hover:text-amber-600"
 				/>
 			</div>
