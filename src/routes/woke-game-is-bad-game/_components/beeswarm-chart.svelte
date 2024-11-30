@@ -47,7 +47,7 @@
 				<div class="relative flex w-full flex-1 flex-row">
 					<div class="absolute inset-x-0 top-1/2 h-[1px] bg-neutral-400"></div>
 					<div
-						class="absolute inset-y-0 border-r border-amber-500 pr-1 font-body text-amber-600"
+						class="absolute inset-y-0 translate-x-[1px] border-r-2 border-amber-500 pr-1 font-body text-amber-600"
 						style="right: {Math.round(100 - xScale(mean))}%;"
 					>
 						Avg. {mean}%

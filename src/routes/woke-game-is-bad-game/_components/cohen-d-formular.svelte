@@ -76,7 +76,10 @@
 		</math>
 	</div>
 
-	<span>M = Mean (Average), SD = Standard Deviation</span>
+	<span class="text-sm">
+		M<sub>1</sub>, M<sub>2</sub> = Mean (Average) of each group<br />
+		SD<sub>1</sub>, SD<sub>2</sub> = Standard Deviation of each group
+	</span>
 </div>
 
 <style lang="postcss">

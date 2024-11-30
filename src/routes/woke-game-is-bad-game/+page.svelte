@@ -172,16 +172,16 @@
 			<BeeswarmChart {groups} />
 			<p>
 				Look like the more woke the game is, the worse review it tends to be by an average of 3%
-				between the
+				between the
 				<i>"Not Woke"</i> and <i>"Overtly Woke"</i> groups. The question is,
 				<span class="font-bold italic">does this different matter?</span>
-				In statistics, we can use <i>"Cohen's D"</i> to measure how large is the difference between the
+				In statistics, we can use <i>"Cohen's d"</i> to measure how large is the difference between the
 				average of two groups relative to their sparsity.
 			</p>
 			<CohenDFormular />
 			<p>
 				We calculated
-				<i>Cohen's D</i>
+				<i>Cohen's d</i>
 				value of the two most extreme groups, <i>"Not Woke"</i> and <i>"Overtly Woke"</i> and here
 				is the result
 				<i>(let's focus only on 80% positive reviews and above to see the details)</i>.
@@ -191,7 +191,7 @@
 				According to the <ReferenceText
 					href="https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/cohens-d/"
 					>Cohen's general guideline</ReferenceText
-				>, Cohen's D of 0.28 can be interpreted as
+				>, Cohen's d of 0.28 can be interpreted as
 				<span class="font-bold italic"
 					>"The difference between two groups is small and difficult to see with the naked eye"</span
 				>.
