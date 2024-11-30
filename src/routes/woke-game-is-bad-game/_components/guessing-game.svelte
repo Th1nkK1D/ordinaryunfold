@@ -118,7 +118,7 @@
 		<button onclick={submit} class="bg-neutral-950 font-bold text-zinc-100 hover:bg-neutral-600">
 			See the result
 		</button>
-		<button onclick={() => (isGuessing = false)} class="hover:bg-zinc-200">Skip</button>
+		<button onclick={() => (isGuessing = false)} class="hover:bg-zinc-200">Just tell me</button>
 	</div>
 {:else}
 	<p transition:slide class="mx-auto max-w-screen-md indent-8">

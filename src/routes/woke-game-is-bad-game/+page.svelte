@@ -191,7 +191,7 @@
 				According to the <ReferenceText
 					href="https://www.statisticshowto.com/probability-and-statistics/statistics-definitions/cohens-d/"
 					>Cohen's general guideline</ReferenceText
-				>, Cohen's d of 0.28 can be interpreted as
+				>, <i>Cohen's d</i> of 0.28 can be interpreted as
 				<span class="font-bold italic"
 					>"The difference between two groups is small and difficult to see with the naked eye"</span
 				>.
