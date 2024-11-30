@@ -20,10 +20,10 @@
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
 			<ProjectCard
 				title="Woke Game is Bad Game?"
-				description="We analyzed over 1,000 games in Woke Content Detector's list to see if wokeness and user positive reviews are correlated."
+				description="We analyzed over 1,000 games in Woke Content Detector's list to see if wokeness and user review ratings are related."
 				href="/woke-game-is-bad-game/"
 				image="/woke-game-is-bad-game/og.png"
-				date="29 Nov 2024"
+				date="30 Nov 2024"
 				lang="EN"
 			/>
 			<ProjectCard

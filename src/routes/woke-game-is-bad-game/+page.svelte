@@ -37,7 +37,7 @@
 
 <Metadata
 	title="Woke Game is Bad Game?"
-	description="We analyzed over 1,000 games to see if wokeness and user reviews are correlated"
+	description="We analyzed over 1,000 games to see if wokeness and user review ratings are related"
 	path={PROJECT_PATH}
 	image="{PROJECT_PATH}/og.png"
 />
@@ -53,7 +53,7 @@
 			</h1>
 			<p class="mx-auto !max-w-none text-xl md:text-2xl">
 				We analyzed over 1,000 games in Woke Content Detector's list to see if wokeness and user
-				positive reviews are correlated.
+				review ratings are related.
 			</p>
 		</div>
 
@@ -76,10 +76,10 @@
 
 		<section>
 			<p>
-				<i>"Woke"</i> might be the most popular word in the past few years. Not only do people use it
-				in discussion a lot, but people also blame it for destroying culture and fun in many sectors
-				including games, a lot. The problem is that not a lot of those accusations are backed by the
-				data when most of the discussion around woke topic are so subjective. So here we are.
+				<i>"Woke"</i> might be the most popular word in recent years. Not only do people frequently use
+				it in discussion, but they also blame it for destroying culture and fun in many sectors, including
+				games. But not many of those accusations are backed by the data when most discussions around
+				woke topics are so subjective. So here we are.
 			</p>
 			<div class="flex justify-center">
 				<blockquote class="twitter-tweet" data-conversation="none">
@@ -134,7 +134,7 @@
 						games={games.filter((g) => g.woke.level === level)}
 					/>
 				{/each}
-				<p class="self-end text-sm italic">* Data collected on 20 November 2024</p>
+				<span class="self-end text-sm italic">* Data collected on 20 November 2024</span>
 			</div>
 		</section>
 
@@ -203,8 +203,8 @@
 			<p class="text-8xl">NO.</p>
 			<p>
 				Using data from the Woke Content Detector, we cannot separate the game's wokeness with
-				positive reviews percentage. And the difference in averages between the wokeness group is
-				too small to be statistically significant.
+				positive reviews percentage, and the difference in averages between the wokeness groups is
+				too small to be significant.
 			</p>
 		</section>
 
