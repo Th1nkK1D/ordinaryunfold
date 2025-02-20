@@ -72,7 +72,7 @@
 	{#if isGuessing}
 		<div transition:fade class="absolute inset-x-0 inset-y-6 z-10 flex select-none flex-row">
 			<p class="area-label" style="width: {selectedPosition}px;">
-				Mostly<br />Overty Woke
+				Mostly<br />Overtly Woke
 			</p>
 			<p class="area-label flex-1">
 				Mostly<br />Not Woke
@@ -129,7 +129,7 @@
 		{:else}
 			Don't worry, because actually,
 		{/if}
-		positive review cannot clearly separate overty woke and not woke games.
+		positive review cannot clearly separate Overtly woke and not woke games.
 	</p>
 {/if}
 

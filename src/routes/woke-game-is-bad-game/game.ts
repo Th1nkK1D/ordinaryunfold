@@ -20,7 +20,7 @@ export const wokeLevelMap = [
 		textClass: 'text-purple-400'
 	},
 	{
-		label: 'Overty Woke',
+		label: 'Overtly Woke',
 		description: 'Woke themes present with overt messaging (Not Recommended)',
 		bgClass: 'bg-red-400',
 		textClass: 'text-red-400'
