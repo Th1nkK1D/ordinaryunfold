@@ -19,7 +19,7 @@
 		<span class="font-rampart text-5xl">{Math.floor(totalMinutes / 60)}h {totalMinutes % 60}m</span>
 		<span class="text-center text-2xl font-bold">of time I spent <br /> in the cinema</span>
 	</div>
-	<p class="flex flex-col items-center gap-3">
+	<button class="flex flex-col items-center gap-3" onclick={() => scrollBy(0, window.innerHeight)}>
 		Follow me below to unwrap
 		<svg class="w-3" viewBox="0 0 15 21">
 			<path
@@ -27,5 +27,5 @@
 				fill="currentColor"
 			/>
 		</svg>
-	</p>
+	</button>
 </section>
