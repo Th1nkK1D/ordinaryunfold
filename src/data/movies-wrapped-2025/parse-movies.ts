@@ -41,7 +41,7 @@ const movieSchema = Object({
 	releaseYear: Column('release_year', asNumber()),
 	duration: Column('duration', asMinutes),
 	genres: Column('genres', asArray(asString(), '/')),
-	companion: Column('companion', asOneOf(['solo', 'partner', 'family', 'friend']))
+	companion: Column('companion', asOneOf(['Myself', 'Partner', 'Family', 'Friend']))
 });
 
 export const movies = parseCsv(rawData, movieSchema);

@@ -3,6 +3,7 @@
 	import { onMount } from 'svelte';
 	import { movies } from '../../data/movies-wrapped-2025/parse-movies';
 	import LandingSection from './_sections/landing-section.svelte';
+	import CompanionSections from './_sections/companion-sections.svelte';
 
 	let currentSectionIndex = $state(0);
 	let totalSectionCount = $state(1);
@@ -32,6 +33,8 @@
 </div>
 
 <LandingSection {movies} />
+
+<CompanionSections {movies} isShowingResult={currentSectionIndex > 1} />
 
 <section>next section</section>
 
