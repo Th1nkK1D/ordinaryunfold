@@ -8,7 +8,8 @@ import {
 	createTransformer,
 	asNumber,
 	asOneOf,
-	asArray
+	asArray,
+	type StaticDecode
 } from 'sheethuahua';
 
 const asDayjs = createTransformer((value) => dayjs(`${value} 2025`));
@@ -44,3 +45,4 @@ const movieSchema = Object({
 });
 
 export const movies = parseCsv(rawData, movieSchema);
+export type Movie = StaticDecode<typeof movieSchema>;
